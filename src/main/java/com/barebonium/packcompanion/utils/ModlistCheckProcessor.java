@@ -1,7 +1,6 @@
 package com.barebonium.packcompanion.utils;
 
 import com.barebonium.packcompanion.PackCompanion;
-import com.barebonium.packcompanion.enumstates.Status;
 import com.barebonium.packcompanion.rendermd.HTMLGenerator;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

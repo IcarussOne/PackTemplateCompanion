@@ -1,0 +1,13 @@
+[
+  {
+    "modId": "thaumicwonders",
+    "status": "DEPRECATED",
+    "version": "1.8.4",
+    "replacementModName": "Thaumic Wonders Unofficial",
+    "replacementModVersion": "2.0.0",
+    "replacementModLink": "thaumic-wonders-unofficial",
+    "action":"REPLACE",
+    "isMinVersion":"false",
+    "isMaxVersion":"true"
+  }
+]

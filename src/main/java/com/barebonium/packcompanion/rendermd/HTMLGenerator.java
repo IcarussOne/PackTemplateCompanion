@@ -3,10 +3,7 @@ package com.barebonium.packcompanion.rendermd;
 
 import com.barebonium.packcompanion.PackCompanion;
 import com.barebonium.packcompanion.utils.HTMLEntry;
-import com.barebonium.packcompanion.enumstates.Status;
-import com.barebonium.packcompanion.utils.ModHelper;
 import com.barebonium.packcompanion.utils.ModlistCheckProcessor;
-
 
 import java.io.*;
 import java.util.ArrayList;

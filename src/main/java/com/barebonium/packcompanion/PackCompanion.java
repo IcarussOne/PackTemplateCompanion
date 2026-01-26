@@ -1,7 +1,6 @@
 package com.barebonium.packcompanion;
 
 import com.barebonium.packcompanion.utils.ModlistCheckProcessor;
-import net.minecraft.client.Minecraft;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
@@ -13,7 +12,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 
 import java.io.File;
 
@@ -44,7 +42,7 @@ public class PackCompanion {
         );
 
         ITextComponent textComponentLink = new TextComponentString(TextFormatting.GOLD + "[Pack Companion] " + TextFormatting.GRAY + "Please click ");
-        ITextComponent clickableHere = new TextComponentString(TextFormatting.RED + "[HERE]");
+        ITextComponent clickableHere = new TextComponentString(TextFormatting.RED + "[ HERE ]");
 
         File reportFile = ModlistCheckProcessor.HTMLReportFile;
 
