@@ -47,23 +47,45 @@ public class ModlistCheckProcessor {
                 writer.println("| :--- | :--- | :--- |");
 
                 for (ModEntry entry : entries) {
-                    boolean loaded = ModHelper.isModLoaded(entry.modId, entry.version, false, true);
+                    boolean loaded = ModHelper.isModLoaded(entry.modId, entry.version, entry.isMinVersion, entry.isMaxVersion);
 
                     if (loaded) {
                         String modName = ModHelper.getModName(entry.modId);
-                        if (entry.status== Status.PROBLEMATIC || entry.replacementModName == null){
-                            writer.printf("| %s | %s | Remove %s |%n", modName, entry.status, modName);
-
+                        String statusStr = entry.status.toString();
+                        String actionMessage;
+                        switch (entry.action) {
+                            case REMOVE:
+                                actionMessage = "Remove " + modName;
+                                break;
+                            case REPLACE:
+                                actionMessage = String.format("Replace with [%s](https://www.curseforge.com/minecraft/mc-mods/%s)",
+                                        entry.replacementModName, entry.replacementModLink);
+                                break;
+                            case INCLUDE:
+                                actionMessage = String.format("Use [%s](https://www.curseforge.com/minecraft/mc-mods/%s)",
+                                        entry.replacementModName, entry.replacementModLink);
+                                break;
+                            case UPGRADE:
+                                actionMessage = "Upgrade to version " + entry.replacementModVersion;
+                                break;
+                            case DOWNGRADE:
+                                actionMessage = "Downgrade to version " + entry.replacementModVersion;
+                                break;
+                            default:
+                                actionMessage = "Check mod compatibility";
+                                break;
                         }
-                        else {
-                            writer.printf("| %s | %s | Use [%s](https://www.curseforge.com/minecraft/mc-mods/%s) |%n", modName, entry.status, entry.replacementModName ,entry.replacementModLink);
-                        }
+                        writer.printf("| %s | %s | %s |%n", modName, statusStr, actionMessage);
                         htmlEntries.add(new HTMLEntry(
                                 modName,
                                 entry.status,
                                 entry.version,
                                 entry.replacementModName,
-                                entry.replacementModLink
+                                entry.replacementModLink,
+                                entry.action,
+                                entry.isMinVersion,
+                                entry.isMaxVersion,
+                                entry.replacementModVersion
                         ));
                     }
                 }

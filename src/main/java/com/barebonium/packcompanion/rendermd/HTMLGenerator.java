@@ -4,6 +4,7 @@ package com.barebonium.packcompanion.rendermd;
 import com.barebonium.packcompanion.PackCompanion;
 import com.barebonium.packcompanion.utils.HTMLEntry;
 import com.barebonium.packcompanion.enumstates.Status;
+import com.barebonium.packcompanion.utils.ModHelper;
 
 
 import java.io.*;
@@ -49,28 +50,60 @@ public class HTMLGenerator {
         tableHtml.append("<th>").append("Recommended Action").append("</th>");
         tableHtml.append("</tr>");
         for(HTMLEntry htmlEntry : htmlEntries){
+            String modName = htmlEntry.modName;
+            String statusStr = htmlEntry.status.toString();
+            String htmlClass;
+            String actionMessage;
+
+
             tableHtml.append("<tr>");
-            tableHtml.append("<td>").append(htmlEntry.modName).append("</td>");
-            if (htmlEntry.status== Status.DEPRECATED){
-                tableHtml.append("<td class=deprecated>").append(htmlEntry.status).append("</td>");
-                tableHtml.append("<td>")
-                        .append("<p>Use ")
-                        .append("<a href=\"https://www.curseforge.com/minecraft/mc-mods/")
-                        .append(htmlEntry.replacementModLink)
-                        .append("\">").append(htmlEntry.replacementModName)
-                        .append("</a>")
-                        .append("</p>")
-                        .append("</td>");
-            }else{
-                tableHtml.append("<td class=problematic>")
-                        .append(htmlEntry.status)
-                        .append("</td>");
-                tableHtml.append("<td>").append("<p>Use ")
-                        .append("<a href=\"https://www.curseforge.com/minecraft/mc-mods/")
-                        .append(htmlEntry.replacementModLink).append("\">")
-                        .append(htmlEntry.replacementModName).append("</a>")
-                        .append("</p>").append("</td>");
+            tableHtml.append("<td>").append(modName).append("</td>");
+
+
+
+
+            switch (htmlEntry.action) {
+                case REMOVE:
+                    actionMessage = "<p>Remove " + modName+ "</p>";
+                    break;
+                case REPLACE:
+                    actionMessage = String.format("<p>Replace with <a href=\"https://www.curseforge.com/minecraft/mc-mods/%s\">%s</a></p>",
+                            htmlEntry.replacementModLink, htmlEntry.replacementModName);
+                    break;
+                case INCLUDE:
+                    actionMessage = String.format("<p>Use <a href=\"https://www.curseforge.com/minecraft/mc-mods/%s\">%s</a></p>",
+                            htmlEntry.replacementModLink, htmlEntry.replacementModName);
+                    break;
+                case UPGRADE:
+                    actionMessage = "<p>Upgrade to version " + htmlEntry.replacementModVersion+"</p>";
+                    break;
+                case DOWNGRADE:
+                    actionMessage = "<p>Downgrade to version " + htmlEntry.replacementModVersion+"</p>";
+                    break;
+                default:
+                    actionMessage = "<p>Check mod compatibility</p>";
+                    break;
             }
+            switch(htmlEntry.status){
+                case DEPRECATED:
+                    htmlClass = "deprecated";
+                    break;
+                case PROBLEMATIC:
+                    htmlClass = "problematic";
+                    break;
+                default:
+                    htmlClass = "";
+                    break;
+            }
+            tableHtml.append("<td class=")
+                    .append(htmlClass)
+                    .append(">")
+                    .append(statusStr)
+                    .append("</td>");
+
+            tableHtml.append("<td>")
+                    .append(actionMessage)
+                    .append("</td>");
             tableHtml.append("</tr>");
         }
 

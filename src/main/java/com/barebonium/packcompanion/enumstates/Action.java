@@ -1,8 +1,9 @@
 package com.barebonium.packcompanion.enumstates;
 
-enum Action {
+public enum Action {
     REMOVE,
     DOWNGRADE,
     UPGRADE,
-    REPLACE
+    REPLACE,
+    INCLUDE
 }
