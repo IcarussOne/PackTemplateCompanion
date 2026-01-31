@@ -1,10 +1,12 @@
 package com.barebonium.packcompanion.utils;
 
 import com.barebonium.packcompanion.PackCompanion;
+import com.barebonium.packcompanion.enumstates.Action;
 import com.barebonium.packcompanion.rendermd.HTMLGenerator;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
+import net.minecraft.client.Minecraft;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
@@ -12,9 +14,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import static com.barebonium.packcompanion.configparse.ConfigParser.processConfigJsonToOutput;
+
 public class ModlistCheckProcessor {
 
     public static File HTMLReportFile;
+    public static File GlobalOutputLog;
     private static final Gson GSON = new Gson();
     public static void checkModList(File configDir, File gameDir) {
         boolean isSuccess = false;
@@ -45,9 +50,10 @@ public class ModlistCheckProcessor {
                 PackCompanion.LOGGER.info("There are no Mods in the modListGuide");
             }
             else {
-                writer.println("| Mod Name | Status | Recommended Action |");
-                writer.println("| :--- | :--- | :--- |");
-
+                writer.println("## Mod Analysis");
+                writer.println("| Mod Name | Status | Recommended Action | Reason |");
+                writer.println("| :--- | :--- | :--- | :--- |");
+                List<ModEntry> ModPatchList = new ArrayList<>();
                 for (ModEntry entry : entries) {
                     boolean loaded = ModHelper.isModLoaded(entry.modId, entry.version, entry.isMinVersion, entry.isMaxVersion);
 
@@ -63,10 +69,10 @@ public class ModlistCheckProcessor {
                                 actionMessage = String.format("Replace with [%s](https://www.curseforge.com/minecraft/mc-mods/%s)",
                                         entry.replacementModName, entry.replacementModLink);
                                 break;
-                            case INCLUDE:
-                                actionMessage = String.format("Use [%s](https://www.curseforge.com/minecraft/mc-mods/%s)",
-                                        entry.replacementModName, entry.replacementModLink);
-                                break;
+//                            case INCLUDE:
+//                                actionMessage = String.format("Use [%s](https://www.curseforge.com/minecraft/mc-mods/%s)",
+//                                        entry.replacementModName, entry.replacementModLink);
+//                                break;
                             case UPGRADE:
                                 actionMessage = "Upgrade to version " + entry.replacementModVersion;
                                 break;
@@ -77,7 +83,11 @@ public class ModlistCheckProcessor {
                                 actionMessage = "Check mod compatibility";
                                 break;
                         }
-                        writer.printf("| %s | %s | %s |%n", modName, statusStr, actionMessage);
+                        if (entry.action != Action.INCLUDE){
+                            writer.printf("| %s | %s | %s | %s |%n", modName, statusStr, actionMessage, entry.message);
+                        } else {
+                            ModPatchList.add(entry);
+                        }
                         htmlEntries.add(new HTMLEntry(
                                 modName,
                                 entry.status,
@@ -87,12 +97,34 @@ public class ModlistCheckProcessor {
                                 entry.action,
                                 entry.isMinVersion,
                                 entry.isMaxVersion,
-                                entry.replacementModVersion
+                                entry.replacementModVersion,
+                                entry.patchList,
+                                entry.message
                         ));
                     }
                 }
+                writer.println("## Mods and Patches to include");
+                writer.println("| Mod Name | Patch for | Description |");
+                writer.println("| :--- | :--- | :--- |");
+                for(ModEntry entry : ModPatchList) {
+                    String modName = ModHelper.getModName(entry.modId);
+
+                    for (ModPatchEntry patchEntry : entry.patchList){
+                        String patchName = String.format("[%s](https://www.curseforge.com/minecraft/mc-mods/%s)",
+                                patchEntry.modName, patchEntry.modLink);
+                        writer.printf("| %s | %s | %s |%n", patchName, modName, patchEntry.modDescription);
+                    }
+
+                }
+
+                writer.println("## Config Analysis");
+                writer.println("| Mod Name | Config Name | Reason |");
+                writer.println("| :--- | :--- | :--- |");
+                File configEntries = new File(Minecraft.getMinecraft().gameDir, "config/packCompanion/configEntries.json");
+                processConfigJsonToOutput(configEntries, outputLog);
                 isSuccess = true;
             }
+            writer.println("");
             PackCompanion.LOGGER.info("Loaded mods Successfully Analysed");
             PackCompanion.LOGGER.info("Please consult the Output log at {}", outputLog.getPath());
             writer.close();
@@ -100,7 +132,7 @@ public class ModlistCheckProcessor {
 
             if(isSuccess) {
                 File htmlOutput = new File(logDir, fileName.replace(".md", ".html"));
-
+                GlobalOutputLog = htmlOutput;
                 HTMLGenerator.saveAsHtml(htmlEntries, htmlOutput, timeStamp);
             }
 

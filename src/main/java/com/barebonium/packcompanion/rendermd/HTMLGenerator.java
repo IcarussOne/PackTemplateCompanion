@@ -2,13 +2,18 @@ package com.barebonium.packcompanion.rendermd;
 
 
 import com.barebonium.packcompanion.PackCompanion;
+import com.barebonium.packcompanion.configparse.ConfigParser;
+import com.barebonium.packcompanion.enumstates.Action;
 import com.barebonium.packcompanion.utils.HTMLEntry;
+import com.barebonium.packcompanion.utils.ModPatchEntry;
 import com.barebonium.packcompanion.utils.ModlistCheckProcessor;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class HTMLGenerator {
+    public static String GlobalHTML;
     public static void saveAsHtml(ArrayList<HTMLEntry> htmlEntries, File file, String timeStamp) {
         String htmlHeader = "<!DOCTYPE html><html><head><title>Pack Companion Report</title>" +
                 "<style>" +
@@ -39,14 +44,18 @@ public class HTMLGenerator {
                 "                border: 1px solid var(--table-border); background: var(--header-bg); color: var(--text-color); }" +
                 "</style></head><body>" +
                 "<h1>Pack Companion Report <button class='toggle-btn' onclick='toggleTheme()'>Toggle Theme</button></h1>" +
-                "<h4>Generated On: "+ timeStamp + "</h4>";
+                "<h4>Generated On: "+ timeStamp + "</h4>"+
+                "<h2>Mod Analysis</h2>";
+
 
         StringBuilder tableHtml = new StringBuilder("<table>");
         tableHtml.append("<tr>");
         tableHtml.append("<th>").append("Mod Name").append("</th>");
         tableHtml.append("<th>").append("Status").append("</th>");
         tableHtml.append("<th>").append("Recommended Action").append("</th>");
+        tableHtml.append("<th>").append("Reason").append("</th>");
         tableHtml.append("</tr>");
+        List<HTMLEntry> modPatchList = new ArrayList<>();
         for(HTMLEntry htmlEntry : htmlEntries){
             String modName = htmlEntry.modName;
             String statusStr = htmlEntry.status.toString();
@@ -68,10 +77,10 @@ public class HTMLGenerator {
                     actionMessage = String.format("<p>Replace with <a href=\"https://www.curseforge.com/minecraft/mc-mods/%s\">%s</a></p>",
                             htmlEntry.replacementModLink, htmlEntry.replacementModName);
                     break;
-                case INCLUDE:
-                    actionMessage = String.format("<p>Use <a href=\"https://www.curseforge.com/minecraft/mc-mods/%s\">%s</a></p>",
-                            htmlEntry.replacementModLink, htmlEntry.replacementModName);
-                    break;
+//                case INCLUDE:
+//                    actionMessage = String.format("<p>Use <a href=\"https://www.curseforge.com/minecraft/mc-mods/%s\">%s</a></p>",
+//                            htmlEntry.replacementModLink, htmlEntry.replacementModName);
+//                    break;
                 case UPGRADE:
                     actionMessage = "<p>Upgrade to version " + htmlEntry.replacementModVersion+"</p>";
                     break;
@@ -93,23 +102,60 @@ public class HTMLGenerator {
                     htmlClass = "";
                     break;
             }
-            tableHtml.append("<td class=")
-                    .append(htmlClass)
-                    .append(">")
-                    .append(statusStr)
-                    .append("</td>");
+            if(htmlEntry.action != Action.INCLUDE){
+                tableHtml.append("<td class=")
+                        .append(htmlClass)
+                        .append(">")
+                        .append(statusStr)
+                        .append("</td>");
 
-            tableHtml.append("<td>")
-                    .append(actionMessage)
-                    .append("</td>");
-            tableHtml.append("</tr>");
+                tableHtml.append("<td>")
+                        .append(actionMessage)
+                        .append("</td>");
+                tableHtml.append("<td>")
+                        .append(htmlEntry.message)
+                        .append("</td>");
+                tableHtml.append("</tr>");
+            } else {
+                modPatchList.add(htmlEntry);
+            }
         }
+        tableHtml.append("</table>");
+        StringBuilder patchListTable = new StringBuilder("<h2>Mods and Patches to include</h2> <table>");
+        patchListTable.append("<tr>");
+        patchListTable.append("<th>").append("Mod Name").append("</th>");
+        patchListTable.append("<th>").append("Patch for mod").append("</th>");
+        patchListTable.append("<th>").append("Description").append("</th>");
+        patchListTable.append("</tr>");
+        for (HTMLEntry htmlEntry : modPatchList){
+            String modName = htmlEntry.modName;
+
+            for (ModPatchEntry patchEntry : htmlEntry.patchList){
+                String patchModName = String.format("<p><a href=\"https://www.curseforge.com/minecraft/mc-mods/%s\">%s</a></p>",
+                        patchEntry.modLink, patchEntry.modName);
+                patchListTable.append("<tr>");
+                patchListTable.append("<td>").append(patchModName).append("</td>");
+                patchListTable.append("<td>").append(modName).append("</td>");
+                patchListTable.append("<td>").append(patchEntry.modDescription).append("</td>");
+            }
+
+
+
+        }
+        patchListTable.append("</table>");
 
         String script = "<script>" +
                 "  function toggleTheme() { document.body.classList.toggle('light-mode'); }" +
                 "</script>";
 
-        String finalHtml = htmlHeader + tableHtml + script + "</body></html>";
+        if(modPatchList.isEmpty()){
+            patchListTable = new StringBuilder();
+        }
+        String ConfigTableFinal = ConfigParser.ConfigTable.toString();
+        if(ConfigParser.ConfigEntryIndex == 0){
+            ConfigTableFinal = "";
+        }
+        String finalHtml = htmlHeader + tableHtml + patchListTable  + ConfigTableFinal + script + "</body></html>";
 
         try (PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(file)))) {
             writer.println(finalHtml);
