@@ -542,10 +542,10 @@
   },
   {
     "modId": "wizardry",
-    "version": "0.11.3",
+    "version": "0.11.2",
     "isMinVersion": true,
     "isMaxVersion": false,
-    "isVersionInclusive": false,
+    "isVersionInclusive": true,
     "status": "PROBLEMATIC",
     "replacementModVersion": "0.11.1",
     "action": "DOWNGRADE",
