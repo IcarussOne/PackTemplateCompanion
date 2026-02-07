@@ -10,9 +10,9 @@ import java.net.URL;
 
 public class VersionChecker {
     private static final String API_URL = "https://api.github.com/repos/AnasDevO/PackTemplateCompanion/releases/latest";
-    private static boolean modListGuideIntegrity = true;
-    private static boolean configEntriesIntegrity = true;
-    private static boolean cleanroomListGuideIntegrity = true;
+    private static boolean modListGuideIntegrity = false;
+    private static boolean configEntriesIntegrity = false;
+    private static boolean cleanroomListGuideIntegrity = false;
     public static void checkAndDownload() {
         try {
             HttpURLConnection connection = (HttpURLConnection) new URL(API_URL).openConnection();
@@ -37,37 +37,43 @@ public class VersionChecker {
                             {
                                 String downloadUrl = assetObject.get("browser_download_url").getAsString();
                                 File targetFile = new File(PackCompanion.configDir, "modListGuide.json");
-                                downloadFile(downloadUrl, targetFile);
+                                if(!modListGuideIntegrity){
+                                    downloadFile(downloadUrl, targetFile);
 
-                                String ModlistHashCache = FileHashCalculator.getFileHash(targetFile, "MD5");
+                                    String ModlistHashCache = FileHashCalculator.getFileHash(targetFile, "MD5");
 
 
-                                saveToCache("modListGuideHash",ModlistHashCache);
-                                modListGuideIntegrity = true;
+                                    saveToCache("modListGuideHash",ModlistHashCache);
+                                    modListGuideIntegrity = true;
+                                }
                                 break;
                             }
                             case "configEntries.json":
                             {
                                 String downloadUrl = assetObject.get("browser_download_url").getAsString();
                                 File targetFile = new File(PackCompanion.configDir, "configEntries.json");
-                                downloadFile(downloadUrl, targetFile);
+                                if(!configEntriesIntegrity){
+                                    downloadFile(downloadUrl, targetFile);
 
-                                String ConfigHashCache = FileHashCalculator.getFileHash(targetFile, "MD5");
+                                    String ConfigHashCache = FileHashCalculator.getFileHash(targetFile, "MD5");
 
-                                saveToCache("configEntriesHash",ConfigHashCache);
-                                configEntriesIntegrity = true;
+                                    saveToCache("configEntriesHash",ConfigHashCache);
+                                    configEntriesIntegrity = true;
+                                }
                                 break;
                             }
                             case "CleanroomListGuide.json":
                             {
                                 String downloadUrl = assetObject.get("browser_download_url").getAsString();
                                 File targetFile = new File(PackCompanion.configDir, "CleanroomListGuide.json");
-                                downloadFile(downloadUrl, targetFile);
+                                if(!cleanroomListGuideIntegrity){
+                                    downloadFile(downloadUrl, targetFile);
 
-                                String CleanroomListHashCache = FileHashCalculator.getFileHash(targetFile, "MD5");
+                                    String CleanroomListHashCache = FileHashCalculator.getFileHash(targetFile, "MD5");
 
-                                saveToCache("CleanroomListGuideHash",CleanroomListHashCache);
-                                cleanroomListGuideIntegrity = true;
+                                    saveToCache("CleanroomListGuideHash",CleanroomListHashCache);
+                                    cleanroomListGuideIntegrity = true;
+                                }
                                 break;
                             }
                         }
@@ -162,6 +168,7 @@ public class VersionChecker {
         if(getCachedHash(hashKey)!= null ) {
             if (hashValue.equals(getCachedHash(hashKey))) {
                 PackCompanion.LOGGER.info("{} Integrity Check pass", name);
+                integrityValue = true;
             } else {
                 PackCompanion.LOGGER.error("{} Integrity Check fail", name);
                 if (targetFile.exists()) {
