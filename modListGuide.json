@@ -80,18 +80,6 @@
     "message": "Outdated and breaks core functionality."
   },
   {
-    "modId": "emojicord",
-    "status": "DEPRECATED",
-    "version": "1.1.1.45",
-    "isMinVersion": true,
-    "isMaxVersion": false,
-    "isVersionInclusive": false,
-    "replacementModName": "Goslingcord",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/goslingcord",
-    "action": "REPLACE",
-    "message": "Outdated and has several bugs. Use #link:[Goslincord version 2.0.0](https://www.curseforge.com/minecraft/mc-mods/goslingcord/files/6231916). (newer versions require Cleanroom)"
-  },
-  {
     "modId": "clumps",
     "status": "DEPRECATED",
     "replacementModName": "Fixeroo",
@@ -572,6 +560,14 @@
     "message": "Incompatible with Cleanroom and several modern optimization mods. Use #link:[Alfheim Lighting Engine](https://www.curseforge.com/minecraft/mc-mods/alfheim-lighting-engine) or Hesperus for better compatibility and performance."
   },
   {
+    "modId": "maxpotidext",
+    "status": "DEPRECATED",
+    "replacementModName": "Roughly Enough IDs",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/reid",
+    "action": "REPLACE",
+    "message": "Replaced by #link:[Roughly Enough IDs](https://www.curseforge.com/minecraft/mc-mods/reid)."
+  },
+  {
     "modId": "optifine",
     "status": "PROBLEMATIC",
     "action": "INCLUDE",
@@ -593,18 +589,6 @@
         "modId": "btfixes",
         "modLink": "https://www.curseforge.com/minecraft/mc-mods/btfixes",
         "modDescription": "Minimally invasive fixes for Battle Towers."
-      }
-    ]
-  },
-  {
-    "modId": "weaponmod",
-    "action": "INCLUDE",
-    "patchList": [
-      {
-        "modName": "Balkon's Expansion",
-        "modId": "balkonsexpansion",
-        "modLink": "https://www.curseforge.com/minecraft/mc-mods/balkons-expansion",
-        "modDescription": "An expansion for Balkon's WeaponMod: Legacy in 1.12.2 that supports materials from other mods."
       }
     ]
   },
@@ -657,30 +641,6 @@
     ]
   },
   {
-    "modId": "mowziesmobs",
-    "action": "INCLUDE",
-    "patchList": [
-      {
-        "modName": "Mowzie's Mobs' Baubles",
-        "modId": "mmbaubles",
-        "modLink": "https://www.curseforge.com/minecraft/mc-mods/mowzies-mobs-baubles",
-        "modDescription": "A small addon for Mowzie's Mobs that adds Baubles support."
-      }
-    ]
-  },
-  {
-    "modId": "patchouli",
-    "action": "INCLUDE",
-    "patchList": [
-      {
-        "modName": "Patchouli Books",
-        "modId": "patchoulibooks",
-        "modLink": "https://www.curseforge.com/minecraft/mc-mods/patchouli-books",
-        "modDescription": "Adds additional integration and QoL for Patchouli."
-      }
-    ]
-  },
-  {
     "modId": "railcraft",
     "action": "INCLUDE",
     "patchList": [
@@ -713,6 +673,24 @@
         "modId": "congregamystica",
         "modLink": "https://www.curseforge.com/minecraft/mc-mods/congrega-mystica",
         "modDescription": "The Thaumcraft 6 integration addon."
+      },
+      {
+        "modName": "Thaumic Augmentation",
+        "modId": "thaumicaugmentation",
+        "modLink": "https://www.curseforge.com/minecraft/mc-mods/thaumic-augmentation",
+        "modDescription": "Augmenting Thaumcraft 6 with a variety of fresh and familiar content."
+      },
+      {
+        "modName": "Magiculture Integrations",
+        "modId": "magicultureintegrations",
+        "modLink": "https://www.curseforge.com/minecraft/mc-mods/magiculture-integrations",
+        "modDescription": "Adds a large number of coded mod integrations."
+      },
+      {
+        "modName": "Thaumic Wonders Unofficial",
+        "modId": "thaumicwonders",
+        "modLink": "https://www.curseforge.com/minecraft/mc-mods/thaumic-wonders-unofficial",
+        "modDescription": "An unofficial continuation of Thaumic Wonders."
       }
     ]
   },

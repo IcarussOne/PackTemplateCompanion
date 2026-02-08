@@ -66,18 +66,6 @@
     "message": "Outdated and has several bugs. Use #link:[Charset CRE](https://www.curseforge.com/minecraft/mc-mods/charset-cre)."
   },
   {
-    "modId": "emojicord",
-    "status": "DEPRECATED",
-    "version": "1.1.1.45",
-    "isMinVersion": true,
-    "isMaxVersion": false,
-    "isVersionInclusive": false,
-    "replacementModName": "Goslingcord",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/goslingcord",
-    "action": "REPLACE",
-    "message": "Outdated and has several bugs. Use latest #link:[Goslingcord](https://www.curseforge.com/minecraft/mc-mods/goslingcord). For Forge, use #link:[version 2.0.0](https://www.curseforge.com/minecraft/mc-mods/goslingcord/files/6231916)."
-  },
-  {
     "modId": "geckolib3",
     "version": "3.0.30",
     "isMinVersion": true,

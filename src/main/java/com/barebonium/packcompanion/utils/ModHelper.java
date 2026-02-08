@@ -1,5 +1,6 @@
 package com.barebonium.packcompanion.utils;
 
+import com.barebonium.packcompanion.PackCompanion;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.LoaderException;
 import net.minecraftforge.fml.common.ModContainer;
@@ -44,8 +45,10 @@ public class ModHelper {
     }
     public static boolean isClassLoaded(String className) {
         try {
-            return Class.forName(className) != null;
+            Class.forName(className);
+            return true;
         } catch(ClassNotFoundException e) {
+            PackCompanion.LOGGER.error("Failed to load class {}: {}", className, e.getMessage());
             return false;
         }
     }
