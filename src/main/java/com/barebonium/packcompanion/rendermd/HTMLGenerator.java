@@ -17,6 +17,7 @@ public class HTMLGenerator {
     public static String GlobalHTML;
     public static void saveAsHtml(ArrayList<HTMLEntry> htmlEntries, File file, String timeStamp) {
         String htmlHeader = "<!DOCTYPE html><html><head><title>Pack Companion Report</title>" +
+                "<meta charset=\"UTF-8\">"+
                 "<style>" +
                 "  :root { " +
                 "    --bg-color: #0d1117; --text-color: #c9d1d9; --table-border: #30363d; " +
@@ -43,6 +44,15 @@ public class HTMLGenerator {
                 "  body.light-mode a:link {color: #0969da; font-weight: bold;}"+
                 "  .toggle-btn { padding: 8px 16px; font-size: 14px; border-radius: 6px; cursor: pointer; " +
                 "                border: 1px solid var(--table-border); background: var(--header-bg); color: var(--text-color); }" +
+                "  .dropdown { margin: 20px 0; border: 1px solid var(--table-border); border-radius: 6px; overflow: hidden; }" +
+                "  .dropdown summary { padding: 12px 16px; font-weight: 600; cursor: pointer; " +
+                "                      background-color: var(--header-bg); color: var(--accent); " +
+                "                      list-style: none; outline: none; border-bottom: 1px solid var(--table-border); }" +
+                "  .dropdown summary::-webkit-details-marker { display: none; }" +
+                "  .dropdown summary::before { content: '\\25B6  '; margin-right: 8px; transition: transform 0.3s ease;}" +
+                "  .dropdown[open] summary::before { content: '\\25BC  '; }" +
+                "  .dropdown table { margin-bottom: 0; border: none; }" +
+                "  .dropdown td, .dropdown th { border-left: none; border-right: none; }" +
                 "</style></head><body>" +
                 "<h1>Pack Companion Report <button class='toggle-btn' onclick='toggleTheme()'>Toggle Theme</button></h1>" +
                 "<h4>Generated On: "+ timeStamp + "</h4>";
@@ -50,10 +60,13 @@ public class HTMLGenerator {
 
         StringBuilder tableHtml = new StringBuilder();
         StringBuilder patchListTable = new StringBuilder();
+        StringBuilder cleanroomTable = new StringBuilder();
         List<HTMLEntry> modPatchList = new ArrayList<>();
         int patchEntryCount = 0;
         if (ConfigHandler.modAnalysisEnabled){
-            tableHtml.append("<h2>Mod Analysis</h2> <table>");
+            tableHtml.append("<h2>Mod Analysis</h2> <details class=\"dropdown\">");
+            tableHtml.append("<summary>Show Mod Analysis</summary>");
+            tableHtml.append("<table>");
             tableHtml.append("<tr>");
             tableHtml.append("<th>").append("Mod Name").append("</th>");
             tableHtml.append("<th>").append("Status").append("</th>");
@@ -76,10 +89,6 @@ public class HTMLGenerator {
                         actionMessage = String.format("<p>Replace with <a href=\"%s\">%s</a></p>",
                                 htmlEntry.replacementModLink, htmlEntry.replacementModName);
                         break;
-//                case INCLUDE:
-//                    actionMessage = String.format("<p>Use <a href=\"https://www.curseforge.com/minecraft/mc-mods/%s\">%s</a></p>",
-//                            htmlEntry.replacementModLink, htmlEntry.replacementModName);
-//                    break;
                     case UPGRADE:
                         actionMessage = "<p>Upgrade to version " + htmlEntry.replacementModVersion+"</p>";
                         break;
@@ -101,7 +110,7 @@ public class HTMLGenerator {
                         htmlClass = "";
                         break;
                 }
-                if(htmlEntry.action != Action.INCLUDE){
+                if(htmlEntry.action != Action.INCLUDE && !htmlEntry.isCleanroom){
                     tableHtml.append("<tr>");
                     tableHtml.append("<td>").append(modName).append("</td>");
                     tableHtml.append("<td class=")
@@ -117,13 +126,16 @@ public class HTMLGenerator {
                             .append(MessageRegex.translateToHTML(htmlEntry.message))
                             .append("</td>");
                     tableHtml.append("</tr>");
-                } else {
+                } else if(htmlEntry.action == Action.INCLUDE &&  !htmlEntry.isCleanroom){
                     modPatchList.add(htmlEntry);
                 }
             }
             tableHtml.append("</table>");
+            tableHtml.append("</details>");
 
-            patchListTable.append("<h2>Mods and Patches to include</h2> <table>");
+            patchListTable.append("<h2>Mods and Patches to include</h2> <details class=\"dropdown\">");
+            patchListTable.append("<summary>Show Mods and Patches to include</summary>");
+            patchListTable.append("<table>");
             patchListTable.append("<tr>");
             patchListTable.append("<th>").append("Mod Name").append("</th>");
             patchListTable.append("<th>").append("Patch for mod").append("</th>");
@@ -147,7 +159,75 @@ public class HTMLGenerator {
                 }
             }
             patchListTable.append("</table>");
+            patchListTable.append("</details>");
+            cleanroomTable.append("<h2>Cleanroom Incompatible Mods</h2> <details class=\"dropdown\">");
+            cleanroomTable.append("<summary>Show Cleanroom Incompatible Mods</summary>");
+            cleanroomTable.append("<table>");
+            cleanroomTable.append("<tr>");
+            cleanroomTable.append("<th>").append("Mod Name").append("</th>");
+            cleanroomTable.append("<th>").append("Status").append("</th>");
+            cleanroomTable.append("<th>").append("Recommended Action").append("</th>");
+            cleanroomTable.append("<th>").append("Reason").append("</th>");
+            cleanroomTable.append("</tr>");
+            for(HTMLEntry htmlEntry : htmlEntries){
+                String modName = htmlEntry.modName;
+                String statusStr = htmlEntry.status.toString();
+                String htmlClass;
+                String actionMessage;
+
+
+                switch (htmlEntry.action) {
+                    case REMOVE:
+                        actionMessage = "<p>Remove " + modName+ "</p>";
+                        break;
+                    case REPLACE:
+                        actionMessage = String.format("<p>Replace with <a href=\"%s\">%s</a></p>",
+                                htmlEntry.replacementModLink, htmlEntry.replacementModName);
+                        break;
+                    case UPGRADE:
+                        actionMessage = "<p>Upgrade to version " + htmlEntry.replacementModVersion+"</p>";
+                        break;
+                    case DOWNGRADE:
+                        actionMessage = "<p>Downgrade to version " + htmlEntry.replacementModVersion+"</p>";
+                        break;
+                    default:
+                        actionMessage = "<p>Check mod compatibility</p>";
+                        break;
+                }
+                switch(htmlEntry.status){
+                    case DEPRECATED:
+                        htmlClass = "deprecated";
+                        break;
+                    case PROBLEMATIC:
+                        htmlClass = "problematic";
+                        break;
+                    default:
+                        htmlClass = "";
+                        break;
+                }
+                if(htmlEntry.action != Action.INCLUDE && htmlEntry.isCleanroom){
+                    cleanroomTable.append("<tr>");
+                    cleanroomTable.append("<td>").append(modName).append("</td>");
+                    cleanroomTable.append("<td class=")
+                            .append(htmlClass)
+                            .append(">")
+                            .append(statusStr)
+                            .append("</td>");
+
+                    cleanroomTable.append("<td>")
+                            .append(actionMessage)
+                            .append("</td>");
+                    cleanroomTable.append("<td>")
+                            .append(MessageRegex.translateToHTML(htmlEntry.message))
+                            .append("</td>");
+                    cleanroomTable.append("</tr>");
+                }
+            }
+            cleanroomTable.append("</table>");
+            cleanroomTable.append("</details>");
         }
+
+
 
         String script = "<script>" +
                 "  function toggleTheme() { document.body.classList.toggle('light-mode'); }" +
@@ -161,7 +241,7 @@ public class HTMLGenerator {
             patchListTable = new StringBuilder();
         }
         String ConfigTableFinal="";
-        if(ConfigHandler.configAnalysisEnabled && ConfigParser.ConfigEntryIndex != 0){
+        if(ConfigHandler.configAnalysisEnabled){
             ConfigTableFinal = ConfigParser.ConfigTable.toString();
         }
         String PatchListTableFinal=patchListTable.toString();
@@ -169,7 +249,7 @@ public class HTMLGenerator {
             PatchListTableFinal="";
         }
 
-        String finalHtml = htmlHeader + tableHtml + patchListTable  + ConfigTableFinal + script + "</body></html>";
+        String finalHtml = htmlHeader + tableHtml + patchListTable + cleanroomTable + ConfigTableFinal + script + "</body></html>";
 
         try (PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(file)))) {
             writer.println(finalHtml);

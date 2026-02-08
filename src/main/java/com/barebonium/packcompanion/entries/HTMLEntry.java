@@ -17,6 +17,7 @@ public class HTMLEntry {
     public boolean isMaxVersion;
     public List<ModPatchEntry> patchList;
     public String message;
+    public boolean isCleanroom = false;
 
     public HTMLEntry(String modName,
                      Status status,
@@ -28,7 +29,8 @@ public class HTMLEntry {
                      boolean isMaxVersion,
                      String replacementModVersion,
                      List<ModPatchEntry> patchList,
-                     String message) {
+                     String message,
+                     boolean isCleanroom) {
         this.modName = modName;
         this.status = status;
         this.actualVersion = actualVersion;
@@ -40,5 +42,6 @@ public class HTMLEntry {
         this.replacementModVersion = replacementModVersion;
         this.patchList = patchList;
         this.message = message;
+        this.isCleanroom = isCleanroom;
     }
 }

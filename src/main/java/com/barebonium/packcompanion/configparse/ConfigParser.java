@@ -19,7 +19,7 @@ import java.util.Objects;
 
 public class ConfigParser {
     private static final Gson GSON = new Gson();
-    public static StringBuilder ConfigTable= new StringBuilder("<h2>Config Analysis</h2> <table>");
+    public static StringBuilder ConfigTable= new StringBuilder("<h2>Config Analysis</h2> <details class=\"dropdown\"> <summary>Show Config Analysis</summary> <table>");
     public static int ConfigEntryIndex = 0;
 
 
@@ -106,7 +106,7 @@ public class ConfigParser {
                     }
                 }
             }
-            ConfigTable.append("</table>");
+            ConfigTable.append("</table> </details>");
             writer.close();
         } catch (IOException e){
             PackCompanion.LOGGER.error("Error while trying to process config json", e);

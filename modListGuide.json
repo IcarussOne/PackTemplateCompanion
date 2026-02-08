@@ -80,6 +80,18 @@
     "message": "Outdated and breaks core functionality."
   },
   {
+    "modId": "emojicord",
+    "status": "DEPRECATED",
+    "version": "1.1.1.45",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionInclusive": false,
+    "replacementModName": "Goslingcord",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/goslingcord",
+    "action": "REPLACE",
+    "message": "Outdated and has several bugs. Use #link:[Goslincord version 2.0.0](https://www.curseforge.com/minecraft/mc-mods/goslingcord/files/6231916). (newer versions require Cleanroom)"
+  },
+  {
     "modId": "clumps",
     "status": "DEPRECATED",
     "replacementModName": "Fixeroo",

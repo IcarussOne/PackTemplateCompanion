@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.versioning.VersionParser;
 import net.minecraftforge.fml.common.versioning.VersionRange;
 
 import javax.annotation.Nullable;
+import java.io.File;
 
 public class ModHelper {
     public static boolean isModLoaded(String modId) {
@@ -33,6 +34,20 @@ public class ModHelper {
             }
         }
         return modId;
+    }
+    public static File getModSource(String modId) {
+        ModContainer container = Loader.instance().getIndexedModList().get(modId);
+        if (container != null) {
+            return container.getSource();
+        }
+        return null;
+    }
+    public static boolean isClassLoaded(String className) {
+        try {
+            return Class.forName(className) != null;
+        } catch(ClassNotFoundException e) {
+            return false;
+        }
     }
 
 

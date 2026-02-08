@@ -74,4 +74,5 @@ public class ModEntry {
 
     /** A list of mods used that patch or fix the main mod. ThaumcraftFix is an example of this. */
     public @Nullable List<ModPatchEntry> patchList;
+
 }
