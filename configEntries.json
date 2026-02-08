@@ -1,15 +1,19 @@
 [
     {
-        "modId": "advancementscreenshot",
+        "modId": "universaltweaks",
         "settings": [
             {
-                "name": "WeakSkyRendersWhitelist",
-                "field": "hellfirepvp.astralsorcery.common.data.config.Config#weakSkyRendersWhitelist",
-                "type": "list_int_p",
-                "value": "Contains:[0]",
+                "name": "[1] Advancement Screenshot Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utAdvancementScreenshotToggle",
+                "type": "boolean",
+                "value": "true",
                 "shouldMatch":"true",
-                "message":"This Setting should contain the dimension 1 (not overworld)... or not",
-                "dependencies":[]
+                "message":"The Advancement Screenshot tweaks are located in 'Universal Tweaks - Tweaks.cfg' -> 'advancement screenshot'.",
+                "dependencies":[
+                    {
+                        "modId": "advancementscreenshot"
+                    }
+                ]
             }
         ]
     },{
