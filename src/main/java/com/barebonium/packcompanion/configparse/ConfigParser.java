@@ -41,23 +41,24 @@ public class ConfigParser {
                 boolean loaded = ModHelper.isModLoaded(entry.modId, entry.version, entry.isMinVersion, entry.isMaxVersion);
 
                 if (!loaded) continue;
+                boolean dependenciesLoaded = true;
 
                 for (ConfigSetting setting : entry.settings) {
                     String modName = ModHelper.getModName(entry.modId);
-                    boolean dependenciesLoaded = false;
-                    if (!setting.dependencies.isEmpty()) {
-                        for(ModDependency dependency: setting.dependencies){
-                            boolean dependencyLoaded = ModHelper.isModLoaded(dependency.modId, dependency.version, dependency.isMinVersion, dependency.isMaxVersion);
-                            if (!dependencyLoaded){
-                                dependenciesLoaded = false;
-                                break;
-                            }else{
-                                dependenciesLoaded = true;
-                            }
-                        }
+                    for (ModDependency dependency : setting.dependencies) {
+                        boolean dependencyLoaded = ModHelper.isModLoaded(
+                                dependency.modId,
+                                dependency.version,
+                                dependency.isMinVersion,
+                                dependency.isMaxVersion
+                        );
 
-                    } else {
-                        dependenciesLoaded = true;
+                        if (!dependencyLoaded) {
+                            PackCompanion.LOGGER.info("Dependency Not Found for Mod Id: " + dependency.modId);
+                            dependenciesLoaded = false;
+                            break;
+                        }
+                        PackCompanion.LOGGER.info("Dependency found for Mod Id: " + dependency.modId);
                     }
                     if (dependenciesLoaded) {
                         if (checkConfigMatch(setting)) {

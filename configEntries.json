@@ -1,5 +1,18 @@
 [
     {
+        "modId": "advancementscreenshot",
+        "settings": [
+            {
+                "name": "WeakSkyRendersWhitelist",
+                "field": "hellfirepvp.astralsorcery.common.data.config.Config#weakSkyRendersWhitelist",
+                "type": "list_int_p",
+                "value": "Contains:[0]",
+                "shouldMatch":"true",
+                "message":"This Setting should contain the dimension 1 (not overworld)... or not",
+                "dependencies":[]
+            }
+        ]
+    },{
         "modId": "potioncore",
         "version":"1.9_for_1.12.2",
         "isMinVersion":"false",
@@ -12,7 +25,7 @@
                 "value": "true",
                 "shouldMatch":"true",
                 "message":"This Setting should be false!",
-                "dependencies":[]               
+                "dependencies":[]
             },
             {
                 "name": "FixReach",
@@ -27,18 +40,19 @@
     },
     {
         "modId": "astralsorcery",
-        "version":"1.12.2-1.10.27",
-        "isMinVersion":"false",
-        "isMaxVersion":"true",
         "settings": [
             {
                 "name": "WeakSkyRendersWhitelist",
                 "field": "hellfirepvp.astralsorcery.common.data.config.Config#weakSkyRendersWhitelist",
                 "type": "list_int_p",
                 "value": "Contains:[0]",
-                "shouldMatch":"true",
-                "message":"This Setting should contain the dimension 1 (not overworld)... or not",
-                "dependencies":[]  
+                "shouldMatch":"false",
+                "message":"This Setting should contain the dimension 0 (Overworld) as Astral Sorcery's Sky conflicts with Hyxcate",
+                "dependencies":[
+                    {
+                        "modId": "nyx"
+                    }
+                ]
             }
         ]
     }

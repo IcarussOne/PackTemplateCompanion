@@ -20,7 +20,11 @@ public class ModHelper {
     }
 
     public static boolean isModLoaded(String modId, @Nullable String version, boolean isMinVersion, boolean isMaxVersion) {
-        return Loader.isModLoaded(modId) && isSpecifiedVersion(modId, version, isMinVersion, isMaxVersion);
+        if(version == null) {
+            return Loader.isModLoaded(modId);
+        } else {
+            return Loader.isModLoaded(modId) && isSpecifiedVersion(modId, version, isMinVersion, isMaxVersion);
+        }
     }
 
     public static String getModName(String modId) {
