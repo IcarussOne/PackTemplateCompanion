@@ -13,6 +13,7 @@ public class VersionChecker {
     private static boolean modListGuideIntegrity = false;
     private static boolean configEntriesIntegrity = false;
     private static boolean cleanroomListGuideIntegrity = false;
+    private static boolean classCheckEntriesIntegrity = false;
     public static void checkAndDownload() {
         try {
             HttpURLConnection connection = (HttpURLConnection) new URL(API_URL).openConnection();
@@ -76,6 +77,20 @@ public class VersionChecker {
                                 }
                                 break;
                             }
+                            case "classCheckEntries.json":
+                            {
+                                String downloadUrl = assetObject.get("browser_download_url").getAsString();
+                                File targetFile = new File(PackCompanion.configDir, "classCheckEntries.json");
+                                if(!classCheckEntriesIntegrity){
+                                    downloadFile(downloadUrl, targetFile);
+
+                                    String ClassCheckEntriesHashCache = FileHashCalculator.getFileHash(targetFile, "MD5");
+
+                                    saveToCache("classCheckEntriesHash",ClassCheckEntriesHashCache);
+                                    classCheckEntriesIntegrity = true;
+                                }
+                                break;
+                            }
                         }
 
                     }
@@ -90,11 +105,15 @@ public class VersionChecker {
                     File targetCleanroomListGuide = new File(PackCompanion.configDir, "CleanroomListGuide.json");
                     String cleanroomListHashValue = FileHashCalculator.getFileHash(targetCleanroomListGuide, "MD5");
 
+                    File targetClassCheckingEntries = new File(PackCompanion.configDir, "CleanroomListGuide.json");
+                    String classCheckingEntriesHashValue = FileHashCalculator.getFileHash(targetClassCheckingEntries, "MD5");
+
                     checkCache(targetModListGuide, modListHashValue, "modListGuideHash", "ModListGuide", modListGuideIntegrity);
                     checkCache(targetConfigEntries, configHashValue, "configEntriesHash", "ConfigEntries", configEntriesIntegrity);
                     checkCache(targetCleanroomListGuide, cleanroomListHashValue, "CleanroomListGuideHash", "CleanroomListGuide", cleanroomListGuideIntegrity);
+                    checkCache(targetClassCheckingEntries, classCheckingEntriesHashValue, "classCheckEntriesHash", "ClassCheckEntries", classCheckEntriesIntegrity);
 
-                    if (modListGuideIntegrity && configEntriesIntegrity &&  cleanroomListGuideIntegrity) {
+                    if (modListGuideIntegrity && configEntriesIntegrity &&  cleanroomListGuideIntegrity && classCheckEntriesIntegrity) {
                         PackCompanion.LOGGER.warn("Already up to date.");
                     }
                 }
