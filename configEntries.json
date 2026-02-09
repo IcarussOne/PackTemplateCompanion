@@ -601,6 +601,19 @@
                 ]
             },
             {
+                "name": "Frustum Culling",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utDoubleConsumptionToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"`Frustum Culling` is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `world`.",
+                "dependencies":[
+                    {
+                        "modId": "frustumculling"
+                    }
+                ]
+            },
+            {
                 "name": "[09] Smart Combination",
                 "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utIESmartCombinationToggle",
                 "type": "boolean",
@@ -692,19 +705,6 @@
                 ]
             },
             {
-                "name": "[1] Arrowless Infinity",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utBowInfinityToggle",
-                "type": "boolean",
-                "value": "false",
-                "shouldMatch":"true",
-                "message":"The infinity enchantment tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `items` -> `infinity`.",
-                "dependencies":[
-                    {
-                        "modId": "bowinfinityfix"
-                    }
-                ]
-            },
-            {
                 "name": "[2] Infinity Conflict",
                 "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utInfinityEnchantmentConflicts",
                 "type": "boolean",
@@ -779,6 +779,19 @@
                 "dependencies":[
                     {
                         "modId": "ksyxis"
+                    }
+                ]
+            },
+            {
+                "name": "Frustum Culling",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utDoubleConsumptionToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"`Frustum Culling` is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `world`.",
+                "dependencies":[
+                    {
+                        "modId": "laglessmod"
                     }
                 ]
             },
