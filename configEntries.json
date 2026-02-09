@@ -239,8 +239,8 @@
             {
                 "name": "Rabbit Killer Spawning",
                 "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utRabbitKillerChance",
-                "type": "boolean",
-                "value": "false",
+                "type": "double",
+                "value": "0.0",
                 "shouldMatch":"true",
                 "message":"The `Rabbit Killer Spawning` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `entities`.",
                 "dependencies":[
