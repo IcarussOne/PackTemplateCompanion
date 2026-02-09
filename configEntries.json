@@ -6,12 +6,246 @@
                 "name": "[1] Advancement Screenshot Toggle",
                 "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utAdvancementScreenshotToggle",
                 "type": "boolean",
-                "value": "true",
+                "value": "false",
                 "shouldMatch":"true",
-                "message":"The Advancement Screenshot tweaks are located in 'Universal Tweaks - Tweaks.cfg' -> 'advancement screenshot'.",
+                "message":"The `Advancement Screenshot` tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `misc` -> `advancement screenshot`.",
                 "dependencies":[
                     {
                         "modId": "advancementscreenshot"
+                    }
+                ]
+            },
+            {
+                "name": "AI Replacement",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utAIReplacementToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"`AI Removal` and `AI Replacement` are located in `Universal Tweaks - Tweaks.cfg` -> `entities`.",
+                "dependencies":[
+                    {
+                        "modId": "aiimprovements"
+                    }
+                ]
+            },
+            {
+                "name": "AI Replacement",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utAIReplacementToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"`AI Removal` and `AI Replacement` are located in `Universal Tweaks - Tweaks.cfg` -> `entities`.",
+                "dependencies":[
+                    {
+                        "modId": "aireducer"
+                    }
+                ]
+            },
+            {
+                "name": "[1] Armor Curve Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utArmorCurveToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Armor Curve` tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `misc` -> `armor curve`.",
+                "dependencies":[
+                    {
+                        "modId": "armorcurve"
+                    }
+                ]
+            },
+            {
+                "name": "[01] Attributes Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utAttributesToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The attribute tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `entities` -> `attributes`.",
+                "dependencies":[
+                    {
+                        "modId": "attributefix"
+                    }
+                ]
+            },
+            {
+                "name": "Banner Bounding Box",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utBannerBoundingBoxToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Banner Bounding Box` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `blocks`.",
+                "dependencies":[
+                    {
+                        "modId": "bannerpatch"
+                    }
+                ]
+            },
+            {
+                "name": "Bed Obstruction Replacement",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utBedObstructionToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Bed Obstruction Replacement` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `blocks`.",
+                "dependencies":[
+                    {
+                        "modId": "bedbreakbegone"
+                    }
+                ]
+            },
+            {
+                "name": "Sleeping Time",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utSleepingTime",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Sleeping Time` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `entities` -> `sleeping`.",
+                "dependencies":[
+                    {
+                        "modId": "bedfix"
+                    }
+                ]
+            },
+            {
+                "name": "Disable Sleeping",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utDisableSleepingToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Disable Sleeping` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `entities` -> `sleeping`.",
+                "dependencies":[
+                    {
+                        "modId": "bedsaynosleep"
+                    }
+                ]
+            },
+            {
+                "name": "Better Burning",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utBBCookedToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Better Burning` tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `entities` -> `better burning`.",
+                "dependencies":[
+                    {
+                        "modId": "betterburning"
+                    }
+                ]
+            },
+            {
+                "name": "Better Ping Display",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utBetterPing",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Better Ping Display` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `misc`.",
+                "dependencies":[
+                    {
+                        "modId": "betterpingdisplay"
+                    }
+                ]
+            },
+            {
+                "name": "[1] Better Placement Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utBetterPlacementToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Better Placement` tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `blocks` -> `better placement`.",
+                "dependencies":[
+                    {
+                        "modId": "betterplacement"
+                    }
+                ]
+            },
+            {
+                "name": "[1] Chat Lines",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utChatLines",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The chat tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `misc` -> `chat`.",
+                "dependencies":[
+                    {
+                        "modId": "biggerchathistory"
+                    }
+                ]
+            },
+            {
+                "name": "[1] Block Dispenser Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utBlockDispenserToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The block dispenser tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `blocks` -> `block dispenser`.",
+                "dependencies":[
+                    {
+                        "modId": "blockdispenser"
+                    }
+                ]
+            },
+            {
+                "name": "[1] Block Overlay Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utBlockOverlayToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The block overlay tweaks are located in `Universal Tweaks - Bugfixes.cfg` -> `blocks` -> `block overlay`.",
+                "dependencies":[
+                    {
+                        "modId": "blockoverlayfix"
+                    }
+                ]
+            },
+            {
+                "name": "Glass Bottle Consumes Water Source",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utGlassBottlesConsumeWaterSource",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Glass Bottle Consumes Water Source` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `items`.",
+                "dependencies":[
+                    {
+                        "modId": "bottlefix"
+                    }
+                ]
+            },
+            {
+                "name": "Better Harvest",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utBetterHarvestToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Better Harvest` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `blocks`.",
+                "dependencies":[
+                    {
+                        "modId": "bottomsugarcanharvest"
+                    }
+                ]
+            },
+            {
+                "name": "[1] Arrowless Infinity",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utBowInfinityToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The infinity enchantment tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `items` -> `infinity`.",
+                "dependencies":[
+                    {
+                        "modId": "bowinfinityfix"
+                    }
+                ]
+            },
+            {
+                "name": "Rabbit Killer Spawning",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utBowInfinityToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Rabbit Killer Spawning` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `entities`.",
+                "dependencies":[
+                    {
+                        "modId": "breedablekillerrabbit"
                     }
                 ]
             }
