@@ -289,8 +289,8 @@
                 ]
             },
             {
-                "name": "[01] Item Entities Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utItemEntitiesToggle",
+                "name": "[14] Clear Despawn",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utIEClearDespawnToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -597,6 +597,188 @@
                 "dependencies":[
                     {
                         "modId": "framevoidpatch"
+                    }
+                ]
+            },
+            {
+                "name": "[09] Smart Combination",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utIESmartCombinationToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The item entity tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `items` -> `item entities`.",
+                "dependencies":[
+                    {
+                        "modId": "getittogetherdrops"
+                    }
+                ]
+            },
+            {
+                "name": "Max Player Health",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utMaxHealthToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Max Player Health` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `entities`.",
+                "dependencies":[
+                    {
+                        "modId": "givemebackmyhp"
+                    }
+                ]
+            },
+            {
+                "name": "[1] Player Speed Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utPlayerSpeedToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The player speed tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `player speed`.",
+                "dependencies":[
+                    {
+                        "modId": "gottagofast"
+                    }
+                ]
+            },
+            {
+                "name": "Help Command",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utHelpToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Help Command` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `misc`.",
+                "dependencies":[
+                    {
+                        "modId": "helpfixer"
+                    }
+                ]
+            },
+            {
+                "name": "Remove Recipe Book",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utRecipeBookToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Remove Recipe Book` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "dependencies":[
+                    {
+                        "modId": "hiddenrecipebook"
+                    }
+                ]
+            },
+            {
+                "name": "No Saddled Wandering",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utSaddledWanderingToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `No Saddled Wandering` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `entities` -> `misc`.",
+                "dependencies":[
+                    {
+                        "modId": "horsestandstill"
+                    }
+                ]
+            },
+            {
+                "name": "[5] Disable Tutorial Toasts",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utToastControlTutorialToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The toast control tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `entities` -> `misc` -> `toast control`.",
+                "dependencies":[
+                    {
+                        "modId": "ikwid"
+                    }
+                ]
+            },
+            {
+                "name": "[1] Arrowless Infinity",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utBowInfinityToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The infinity enchantment tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `items` -> `infinity`.",
+                "dependencies":[
+                    {
+                        "modId": "bowinfinityfix"
+                    }
+                ]
+            },
+            {
+                "name": "[2] Infinity Conflict",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utInfinityEnchantmentConflicts",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The infinity enchantment tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `items` -> `infinity`.",
+                "dependencies":[
+                    {
+                        "modId": "infwithmend"
+                    }
+                ]
+            },
+            {
+                "name": "[3] Infinity Affects All Arrows",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utAllArrowsAreInfinite",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The infinity enchantment tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `items` -> `infinity`.",
+                "dependencies":[
+                    {
+                        "modId": "infinityworkswithallarrows"
+                    }
+                ]
+            },
+            {
+                "name": "Disable Sleeping",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utDisableSleepingToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Disable Sleeping` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `sleeping`.",
+                "dependencies":[
+                    {
+                        "modId": "insomniac"
+                    }
+                ]
+            },
+            {
+                "name": "[01] Pickup Notification Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utPickupNotificationToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The pickup notification tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc` -> `pickup notification`.",
+                "dependencies":[
+                    {
+                        "modId": "inventoryspam"
+                    }
+                ]
+            },
+            {
+                "name": "Prevent Keybinds from Overflowing Screen",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utPreventKeybindingEntryOverflow",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Prevent Keybinds from Overflowing Screen` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "dependencies":[
+                    {
+                        "modId": "keydescfix"
+                    }
+                ]
+            },
+            {
+                "name": "Spawn Chunks",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utSpawnChunksGenToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The spawn chunk tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `world` -> `spawn chunks`.",
+                "dependencies":[
+                    {
+                        "modId": "ksyxis"
                     }
                 ]
             }
