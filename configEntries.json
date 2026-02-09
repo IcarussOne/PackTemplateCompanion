@@ -248,6 +248,357 @@
                         "modId": "breedablekillerrabbit"
                     }
                 ]
+            },
+            {
+                "name": "[1] Chicken Shedding",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utChickenSheddingToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Chicken Shedding` tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `entities` -> `chicken shedding`.",
+                "dependencies":[
+                    {
+                        "modId": "chickensshed"
+                    }
+                ]
+            },
+            {
+                "name": "[01] Item Entities Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utItemEntitiesToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The item entity tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `items` -> `item entities`.",
+                "dependencies":[
+                    {
+                        "modId": "cie"
+                    }
+                ]
+            },
+            {
+                "name": "[01] No Attack Cooldown Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utAttackCooldownToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The attack cooldown tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `items` -> `attack cooldown`.",
+                "dependencies":[
+                    {
+                        "modId": "classiccombat"
+                    }
+                ]
+            },
+            {
+                "name": "[01] Item Entities Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utItemEntitiesToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The item entity flash tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `items` -> `item entities`.",
+                "dependencies":[
+                    {
+                        "modId": "cleardespawn"
+                    }
+                ]
+            },
+            {
+                "name": "Sugar Cane Size",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utSugarCaneSize",
+                "type": "int",
+                "value": "3",
+                "shouldMatch":"true",
+                "message":"The `Sugar Cane Size` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `blocks`.",
+                "dependencies":[
+                    {
+                        "modId": "configurablecane"
+                    }
+                ]
+            },
+            {
+                "name": "[01] Item Entities Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utItemEntitiesToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The item entity tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `items` -> `item entities`.",
+                "dependencies":[
+                    {
+                        "modId": "configurabledespawntimer"
+                    }
+                ]
+            },
+            {
+                "name": "[01] Music Control Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utMusicControlToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The music tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `misc` -> `music`.",
+                "dependencies":[
+                    {
+                        "modId": "continousmusic"
+                    }
+                ]
+            },
+            {
+                "name": "[01] Creeper Confetti Chance",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utCreeperConfettiChance",
+                "type": "double",
+                "value": "0.0",
+                "shouldMatch":"true",
+                "message":"The `Creeper Confetti` tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `entities` -> `creeper confetti`.",
+                "dependencies":[
+                    {
+                        "modId": "creeperconfetti"
+                    }
+                ]
+            },
+            {
+                "name": "Damage Tilt",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utDamageTiltToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Damage Tilt` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `misc`.",
+                "dependencies":[
+                    {
+                        "modId": "damagetilt"
+                    }
+                ]
+            },
+            {
+                "name": "No Redstone Lighting",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utRedstoneLightingToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `No Redstone Lighting` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `performance`.",
+                "dependencies":[
+                    {
+                        "modId": "darkstone"
+                    }
+                ]
+            },
+            {
+                "name": "LAN Server Properties",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utLANServerProperties",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `LAN Server Properties` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `misc`.",
+                "dependencies":[
+                    {
+                        "modId": "defaultlanport"
+                    }
+                ]
+            },
+            {
+                "name": "Entity UUID",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utEntityUUIDToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Entity UUID` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `entities`.",
+                "dependencies":[
+                    {
+                        "modId": "deuf"
+                    }
+                ]
+            },
+            {
+                "name": "Hopper Bounding Box",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utDietHopperToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Hopper Bounding Box` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `blocks`.",
+                "dependencies":[
+                    {
+                        "modId": "diethopper"
+                    }
+                ]
+            },
+            {
+                "name": "Load Sounds",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utLoadSoundMode",
+                "type": "string",
+                "value": "NOTHING",
+                "shouldMatch":"true",
+                "message":"The load sounds tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `misc` -> `load sounds`.",
+                "dependencies":[
+                    {
+                        "modId": "ding"
+                    }
+                ]
+            },
+            {
+                "name": "Render Range",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigMods#utSDRenderRange",
+                "type": "int",
+                "value": "0",
+                "shouldMatch":"true",
+                "message":"The `Storage Drawers` tweaks are located in `Universal Tweaks - Mod Integration.cfg` -> `general` -> `storage drawers`.",
+                "dependencies":[
+                    {
+                        "modId": "drawerfps"
+                    }
+                ]
+            },
+            {
+                "name": "[1] Easy Breeding Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utEasyBreedingToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Easy Breeding` tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `entities` -> `easy breeding`.",
+                "dependencies":[
+                    {
+                        "modId": "easybreeding"
+                    }
+                ]
+            },
+            {
+                "name": "Toggle Cheats Button",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utToggleCheatsToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Toggle Cheats Button` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `misc`.",
+                "dependencies":[
+                    {
+                        "modId": "enablecheats"
+                    }
+                ]
+            },
+            {
+                "name": "End Portal Parallax",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utEndPortalParallaxToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `End Portal Parallax` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `misc`.",
+                "dependencies":[
+                    {
+                        "modId": "endportalparallax"
+                    }
+                ]
+            },
+            {
+                "name": "[1] Entity Desync Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utEntityDesyncToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Entity Desync` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `entities` -> `entity desync`.",
+                "dependencies":[
+                    {
+                        "modId": "entity_desync_fix"
+                    }
+                ]
+            },
+            {
+                "name": "Preserved Blocks Fix",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigMods#utEBPreservedBlocksToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"`The Erebus` fixes are located in `Universal Tweaks - Mod Integration.cfg` -> `general` -> `the erebus`.",
+                "dependencies":[
+                    {
+                        "modId": "erebusfix"
+                    }
+                ]
+            },
+            {
+                "name": "Elytra Deployment & Landing",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utElytraDeploymentLandingToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Elytra Deployment & Landing` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `entities`.",
+                "dependencies":[
+                    {
+                        "modId": "eyltrafix"
+                    }
+                ]
+            },
+            {
+                "name": "Fast Leaf Decay",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utLeafDecayToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Fast Leaf Decay` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `blocks`.",
+                "dependencies":[
+                    {
+                        "modId": "fastleafdecay"
+                    }
+                ]
+            },
+            {
+                "name": "Fence/Wall Jump",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utFenceWallJumpToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Fence/Wall Jump` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `blocks`.",
+                "dependencies":[
+                    {
+                        "modId": "fencejumper"
+                    }
+                ]
+            },
+            {
+                "name": "[1] Finite Water Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utFiniteWaterToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The finite water tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `blocks` -> `finite water`.",
+                "dependencies":[
+                    {
+                        "modId": "finite-fluid-control"
+                    }
+                ]
+            },
+            {
+                "name": "Double Consumption",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utDoubleConsumptionToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Double Consumption` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `entities`.",
+                "dependencies":[
+                    {
+                        "modId": "foodfix"
+                    }
+                ]
+            },
+            {
+                "name": "[1] Void Teleport Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utVoidTeleportToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Void Teleport` tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `entities` -> `void teleport`.",
+                "dependencies":[
+                    {
+                        "modId": "forgivingvoid"
+                    }
+                ]
+            },
+            {
+                "name": "Item Frame Void",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utItemFrameVoidToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Item Frame Void` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `blocks`.",
+                "dependencies":[
+                    {
+                        "modId": "framevoidpatch"
+                    }
+                ]
             }
         ]
     },{
