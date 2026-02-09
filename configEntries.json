@@ -602,7 +602,7 @@
             },
             {
                 "name": "Frustum Culling",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utDoubleConsumptionToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utFrustumCullingToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -784,7 +784,7 @@
             },
             {
                 "name": "Frustum Culling",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utDoubleConsumptionToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utFrustumCullingToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",

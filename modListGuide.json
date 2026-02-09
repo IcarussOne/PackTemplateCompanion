@@ -102,6 +102,12 @@
     "message": "Merged and rewritten in #link:[CensoredASM](https://www.curseforge.com/minecraft/mc-mods/lolasm)."
   },
   {
+    "modId": "frustumculling",
+    "status": "DEPRECATED",
+    "action": "REMOVE",
+    "message": "Will cause incompatibilities with no performance gain. #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks) already has its own Frustum Culling tweak."
+  },
+  {
     "modId": "fpsboost",
     "status": "DEPRECATED",
     "action": "REMOVE",
@@ -112,6 +118,12 @@
     "status": "DEPRECATED",
     "action": "REMOVE",
     "message": "Provides no benefit."
+  },
+  {
+    "modId": "laglessmod",
+    "status": "DEPRECATED",
+    "action": "REMOVE",
+    "message": "Will cause incompatibilities with no performance gain. #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks) already has its own Frustum Culling tweak."
   },
   {
     "modId": "multithreadednoise",
