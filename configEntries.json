@@ -1438,7 +1438,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The void fog tweaks are located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `blocks` -> `finite water`.",
+                "message":"The finite water tweaks are located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `blocks` -> `finite water`.",
                 "dependencies":[
                     {
                         "modId": "watercontrolextreme"
