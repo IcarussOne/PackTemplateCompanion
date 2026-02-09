@@ -97,7 +97,7 @@
                 "name": "Sleeping Time",
                 "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utSleepingTime",
                 "type": "boolean",
-                "value": "false",
+                "value": "-1",
                 "shouldMatch":"true",
                 "message":"The `Sleeping Time` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `entities` -> `sleeping`.",
                 "dependencies":[
@@ -161,8 +161,8 @@
             {
                 "name": "[1] Chat Lines",
                 "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utChatLines",
-                "type": "boolean",
-                "value": "false",
+                "type": "int",
+                "value": "100",
                 "shouldMatch":"true",
                 "message":"The chat tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `misc` -> `chat`.",
                 "dependencies":[
@@ -238,7 +238,7 @@
             },
             {
                 "name": "Rabbit Killer Spawning",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utBowInfinityToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utRabbitKillerChance",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
