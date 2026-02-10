@@ -113,7 +113,7 @@ public class VersionChecker {
                     checkCache(targetCleanroomListGuide, cleanroomListHashValue, "CleanroomListGuideHash", "CleanroomListGuide", cleanroomListGuideIntegrity);
                     checkCache(targetClassCheckingEntries, classCheckingEntriesHashValue, "classCheckEntriesHash", "ClassCheckEntries", classCheckEntriesIntegrity);
 
-                    if (modListGuideIntegrity && configEntriesIntegrity &&  cleanroomListGuideIntegrity && classCheckEntriesIntegrity) {
+                    if (modListGuideIntegrity && configEntriesIntegrity && cleanroomListGuideIntegrity && classCheckEntriesIntegrity) {
                         PackCompanion.LOGGER.warn("Already up to date.");
                     }
                 }

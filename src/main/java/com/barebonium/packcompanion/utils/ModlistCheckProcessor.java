@@ -100,7 +100,7 @@ public class ModlistCheckProcessor {
             List<ModEntry> entries = GSON.fromJson(reader, new TypeToken<List<ModEntry>>(){}.getType());
             List<ModEntry> cleanRoomEntries = GSON.fromJson(cleanRoomReader, new TypeToken<List<ModEntry>>(){}.getType());
             List<ClassCheckEntry> classCheckEntries = GSON.fromJson(classCheckReader, new TypeToken<List<ClassCheckEntry>>(){}.getType());
-            if (ConfigHandler.mdFileReportEnabled){
+            if (ConfigHandler.enableReportMarkdown){
                 writer.println("# Pack Companion Report");
                 writer.println("");
                 writer.printf("### Generated on: %s%n",timeStamp);
@@ -110,7 +110,7 @@ public class ModlistCheckProcessor {
                 PackCompanion.LOGGER.info("There are no Mods in the modListGuide");
             }
             else {
-                if(ConfigHandler.modAnalysisEnabled && ConfigHandler.mdFileReportEnabled){
+                if(ConfigHandler.enableModAnalysis && ConfigHandler.enableReportMarkdown){
                     writer.println("## Mod Analysis");
                     writer.println("| Mod Name | Status | Recommended Action | Reason |");
                     writer.println("| :--- | :--- | :--- | :--- |");
@@ -241,7 +241,7 @@ public class ModlistCheckProcessor {
                         }
                     }
                 }
-                if(ConfigHandler.configAnalysisEnabled && ConfigHandler.mdFileReportEnabled){
+                if(ConfigHandler.enableConfigAnalysis && ConfigHandler.enableReportMarkdown){
                     writer.println("## Config Analysis");
                     writer.println("| Mod Name | Config Name | Reason |");
                     writer.println("| :--- | :--- | :--- |");
@@ -259,7 +259,7 @@ public class ModlistCheckProcessor {
             if(isSuccess) {
                 File htmlOutput = new File(logDir, fileName.replace(".md", ".html"));
                 GlobalOutputLog = htmlOutput;
-                if(ConfigHandler.htmlFileReportEnabled){
+                if(ConfigHandler.enableReportHtml){
                     HTMLGenerator.saveAsHtml(htmlEntries, htmlOutput, timeStamp);
                 }
             }

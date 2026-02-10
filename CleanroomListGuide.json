@@ -6,30 +6,6 @@
     "message": "Binary patching, incompatible."
   },
   {
-    "modId": "rawinput",
-    "status": "DEPRECATED",
-    "action": "REMOVE",
-    "message": "Already included in Cleanroom."
-  },
-  {
-    "modId": "serializationisbad",
-    "status": "DEPRECATED",
-    "action": "REMOVE",
-    "message": "Modern Java versions fix the issue this mod solves."
-  },
-  {
-    "modId": "randomportals",
-    "status": "PROBLEMATIC",
-    "version": "1.12.2-1.8.2.4",
-    "isMinVersion": true,
-    "isMaxVersion": false,
-    "isVersionInclusive": false,
-    "replacementModName": "Clean Portals",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/clean-portals-randomportals-cleanroom-edition",
-    "action": "REPLACE",
-    "message": "Does not work with Cleanroom Launcher. Use the Cleanroom Edition replacement."
-  },
-  {
     "modId": "blockcraftery",
     "version": "1.2.0",
     "isMinVersion": true,
@@ -40,18 +16,6 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/blockcraftery-refurbished",
     "action": "REPLACE",
     "message": "Outdated and has several bugs. Use #link:[Blockcraftery: Refurbished](https://www.curseforge.com/minecraft/mc-mods/blockcraftery-refurbished)."
-  },
-  {
-    "modId": "codechickenlib",
-    "status": "DEPRECATED",
-    "version": "3.2.3.358",
-    "isMinVersion": true,
-    "isMaxVersion": false,
-    "isVersionInclusive": false,
-    "replacementModName": "CodeChicken Lib CRE",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/codechicken-lib-cre",
-    "action": "REPLACE",
-    "message": "Outdated and has several bugs. Use #link:[CodeChicken Lib CRE](https://www.curseforge.com/minecraft/mc-mods/codechicken-lib-cre)."
   },
   {
     "modId": "charset",
@@ -66,6 +30,18 @@
     "message": "Outdated and has several bugs. Use #link:[Charset CRE](https://www.curseforge.com/minecraft/mc-mods/charset-cre)."
   },
   {
+    "modId": "codechickenlib",
+    "status": "DEPRECATED",
+    "version": "3.2.3.358",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionInclusive": false,
+    "replacementModName": "CodeChicken Lib CRE",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/codechicken-lib-cre",
+    "action": "REPLACE",
+    "message": "Outdated and has several bugs. Use #link:[CodeChicken Lib CRE](https://www.curseforge.com/minecraft/mc-mods/codechicken-lib-cre)."
+  },
+  {
     "modId": "geckolib3",
     "version": "3.0.30",
     "isMinVersion": true,
@@ -76,6 +52,30 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/saurialib",
     "action": "REPLACE",
     "message": "Outdated and has several bugs. SauriaLib remains compatible with existing mods that depend on GeckoLib 3. Use #link:[SauriaLib](https://www.curseforge.com/minecraft/mc-mods/saurialib)."
+  },
+  {
+    "modId": "randomportals",
+    "status": "PROBLEMATIC",
+    "version": "1.12.2-1.8.2.4",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionInclusive": false,
+    "replacementModName": "Clean Portals",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/clean-portals-randomportals-cleanroom-edition",
+    "action": "REPLACE",
+    "message": "Does not work with Cleanroom Launcher. Use the Cleanroom Edition replacement."
+  },
+  {
+    "modId": "rawinput",
+    "status": "DEPRECATED",
+    "action": "REMOVE",
+    "message": "Already included in Cleanroom."
+  },
+  {
+    "modId": "serializationisbad",
+    "status": "DEPRECATED",
+    "action": "REMOVE",
+    "message": "Modern Java versions fix the issue this mod solves."
   },
   {
     "modId": "soundfilters",

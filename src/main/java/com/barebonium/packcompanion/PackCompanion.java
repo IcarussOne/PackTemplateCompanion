@@ -9,7 +9,7 @@ import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.event.ClickEvent;
 import net.minecraft.util.text.event.HoverEvent;
-import net.minecraftforge.common.config.Config;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -20,8 +20,15 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 
-@Mod(modid = Tags.MOD_ID, name = Tags.MOD_NAME, version = Tags.VERSION)
+@Mod(
+        modid = PackCompanion.MOD_ID,
+        name = PackCompanion.MOD_NAME,
+        version = PackCompanion.MOD_VERSION
+)
 public class PackCompanion {
+    public static final String MOD_ID = Tags.MOD_ID;
+    public static final String MOD_NAME = Tags.MOD_NAME;
+    public static final String MOD_VERSION = Tags.VERSION;
 
     public static final Logger LOGGER = LogManager.getLogger(Tags.MOD_NAME);
     public static File configDir;
@@ -37,44 +44,16 @@ public class PackCompanion {
     public void preInit(FMLPreInitializationEvent event) {
         baseConfig = event.getModConfigurationDirectory();
         gameDir = event.getModConfigurationDirectory().getParentFile();
-
         configDir = new File(baseConfig, "packCompanion");
-    }
-    @SubscribeEvent
-    public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-
-        if(ConfigHandler.packCompanionEnabled && ConfigHandler.globalOnLoginMessageEnabled){
-            ITextComponent textComponent = new TextComponentString(
-                    TextFormatting.GOLD + "[Pack Companion] " + TextFormatting.GRAY + "Modlist analysis complete. Check your logs folder for the compatibility report!"
-            );
-
-            ITextComponent textComponentLink = new TextComponentString(TextFormatting.GOLD + "[Pack Companion] " + TextFormatting.GRAY + "Please click ");
-            ITextComponent clickableHere = new TextComponentString(TextFormatting.RED + "[ HERE ]");
-
-            File reportFile = ModlistCheckProcessor.HTMLReportFile;
-
-            clickableHere.getStyle().setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_FILE, reportFile.getAbsolutePath()));
-            clickableHere.getStyle().setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new TextComponentString("Click to open report in your browser")));
-
-            textComponentLink.appendSibling(clickableHere);
-            textComponentLink.appendText(TextFormatting.GRAY + " to access the Web version of your report.");
-
-            if(ConfigHandler.mdOnLoginMessageEnabled){
-                event.player.sendMessage(textComponent);
-            }
-
-            if(ConfigHandler.htmlOnLoginMessageEnabled){
-                event.player.sendMessage(textComponentLink);
-            }
+        if(ConfigHandler.enableLoginMessage) {
+            MinecraftForge.EVENT_BUS.register(this);
         }
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event){
-
         if(ConfigHandler.packCompanionEnabled){
             ConfigInitialiser.initialise(baseConfig);
-            net.minecraftforge.common.MinecraftForge.EVENT_BUS.register(this);
             if (!ConfigHandler.debugMode) {
                 VersionChecker.checkAndDownload();
             }
@@ -84,6 +63,27 @@ public class PackCompanion {
         }
     }
 
+    @SubscribeEvent
+    public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
+        if(ConfigHandler.packCompanionEnabled && ConfigHandler.enableLoginMessage){
+            File reportFile = ModlistCheckProcessor.HTMLReportFile;
+            if(reportFile != null) {
+                ITextComponent textComponent = new TextComponentString(
+                        TextFormatting.GOLD + "[Pack Companion] " + TextFormatting.GRAY + "Modlist analysis complete. Check your logs folder for the compatibility report!"
+                );
 
+                ITextComponent textComponentLink = new TextComponentString(TextFormatting.GOLD + "[Pack Companion] " + TextFormatting.GRAY + "Please click ");
+                ITextComponent clickableHere = new TextComponentString(TextFormatting.RED + "[ HERE ]");
 
+                clickableHere.getStyle().setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_FILE, reportFile.getAbsolutePath()));
+                clickableHere.getStyle().setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new TextComponentString("Click to open report in your browser")));
+
+                textComponentLink.appendSibling(clickableHere);
+                textComponentLink.appendText(TextFormatting.GRAY + " to access the Web version of your report.");
+
+                event.player.sendMessage(textComponent);
+                event.player.sendMessage(textComponentLink);
+            }
+        }
+    }
 }
