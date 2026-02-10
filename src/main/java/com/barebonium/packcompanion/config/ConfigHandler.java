@@ -14,8 +14,6 @@ public class ConfigHandler {
     @Config.Comment("Enable PackCompanion Features")
     public static boolean packCompanionEnabled = true;
 
-
-
     @Config.RequiresMcRestart
     @Config.Name("Analyze Config Settings")
     @Config.Comment("Enable PackCompanion Config Analysis")
@@ -26,49 +24,25 @@ public class ConfigHandler {
     @Config.Comment("Enable PackCompanion Mod Analysis")
     public static boolean enableModAnalysis = true;
 
-
-
-
-
     @Config.RequiresMcRestart
     @Config.Name("Enable HTML Report")
-    @Config.Comment("Save PackCompanion Report as an HTML file")
+    @Config.Comment("Enables the PackCompanion HTML format output file.")
     public static boolean enableReportHtml = true;
 
     @Config.RequiresMcRestart
     @Config.Name("Enable Markdown Report")
-    @Config.Comment("Save PackCompanion Report as a MarkdownFile")
+    @Config.Comment("Enables the PackCompanion markdown format output file.")
     public static boolean enableReportMarkdown = true;
 
-
-
-
-
     @Config.RequiresMcRestart
-    @Config.Comment("Enable PackCompanion login messages")
+    @Config.Name("Enable Login Message")
+    @Config.Comment("Enables the PackCompanion login message.")
     public static boolean enableLoginMessage = true;
 
     @Config.RequiresMcRestart
-    @Config.Comment("Enable PackCompanion HTML login message")
-    public static boolean htmlOnLoginMessageEnabled = true;
-
-    @Config.RequiresMcRestart
-    @Config.Comment("Enable PackCompanion Markdown login message")
-    public static boolean mdOnLoginMessageEnabled = true;
-
-
-
-
-    @Config.RequiresMcRestart
     @Config.Name("Enable Debug Mode")
-    @Config.Comment("Enable master list version check debug mode.")
+    @Config.Comment("Enables debug mode, preventing the master list from updating from the remote repository.")
     public static boolean debugMode = false;
-
-
-
-
-
-
 
     @Mod.EventBusSubscriber(modid = PackCompanion.MOD_ID)
     public static class ConfigChangeListener {

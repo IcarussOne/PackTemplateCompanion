@@ -66,29 +66,23 @@ public class PackCompanion {
     @SubscribeEvent
     public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
         if(ConfigHandler.packCompanionEnabled && ConfigHandler.enableLoginMessage){
-            ITextComponent textComponent = new TextComponentString(
-                    TextFormatting.GOLD + "[Pack Companion] " + TextFormatting.GRAY + "Modlist analysis complete. Check your logs folder for the compatibility report!"
-            );
-
-            ITextComponent textComponentLink = new TextComponentString(TextFormatting.GOLD + "[Pack Companion] " + TextFormatting.GRAY + "Please click ");
-            ITextComponent clickableHere = new TextComponentString(TextFormatting.RED + "[ HERE ]");
-
             File reportFile = ModlistCheckProcessor.HTMLReportFile;
-
             if(reportFile != null) {
+                ITextComponent textComponent = new TextComponentString(
+                        TextFormatting.GOLD + "[Pack Companion] " + TextFormatting.GRAY + "Modlist analysis complete. Check your logs folder for the compatibility report!"
+                );
+
+                ITextComponent textComponentLink = new TextComponentString(TextFormatting.GOLD + "[Pack Companion] " + TextFormatting.GRAY + "Please click ");
+                ITextComponent clickableHere = new TextComponentString(TextFormatting.RED + "[ HERE ]");
+
                 clickableHere.getStyle().setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_FILE, reportFile.getAbsolutePath()));
                 clickableHere.getStyle().setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new TextComponentString("Click to open report in your browser")));
 
                 textComponentLink.appendSibling(clickableHere);
                 textComponentLink.appendText(TextFormatting.GRAY + " to access the Web version of your report.");
 
-                if (ConfigHandler.mdOnLoginMessageEnabled) {
-                    event.player.sendMessage(textComponent);
-                }
-
-                if (ConfigHandler.htmlOnLoginMessageEnabled) {
-                    event.player.sendMessage(textComponentLink);
-                }
+                event.player.sendMessage(textComponent);
+                event.player.sendMessage(textComponentLink);
             }
         }
     }
