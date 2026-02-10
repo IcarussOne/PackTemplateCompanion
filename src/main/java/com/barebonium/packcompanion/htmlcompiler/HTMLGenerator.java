@@ -1,4 +1,4 @@
-package com.barebonium.packcompanion.rendermd;
+package com.barebonium.packcompanion.htmlcompiler;
 
 
 import com.barebonium.packcompanion.PackCompanion;

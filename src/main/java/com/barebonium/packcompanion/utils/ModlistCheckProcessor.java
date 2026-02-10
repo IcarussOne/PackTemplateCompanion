@@ -8,7 +8,7 @@ import com.barebonium.packcompanion.entries.ModEntry;
 import com.barebonium.packcompanion.entries.ModPatchEntry;
 import com.barebonium.packcompanion.enumstates.Action;
 import com.barebonium.packcompanion.enumstates.Verification;
-import com.barebonium.packcompanion.rendermd.HTMLGenerator;
+import com.barebonium.packcompanion.htmlcompiler.HTMLGenerator;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
@@ -73,33 +73,33 @@ public class ModlistCheckProcessor {
         String timeStampFile = new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss").format(new Date());
         String fileName = "companionOutput-" + timeStampFile + ".md";
 
-        File modListGuide = new File(configDir, "packCompanion/modListGuide.json");
-        if (!modListGuide.exists()) {
-            PackCompanion.LOGGER.info("modList JSON could not be fetched at {}", modListGuide.getPath());
+        File masterlistModsFile = new File(configDir, "packCompanion/masterlist_mods.json");
+        if (!masterlistModsFile.exists()) {
+            PackCompanion.LOGGER.info("modList JSON could not be fetched at {}", masterlistModsFile.getPath());
         }
 
         File logDir = new File(configDir, "packCompanion/output");
         if (!logDir.exists()) logDir.mkdirs();
         File outputLog = new File(logDir, fileName);
 
-        File classCheckfile = new File(configDir, "packCompanion/classCheckEntries.json");
-        File cleanroomFile = new File(configDir, "packCompanion/CleanroomListGuide.json");
-        if (!classCheckfile.exists()) {
-            PackCompanion.LOGGER.info("modList JSON could not be fetched at {}", classCheckfile.getPath());
+        File masterlistModsClassesFile = new File(configDir, "packCompanion/masterlist_mods_classes.json");
+        File masterlistModsCleanroomFile = new File(configDir, "packCompanion/masterlist_mods_cleanroom.json");
+        if (!masterlistModsClassesFile.exists()) {
+            PackCompanion.LOGGER.info("modList JSON could not be fetched at {}", masterlistModsClassesFile.getPath());
         }
 
         ArrayList<HTMLEntry> htmlEntries = new ArrayList<>();
         try{
-            JsonReader reader = new JsonReader(new FileReader(modListGuide));
-            JsonReader classCheckReader = new JsonReader(new FileReader(classCheckfile));
-            JsonReader cleanRoomReader = new JsonReader(new FileReader(cleanroomFile));
+            JsonReader reader = new JsonReader(new FileReader(masterlistModsFile));
+            JsonReader masterListClassReader = new JsonReader(new FileReader(masterlistModsClassesFile));
+            JsonReader masterListCleanroomReader = new JsonReader(new FileReader(masterlistModsCleanroomFile));
             PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(outputLog)));
 
 
 
             List<ModEntry> entries = GSON.fromJson(reader, new TypeToken<List<ModEntry>>(){}.getType());
-            List<ModEntry> cleanRoomEntries = GSON.fromJson(cleanRoomReader, new TypeToken<List<ModEntry>>(){}.getType());
-            List<ClassCheckEntry> classCheckEntries = GSON.fromJson(classCheckReader, new TypeToken<List<ClassCheckEntry>>(){}.getType());
+            List<ModEntry> cleanroomEntries = GSON.fromJson(masterListCleanroomReader, new TypeToken<List<ModEntry>>(){}.getType());
+            List<ClassCheckEntry> classCheckEntries = GSON.fromJson(masterListClassReader, new TypeToken<List<ClassCheckEntry>>(){}.getType());
             if (ConfigHandler.enableReportMarkdown){
                 writer.println("# Pack Companion Report");
                 writer.println("");
@@ -107,14 +107,14 @@ public class ModlistCheckProcessor {
                 writer.println("");
             }
             if(entries == null || entries.isEmpty()) {
-                PackCompanion.LOGGER.info("There are no Mods in the modListGuide");
+                PackCompanion.LOGGER.info("There are no Mods in the masterlist_mods file");
             }
             else {
                 if(ConfigHandler.enableModAnalysis && ConfigHandler.enableReportMarkdown){
                     writer.println("## Mod Analysis");
                     writer.println("| Mod Name | Status | Recommended Action | Reason |");
                     writer.println("| :--- | :--- | :--- | :--- |");
-                    List<ModEntry> ModPatchList = new ArrayList<>();
+                    List<ModEntry> modPatchList = new ArrayList<>();
                     List<ClassCheckEntry> cleanroomClassCheckList = new ArrayList<>();
                     for (ModEntry entry : entries) {
 
@@ -125,7 +125,7 @@ public class ModlistCheckProcessor {
                             if (entry.action != Action.INCLUDE){
                                 writer.printf("| %s | %s | %s | %s |%n", modName, statusStr, actionMessage, MessageRegex.translateToMarkdown(entry.message));
                             } else {
-                                ModPatchList.add(entry);
+                                modPatchList.add(entry);
                             }
                             htmlEntries.add(new HTMLEntry(
                                     modName,
@@ -165,7 +165,7 @@ public class ModlistCheckProcessor {
                                 classCheckEntryConverted.patchList = entry.patchList;
                                 classCheckEntryConverted.message = entry.message;
 
-                                ModPatchList.add(classCheckEntryConverted);
+                                modPatchList.add(classCheckEntryConverted);
                             }
                             htmlEntries.add(new HTMLEntry(
                                     modName,
@@ -188,9 +188,10 @@ public class ModlistCheckProcessor {
                     writer.println("## Mods and Patches to include");
                     writer.println("| Mod Name | Patch for | Description |");
                     writer.println("| :--- | :--- | :--- |");
-                    for(ModEntry entry : ModPatchList) {
+                    for(ModEntry entry : modPatchList) {
                         String modName = ModHelper.getModName(entry.modId);
 
+                        assert entry.patchList != null;
                         for (ModPatchEntry patchEntry : entry.patchList){
                             boolean loaded = ModHelper.isModLoaded(patchEntry.modId);
                             if (!loaded){
@@ -215,7 +216,7 @@ public class ModlistCheckProcessor {
                             }
                         }
                     }
-                    for (ModEntry entry : cleanRoomEntries) {
+                    for (ModEntry entry : cleanroomEntries) {
 
                         if (shouldGenerateEntry(entry)) {
                             String modName = ModHelper.getModName(entry.modId);
@@ -245,7 +246,7 @@ public class ModlistCheckProcessor {
                     writer.println("## Config Analysis");
                     writer.println("| Mod Name | Config Name | Reason |");
                     writer.println("| :--- | :--- | :--- |");
-                    File configEntries = new File(Minecraft.getMinecraft().gameDir, "config/packCompanion/configEntries.json");
+                    File configEntries = new File(Minecraft.getMinecraft().gameDir, "config/packCompanion/masterlist_configs.json");
                     processConfigJsonToOutput(configEntries, outputLog);
                 }
                 isSuccess = true;

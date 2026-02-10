@@ -34,10 +34,10 @@ public class VersionChecker {
                         JsonObject assetObject = asset.getAsJsonObject();
                         String filename = assetObject.get("name").getAsString();
                         switch (filename) {
-                            case "modListGuide.json":
+                            case "masterlist_mods.json":
                             {
                                 String downloadUrl = assetObject.get("browser_download_url").getAsString();
-                                File targetFile = new File(PackCompanion.configDir, "modListGuide.json");
+                                File targetFile = new File(PackCompanion.configDir, "masterlist_mods.json");
                                 if(!modListGuideIntegrity){
                                     downloadFile(downloadUrl, targetFile);
 
@@ -49,10 +49,10 @@ public class VersionChecker {
                                 }
                                 break;
                             }
-                            case "configEntries.json":
+                            case "masterlist_configs.json":
                             {
                                 String downloadUrl = assetObject.get("browser_download_url").getAsString();
-                                File targetFile = new File(PackCompanion.configDir, "configEntries.json");
+                                File targetFile = new File(PackCompanion.configDir, "masterlist_configs.json");
                                 if(!configEntriesIntegrity){
                                     downloadFile(downloadUrl, targetFile);
 
@@ -63,10 +63,10 @@ public class VersionChecker {
                                 }
                                 break;
                             }
-                            case "CleanroomListGuide.json":
+                            case "masterlist_mods_cleanroom.json":
                             {
                                 String downloadUrl = assetObject.get("browser_download_url").getAsString();
-                                File targetFile = new File(PackCompanion.configDir, "CleanroomListGuide.json");
+                                File targetFile = new File(PackCompanion.configDir, "masterlist_mods_cleanroom.json");
                                 if(!cleanroomListGuideIntegrity){
                                     downloadFile(downloadUrl, targetFile);
 
@@ -77,10 +77,10 @@ public class VersionChecker {
                                 }
                                 break;
                             }
-                            case "classCheckEntries.json":
+                            case "masterlist_mods_classes.json":
                             {
                                 String downloadUrl = assetObject.get("browser_download_url").getAsString();
-                                File targetFile = new File(PackCompanion.configDir, "classCheckEntries.json");
+                                File targetFile = new File(PackCompanion.configDir, "masterlist_mods_classes.json");
                                 if(!classCheckEntriesIntegrity){
                                     downloadFile(downloadUrl, targetFile);
 
@@ -96,16 +96,16 @@ public class VersionChecker {
                     }
                     saveToCache("version",latestVersion);
                 } else {
-                    File targetModListGuide = new File(PackCompanion.configDir, "modListGuide.json");
+                    File targetModListGuide = new File(PackCompanion.configDir, "masterlist_mods.json");
                     String modListHashValue = FileHashCalculator.getFileHash(targetModListGuide, "MD5");
 
-                    File targetConfigEntries = new File(PackCompanion.configDir, "configEntries.json");
+                    File targetConfigEntries = new File(PackCompanion.configDir, "masterlist_configs.json");
                     String configHashValue = FileHashCalculator.getFileHash(targetConfigEntries, "MD5");
 
-                    File targetCleanroomListGuide = new File(PackCompanion.configDir, "CleanroomListGuide.json");
+                    File targetCleanroomListGuide = new File(PackCompanion.configDir, "masterlist_mods_cleanroom.json");
                     String cleanroomListHashValue = FileHashCalculator.getFileHash(targetCleanroomListGuide, "MD5");
 
-                    File targetClassCheckingEntries = new File(PackCompanion.configDir, "CleanroomListGuide.json");
+                    File targetClassCheckingEntries = new File(PackCompanion.configDir, "masterlist_mods_cleanroom.json");
                     String classCheckingEntriesHashValue = FileHashCalculator.getFileHash(targetClassCheckingEntries, "MD5");
 
                     checkCache(targetModListGuide, modListHashValue, "modListGuideHash", "ModListGuide", modListGuideIntegrity);

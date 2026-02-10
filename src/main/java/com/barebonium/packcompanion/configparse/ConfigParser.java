@@ -166,14 +166,14 @@ public class ConfigParser {
 
     private static Class<?> getElementClass(String type) {
         switch (type.toLowerCase()) {
-            case "int":     return int.class;
-            case "int_p":   return Integer.class;
-            case "bool":    return boolean.class;
-            case "bool_p":  return Boolean.class;
-            case "double":  return double.class;
-            case "double_p":return Double.class;
-            case "float":   return float.class;
-            case "float_p": return Float.class;
+            case "int":     return Integer.class;
+            case "int_p":   return int.class;
+            case "bool":    return Boolean.class;
+            case "bool_p":  return boolean.class;
+            case "double":  return Double.class;
+            case "double_p":return double.class;
+            case "float":   return Float.class;
+            case "float_p": return float.class;
             case "string":  return String.class;
             default:        return String.class;
         }
