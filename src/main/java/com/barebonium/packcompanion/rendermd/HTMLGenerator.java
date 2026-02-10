@@ -63,7 +63,7 @@ public class HTMLGenerator {
         StringBuilder cleanroomTable = new StringBuilder();
         List<HTMLEntry> modPatchList = new ArrayList<>();
         int patchEntryCount = 0;
-        if (ConfigHandler.modAnalysisEnabled){
+        if (ConfigHandler.enableModAnalysis){
             tableHtml.append("<h2>Mod Analysis</h2> <details class=\"dropdown\">");
             tableHtml.append("<summary>Show Mod Analysis</summary>");
             tableHtml.append("<table>");
@@ -241,7 +241,7 @@ public class HTMLGenerator {
             patchListTable = new StringBuilder();
         }
         String ConfigTableFinal="";
-        if(ConfigHandler.configAnalysisEnabled){
+        if(ConfigHandler.enableConfigAnalysis){
             ConfigTableFinal = ConfigParser.ConfigTable.toString();
         }
         String PatchListTableFinal=patchListTable.toString();
