@@ -354,6 +354,19 @@
                 ]
             },
             {
+                "name": "[1] Spawn Caps Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utSpawnCapsToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The spawn cap tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `spawn caps`.",
+                "dependencies":[
+                    {
+                        "modId": "customspawner"
+                    }
+                ]
+            },
+            {
                 "name": "Damage Tilt",
                 "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utDamageTiltToggle",
                 "type": "boolean",

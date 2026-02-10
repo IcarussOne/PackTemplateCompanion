@@ -8,6 +8,14 @@
     "message": "Outdated. Use #link:[Bubbles](https://www.curseforge.com/minecraft/mc-mods/bubbles-a-baubles-fork). If incompatibilities occur, revert to Baubles."
   },
   {
+    "modId": "customspawner",
+    "status": "PROBLEMATIC",
+    "replacementModName": "Universal Tweaks",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
+    "action": "REPLACE",
+    "message": "Very outdated and WILL screw up mob spawns in many mods. If you are using Mo' Creatures, it is highly recommended to use #link:[Mo' Creatures Extended](https://www.curseforge.com/minecraft/mc-mods/mo-creatures-extended) instead which removes the dependency."
+  },
+  {
     "modId": "forgelin",
     "status": "DEPRECATED",
     "replacementModName": "Forgelin-Continuous",
@@ -68,14 +76,14 @@
     "message": "Not a legitimate performance mod. It was made to bait users for a YouTube video."
   },
   {
-    "modId": "betterbiomeblend",
+    "modId": "astatine",
     "status": "PROBLEMATIC",
     "action": "REMOVE",
-    "message": "Does not provide any meaningful performance improvements or fixes."
+    "message": "Has no performance gain and may even reduce performance for some users."
   },
   {
     "modId": "betterfps",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "action": "REMOVE",
     "message": "Outdated and breaks core functionality."
   },
@@ -88,12 +96,6 @@
     "message": "Outdated. Use #link:[Fixeroo](https://www.curseforge.com/minecraft/mc-mods/xp-orb-clump)."
   },
   {
-    "modId": "farsight",
-    "status": "DEPRECATED",
-    "action": "REMOVE",
-    "message": "Does almost nothing except move unloadChunk to tick; caches chunks indefinitely which might impact RAM usage."
-  },
-  {
     "modId": "fastfurnace",
     "status": "DEPRECATED",
     "replacementModName": "CensoredASM",
@@ -103,7 +105,7 @@
   },
   {
     "modId": "frustumculling",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "action": "REMOVE",
     "message": "Will cause incompatibilities with no performance gain. #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks) already has its own Frustum Culling tweak."
   },
@@ -114,6 +116,14 @@
     "message": "Provides no benefit."
   },
   {
+    "modId": "fpsoptimizer",
+    "status": "PROBLEMATIC",
+    "replacementModName": "FPS Reducer",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/fps-reducer",
+    "action": "REPLACE",
+    "message": "Has little to no performance gain. It is highly recommended to use #link:[FPS Reducer](https://www.curseforge.com/minecraft/mc-mods/fps-reducer) instead for the same functionality."
+  },
+  {
     "modId": "gputape",
     "status": "DEPRECATED",
     "action": "REMOVE",
@@ -121,7 +131,7 @@
   },
   {
     "modId": "laglessmod",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "action": "REMOVE",
     "message": "Will cause incompatibilities with no performance gain. #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks) already has its own Frustum Culling tweak."
   },
@@ -133,7 +143,7 @@
   },
   {
     "modId": "neonium",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "action": "REMOVE",
     "message": "Outdated Vintagium fork. Use #link:[Nothirium](https://www.curseforge.com/minecraft/mc-mods/nothirium) or #link:[Celeritas](https://github.com/kappa-maintainer/Celeritas-auto-build/releases)"
   },
@@ -159,7 +169,7 @@
   },
   {
     "modId": "vintagium",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "action": "REMOVE",
     "message": "Broken and abandoned performance mod. Use #link:[Nothirium](https://www.curseforge.com/minecraft/mc-mods/nothirium) or #link:[Celeritas](https://github.com/kappa-maintainer/Celeritas-auto-build/releases)"
   },
@@ -451,7 +461,7 @@
     "replacementModName": "Mo' Creatures Extended",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/mo-creatures-extended",
     "action": "REPLACE",
-    "message": "Outdated and requires Custom Mob Spawner. Use #link:[Mo' Creatures Extended](https://www.curseforge.com/minecraft/mc-mods/mo-creatures-extended)."
+    "message": "Outdated, has lots of issues, and requires Custom Mob Spawner. Use #link:[Mo' Creatures Extended](https://www.curseforge.com/minecraft/mc-mods/mo-creatures-extended)."
   },
   {
     "modId": "natura",
