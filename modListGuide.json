@@ -82,6 +82,12 @@
     "message": "Has no performance gain and may even reduce performance for some users."
   },
   {
+    "modId": "betterbiomeblend",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "Does not provide any meaningful performance improvements or fixes."
+  },
+  {
     "modId": "betterfps",
     "status": "PROBLEMATIC",
     "action": "REMOVE",
@@ -94,6 +100,12 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/xp-orb-clump",
     "action": "REPLACE",
     "message": "Outdated. Use #link:[Fixeroo](https://www.curseforge.com/minecraft/mc-mods/xp-orb-clump)."
+  },
+  {
+    "modId": "farsight",
+    "status": "DEPRECATED",
+    "action": "REMOVE",
+    "message": "Does almost nothing except move unloadChunk to tick; caches chunks indefinitely which might impact RAM usage."
   },
   {
     "modId": "fastfurnace",
