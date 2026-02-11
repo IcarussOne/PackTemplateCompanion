@@ -41,9 +41,9 @@ public class ConfigParser {
                 boolean loaded = ModHelper.isModLoaded(entry.modId, entry.version, entry.isMinVersion, entry.isMaxVersion);
 
                 if (!loaded) continue;
-                boolean dependenciesLoaded = true;
 
                 for (ConfigSetting setting : entry.settings) {
+                    boolean dependenciesLoaded = true;
                     String modName = ModHelper.getModName(entry.modId);
                     for (ModDependency dependency : setting.dependencies) {
                         boolean dependencyLoaded = ModHelper.isModLoaded(
@@ -54,13 +54,13 @@ public class ConfigParser {
                         );
 
                         if (!dependencyLoaded) {
-                            PackCompanion.LOGGER.info("Dependency Not Found for Mod Id: " + dependency.modId);
+                            PackCompanion.LOGGER.info("Dependency {} Not Found for Mod Id {} ",dependency.modId, entry.modId);
                             dependenciesLoaded = false;
                             break;
                         }
-                        PackCompanion.LOGGER.info("Dependency found for Mod Id: " + dependency.modId);
                     }
                     if (dependenciesLoaded) {
+                        PackCompanion.LOGGER.info("Dependencies Loaded for Mod Id: " + entry.modId);
                         if (checkConfigMatch(setting)) {
                             if (setting.shouldMatch) {
                                 writer.printf("| %s | %s | %s |%n", modName, setting.name, setting.message);
@@ -119,9 +119,16 @@ public class ConfigParser {
 
     private static boolean checkConfigMatch(ConfigSetting setting) {
         try {
-            Object currentValue = getConfigObject(setting.field);
-
+            PackCompanion.LOGGER.warn("Checking config match for Mod Id: {}", setting.field);
+            Object currentValue = null;
+            try{
+                currentValue  = getConfigObject(setting.field);
+            } catch(Exception e){
+                PackCompanion.LOGGER.error("Error while trying to process config setting", e);
+            }
+            PackCompanion.LOGGER.info("Current value object is {} ",currentValue);
             if (setting.type.startsWith("list")) {
+                PackCompanion.LOGGER.info("The field is a List, Processing..");
                 if (setting.value.equals("[]")) {
                     if (currentValue instanceof List) return ((List<?>) currentValue).isEmpty();
                     if (currentValue.getClass().isArray()) return java.lang.reflect.Array.getLength(currentValue) == 0;
@@ -136,14 +143,20 @@ public class ConfigParser {
 
                     if (currentValue instanceof List) {
                         List<?> actualList = (List<?>) currentValue;
+                        PackCompanion.LOGGER.info("Returning List Match");
                         return actualList.containsAll(checkList);
                     }
+                    PackCompanion.LOGGER.info("No List Match, returning False");
                     return false;
                 }
             }
+            PackCompanion.LOGGER.info("The field is not a List, Processing..");
             Object expectedValue = GSON.fromJson(setting.value, currentValue.getClass());
+            PackCompanion.LOGGER.info("Expected value {} found {}", expectedValue, currentValue);
+            PackCompanion.LOGGER.info("returning {}", Objects.equals(currentValue, expectedValue));
             return Objects.equals(currentValue, expectedValue);
         } catch (Exception e) {
+            PackCompanion.LOGGER.error("Error while trying to process config setting {}",setting.field, e);
             return false;
         }
     }
@@ -168,8 +181,8 @@ public class ConfigParser {
         switch (type.toLowerCase()) {
             case "int":     return Integer.class;
             case "int_p":   return int.class;
-            case "bool":    return Boolean.class;
-            case "bool_p":  return boolean.class;
+            case "boolean":    return Boolean.class;
+            case "boolean_p":  return boolean.class;
             case "double":  return Double.class;
             case "double_p":return double.class;
             case "float":   return Float.class;

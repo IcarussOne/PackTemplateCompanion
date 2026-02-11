@@ -48,7 +48,7 @@
         "settings": [
             {
                 "name": "[1] Advancement Screenshot Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utAdvancementScreenshotToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#ADVANCEMENT_SCREENSHOT#utAdvancementScreenshotToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -61,7 +61,7 @@
             },
             {
                 "name": "AI Replacement",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utAIReplacementToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#utAIReplacementToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -74,7 +74,7 @@
             },
             {
                 "name": "AI Replacement",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utAIReplacementToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#utAIReplacementToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -87,7 +87,7 @@
             },
             {
                 "name": "[1] Armor Curve Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utArmorCurveToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#ARMOR_CURVE#utArmorCurveToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -100,7 +100,7 @@
             },
             {
                 "name": "[01] Attributes Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utAttributesToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#ATTRIBUTES#utAttributesToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -113,7 +113,7 @@
             },
             {
                 "name": "Banner Bounding Box",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utBannerBoundingBoxToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#BLOCKS#utBannerBoundingBoxToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -126,7 +126,7 @@
             },
             {
                 "name": "Bed Obstruction Replacement",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utBedObstructionToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#BLOCKS#utBedObstructionToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -139,8 +139,8 @@
             },
             {
                 "name": "Sleeping Time",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utSleepingTime",
-                "type": "boolean",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#SLEEPING#utSleepingTime",
+                "type": "int",
                 "value": "-1",
                 "shouldMatch":"true",
                 "message":"The `Sleeping Time` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `sleeping`.",
@@ -152,7 +152,7 @@
             },
             {
                 "name": "Disable Sleeping",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utDisableSleepingToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#SLEEPING#utDisableSleepingToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -165,7 +165,7 @@
             },
             {
                 "name": "Better Burning",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utBBCookedToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#BETTER_BURNING#utBBCookedToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -178,7 +178,7 @@
             },
             {
                 "name": "Better Ping Display",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utBetterPing",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#utBetterPing",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -191,7 +191,7 @@
             },
             {
                 "name": "[1] Better Placement Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utBetterPlacementToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#BLOCKS#BETTER_PLACEMENT#utBetterPlacementToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -204,7 +204,7 @@
             },
             {
                 "name": "[1] Chat Lines",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utChatLines",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#CHAT#utChatLines",
                 "type": "int",
                 "value": "100",
                 "shouldMatch":"true",
@@ -217,7 +217,7 @@
             },
             {
                 "name": "[1] Block Dispenser Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utBlockDispenserToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#BLOCKS#BLOCK_DISPENSER#utBlockDispenserToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -230,7 +230,7 @@
             },
             {
                 "name": "[1] Block Overlay Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utBlockOverlayToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#BLOCKS#BLOCK_OVERLAY#utBlockOverlayToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -243,7 +243,7 @@
             },
             {
                 "name": "Glass Bottle Consumes Water Source",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utGlassBottlesConsumeWaterSource",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ITEMS#utGlassBottlesConsumeWaterSource",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -256,7 +256,7 @@
             },
             {
                 "name": "Better Harvest",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utBetterHarvestToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#BLOCKS#utBetterHarvestToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -269,7 +269,7 @@
             },
             {
                 "name": "[1] Arrowless Infinity",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utBowInfinityToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ITEMS#INFINITY#utBowInfinityToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -282,7 +282,7 @@
             },
             {
                 "name": "Rabbit Killer Spawning Chance",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utRabbitKillerChance",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#utRabbitKillerChance",
                 "type": "double",
                 "value": "0.0",
                 "shouldMatch":"true",
@@ -295,7 +295,7 @@
             },
             {
                 "name": "[1] Chicken Shedding",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utChickenSheddingToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#CHICKEN_SHEDDING#utChickenSheddingToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -308,7 +308,7 @@
             },
             {
                 "name": "[01] Item Entities Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utItemEntitiesToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ITEMS#ITEM_ENTITIES#utItemEntitiesToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -321,7 +321,7 @@
             },
             {
                 "name": "[01] No Attack Cooldown Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utAttackCooldownToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ITEMS#ATTACK_COOLDOWN#utAttackCooldownToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -334,7 +334,7 @@
             },
             {
                 "name": "[14] Clear Despawn",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utIEClearDespawnToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ITEMS#ITEM_ENTITIES#utIEClearDespawnToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -347,7 +347,7 @@
             },
             {
                 "name": "Sugar Cane Size",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utSugarCaneSize",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#BLOCKS#utSugarCaneSize",
                 "type": "int",
                 "value": "3",
                 "shouldMatch":"true",
@@ -360,7 +360,7 @@
             },
             {
                 "name": "[01] Item Entities Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utItemEntitiesToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ITEMS#ITEM_ENTITIES#utItemEntitiesToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -373,7 +373,7 @@
             },
             {
                 "name": "[01] Music Control Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utMusicControlToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#MUSIC#utMusicControlToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -386,7 +386,7 @@
             },
             {
                 "name": "[01] Creeper Confetti Chance",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utCreeperConfettiChance",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#CREEPER_CONFETTI#utCreeperConfettiChance",
                 "type": "double",
                 "value": "0.0",
                 "shouldMatch":"true",
@@ -399,7 +399,7 @@
             },
             {
                 "name": "[1] Spawn Caps Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utSpawnCapsToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#SPAWN_CAPS#utSpawnCapsToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -412,7 +412,7 @@
             },
             {
                 "name": "Damage Tilt",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utDamageTiltToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#utDamageTiltToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -425,7 +425,7 @@
             },
             {
                 "name": "No Redstone Lighting",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utRedstoneLightingToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#PERFORMANCE#utRedstoneLightingToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -438,7 +438,7 @@
             },
             {
                 "name": "LAN Server Properties",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utLANServerProperties",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#utLANServerProperties",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -451,7 +451,7 @@
             },
             {
                 "name": "Entity UUID",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utEntityUUIDToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#ENTITIES#utEntityUUIDToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -464,7 +464,7 @@
             },
             {
                 "name": "Hopper Bounding Box",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utDietHopperToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#BLOCKS#utDietHopperToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -477,7 +477,7 @@
             },
             {
                 "name": "Load Sounds",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utLoadSoundMode",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#LOAD_SOUND#utLoadSoundMode",
                 "type": "string",
                 "value": "NOTHING",
                 "shouldMatch":"true",
@@ -490,7 +490,7 @@
             },
             {
                 "name": "Render Range",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigMods#utSDRenderRange",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigMods#STORAGE_DRAWERS#utSDRenderRange",
                 "type": "int",
                 "value": "0",
                 "shouldMatch":"true",
@@ -503,7 +503,7 @@
             },
             {
                 "name": "[1] Easy Breeding Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utEasyBreedingToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#EASY_BREEDING#utEasyBreedingToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -516,7 +516,7 @@
             },
             {
                 "name": "Toggle Cheats Button",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utToggleCheatsToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#utToggleCheatsToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -529,7 +529,7 @@
             },
             {
                 "name": "End Portal Parallax",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utEndPortalParallaxToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#utEndPortalParallaxToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -542,7 +542,7 @@
             },
             {
                 "name": "[1] Entity Desync Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utEntityDesyncToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#ENTITIES#ENTITY_DESYNC#utEntityDesyncToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -555,7 +555,7 @@
             },
             {
                 "name": "Preserved Blocks Fix",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigMods#utEBPreservedBlocksToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigMods#THE_EREBUS#utEBPreservedBlocksToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -568,7 +568,7 @@
             },
             {
                 "name": "Elytra Deployment & Landing",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utElytraDeploymentLandingToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#ENTITIES#utElytraDeploymentLandingToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -581,7 +581,7 @@
             },
             {
                 "name": "Fast Leaf Decay",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utLeafDecayToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#BLOCKS#utLeafDecayToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -594,7 +594,7 @@
             },
             {
                 "name": "Fence/Wall Jump",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utFenceWallJumpToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#BLOCKS#utFenceWallJumpToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -607,7 +607,7 @@
             },
             {
                 "name": "[1] Finite Water Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utFiniteWaterToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#BLOCKS#FINITE_WATER#utFiniteWaterToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -620,7 +620,7 @@
             },
             {
                 "name": "Double Consumption",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utDoubleConsumptionToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#ENTITIES#utDoubleConsumptionToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -633,7 +633,7 @@
             },
             {
                 "name": "[1] Void Teleport Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utVoidTeleportToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#VOID_TELEPORT#utVoidTeleportToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -646,7 +646,7 @@
             },
             {
                 "name": "Item Frame Void",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utItemFrameVoidToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#BLOCKS#utItemFrameVoidToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -659,7 +659,7 @@
             },
             {
                 "name": "Frustum Culling",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utFrustumCullingToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#WORLD#utFrustumCullingToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -672,7 +672,7 @@
             },
             {
                 "name": "[09] Smart Combination",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utIESmartCombinationToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ITEMS#ITEM_ENTITIES#utIESmartCombinationToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -685,7 +685,7 @@
             },
             {
                 "name": "Max Player Health",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utMaxHealthToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#ENTITIES#utMaxHealthToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -698,7 +698,7 @@
             },
             {
                 "name": "[1] Player Speed Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utPlayerSpeedToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#PLAYER_SPEED#utPlayerSpeedToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -711,7 +711,7 @@
             },
             {
                 "name": "Help Command",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utHelpToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#MISC#utHelpToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -724,7 +724,7 @@
             },
             {
                 "name": "Remove Recipe Book",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utRecipeBookToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#utRecipeBookToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -737,7 +737,7 @@
             },
             {
                 "name": "No Saddled Wandering",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utSaddledWanderingToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#MISC#utSaddledWanderingToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -750,7 +750,7 @@
             },
             {
                 "name": "[5] Disable Tutorial Toasts",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utToastControlTutorialToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#MISC#TOAST_CONTROL#utToastControlTutorialToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -763,7 +763,7 @@
             },
             {
                 "name": "[2] Infinity Conflict",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utInfinityEnchantmentConflicts",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ITEMS#INFINITY#utInfinityEnchantmentConflicts",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -776,7 +776,7 @@
             },
             {
                 "name": "[3] Infinity Affects All Arrows",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utAllArrowsAreInfinite",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ITEMS#INFINITY#utAllArrowsAreInfinite",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -789,7 +789,7 @@
             },
             {
                 "name": "Disable Sleeping",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utDisableSleepingToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#SLEEPING#utDisableSleepingToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -802,7 +802,7 @@
             },
             {
                 "name": "[01] Pickup Notification Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utPickupNotificationToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#PICKUP_NOTIFICATION#utPickupNotificationToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -815,7 +815,7 @@
             },
             {
                 "name": "Prevent Keybinds from Overflowing Screen",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utPreventKeybindingEntryOverflow",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#utPreventKeybindingEntryOverflow",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -828,7 +828,7 @@
             },
             {
                 "name": "Spawn Chunks",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utSpawnChunksGenToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#WORLD#SPAWN_CHUNKS#utSpawnChunksGenToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -841,7 +841,7 @@
             },
             {
                 "name": "Frustum Culling",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utFrustumCullingToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#WORLD#utFrustumCullingToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -854,7 +854,7 @@
             },
             {
                 "name": "LAN Server Properties",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utLANServerProperties",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#utLANServerProperties",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -867,7 +867,7 @@
             },
             {
                 "name": "Fast Leaf Decay",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utLeafDecayToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#BLOCKS#utLeafDecayToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -880,7 +880,7 @@
             },
             {
                 "name": "Mob Despawning Improvement",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utMobDespawningToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#utMobDespawningToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -893,7 +893,7 @@
             },
             {
                 "name": "Max Player Health",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utMaxHealthToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#ENTITIES#utMaxHealthToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -906,7 +906,7 @@
             },
             {
                 "name": "Max Player Health",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utMaxHealthToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#ENTITIES#utMaxHealthToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -919,7 +919,7 @@
             },
             {
                 "name": "[1] Mending Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utMendingToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#utMendingToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -932,7 +932,7 @@
             },
             {
                 "name": "Uncap FPS",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utUncapFPSToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#PERFORMANCE#utUncapFPSToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -945,7 +945,7 @@
             },
             {
                 "name": "Mob Despawning Improvement",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utMobDespawningToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#utMobDespawningToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -958,11 +958,11 @@
             },
             {
                 "name": "[1] Player Speed Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utPlayerSpeedToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#PLAYER_SPEED#utPlayerSpeedToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The player speed tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `general` -> `entities` -> `player speed`.",
+                "message":"The player speed tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `player speed`.",
                 "dependencies":[
                     {
                         "modId": "movingquickly"
@@ -971,7 +971,7 @@
             },
             {
                 "name": "[1] Player Speed Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utPlayerSpeedToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#PLAYER_SPEED#utPlayerSpeedToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -984,7 +984,7 @@
             },
             {
                 "name": "Mute Texture Map Errors",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utTextureMapCheckToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#PERFORMANCE#utTextureMapCheckToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -997,7 +997,7 @@
             },
             {
                 "name": "Entity NaN Values",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utEntityNaNToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#ENTITIES#utEntityNaNToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1010,7 +1010,7 @@
             },
             {
                 "name": "Creeper Charged Spawning Chance",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utCreeperChargedChance",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#utCreeperChargedChance",
                 "type": "double",
                 "value": "0.0",
                 "shouldMatch":"true",
@@ -1023,7 +1023,7 @@
             },
             {
                 "name": "Portal Location Link",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utPortalLocationLink",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#WORLD#utPortalLocationLink",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1036,7 +1036,7 @@
             },
             {
                 "name": "Disable Advancements",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utDisableAdvancementsToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#utDisableAdvancementsToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1049,7 +1049,7 @@
             },
             {
                 "name": "Disable Sleeping",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utDisableSleepingToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#SLEEPING#utDisableSleepingToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1062,7 +1062,7 @@
             },
             {
                 "name": "Disable Glint Overlay on Potions",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utDisablePotionGlint",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#utDisablePotionGlint",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1075,7 +1075,7 @@
             },
             {
                 "name": "No Night Vision Flash",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utNightVisionFlashToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#utNightVisionFlashToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1088,7 +1088,7 @@
             },
             {
                 "name": "No Night Vision Flash",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utNightVisionFlashToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#utNightVisionFlashToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1101,7 +1101,7 @@
             },
             {
                 "name": "No Potion Shift",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utPotionShiftToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#utPotionShiftToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1114,7 +1114,7 @@
             },
             {
                 "name": "Remove Recipe Book",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utRecipeBookToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#utRecipeBookToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1127,7 +1127,7 @@
             },
             {
                 "name": "Remove Recipe Book",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utRecipeBookToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#utRecipeBookToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1140,7 +1140,7 @@
             },
             {
                 "name": "[01] No Attack Cooldown Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utAttackCooldownToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ITEMS#ATTACK_COOLDOWN#utAttackCooldownToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1153,7 +1153,7 @@
             },
             {
                 "name": "[3] Overpowered",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utMendingOPToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#utMendingOPToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1166,7 +1166,7 @@
             },
             {
                 "name": "[01] Shield Parry Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utParryToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ITEMS#SHIELD_PARRY#utParryToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1179,7 +1179,7 @@
             },
             {
                 "name": "Lenient Paths",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utLenientPathsToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#BLOCKS#utLenientPathsToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1192,7 +1192,7 @@
             },
             {
                 "name": "[01] Pickup Notification Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utPickupNotificationToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#PICKUP_NOTIFICATION#utPickupNotificationToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1205,7 +1205,7 @@
             },
             {
                 "name": "Portal Traveling Dupe",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utPortalTravelingDupeToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#WORLD#utPortalTravelingDupeToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1218,7 +1218,7 @@
             },
             {
                 "name": "Fast Leaf Decay",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utLeafDecayToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#BLOCKS#utLeafDecayToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1231,7 +1231,7 @@
             },
             {
                 "name": "[1] Rally Health Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utRallyHealthToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#RALLY_HEALTH#utRallyHealthToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1244,7 +1244,7 @@
             },
             {
                 "name": "Use Separate Narrator Key",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utUseCustomNarratorKeybind",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#utUseCustomNarratorKeybind",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1257,7 +1257,7 @@
             },
             {
                 "name": "Always Eat",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utAlwaysEatToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ITEMS#utAlwaysEatToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1270,7 +1270,7 @@
             },
             {
                 "name": "Stronghold Enforcement",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utStrongholdToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#WORLD#utStrongholdToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1283,7 +1283,7 @@
             },
             {
                 "name": "Copy World Seed",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utCopyWorldSeedToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#utCopyWorldSeedToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1296,7 +1296,7 @@
             },
             {
                 "name": "Broadcast Ender Dragon Death Sound",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utBroadcastSoundDragon",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#BROADCAST_SOUNDS#utBroadcastSoundDragon",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1309,7 +1309,7 @@
             },
             {
                 "name": "Sleeping Time",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utSleepingTime",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#SLEEPING#utSleepingTime",
                 "type": "boolean",
                 "value": "-1",
                 "shouldMatch":"true",
@@ -1322,7 +1322,7 @@
             },
             {
                 "name": "[1] Smooth Scrolling Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utSmoothScrollingToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#SMOOTH_SCROLLING#utSmoothScrollingToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1335,7 +1335,7 @@
             },
             {
                 "name": "Glass Bottle Consumes Water Source",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utGlassBottlesConsumeWaterSource",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ITEMS#utGlassBottlesConsumeWaterSource",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1348,7 +1348,7 @@
             },
             {
                 "name": "Sky of Old Dimension Fix",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigMods#utSkyOfOldFixToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigMods#STEAMWORLD#utSkyOfOldFixToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1361,7 +1361,7 @@
             },
             {
                 "name": "Auto Jump Replacement",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utAutoJumpToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#utAutoJumpToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1374,7 +1374,7 @@
             },
             {
                 "name": "[1] Swing Through Grass Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utSwingThroughGrassToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#SWING_THROUGH_GRASS#utSwingThroughGrassToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1387,7 +1387,7 @@
             },
             {
                 "name": "Super Hot Torch",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utSuperHotTorchToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ITEMS#utSuperHotTorchToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1400,7 +1400,7 @@
             },
             {
                 "name": "Glass Bottle Consumes Water Source",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utGlassBottlesConsumeWaterSource",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ITEMS#utGlassBottlesConsumeWaterSource",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1413,7 +1413,7 @@
             },
             {
                 "name": "Tidy Chunk",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utTidyChunkToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#WORLD#utTidyChunkToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1426,7 +1426,7 @@
             },
             {
                 "name": "Farmland Trample",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utFarmlandTrample",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#BLOCKS#utFarmlandTrample",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1439,7 +1439,7 @@
             },
             {
                 "name": "No Enchantment Table Obstruction",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utEnchantmentTableObstructionToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#BLOCKS#utEnchantmentTableObstructionToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1452,7 +1452,7 @@
             },
             {
                 "name": "[1] Dimension Unload Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utUnloaderToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#WORLD#DIMENSION_UNLOAD#utUnloaderToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1465,7 +1465,7 @@
             },
             {
                 "name": "Use Separate Dismount Key",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utUseSeparateDismountKey",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#utUseSeparateDismountKey",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1478,7 +1478,7 @@
             },
             {
                 "name": "Villager Mantle Hoods",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#utVillagerMantleToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigBugfixes#ENTITIES#utVillagerMantleToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1491,7 +1491,7 @@
             },
             {
                 "name": "[1] Void Fog Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utVoidFogToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#WORLD#VOID_FOG#utVoidFogToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
@@ -1504,7 +1504,7 @@
             },
             {
                 "name": "[1] Finite Water Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#utFiniteWaterToggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#BLOCKS#FINITE_WATER#utFiniteWaterToggle",
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
