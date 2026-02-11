@@ -46,12 +46,17 @@ public class ConfigParser {
                     boolean dependenciesLoaded = true;
                     String modName = ModHelper.getModName(entry.modId);
                     for (ModDependency dependency : setting.dependencies) {
-                        boolean dependencyLoaded = ModHelper.isModLoaded(
-                                dependency.modId,
-                                dependency.version,
-                                dependency.isMinVersion,
-                                dependency.isMaxVersion
-                        );
+                        boolean dependencyLoaded;
+                        if (dependency.classLoaded){
+                            dependencyLoaded = ModHelper.isClassLoaded(dependency.className);
+                        } else {
+                            dependencyLoaded = ModHelper.isModLoaded(
+                                    dependency.modId,
+                                    dependency.version,
+                                    dependency.isMinVersion,
+                                    dependency.isMaxVersion
+                            );
+                        }
 
                         if (!dependencyLoaded) {
                             PackCompanion.LOGGER.info("Dependency {} Not Found for Mod Id {} ",dependency.modId, entry.modId);

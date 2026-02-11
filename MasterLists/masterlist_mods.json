@@ -1138,19 +1138,6 @@
     "message": "Merged into #link:[OpenBlocks Reopened](https://www.curseforge.com/minecraft/mc-mods/openblocks-reopened), no other mods require it."
   },
   {
-    "modId": "optifine",
-    "status": "PROBLEMATIC",
-    "action": "INCLUDE",
-    "patchlist": [
-      {
-        "modName": "OptiNotFine",
-        "modId": "optinotfine",
-        "modLink": "https://www.curseforge.com/minecraft/mc-mods/optinotfine",
-        "modDescription": "Fixing OptiFine, until something better comes."
-      }
-    ]
-  },
-  {
     "modId": "overpowered_mending",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",

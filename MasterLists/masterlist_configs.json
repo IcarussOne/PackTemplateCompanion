@@ -1,5 +1,66 @@
 [
     {
+        "modId": "advancedrocketry",
+        "settings": [
+            {
+                "name": "PlanetSkyOverride",
+                "field": "zmaster587.advancedRocketry.api.ARConfiguration#currentConfig#planetSkyOverride",
+                "type": "boolean",
+                "value": "true",
+                "shouldMatch":"true",
+                "message":"This Setting should be disabled as Advanced Rocketry's Sky conflicts with Optifine (mainly shaders)",
+                "dependencies":[
+                    {
+                        "modId": "optifine",
+                        "classLoaded": true,
+                        "className": "optifine.OptiFineForgeTweaker"
+                    }
+                ]
+            },
+            {
+                "name": "StationSkyOverride",
+                "field": "zmaster587.advancedRocketry.api.ARConfiguration#currentConfig#stationSkyOverride",
+                "type": "boolean",
+                "value": "true",
+                "shouldMatch":"true",
+                "message":"This Setting should be disabled as Advanced Rocketry's Sky conflicts with Optifine (mainly shaders)",
+                "dependencies":[
+                    {
+                        "modId": "optifine",
+                        "classLoaded": true,
+                        "className": "optifine.OptiFineForgeTweaker"
+                    }
+                ]
+            },
+            {
+                "name": "PlanetSkyOverride",
+                "field": "zmaster587.advancedRocketry.api.ARConfiguration#currentConfig#planetSkyOverride",
+                "type": "boolean",
+                "value": "true",
+                "shouldMatch":"true",
+                "message":"This Setting should be disabled as Advanced Rocketry's Sky conflicts with Hyxcate/Nyx's Sky",
+                "dependencies":[
+                    {
+                        "modId": "nyx"
+                    }
+                ]
+            },
+            {
+                "name": "StationSkyOverride",
+                "field": "zmaster587.advancedRocketry.api.ARConfiguration#currentConfig#stationSkyOverride",
+                "type": "boolean",
+                "value": "true",
+                "shouldMatch":"true",
+                "message":"This Setting should be disabled as Advanced Rocketry's Sky conflicts with Hyxcate/Nyx's Sky",
+                "dependencies":[
+                    {
+                        "modId": "nyx"
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "modId": "astralsorcery",
         "settings": [
             {
@@ -12,6 +73,21 @@
                 "dependencies":[
                     {
                         "modId": "nyx"
+                    }
+                ]
+            },
+            {
+                "name": "WeakSkyRendersWhitelist",
+                "field": "hellfirepvp.astralsorcery.common.data.config.Config#weakSkyRendersWhitelist",
+                "type": "list_int_p",
+                "value": "Contains:[0]",
+                "shouldMatch":"false",
+                "message":"This Setting should contain the dimension 0 (Overworld) as Astral Sorcery's Sky conflicts with Optifine's Sky (Mainly Shaders)",
+                "dependencies":[
+                    {
+                        "modId": "optifine",
+                        "classLoaded": true,
+                        "className": "optifine.OptiFineForgeTweaker"
                     }
                 ]
             }
@@ -40,6 +116,61 @@
                 "shouldMatch":"true",
                 "message":"This Setting should be false!",
                 "dependencies":[]
+            }
+        ]
+    },
+    {
+        "modId": "botania",
+        "settings": [
+            {
+                "name": "shaders.enabled",
+                "field": "vazkii.botania.common.core.handler.ConfigHandler#useShaders",
+                "type": "boolean",
+                "value": "true",
+                "shouldMatch":"true",
+                "message":"This setting messes up with Optifine's shaders, you should disable it if you use shaders",
+                "dependencies":[
+                    {
+                        "modId": "optifine",
+                        "classLoaded": true,
+                        "className": "optifine.OptiFineForgeTweaker"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "modId": "draconicevolution",
+        "settings": [
+            {
+                "name": "useShaders",
+                "field": "com.brandon3055.draconicevolution.DEConfig#useShaders",
+                "type": "boolean",
+                "value": "true",
+                "shouldMatch":"true",
+                "message":"This setting messes up with Optifine's shaders, you should disable it if you use shaders",
+                "dependencies":[
+                    {
+                        "modId": "optifine",
+                        "classLoaded": true,
+                        "className": "optifine.OptiFineForgeTweaker"
+                    }
+                ]
+            },
+            {
+                "name": "useCrystalShaders",
+                "field": "com.brandon3055.draconicevolution.DEConfig#useCrystalShaders",
+                "type": "boolean",
+                "value": "true",
+                "shouldMatch":"true",
+                "message":"This setting messes up with Optifine's shaders, you should disable it if you use shaders",
+                "dependencies":[
+                    {
+                        "modId": "optifine",
+                        "classLoaded": true,
+                        "className": "optifine.OptiFineForgeTweaker"
+                    }
+                ]
             }
         ]
     },
