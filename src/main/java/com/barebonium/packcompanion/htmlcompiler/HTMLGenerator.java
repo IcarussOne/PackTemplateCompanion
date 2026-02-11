@@ -89,6 +89,9 @@ public class HTMLGenerator {
                     case REMOVE:
                         actionMessage = "<p>Remove " + modName+ "</p>";
                         break;
+                    case INFO:
+                        actionMessage = "<p>No Action Needed</p>";
+                        break;
                     case REPLACE:
                         actionMessage = String.format("<p>Replace with <a href=\"%s\">%s</a></p>",
                                 htmlEntry.replacementModLink, htmlEntry.replacementModName);
@@ -183,6 +186,9 @@ public class HTMLGenerator {
                 switch (htmlEntry.action) {
                     case REMOVE:
                         actionMessage = "<p>Remove " + modName+ "</p>";
+                        break;
+                    case INFO:
+                        actionMessage = "<p>No Action Needed</p>";
                         break;
                     case REPLACE:
                         actionMessage = String.format("<p>Replace with <a href=\"%s\">%s</a></p>",

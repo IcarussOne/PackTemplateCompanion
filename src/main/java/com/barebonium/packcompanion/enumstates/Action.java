@@ -5,5 +5,6 @@ public enum Action {
     DOWNGRADE,
     UPGRADE,
     REPLACE,
-    INCLUDE
+    INCLUDE,
+    INFO
 }

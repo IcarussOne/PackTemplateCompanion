@@ -275,6 +275,9 @@ public class ModlistCheckProcessor {
             case REMOVE:
                 actionMessage = "Remove " + modName;
                 break;
+            case INFO:
+                actionMessage = "No Action Needed";
+                break;
             case REPLACE:
                 actionMessage = String.format("Replace with [%s](%s)",
                         entry.replacementModName, entry.replacementModLink);
@@ -296,6 +299,9 @@ public class ModlistCheckProcessor {
         switch (entry.action) {
             case REMOVE:
                 actionMessage = "Remove " + modName;
+                break;
+            case INFO:
+                actionMessage = "No Action Needed";
                 break;
             case REPLACE:
                 actionMessage = String.format("Replace with [%s](%s)",
