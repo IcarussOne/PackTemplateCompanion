@@ -72,17 +72,27 @@ public class PackCompanion {
                         TextFormatting.GOLD + "[Pack Companion] " + TextFormatting.GRAY + "Modlist analysis complete. Check your logs folder for the compatibility report!"
                 );
 
-                ITextComponent textComponentLink = new TextComponentString(TextFormatting.GOLD + "[Pack Companion] " + TextFormatting.GRAY + "Please click ");
-                ITextComponent clickableHere = new TextComponentString(TextFormatting.RED + "[ HERE ]");
+                ITextComponent htmlTextComponentLink = new TextComponentString(TextFormatting.GOLD + "[Pack Companion] " + TextFormatting.GRAY + "Please click ");
+                ITextComponent htmlClickableHere = new TextComponentString(TextFormatting.RED + "[ HERE ]");
+                htmlClickableHere.getStyle().setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_FILE, reportFile.getAbsolutePath()));
+                htmlClickableHere.getStyle().setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new TextComponentString("Click to open HTML report in your browser")));
+                htmlTextComponentLink.appendSibling(htmlClickableHere);
+                htmlTextComponentLink.appendText(TextFormatting.GRAY + " to access the Local Web version of your report.");
 
-                clickableHere.getStyle().setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_FILE, reportFile.getAbsolutePath()));
-                clickableHere.getStyle().setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new TextComponentString("Click to open report in your browser")));
+                ITextComponent mdTextComponentLink = new TextComponentString(TextFormatting.GOLD + "[Pack Companion] " + TextFormatting.GRAY + "Your report has been uploaded to Rentry.co, please click ");
+                ITextComponent mdClickableHere = new TextComponentString(TextFormatting.RED + "[ HERE ]");
 
-                textComponentLink.appendSibling(clickableHere);
-                textComponentLink.appendText(TextFormatting.GRAY + " to access the Web version of your report.");
+                mdClickableHere.getStyle().setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, ModlistCheckProcessor.lastRentryUrl));
+                mdClickableHere.getStyle().setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new TextComponentString("Click to open MD report in your browser")));
+
+                mdTextComponentLink.appendSibling(mdClickableHere);
+
 
                 event.player.sendMessage(textComponent);
-                event.player.sendMessage(textComponentLink);
+                if (!ModlistCheckProcessor.lastRentryUrl.isEmpty()){
+                    event.player.sendMessage(mdTextComponentLink);
+                }
+                event.player.sendMessage(htmlTextComponentLink);
             }
         }
     }

@@ -15,12 +15,14 @@ import com.google.gson.stream.JsonReader;
 import net.minecraft.client.Minecraft;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import static com.barebonium.packcompanion.configparse.ConfigParser.processConfigJsonToOutput;
+import static java.nio.file.Files.readAllBytes;
 
 public class ModlistCheckProcessor {
 
@@ -66,6 +68,7 @@ public class ModlistCheckProcessor {
 
     public static File HTMLReportFile;
     public static File GlobalOutputLog;
+    public static String lastRentryUrl = "";
     private static final Gson GSON = new Gson();
     public static void checkModList(File configDir, File gameDir) {
         boolean isSuccess = false;
@@ -112,8 +115,8 @@ public class ModlistCheckProcessor {
             else {
                 if(ConfigHandler.enableModAnalysis && ConfigHandler.enableReportMarkdown){
                     writer.println("## Mod Analysis");
-                    writer.println("| Mod Name | Status | Recommended Action | Reason |");
-                    writer.println("| :--- | :--- | :--- | :--- |");
+                    writer.printf("| %-25s | %-15s | %-150s | %-200s |%n", "Mod Name", "Status", "Recommended Action", "Reason");
+                    writer.printf("| %-25s | %-15s | %-150s | %-200s |%n", ":---", ":---", ":---", ":---");
                     List<ModEntry> modPatchList = new ArrayList<>();
                     List<ClassCheckEntry> cleanroomClassCheckList = new ArrayList<>();
                     for (ModEntry entry : entries) {
@@ -123,7 +126,7 @@ public class ModlistCheckProcessor {
                             String statusStr = entry.status.toString();
                             String actionMessage = ActionString(entry, modName);
                             if (entry.action != Action.INCLUDE){
-                                writer.printf("| %s | %s | %s | %s |%n", modName, statusStr, actionMessage, MessageRegex.translateToMarkdown(entry.message));
+                                writer.printf("| %-25s | %-15s | %-150s | %-200s |%n", modName, statusStr, actionMessage, MessageRegex.translateToMarkdown(entry.message));
                             } else {
                                 modPatchList.add(entry);
                             }
@@ -152,7 +155,7 @@ public class ModlistCheckProcessor {
                                 cleanroomClassCheckList.add(entry);
                             }
                             else if (entry.action != Action.INCLUDE){
-                                writer.printf("| %s | %s | %s | %s |%n", modName, statusStr, actionMessage, MessageRegex.translateToMarkdown(entry.message));
+                                writer.printf("| %-25s | %-15s | %-150s | %-200s |%n", modName, statusStr, actionMessage, MessageRegex.translateToMarkdown(entry.message));
                             } else {
                                 ModEntry classCheckEntryConverted = new ModEntry();
 
@@ -184,10 +187,10 @@ public class ModlistCheckProcessor {
 
                         }
                     }
-
+                    writer.println("");
                     writer.println("## Mods and Patches to include");
-                    writer.println("| Mod Name | Patch for | Description |");
-                    writer.println("| :--- | :--- | :--- |");
+                    writer.printf("| %-200s | %-40s | %-80s |%n", "Mod Name", "Patch for", "Description");
+                    writer.printf("| %-200s | %-40s | %-80s |%n", ":---", ":---", ":---");
                     for(ModEntry entry : modPatchList) {
                         String modName = ModHelper.getModName(entry.modId);
 
@@ -197,22 +200,22 @@ public class ModlistCheckProcessor {
                             if (!loaded){
                                 String patchName = String.format("[%s](https://www.curseforge.com/minecraft/mc-mods/%s)",
                                         patchEntry.modName, patchEntry.modLink);
-                                writer.printf("| %s | %s | %s |%n", patchName, modName, patchEntry.modDescription);
+                                writer.printf("| %-200s | %-40s | %-80s |%n", patchName, modName, patchEntry.modDescription);
                             }
                         }
 
                     }
-
+                    writer.println("");
                     writer.println("## Cleanroom incompatible mods");
-                    writer.println("| Mod Name | Status | Recommended Action | Reason |");
-                    writer.println("| :--- | :--- | :--- | :--- |");
+                    writer.printf("| %-25s | %-15s | %-45s | %-80s |%n", "Mod Name", "Status", "Recommended Action", "Reason");
+                    writer.printf("| %-25s | %-15s | %-45s | %-80s |%n", ":---", ":---", ":---", ":---");
                     for (ClassCheckEntry entry : cleanroomClassCheckList) {
                         if (shouldGenerateEntry(entry)) {
                             String modName = ModHelper.getModName(entry.modId);
                             String statusStr = entry.status.toString();
                             String actionMessage = ActionString(entry, modName);
                             if (entry.action != Action.INCLUDE){
-                                writer.printf("| %s | %s | %s | %s |%n", modName, statusStr, actionMessage, MessageRegex.translateToMarkdown(entry.message));
+                                writer.printf("| %-25s | %-15s | %-45s | %80s |%n", modName, statusStr, actionMessage, MessageRegex.translateToMarkdown(entry.message));
                             }
                         }
                     }
@@ -223,7 +226,7 @@ public class ModlistCheckProcessor {
                             String statusStr = entry.status.toString();
                             String actionMessage = ActionString(entry, modName);
                             if (entry.action != Action.INCLUDE){
-                                writer.printf("| %s | %s | %s | %s |%n", modName, statusStr, actionMessage, MessageRegex.translateToMarkdown(entry.message));
+                                writer.printf("| %-25s | %-15s | %-45s | %80s |%n", modName, statusStr, actionMessage, MessageRegex.translateToMarkdown(entry.message));
                             }
                             htmlEntries.add(new HTMLEntry(
                                     modName,
@@ -243,9 +246,10 @@ public class ModlistCheckProcessor {
                     }
                 }
                 if(ConfigHandler.enableConfigAnalysis && ConfigHandler.enableReportMarkdown){
+                    writer.println("");
                     writer.println("## Config Analysis");
-                    writer.println("| Mod Name | Config Name | Reason |");
-                    writer.println("| :--- | :--- | :--- |");
+                    writer.printf("| %-25s | %-40s | %-150s |%n", "Mod Name", "Config Name", "Reason");
+                    writer.printf("| %-25s | %-40s | %-150s |%n", ":---", ":---", ":---");
                     File configEntries = new File(Minecraft.getMinecraft().gameDir, "config/packCompanion/masterlist_configs.json");
                     processConfigJsonToOutput(configEntries, writer);
                 }
@@ -262,6 +266,21 @@ public class ModlistCheckProcessor {
                 GlobalOutputLog = htmlOutput;
                 if(ConfigHandler.enableReportHtml){
                     HTMLGenerator.saveAsHtml(htmlEntries, htmlOutput, timeStamp);
+                }
+                if (ConfigHandler.enableUploadToRentry) {
+                    try {
+                        byte[] encoded = readAllBytes(outputLog.toPath());
+                        String content = new String(encoded, StandardCharsets.UTF_8);
+
+                        String rentryUrl = RentryUploader.uploadToRentry(content);
+
+                        if (rentryUrl != null) {
+                            PackCompanion.LOGGER.info("Report uploaded to Rentry: {}", rentryUrl);
+                            lastRentryUrl = rentryUrl;
+                        }
+                    } catch (IOException e) {
+                        PackCompanion.LOGGER.error("Failed to read MD file for upload", e);
+                    }
                 }
             }
 

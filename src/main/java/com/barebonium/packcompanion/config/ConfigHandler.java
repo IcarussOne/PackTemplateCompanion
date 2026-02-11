@@ -35,6 +35,11 @@ public class ConfigHandler {
     public static boolean enableReportMarkdown = true;
 
     @Config.RequiresMcRestart
+    @Config.Name("Enable Upload To Rentry")
+    @Config.Comment("Upload the PackCompanion markdown output file to \"Rentry.co\".")
+    public static boolean enableUploadToRentry = true;
+
+    @Config.RequiresMcRestart
     @Config.Name("Enable Login Message")
     @Config.Comment("Enables the PackCompanion login message.")
     public static boolean enableLoginMessage = true;

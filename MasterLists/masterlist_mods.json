@@ -180,8 +180,8 @@
   {
     "modId": "betterbiomeblend",
     "status": "PROBLEMATIC",
-    "action": "REMOVE",
-    "message": "Does not provide any meaningful performance improvements or fixes."
+    "action": "INFO",
+    "message": "Does not provide any meaningful performance improvements or fixes, can only provide a biome blending visual."
   },
   {
     "modId": "betterburning",
@@ -528,7 +528,7 @@
   {
     "modId": "farsight",
     "status": "DEPRECATED",
-    "action": "REMOVE",
+    "action": "INFO",
     "message": "Does almost nothing except move unloadChunk to tick; caches chunks indefinitely which might impact RAM usage."
   },
   {

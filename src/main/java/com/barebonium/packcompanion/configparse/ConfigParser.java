@@ -63,7 +63,7 @@ public class ConfigParser {
                         PackCompanion.LOGGER.info("Dependencies Loaded for Mod Id: " + entry.modId);
                         if (checkConfigMatch(setting)) {
                             if (setting.shouldMatch) {
-                                mdWriter.printf("| %s | %s | %s |%n", modName, setting.name, setting.message);
+                                mdWriter.printf("| %-25s | %-40s | %-150s |%n", modName, setting.name, setting.message);
                                 ConfigTable.append("<td>")
                                         .append(modName)
                                         .append("</td>");
@@ -89,7 +89,7 @@ public class ConfigParser {
                                     String[] split = setting.field.split("#");
                                     setting.name = split[1];
                                 }
-                                mdWriter.printf("| %s | %s | %s |%n", modName, setting.name, setting.message);
+                                mdWriter.printf("| %-25s | %-40s | %-150s |%n", modName, setting.name, setting.message);
                                 ConfigTable.append("<td>")
                                         .append(modName)
                                         .append("</td>");
