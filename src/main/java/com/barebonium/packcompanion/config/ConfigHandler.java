@@ -8,7 +8,10 @@ import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@Config(modid = Tags.MOD_ID)
+@Config(
+        modid = Tags.MOD_ID,
+        name = PackCompanion.MOD_ID + "/" + PackCompanion.MOD_ID
+)
 public class ConfigHandler {
     @Config.RequiresMcRestart
     @Config.Comment("Enable PackCompanion Features")
@@ -36,7 +39,7 @@ public class ConfigHandler {
 
     @Config.RequiresMcRestart
     @Config.Name("Enable Upload To Rentry")
-    @Config.Comment("Upload the PackCompanion markdown output file to \"Rentry.co\".")
+    @Config.Comment("Upload the PackCompanion markdown output file to \"Rentry.co\" to view formatted viewing.")
     public static boolean enableUploadToRentry = true;
 
     @Config.RequiresMcRestart

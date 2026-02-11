@@ -32,7 +32,8 @@ public class PackCompanion {
 
     public static final Logger LOGGER = LogManager.getLogger(Tags.MOD_NAME);
     public static File configDir;
-    public static File baseConfig;
+    public static File cacheDir;
+    public static File outputDir;
     public static File gameDir;
 
     /**
@@ -42,24 +43,31 @@ public class PackCompanion {
      */
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        baseConfig = event.getModConfigurationDirectory();
         gameDir = event.getModConfigurationDirectory().getParentFile();
-        configDir = new File(baseConfig, "packCompanion");
+        configDir = initDirectory(event.getModConfigurationDirectory(), PackCompanion.MOD_ID);
+        cacheDir = initDirectory(configDir, "cache");
+        outputDir = initDirectory(configDir, "output");
         if(ConfigHandler.enableLoginMessage) {
             MinecraftForge.EVENT_BUS.register(this);
         }
     }
 
+    private File initDirectory(File parentDir, String childDir) {
+        File directory = new File(parentDir, childDir);
+        if (!directory.exists()) directory.mkdir();
+        return directory;
+    }
+
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event){
         if(ConfigHandler.packCompanionEnabled){
-            ConfigInitialiser.initialise(baseConfig);
+            ConfigInitialiser.initialise(configDir);
             if (!ConfigHandler.debugMode) {
                 VersionChecker.checkAndDownload();
             }
 
             LOGGER.info("{} is Checking your modlist!", Tags.MOD_NAME);
-            ModlistCheckProcessor.checkModList(baseConfig, gameDir);
+            ModlistCheckProcessor.checkModList();
         }
     }
 

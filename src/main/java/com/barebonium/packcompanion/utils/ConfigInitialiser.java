@@ -4,7 +4,7 @@ import java.io.File;
 
 public class ConfigInitialiser {
     public static void initialise(File configDir) {
-        File logDir = new File(configDir, "packCompanion/output");
+        File logDir = new File(configDir, "output");
         if (!logDir.exists()) logDir.mkdirs();
     }
 }

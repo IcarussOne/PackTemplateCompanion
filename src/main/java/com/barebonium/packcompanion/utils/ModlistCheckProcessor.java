@@ -43,6 +43,7 @@ public class ModlistCheckProcessor {
         }
         return false;
     }
+
     public static boolean shouldGenerateEntry(ClassCheckEntry entry) {
         if(ModHelper.isModLoaded(entry.modId) && entry.verification == Verification.HASHMATCH) {
             File jarFile = ModHelper.getModSource(entry.modId);
@@ -70,23 +71,22 @@ public class ModlistCheckProcessor {
     public static File GlobalOutputLog;
     public static String lastRentryUrl = "";
     private static final Gson GSON = new Gson();
-    public static void checkModList(File configDir, File gameDir) {
+
+    public static void checkModList() {
         boolean isSuccess = false;
         String timeStamp = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date());
         String timeStampFile = new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss").format(new Date());
         String fileName = "companionOutput-" + timeStampFile + ".md";
 
-        File masterlistModsFile = new File(configDir, "packCompanion/masterlist_mods.json");
+        File masterlistModsFile = new File(PackCompanion.cacheDir, "masterlist_mods.json");
         if (!masterlistModsFile.exists()) {
             PackCompanion.LOGGER.info("modList JSON could not be fetched at {}", masterlistModsFile.getPath());
         }
 
-        File logDir = new File(configDir, "packCompanion/output");
-        if (!logDir.exists()) logDir.mkdirs();
-        File outputLog = new File(logDir, fileName);
+        File outputLog = new File(PackCompanion.outputDir, fileName);
 
-        File masterlistModsClassesFile = new File(configDir, "packCompanion/masterlist_mods_classes.json");
-        File masterlistModsCleanroomFile = new File(configDir, "packCompanion/masterlist_mods_cleanroom.json");
+        File masterlistModsClassesFile = new File(PackCompanion.cacheDir, "masterlist_mods_classes.json");
+        File masterlistModsCleanroomFile = new File(PackCompanion.cacheDir, "masterlist_mods_cleanroom.json");
         if (!masterlistModsClassesFile.exists()) {
             PackCompanion.LOGGER.info("modList JSON could not be fetched at {}", masterlistModsClassesFile.getPath());
         }
@@ -250,7 +250,7 @@ public class ModlistCheckProcessor {
                     writer.println("## Config Analysis");
                     writer.printf("| %-25s | %-40s | %-150s |%n", "Mod Name", "Config Name", "Reason");
                     writer.printf("| %-25s | %-40s | %-150s |%n", ":---", ":---", ":---");
-                    File configEntries = new File(Minecraft.getMinecraft().gameDir, "config/packCompanion/masterlist_configs.json");
+                    File configEntries = new File(PackCompanion.cacheDir, "masterlist_configs.json");
                     processConfigJsonToOutput(configEntries, writer);
                 }
                 isSuccess = true;
@@ -262,7 +262,7 @@ public class ModlistCheckProcessor {
             reader.close();
 
             if(isSuccess) {
-                File htmlOutput = new File(logDir, fileName.replace(".md", ".html"));
+                File htmlOutput = new File(PackCompanion.outputDir, fileName.replace(".md", ".html"));
                 GlobalOutputLog = htmlOutput;
                 if(ConfigHandler.enableReportHtml){
                     HTMLGenerator.saveAsHtml(htmlEntries, htmlOutput, timeStamp);
@@ -288,6 +288,7 @@ public class ModlistCheckProcessor {
             PackCompanion.LOGGER.error("Error while trying to read modlist guide", e);
         }
     }
+
     private static String ActionString(ModEntry entry, String modName) {
         String actionMessage;
         switch (entry.action) {
