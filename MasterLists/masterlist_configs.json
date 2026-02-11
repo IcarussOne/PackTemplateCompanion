@@ -44,6 +44,20 @@
         ]
     },
     {
+        "modId": "secretroomsmod",
+        "settings": [
+            {
+                "name": "Update checker",
+                "field": "com.wynprice.secretroomsmod.SecretConfig$General#updateChecker",
+                "type": "boolean",
+                "value": "true",
+                "shouldMatch":"true",
+                "message":"Update Checker may break in Cleanroom environment, Disable it.",
+                "dependencies":[]
+            }
+        ]
+    },
+    {
         "modId": "universaltweaks",
         "settings": [
             {
@@ -52,7 +66,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Advancement Screenshot` tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc` -> `advancement screenshot`.",
+                "message":"The `Advancement Screenshot` tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc` → `advancement screenshot`.",
                 "dependencies":[
                     {
                         "modId": "advancementscreenshot"
@@ -65,7 +79,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"`AI Removal` and `AI Replacement` are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities`.",
+                "message":"`AI Removal` and `AI Replacement` are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities`.",
                 "dependencies":[
                     {
                         "modId": "aiimprovements"
@@ -78,7 +92,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"`AI Removal` and `AI Replacement` are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities`.",
+                "message":"`AI Removal` and `AI Replacement` are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities`.",
                 "dependencies":[
                     {
                         "modId": "aireducer"
@@ -91,7 +105,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Armor Curve` tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc` -> `armor curve`.",
+                "message":"The `Armor Curve` tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc` → `armor curve`.",
                 "dependencies":[
                     {
                         "modId": "armorcurve"
@@ -104,7 +118,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The attribute tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `attributes`.",
+                "message":"The attribute tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `attributes`.",
                 "dependencies":[
                     {
                         "modId": "attributefix"
@@ -117,7 +131,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Banner Bounding Box` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `blocks`.",
+                "message":"The `Banner Bounding Box` fix is located in `Universal Tweaks - Bugfixes.cfg` → `general` → `blocks`.",
                 "dependencies":[
                     {
                         "modId": "bannerpatch"
@@ -130,7 +144,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Bed Obstruction Replacement` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `blocks`.",
+                "message":"The `Bed Obstruction Replacement` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `blocks`.",
                 "dependencies":[
                     {
                         "modId": "bedbreakbegone"
@@ -143,7 +157,7 @@
                 "type": "int",
                 "value": "-1",
                 "shouldMatch":"true",
-                "message":"The `Sleeping Time` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `sleeping`.",
+                "message":"The `Sleeping Time` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `sleeping`.",
                 "dependencies":[
                     {
                         "modId": "bedfix"
@@ -156,7 +170,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Disable Sleeping` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `sleeping`.",
+                "message":"The `Disable Sleeping` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `sleeping`.",
                 "dependencies":[
                     {
                         "modId": "bedsaynosleep"
@@ -169,7 +183,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Better Burning` tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `better burning`.",
+                "message":"The `Better Burning` tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `better burning`.",
                 "dependencies":[
                     {
                         "modId": "betterburning"
@@ -182,7 +196,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Better Ping Display` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "message":"The `Better Ping Display` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "betterpingdisplay"
@@ -195,7 +209,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Better Placement` tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `blocks` -> `better placement`.",
+                "message":"The `Better Placement` tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `blocks` → `better placement`.",
                 "dependencies":[
                     {
                         "modId": "betterplacement"
@@ -208,7 +222,7 @@
                 "type": "int",
                 "value": "100",
                 "shouldMatch":"true",
-                "message":"The chat tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc` -> `chat`.",
+                "message":"The chat tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc` → `chat`.",
                 "dependencies":[
                     {
                         "modId": "biggerchathistory"
@@ -221,7 +235,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The block dispenser tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `blocks` -> `block dispenser`.",
+                "message":"The block dispenser tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `blocks` → `block dispenser`.",
                 "dependencies":[
                     {
                         "modId": "blockdispenser"
@@ -234,7 +248,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The block overlay tweaks are located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `blocks` -> `block overlay`.",
+                "message":"The block overlay tweaks are located in `Universal Tweaks - Bugfixes.cfg` → `general` → `blocks` → `block overlay`.",
                 "dependencies":[
                     {
                         "modId": "blockoverlayfix"
@@ -247,7 +261,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Glass Bottle Consumes Water Source` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `items`.",
+                "message":"The `Glass Bottle Consumes Water Source` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `items`.",
                 "dependencies":[
                     {
                         "modId": "bottlefix"
@@ -260,7 +274,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Better Harvest` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `blocks`.",
+                "message":"The `Better Harvest` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `blocks`.",
                 "dependencies":[
                     {
                         "modId": "bottomsugarcanharvest"
@@ -273,7 +287,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The infinity enchantment tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `items` -> `infinity`.",
+                "message":"The infinity enchantment tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `items` → `infinity`.",
                 "dependencies":[
                     {
                         "modId": "bowinfinityfix"
@@ -286,7 +300,7 @@
                 "type": "double",
                 "value": "0.0",
                 "shouldMatch":"true",
-                "message":"The `Rabbit Killer Spawning Chance` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities`.",
+                "message":"The `Rabbit Killer Spawning Chance` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities`.",
                 "dependencies":[
                     {
                         "modId": "breedablekillerrabbit"
@@ -299,7 +313,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Chicken Shedding` tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `chicken shedding`.",
+                "message":"The `Chicken Shedding` tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `chicken shedding`.",
                 "dependencies":[
                     {
                         "modId": "chickensshed"
@@ -312,7 +326,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The item entity tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `items` -> `item entities`.",
+                "message":"The item entity tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `items` → `item entities`.",
                 "dependencies":[
                     {
                         "modId": "cie"
@@ -325,7 +339,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The attack cooldown tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `items` -> `attack cooldown`.",
+                "message":"The attack cooldown tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `items` → `attack cooldown`.",
                 "dependencies":[
                     {
                         "modId": "classiccombat"
@@ -338,7 +352,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The item entity flash tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `items` -> `item entities`.",
+                "message":"The item entity flash tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `items` → `item entities`.",
                 "dependencies":[
                     {
                         "modId": "cleardespawn"
@@ -351,7 +365,7 @@
                 "type": "int",
                 "value": "3",
                 "shouldMatch":"true",
-                "message":"The `Sugar Cane Size` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `blocks`.",
+                "message":"The `Sugar Cane Size` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `blocks`.",
                 "dependencies":[
                     {
                         "modId": "configurablecane"
@@ -364,7 +378,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The item entity tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `items` -> `item entities`.",
+                "message":"The item entity tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `items` → `item entities`.",
                 "dependencies":[
                     {
                         "modId": "configurabledespawntimer"
@@ -377,7 +391,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The music tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc` -> `music`.",
+                "message":"The music tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc` → `music`.",
                 "dependencies":[
                     {
                         "modId": "continousmusic"
@@ -390,7 +404,7 @@
                 "type": "double",
                 "value": "0.0",
                 "shouldMatch":"true",
-                "message":"The `Creeper Confetti` tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `creeper confetti`.",
+                "message":"The `Creeper Confetti` tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `creeper confetti`.",
                 "dependencies":[
                     {
                         "modId": "creeperconfetti"
@@ -403,7 +417,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The spawn cap tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `spawn caps`.",
+                "message":"The spawn cap tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `spawn caps`.",
                 "dependencies":[
                     {
                         "modId": "customspawner"
@@ -416,7 +430,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Damage Tilt` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "message":"The `Damage Tilt` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "damagetilt"
@@ -429,7 +443,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `No Redstone Lighting` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `performance`.",
+                "message":"The `No Redstone Lighting` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `performance`.",
                 "dependencies":[
                     {
                         "modId": "darkstone"
@@ -442,7 +456,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `LAN Server Properties` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "message":"The `LAN Server Properties` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "defaultlanport"
@@ -455,7 +469,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Entity UUID` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `entities`.",
+                "message":"The `Entity UUID` fix is located in `Universal Tweaks - Bugfixes.cfg` → `general` → `entities`.",
                 "dependencies":[
                     {
                         "modId": "deuf"
@@ -468,7 +482,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Hopper Bounding Box` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `blocks`.",
+                "message":"The `Hopper Bounding Box` fix is located in `Universal Tweaks - Bugfixes.cfg` → `general` → `blocks`.",
                 "dependencies":[
                     {
                         "modId": "diethopper"
@@ -481,7 +495,7 @@
                 "type": "string",
                 "value": "NOTHING",
                 "shouldMatch":"true",
-                "message":"The load sounds tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc` -> `load sounds`.",
+                "message":"The load sounds tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc` → `load sounds`.",
                 "dependencies":[
                     {
                         "modId": "ding"
@@ -494,7 +508,7 @@
                 "type": "int",
                 "value": "0",
                 "shouldMatch":"true",
-                "message":"The `Storage Drawers` tweaks are located in `Universal Tweaks - Mod Integration.cfg` -> `general` -> `storage drawers`.",
+                "message":"The `Storage Drawers` tweaks are located in `Universal Tweaks - Mod Integration.cfg` → `general` → `storage drawers`.",
                 "dependencies":[
                     {
                         "modId": "drawerfps"
@@ -507,7 +521,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Easy Breeding` tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `easy breeding`.",
+                "message":"The `Easy Breeding` tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `easy breeding`.",
                 "dependencies":[
                     {
                         "modId": "easybreeding"
@@ -520,7 +534,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Toggle Cheats Button` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "message":"The `Toggle Cheats Button` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "enablecheats"
@@ -533,7 +547,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `End Portal Parallax` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "message":"The `End Portal Parallax` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "endportalparallax"
@@ -546,7 +560,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Entity Desync` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `entities` -> `entity desync`.",
+                "message":"The `Entity Desync` fix is located in `Universal Tweaks - Bugfixes.cfg` → `general` → `entities` → `entity desync`.",
                 "dependencies":[
                     {
                         "modId": "entity_desync_fix"
@@ -559,7 +573,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"`The Erebus` fixes are located in `Universal Tweaks - Mod Integration.cfg` -> `general` -> `the erebus`.",
+                "message":"`The Erebus` fixes are located in `Universal Tweaks - Mod Integration.cfg` → `general` → `the erebus`.",
                 "dependencies":[
                     {
                         "modId": "erebusfix"
@@ -572,7 +586,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Elytra Deployment & Landing` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `entities`.",
+                "message":"The `Elytra Deployment & Landing` fix is located in `Universal Tweaks - Bugfixes.cfg` → `general` → `entities`.",
                 "dependencies":[
                     {
                         "modId": "eyltrafix"
@@ -585,7 +599,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Fast Leaf Decay` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `blocks`.",
+                "message":"The `Fast Leaf Decay` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `blocks`.",
                 "dependencies":[
                     {
                         "modId": "fastleafdecay"
@@ -598,7 +612,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Fence/Wall Jump` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `blocks`.",
+                "message":"The `Fence/Wall Jump` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `blocks`.",
                 "dependencies":[
                     {
                         "modId": "fencejumper"
@@ -611,7 +625,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The finite water tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `blocks` -> `finite water`.",
+                "message":"The finite water tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `blocks` → `finite water`.",
                 "dependencies":[
                     {
                         "modId": "finite-fluid-control"
@@ -624,7 +638,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Double Consumption` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `entities`.",
+                "message":"The `Double Consumption` fix is located in `Universal Tweaks - Bugfixes.cfg` → `general` → `entities`.",
                 "dependencies":[
                     {
                         "modId": "foodfix"
@@ -637,7 +651,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Void Teleport` tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `void teleport`.",
+                "message":"The `Void Teleport` tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `void teleport`.",
                 "dependencies":[
                     {
                         "modId": "forgivingvoid"
@@ -650,7 +664,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Item Frame Void` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `blocks`.",
+                "message":"The `Item Frame Void` fix is located in `Universal Tweaks - Bugfixes.cfg` → `general` → `blocks`.",
                 "dependencies":[
                     {
                         "modId": "framevoidpatch"
@@ -663,7 +677,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"`Frustum Culling` is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `world`.",
+                "message":"`Frustum Culling` is located in `Universal Tweaks - Bugfixes.cfg` → `general` → `world`.",
                 "dependencies":[
                     {
                         "modId": "frustumculling"
@@ -676,7 +690,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The item entity tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `items` -> `item entities`.",
+                "message":"The item entity tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `items` → `item entities`.",
                 "dependencies":[
                     {
                         "modId": "getittogetherdrops"
@@ -689,7 +703,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Max Player Health` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `entities`.",
+                "message":"The `Max Player Health` fix is located in `Universal Tweaks - Bugfixes.cfg` → `general` → `entities`.",
                 "dependencies":[
                     {
                         "modId": "givemebackmyhp"
@@ -702,7 +716,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The player speed tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `player speed`.",
+                "message":"The player speed tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `player speed`.",
                 "dependencies":[
                     {
                         "modId": "gottagofast"
@@ -715,7 +729,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Help Command` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `misc`.",
+                "message":"The `Help Command` fix is located in `Universal Tweaks - Bugfixes.cfg` → `general` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "helpfixer"
@@ -728,7 +742,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Remove Recipe Book` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "message":"The `Remove Recipe Book` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "hiddenrecipebook"
@@ -741,7 +755,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `No Saddled Wandering` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `misc`.",
+                "message":"The `No Saddled Wandering` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "horsestandstill"
@@ -754,7 +768,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The toast control tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `misc` -> `toast control`.",
+                "message":"The toast control tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `misc` → `toast control`.",
                 "dependencies":[
                     {
                         "modId": "ikwid"
@@ -767,7 +781,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The infinity enchantment tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `items` -> `infinity`.",
+                "message":"The infinity enchantment tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `items` → `infinity`.",
                 "dependencies":[
                     {
                         "modId": "infwithmend"
@@ -780,7 +794,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The infinity enchantment tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `items` -> `infinity`.",
+                "message":"The infinity enchantment tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `items` → `infinity`.",
                 "dependencies":[
                     {
                         "modId": "infinityworkswithallarrows"
@@ -793,7 +807,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Disable Sleeping` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `sleeping`.",
+                "message":"The `Disable Sleeping` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `sleeping`.",
                 "dependencies":[
                     {
                         "modId": "insomniac"
@@ -806,7 +820,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The pickup notification tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc` -> `pickup notification`.",
+                "message":"The pickup notification tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc` → `pickup notification`.",
                 "dependencies":[
                     {
                         "modId": "inventoryspam"
@@ -819,7 +833,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Prevent Keybinds from Overflowing Screen` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "message":"The `Prevent Keybinds from Overflowing Screen` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "keydescfix"
@@ -832,7 +846,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The spawn chunk tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `world` -> `spawn chunks`.",
+                "message":"The spawn chunk tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `world` → `spawn chunks`.",
                 "dependencies":[
                     {
                         "modId": "ksyxis"
@@ -845,7 +859,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"`Frustum Culling` is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `world`.",
+                "message":"`Frustum Culling` is located in `Universal Tweaks - Bugfixes.cfg` → `general` → `world`.",
                 "dependencies":[
                     {
                         "modId": "laglessmod"
@@ -858,7 +872,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `LAN Server Properties` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "message":"The `LAN Server Properties` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "lanserverproperties"
@@ -871,7 +885,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Fast Leaf Decay` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `blocks`.",
+                "message":"The `Fast Leaf Decay` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `blocks`.",
                 "dependencies":[
                     {
                         "modId": "leafdecay"
@@ -884,7 +898,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Mob Despawning Improvement` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities`.",
+                "message":"The `Mob Despawning Improvement` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities`.",
                 "dependencies":[
                     {
                         "modId": "letmedespawn"
@@ -897,7 +911,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Max Player Health` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `entities`.",
+                "message":"The `Max Player Health` fix is located in `Universal Tweaks - Bugfixes.cfg` → `general` → `entities`.",
                 "dependencies":[
                     {
                         "modId": "loginhpfix"
@@ -910,7 +924,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Max Player Health` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `entities`.",
+                "message":"The `Max Player Health` fix is located in `Universal Tweaks - Bugfixes.cfg` → `general` → `entities`.",
                 "dependencies":[
                     {
                         "modId": "maxhealthfixer"
@@ -923,7 +937,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The mending tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities`.",
+                "message":"The mending tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities`.",
                 "dependencies":[
                     {
                         "modId": "mendingfix"
@@ -936,7 +950,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Uncap FPS` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `performance`.",
+                "message":"The `Uncap FPS` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `performance`.",
                 "dependencies":[
                     {
                         "modId": "mfpu"
@@ -949,7 +963,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Mob Despawning Improvement` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities`.",
+                "message":"The `Mob Despawning Improvement` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities`.",
                 "dependencies":[
                     {
                         "modId": "mobpc"
@@ -962,7 +976,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The player speed tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `player speed`.",
+                "message":"The player speed tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `player speed`.",
                 "dependencies":[
                     {
                         "modId": "movingquickly"
@@ -975,7 +989,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The player speed tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `player speed`.",
+                "message":"The player speed tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `player speed`.",
                 "dependencies":[
                     {
                         "modId": "mtqfix"
@@ -988,7 +1002,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Mute Texture Map Errors` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `performance`.",
+                "message":"The `Mute Texture Map Errors` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `performance`.",
                 "dependencies":[
                     {
                         "modId": "muteuselesslogs"
@@ -1001,7 +1015,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Entity NaN Values` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `entities`.",
+                "message":"The `Entity NaN Values` fix is located in `Universal Tweaks - Bugfixes.cfg` → `general` → `entities`.",
                 "dependencies":[
                     {
                         "modId": "nanfix"
@@ -1014,7 +1028,7 @@
                 "type": "double",
                 "value": "0.0",
                 "shouldMatch":"true",
-                "message":"The `Creeper Charged Spawning Chance` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities`.",
+                "message":"The `Creeper Charged Spawning Chance` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities`.",
                 "dependencies":[
                     {
                         "modId": "naturallychargedcreepers"
@@ -1027,7 +1041,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Portal Location Link` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `world`.",
+                "message":"The `Portal Location Link` fix is located in `Universal Tweaks - Bugfixes.cfg` → `general` → `world`.",
                 "dependencies":[
                     {
                         "modId": "netherportalfix"
@@ -1040,7 +1054,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Disable Advancements` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "message":"The `Disable Advancements` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "noadvancements"
@@ -1053,7 +1067,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Disable Sleeping` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `sleeping`.",
+                "message":"The `Disable Sleeping` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `sleeping`.",
                 "dependencies":[
                     {
                         "modId": "nodoze"
@@ -1066,7 +1080,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Disable Glint Overlay on Potions` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "message":"The `Disable Glint Overlay on Potions` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "nomoreglowingpots"
@@ -1079,7 +1093,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `No Night Vision Flash` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "message":"The `No Night Vision Flash` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "nonvflash"
@@ -1092,7 +1106,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `No Night Vision Flash` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "message":"The `No Night Vision Flash` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "nonvflash"
@@ -1105,7 +1119,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `No Potion Shift` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "message":"The `No Potion Shift` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "nopotionshift"
@@ -1118,7 +1132,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Remove Recipe Book` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "message":"The `Remove Recipe Book` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "norecipebook"
@@ -1131,7 +1145,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Remove Recipe Book` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "message":"The `Remove Recipe Book` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "noprecipebook"
@@ -1144,7 +1158,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The attack cooldown tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `items` -> `attack cooldown`.",
+                "message":"The attack cooldown tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `items` → `attack cooldown`.",
                 "dependencies":[
                     {
                         "modId": "oldcombat"
@@ -1157,7 +1171,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The mending tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities`.",
+                "message":"The mending tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities`.",
                 "dependencies":[
                     {
                         "modId": "overpowered_mending"
@@ -1170,7 +1184,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The shield parry tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `items` -> `shield parry`.",
+                "message":"The shield parry tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `items` → `shield parry`.",
                 "dependencies":[
                     {
                         "modId": "parry"
@@ -1183,7 +1197,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Lenient Paths` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `blocks`.",
+                "message":"The `Lenient Paths` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `blocks`.",
                 "dependencies":[
                     {
                         "modId": "pathundergates"
@@ -1196,7 +1210,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The pickup notification tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc` -> `pickup notification`.",
+                "message":"The pickup notification tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc` → `pickup notification`.",
                 "dependencies":[
                     {
                         "modId": "pickupnotifier"
@@ -1209,7 +1223,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Portal Traveling Dupe` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `world`.",
+                "message":"The `Portal Traveling Dupe` fix is located in `Universal Tweaks - Bugfixes.cfg` → `general` → `world`.",
                 "dependencies":[
                     {
                         "modId": "portaldupebegone"
@@ -1222,7 +1236,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Fast Leaf Decay` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `blocks`.",
+                "message":"The `Fast Leaf Decay` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `blocks`.",
                 "dependencies":[
                     {
                         "modId": "quickleafdecay"
@@ -1235,7 +1249,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The rally health tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `rally health`.",
+                "message":"The rally health tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `rally health`.",
                 "dependencies":[
                     {
                         "modId": "rallyhealth"
@@ -1248,7 +1262,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Use Separate Narrator Key` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "message":"The `Use Separate Narrator Key` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "rebind_narrator"
@@ -1261,7 +1275,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Always Eat` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `items`.",
+                "message":"The `Always Eat` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `items`.",
                 "dependencies":[
                     {
                         "modId": "salwayseat"
@@ -1274,7 +1288,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Stronghold Enforcement` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `world`.",
+                "message":"The `Stronghold Enforcement` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `world`.",
                 "dependencies":[
                     {
                         "modId": "savemystronghold"
@@ -1287,7 +1301,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Copy World Seed` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "message":"The `Copy World Seed` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "seedcopy"
@@ -1300,7 +1314,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The broadcast sound tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc` -> `broadcast sounds`.",
+                "message":"The broadcast sound tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc` → `broadcast sounds`.",
                 "dependencies":[
                     {
                         "modId": "silentboss"
@@ -1313,7 +1327,7 @@
                 "type": "boolean",
                 "value": "-1",
                 "shouldMatch":"true",
-                "message":"The `Sleeping Time` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities` -> `sleeping`.",
+                "message":"The `Sleeping Time` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `sleeping`.",
                 "dependencies":[
                     {
                         "modId": "sleepsooner"
@@ -1326,7 +1340,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The smooth scrolling tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc` -> `smooth scrolling`.",
+                "message":"The smooth scrolling tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc` → `smooth scrolling`.",
                 "dependencies":[
                     {
                         "modId": "smooth-scrolling-everywhere"
@@ -1339,7 +1353,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Glass Bottle Consumes Water Source` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `items`.",
+                "message":"The `Glass Bottle Consumes Water Source` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `items`.",
                 "dependencies":[
                     {
                         "modId": "sourcebottles"
@@ -1352,7 +1366,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"`SteamWorld` fixes are located in `Universal Tweaks - Mod Integration.cfg` -> `general` -> `steamworld`.",
+                "message":"`SteamWorld` fixes are located in `Universal Tweaks - Mod Integration.cfg` → `general` → `steamworld`.",
                 "dependencies":[
                     {
                         "modId": "steamworldpatcher"
@@ -1365,7 +1379,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Auto Jump Replacement` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `entities`.",
+                "message":"The `Auto Jump Replacement` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities`.",
                 "dependencies":[
                     {
                         "modId": "stepupfixer"
@@ -1378,7 +1392,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The swing through grass tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc` -> `swing through grass`.",
+                "message":"The swing through grass tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc` → `swing through grass`.",
                 "dependencies":[
                     {
                         "modId": "stg"
@@ -1391,7 +1405,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Super Hot Torch` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `items`.",
+                "message":"The `Super Hot Torch` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `items`.",
                 "dependencies":[
                     {
                         "modId": "superhot"
@@ -1404,7 +1418,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Glass Bottle Consumes Water Source` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `items`.",
+                "message":"The `Glass Bottle Consumes Water Source` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `items`.",
                 "dependencies":[
                     {
                         "modId": "thirstybottles"
@@ -1417,7 +1431,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Tidy Chunk` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `world`.",
+                "message":"The `Tidy Chunk` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `world`.",
                 "dependencies":[
                     {
                         "modId": "tidychunk"
@@ -1430,7 +1444,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Farmland Trample` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `blocks`.",
+                "message":"The `Farmland Trample` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `blocks`.",
                 "dependencies":[
                     {
                         "modId": "tidychunk"
@@ -1443,7 +1457,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `No Enchantment Table Obstruction` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `blocks`.",
+                "message":"The `No Enchantment Table Obstruction` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `blocks`.",
                 "dependencies":[
                     {
                         "modId": "underwaterenchanting"
@@ -1456,7 +1470,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The dimension unload tweaks are located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `world` -> `dimension unload`.",
+                "message":"The dimension unload tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `world` → `dimension unload`.",
                 "dependencies":[
                     {
                         "modId": "unloader"
@@ -1469,7 +1483,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `No Enchantment Table Obstruction` tweak is located in `Universal Tweaks - Tweaks.cfg` -> `general` -> `misc`.",
+                "message":"The `No Enchantment Table Obstruction` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc`.",
                 "dependencies":[
                     {
                         "modId": "unridekeybind"
@@ -1482,7 +1496,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The `Villager Mantle Hoods` fix is located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `entities`.",
+                "message":"The `Villager Mantle Hoods` fix is located in `Universal Tweaks - Bugfixes.cfg` → `general` → `entities`.",
                 "dependencies":[
                     {
                         "modId": "villagermantlefix"
@@ -1495,7 +1509,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The void fog tweaks are located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `world` -> `void fog`.",
+                "message":"The void fog tweaks are located in `Universal Tweaks - Bugfixes.cfg` → `general` → `world` → `void fog`.",
                 "dependencies":[
                     {
                         "modId": "voidfog"
@@ -1508,7 +1522,7 @@
                 "type": "boolean",
                 "value": "false",
                 "shouldMatch":"true",
-                "message":"The finite water tweaks are located in `Universal Tweaks - Bugfixes.cfg` -> `general` -> `blocks` -> `finite water`.",
+                "message":"The finite water tweaks are located in `Universal Tweaks - Bugfixes.cfg` → `general` → `blocks` → `finite water`.",
                 "dependencies":[
                     {
                         "modId": "watercontrolextreme"
