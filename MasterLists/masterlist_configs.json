@@ -48,7 +48,7 @@
         "settings": [
             {
                 "name": "Update checker",
-                "field": "com.wynprice.secretroomsmod.SecretConfig$General#updateChecker",
+                "field": "com.wynprice.secretroomsmod.SecretConfig#GENERAL#updateChecker",
                 "type": "boolean",
                 "value": "true",
                 "shouldMatch":"true",
