@@ -4,6 +4,7 @@ import com.barebonium.packcompanion.PackCompanion;
 import com.barebonium.packcompanion.entries.ConfigEntry;
 import com.barebonium.packcompanion.utils.ConfigSetting;
 import com.barebonium.packcompanion.entries.ModDependency;
+import com.barebonium.packcompanion.utils.MessageRegex;
 import com.barebonium.packcompanion.utils.ModHelper;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -23,12 +24,11 @@ public class ConfigParser {
     public static int ConfigEntryIndex = 0;
 
 
-    public static void processConfigJsonToOutput(File ConfigGuide, File outputLog) throws FileNotFoundException {
+    public static void processConfigJsonToOutput(File configGuide, PrintWriter mdWriter) throws FileNotFoundException {
         PackCompanion.LOGGER.info("Beginning processing config json into Log Output");
-        JsonReader reader = new JsonReader(new FileReader(ConfigGuide));
+        JsonReader reader = new JsonReader(new FileReader(configGuide));
 
         try{
-            PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(outputLog)));
             List<ConfigEntry> entries = GSON.fromJson(reader, new TypeToken<List<ConfigEntry>>(){}.getType());
 
             if (entries == null) return;
@@ -63,16 +63,16 @@ public class ConfigParser {
                         PackCompanion.LOGGER.info("Dependencies Loaded for Mod Id: " + entry.modId);
                         if (checkConfigMatch(setting)) {
                             if (setting.shouldMatch) {
-                                writer.printf("| %s | %s | %s |%n", modName, setting.name, setting.message);
+                                mdWriter.printf("| %s | %s | %s |%n", modName, setting.name, setting.message);
                                 ConfigTable.append("<td>")
                                         .append(modName)
                                         .append("</td>");
 
-                                ConfigTable.append("<td>")
+                                ConfigTable.append("<td class=\"config-name\">")
                                         .append(setting.name)
                                         .append("</td>");
                                 ConfigTable.append("<td>")
-                                        .append(setting.message)
+                                        .append(MessageRegex.translateToHTML(setting.message))
                                         .append("</td>");
                                 ConfigTable.append("</tr>");
                                 ConfigEntryIndex +=1;
@@ -89,16 +89,16 @@ public class ConfigParser {
                                     String[] split = setting.field.split("#");
                                     setting.name = split[1];
                                 }
-                                writer.printf("| %s | %s | %s |%n", modName, setting.name, setting.message);
+                                mdWriter.printf("| %s | %s | %s |%n", modName, setting.name, setting.message);
                                 ConfigTable.append("<td>")
                                         .append(modName)
                                         .append("</td>");
 
-                                ConfigTable.append("<td>")
+                                ConfigTable.append("<td class=\"config-name\">")
                                         .append(setting.name)
                                         .append("</td>");
                                 ConfigTable.append("<td>")
-                                        .append(setting.message)
+                                        .append(MessageRegex.translateToHTML(setting.message))
                                         .append("</td>");
                                 ConfigTable.append("</tr>");
                                 ConfigEntryIndex +=1;
@@ -108,8 +108,7 @@ public class ConfigParser {
                 }
             }
             ConfigTable.append("</table> </details>");
-            writer.close();
-        } catch (IOException e){
+        } catch (Exception e){
             PackCompanion.LOGGER.error("Error while trying to process config json", e);
         }
 

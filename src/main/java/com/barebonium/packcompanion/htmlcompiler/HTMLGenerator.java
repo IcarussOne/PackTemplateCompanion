@@ -40,6 +40,10 @@ public class HTMLGenerator {
                 "  body.light-mode .problematic { color: #cf222e; }" +
                 "  .deprecated { color: #ffdc72; font-weight: bold; } " +
                 "  body.light-mode .deprecated { color: #ffa700; }" +
+                "  .code-snippet{font-family: 'Courier New', Courier, monospace; font-size: 85%; background-color: rgba(240, 246, 252, 0.15); padding: 0.2em 0.4em; border-radius: 3px; color: #ff7b72;}"+
+                "  body.light-mode .code-snippet{ background-color: rgba(11, 36, 62, 0.9); color: #FFFFFF;}"+
+                "  .config-name {color: #72ffeb;}"+
+                "  body.light-mode .config-name{ color: #129d7d;}"+
                 "  a:link {color: #0969da; font-weight: bold;}"+
                 "  body.light-mode a:link {color: #0969da; font-weight: bold;}"+
                 "  .toggle-btn { padding: 8px 16px; font-size: 14px; border-radius: 6px; cursor: pointer; " +

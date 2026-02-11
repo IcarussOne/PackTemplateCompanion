@@ -247,7 +247,7 @@ public class ModlistCheckProcessor {
                     writer.println("| Mod Name | Config Name | Reason |");
                     writer.println("| :--- | :--- | :--- |");
                     File configEntries = new File(Minecraft.getMinecraft().gameDir, "config/packCompanion/masterlist_configs.json");
-                    processConfigJsonToOutput(configEntries, outputLog);
+                    processConfigJsonToOutput(configEntries, writer);
                 }
                 isSuccess = true;
             }
