@@ -13,6 +13,19 @@
     "patchList": []
   },
   {
+    "modId": "codechickenlib",
+    "status": "DEPRECATED",
+    "className": "codechicken.lib.Reference",
+    "verification": "CLASSLOADED",
+    "versionHash": "3b5e44db5ac96fb23a439590b6731a31",
+    "replacementModName": "CodeChicken Lib CRE",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/codechicken-lib-cre",
+    "action": "REPLACE",
+    "patchList": [],
+    "message": "Outdated and has several bugs. Use #link:[CodeChicken Lib CRE](https://www.curseforge.com/minecraft/mc-mods/codechicken-lib-cre).",
+    "isCleanroom": true
+  },
+  {
     "modId": "emojicord",
     "status": "PROBLEMATIC",
     "verification": "HASHMATCH",
