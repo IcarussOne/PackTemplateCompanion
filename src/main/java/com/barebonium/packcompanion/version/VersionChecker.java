@@ -85,7 +85,7 @@ public class VersionChecker {
                     File targetConfigEntries = new File(PackCompanion.cacheDir, "masterlist_configs.json");
                     String configHashValue = FileHashCalculator.getFileHash(targetConfigEntries, "MD5");
 
-                    File targetClassCheckingEntries = new File(PackCompanion.cacheDir, "masterlist_mods_cleanroom.json");
+                    File targetClassCheckingEntries = new File(PackCompanion.cacheDir, "masterlist_mods_classes.json");
                     String classCheckingEntriesHashValue = FileHashCalculator.getFileHash(targetClassCheckingEntries, "MD5");
 
                     checkCache(targetModListGuide, modListHashValue, "modListGuideHash", "ModListGuide", modListGuideIntegrity);
