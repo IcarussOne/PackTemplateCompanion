@@ -1,6 +1,7 @@
 package com.barebonium.packcompanion.utils.helpers;
 
 import com.barebonium.packcompanion.PackCompanion;
+import com.barebonium.packcompanion.config.ConfigHandler;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.LoaderException;
 import net.minecraftforge.fml.common.ModContainer;
@@ -12,7 +13,11 @@ import java.io.File;
 
 public class ModHelper {
     public static boolean isModLoaded(String modId) {
-        return Loader.isModLoaded(modId);
+        boolean loaded = Loader.isModLoaded(modId);
+        if(ConfigHandler.debugMode){
+            PackCompanion.LOGGER.info("Mod {} Load status: {} using the following jar: {}",modId, loaded, getModSource(modId));
+        }
+        return loaded;
     }
 
     public static boolean isModLoaded(String modId, @Nullable String version) {
@@ -21,8 +26,13 @@ public class ModHelper {
 
     public static boolean isModLoaded(String modId, @Nullable String version, boolean isMinVersion, boolean isMaxVersion) {
         if(version == null) {
-            return Loader.isModLoaded(modId);
+            return isModLoaded(modId);
         } else {
+            boolean loaded = Loader.isModLoaded(modId) && isSpecifiedVersion(modId, version, isMinVersion, isMaxVersion);
+            if(ConfigHandler.debugMode){
+                PackCompanion.LOGGER.info("Mod {} Load status: {} using the following jar: {}",modId, loaded, getModSource(modId));
+                PackCompanion.LOGGER.info("Specified version: {}, whereas the actual version is {}", version, Loader.instance().getIndexedModList().get(modId).getProcessedVersion());
+            }
             return Loader.isModLoaded(modId) && isSpecifiedVersion(modId, version, isMinVersion, isMaxVersion);
         }
     }
