@@ -10,7 +10,7 @@ public enum Action {
     UPGRADE((modEntry, modName) -> "Upgrade to version " + modEntry.replacementModVersion),
     REPLACE(
             (modEntry, modName) -> String.format("Replace with [%s](%s)", modEntry.replacementModName, modEntry.replacementModLink),
-            (modEntry, modName) -> String.format("<p>Replace with <a href=\"%s\">%s</a></p>", modEntry.replacementModName, modEntry.replacementModLink)
+            (modEntry, modName) -> String.format("<p>Replace with <a href=\"%s\">%s</a></p>", modEntry.replacementModLink, modEntry.replacementModName)
     ),
     INCLUDE((modEntry, modName) -> "Check mod compatibility"),
     INFO((modEntry, modName) -> "No Action Needed");
