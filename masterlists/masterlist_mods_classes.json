@@ -50,7 +50,7 @@
     "replacementModName": "",
     "replacementModLink": "",
     "replacementModVersion": "",
-    "message": "Not Required with latest MixinBooter",
+    "message": "Not Required with latest version of MixinBooter.",
     "patchList": [],
     "isCleanroom": false
   },
@@ -64,7 +64,7 @@
     "replacementModName": "latest beta",
     "replacementModLink": "latest beta",
     "replacementModVersion": "latest beta",
-    "message": "Not Required with latest MixinBooter",
+    "message": "Not Required with latest version of MixinBooter.",
     "patchList": [],
     "isCleanroom": false
   },
@@ -78,7 +78,7 @@
     "replacementModName": "latest beta",
     "replacementModLink": "latest beta",
     "replacementModVersion": "latest beta",
-    "message": "Must use the latest beta version or it will crash. Optional Baubles integration available.",
+    "message": "Must use the latest beta version or it will crash. Optional Baubles integration available with #link:[Mowzie's Mobs' Baubles](https://www.curseforge.com/minecraft/mc-mods/mowzies-mobs-baubles).",
     "patchList": []
   },
   {
@@ -94,7 +94,7 @@
         "modName": "OptiNotFine",
         "modId": "optinotfine",
         "modLink": "https://www.curseforge.com/minecraft/mc-mods/optinotfine",
-        "modDescription": "Fixing OptiFine, until something better comes."
+        "modDescription": "Numerous OptiFine fixes and improvements."
       }
     ]
   },
@@ -108,7 +108,7 @@
     "replacementModName": "latest beta",
     "replacementModLink": "latest beta",
     "replacementModVersion": "latest beta",
-    "message": "Redundant in modern java version",
+    "message": "Serialization RCE exploit has been fixed in modern java versions. Do not remove if you are using Forge.",
     "patchList": [],
     "isCleanroom": true
   },
@@ -136,7 +136,7 @@
     "replacementModName": "ThaumicTweaker",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumictweaker",
     "replacementModVersion": "",
-    "message": "Problematic. Use #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumcraft-6-enhanced).",
+    "message": "Problematic. Crashes with other Thaumcraft addons. Use #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker).",
     "patchList": [],
     "isCleanroom": false
   }
