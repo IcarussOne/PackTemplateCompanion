@@ -194,9 +194,6 @@ public class ModlistProcessor {
     }
 
     private static void writeCleanroomTable(PrintWriter writer, Map<String, List<ModEntry>> loadedModEntries) {
-        //Skip output if it is not a cleanroom env
-        if(!PackCompanion.isCleanroomEnv) return;
-
         final String analysisTableColumn = "| %-25s | %-15s | %-150s | %-200s |%n";
 
         boolean shouldProcess = loadedModEntries.values().stream().anyMatch(modEntries -> modEntries.stream().anyMatch(entry -> entry.isCleanroom));

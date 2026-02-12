@@ -139,43 +139,41 @@ public class HTMLGenerator {
             patchListTable.append("</table>");
             patchListTable.append("</details>");
 
-            if (PackCompanion.isCleanroomEnv) {
-                cleanroomTable.append("<h2>Cleanroom Incompatible Mods</h2> <details class=\"dropdown\">");
-                cleanroomTable.append("<summary>Show Cleanroom Incompatible Mods</summary>");
-                cleanroomTable.append("<table>");
-                cleanroomTable.append("<tr>");
-                cleanroomTable.append("<th>").append("Mod Name").append("</th>");
-                cleanroomTable.append("<th>").append("Status").append("</th>");
-                cleanroomTable.append("<th>").append("Recommended Action").append("</th>");
-                cleanroomTable.append("<th>").append("Reason").append("</th>");
-                cleanroomTable.append("</tr>");
+            cleanroomTable.append("<h2>Cleanroom Incompatible Mods</h2> <details class=\"dropdown\">");
+            cleanroomTable.append("<summary>Show Cleanroom Incompatible Mods</summary>");
+            cleanroomTable.append("<table>");
+            cleanroomTable.append("<tr>");
+            cleanroomTable.append("<th>").append("Mod Name").append("</th>");
+            cleanroomTable.append("<th>").append("Status").append("</th>");
+            cleanroomTable.append("<th>").append("Recommended Action").append("</th>");
+            cleanroomTable.append("<th>").append("Reason").append("</th>");
+            cleanroomTable.append("</tr>");
 
-                for (HTMLEntry htmlEntry : htmlEntries) {
-                    String modName = htmlEntry.modName;
-                    String statusStr = htmlEntry.status.toString();
-                    String actionMessage = htmlEntry.actionMessage;
-                    String htmlClass = htmlEntry.status.toString().toLowerCase(Locale.ROOT);
-                    if (htmlEntry.action != Action.INCLUDE && htmlEntry.isCleanroom) {
-                        cleanroomTable.append("<tr>");
-                        cleanroomTable.append("<td>").append(modName).append("</td>");
-                        cleanroomTable.append("<td class=")
-                                .append(htmlClass)
-                                .append(">")
-                                .append(statusStr)
-                                .append("</td>");
+            for (HTMLEntry htmlEntry : htmlEntries) {
+                String modName = htmlEntry.modName;
+                String statusStr = htmlEntry.status.toString();
+                String actionMessage = htmlEntry.actionMessage;
+                String htmlClass = htmlEntry.status.toString().toLowerCase(Locale.ROOT);
+                if (htmlEntry.action != Action.INCLUDE && htmlEntry.isCleanroom) {
+                    cleanroomTable.append("<tr>");
+                    cleanroomTable.append("<td>").append(modName).append("</td>");
+                    cleanroomTable.append("<td class=")
+                            .append(htmlClass)
+                            .append(">")
+                            .append(statusStr)
+                            .append("</td>");
 
-                        cleanroomTable.append("<td>")
-                                .append(actionMessage)
-                                .append("</td>");
-                        cleanroomTable.append("<td>")
-                                .append(MessageRegex.translateToHTML(htmlEntry.message))
-                                .append("</td>");
-                        cleanroomTable.append("</tr>");
-                    }
+                    cleanroomTable.append("<td>")
+                            .append(actionMessage)
+                            .append("</td>");
+                    cleanroomTable.append("<td>")
+                            .append(MessageRegex.translateToHTML(htmlEntry.message))
+                            .append("</td>");
+                    cleanroomTable.append("</tr>");
                 }
-                cleanroomTable.append("</table>");
-                cleanroomTable.append("</details>");
             }
+            cleanroomTable.append("</table>");
+            cleanroomTable.append("</details>");
         }
 
 
