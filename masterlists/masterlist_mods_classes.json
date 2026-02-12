@@ -10,7 +10,7 @@
     "replacementModLink": "latest beta",
     "replacementModVersion": "latest beta",
     "message": "Fix already included in Forge / Cleanroom Loader, does nothing when installed.",
-    "patchlist": []
+    "patchList": []
   },
   {
     "modId": "emojicord",
@@ -23,7 +23,7 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/goslingcord",
     "replacementModVersion": "",
     "message": "Outdated and has several bugs. Use #link:[Goslincord version 2.0.0](https://www.curseforge.com/minecraft/mc-mods/goslingcord/files/6231916). (newer versions require Cleanroom)",
-    "patchlist": [],
+    "patchList": [],
     "isCleanroom": false
   },
   {
@@ -37,7 +37,7 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/goslingcord",
     "replacementModVersion": "",
     "message": "Outdated and has several bugs. Use latest #link:[Goslingcord](https://www.curseforge.com/minecraft/mc-mods/goslingcord). For Forge, use #link:[version 2.0.0](https://www.curseforge.com/minecraft/mc-mods/goslingcord/files/6231916).",
-    "patchlist": [],
+    "patchList": [],
     "isCleanroom": true
   },
   {
@@ -51,7 +51,7 @@
     "replacementModLink": "",
     "replacementModVersion": "",
     "message": "Not Required with latest MixinBooter",
-    "patchlist": [],
+    "patchList": [],
     "isCleanroom": false
   },
   {
@@ -65,7 +65,7 @@
     "replacementModLink": "latest beta",
     "replacementModVersion": "latest beta",
     "message": "Not Required with latest MixinBooter",
-    "patchlist": [],
+    "patchList": [],
     "isCleanroom": false
   },
   {
@@ -79,7 +79,24 @@
     "replacementModLink": "latest beta",
     "replacementModVersion": "latest beta",
     "message": "Must use the latest beta version or it will crash. Optional Baubles integration available.",
-    "patchlist": []
+    "patchList": []
+  },
+  {
+    "modId": "optifine",
+    "status": "PROBLEMATIC",
+    "verification": "CLASSLOADED",
+    "className": "optifine.OptiFineForgeTweaker",
+    "versionHash": "",
+    "action": "INCLUDE",
+    "message": "",
+    "patchList": [
+      {
+        "modName": "OptiNotFine",
+        "modId": "optinotfine",
+        "modLink": "https://www.curseforge.com/minecraft/mc-mods/optinotfine",
+        "modDescription": "Fixing OptiFine, until something better comes."
+      }
+    ]
   },
   {
     "modId": "serialisationisbad",
@@ -92,7 +109,7 @@
     "replacementModLink": "latest beta",
     "replacementModVersion": "latest beta",
     "message": "Redundant in modern java version",
-    "patchlist": [],
+    "patchList": [],
     "isCleanroom": true
   },
   {
@@ -106,7 +123,7 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/tinkers-antique",
     "replacementModVersion": "",
     "message": "Outdated. Use #link:[Tinker's Antique](https://www.curseforge.com/minecraft/mc-mods/tinkers-antique).",
-    "patchlist": [],
+    "patchList": [],
     "isCleanroom": false
   },
   {
@@ -120,7 +137,7 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumictweaker",
     "replacementModVersion": "",
     "message": "Problematic. Use #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumcraft-6-enhanced).",
-    "patchlist": [],
+    "patchList": [],
     "isCleanroom": false
   }
 ]
