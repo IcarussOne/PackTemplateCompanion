@@ -133,6 +133,9 @@ public class ModlistProcessor {
         } else if(entry.verification == Verification.CLASSLOADED){
             PackCompanion.LOGGER.warn("Classloaded status for class {}: {}", entry.className,ModHelper.isClassLoaded(entry.className) );
             return ModHelper.isClassLoaded(entry.className);
+        } else if(entry.verification == Verification.CLASSNOTLOADED){
+            PackCompanion.LOGGER.warn("Classloaded status for class {}: {}", entry.className,ModHelper.isClassLoaded(entry.className) );
+            return !ModHelper.isClassLoaded(entry.className);
         } else {
             return false;
         }
