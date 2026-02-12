@@ -20,23 +20,23 @@ public class LoginHandler {
             ITextComponent textComponent = new TextComponentString(TextFormatting.GOLD + "[Pack Companion] " + TextFormatting.GRAY + "Modlist analysis complete!");
 
             ITextComponent htmlTextComponentLink = new TextComponentString(TextFormatting.GOLD + "[Pack Companion] " + TextFormatting.GRAY + "Click ");
-            htmlTextComponentLink.appendSibling(this.getClickable(reportFile.getAbsolutePath(), "Click to open HTML report in your browser"));
+            htmlTextComponentLink.appendSibling(this.getClickable(reportFile.getAbsolutePath(), ClickEvent.Action.OPEN_FILE,"Click to open HTML report in your browser"));
             htmlTextComponentLink.appendText(TextFormatting.GRAY + " to access the Local version of your report.");
 
             event.player.sendMessage(textComponent);
             event.player.sendMessage(htmlTextComponentLink);
             if (!OutputProcessor.lastRentryUrl.isEmpty()){
                 ITextComponent mdTextComponentLink = new TextComponentString(TextFormatting.GOLD + "[Pack Companion] " + TextFormatting.GRAY + "Click ");
-                mdTextComponentLink.appendSibling(this.getClickable(OutputProcessor.lastRentryUrl, "Click to open MD report in your browser"));
+                mdTextComponentLink.appendSibling(this.getClickable(OutputProcessor.lastRentryUrl, ClickEvent.Action.OPEN_URL, "Click to open MD report in your browser"));
                 mdTextComponentLink.appendText(TextFormatting.GRAY + " to access the Web version of your report.");
                 event.player.sendMessage(mdTextComponentLink);
             }
         }
     }
 
-    private ITextComponent getClickable(String link, String tooltip) {
+    private ITextComponent getClickable(String link, ClickEvent.Action action, String tooltip) {
         ITextComponent clickable = new TextComponentTranslation(TextFormatting.RED + "[HERE]");
-        clickable.getStyle().setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_FILE, link));
+        clickable.getStyle().setClickEvent(new ClickEvent(action, link));
         clickable.getStyle().setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new TextComponentString(tooltip)));
         return clickable;
     }
