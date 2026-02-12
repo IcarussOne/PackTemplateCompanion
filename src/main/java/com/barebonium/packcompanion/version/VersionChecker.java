@@ -12,7 +12,6 @@ public class VersionChecker {
     private static final String API_URL = "https://api.github.com/repos/AnasDevO/PackTemplateCompanion/releases/latest";
     private static boolean modListGuideIntegrity = false;
     private static boolean configEntriesIntegrity = false;
-    private static boolean cleanroomListGuideIntegrity = false;
     private static boolean classCheckEntriesIntegrity = false;
 
     public static void checkAndDownload() {
@@ -41,9 +40,7 @@ public class VersionChecker {
                                 File targetFile = new File(PackCompanion.cacheDir, "masterlist_mods.json");
                                 if(!modListGuideIntegrity){
                                     downloadFile(downloadUrl, targetFile);
-
                                     String ModlistHashCache = FileHashCalculator.getFileHash(targetFile, "MD5");
-
 
                                     saveToCache("modListGuideHash",ModlistHashCache);
                                     modListGuideIntegrity = true;
@@ -56,25 +53,10 @@ public class VersionChecker {
                                 File targetFile = new File(PackCompanion.cacheDir, "masterlist_configs.json");
                                 if(!configEntriesIntegrity){
                                     downloadFile(downloadUrl, targetFile);
-
                                     String ConfigHashCache = FileHashCalculator.getFileHash(targetFile, "MD5");
 
                                     saveToCache("configEntriesHash",ConfigHashCache);
                                     configEntriesIntegrity = true;
-                                }
-                                break;
-                            }
-                            case "masterlist_mods_cleanroom.json":
-                            {
-                                String downloadUrl = assetObject.get("browser_download_url").getAsString();
-                                File targetFile = new File(PackCompanion.cacheDir, "masterlist_mods_cleanroom.json");
-                                if(!cleanroomListGuideIntegrity){
-                                    downloadFile(downloadUrl, targetFile);
-
-                                    String CleanroomListHashCache = FileHashCalculator.getFileHash(targetFile, "MD5");
-
-                                    saveToCache("CleanroomListGuideHash",CleanroomListHashCache);
-                                    cleanroomListGuideIntegrity = true;
                                 }
                                 break;
                             }
@@ -103,18 +85,14 @@ public class VersionChecker {
                     File targetConfigEntries = new File(PackCompanion.cacheDir, "masterlist_configs.json");
                     String configHashValue = FileHashCalculator.getFileHash(targetConfigEntries, "MD5");
 
-                    File targetCleanroomListGuide = new File(PackCompanion.cacheDir, "masterlist_mods_cleanroom.json");
-                    String cleanroomListHashValue = FileHashCalculator.getFileHash(targetCleanroomListGuide, "MD5");
-
                     File targetClassCheckingEntries = new File(PackCompanion.cacheDir, "masterlist_mods_cleanroom.json");
                     String classCheckingEntriesHashValue = FileHashCalculator.getFileHash(targetClassCheckingEntries, "MD5");
 
                     checkCache(targetModListGuide, modListHashValue, "modListGuideHash", "ModListGuide", modListGuideIntegrity);
                     checkCache(targetConfigEntries, configHashValue, "configEntriesHash", "ConfigEntries", configEntriesIntegrity);
-                    checkCache(targetCleanroomListGuide, cleanroomListHashValue, "CleanroomListGuideHash", "CleanroomListGuide", cleanroomListGuideIntegrity);
                     checkCache(targetClassCheckingEntries, classCheckingEntriesHashValue, "classCheckEntriesHash", "ClassCheckEntries", classCheckEntriesIntegrity);
 
-                    if (modListGuideIntegrity && configEntriesIntegrity && cleanroomListGuideIntegrity && classCheckEntriesIntegrity) {
+                    if (modListGuideIntegrity && configEntriesIntegrity && classCheckEntriesIntegrity) {
                         PackCompanion.LOGGER.warn("Already up to date.");
                     }
                 }
@@ -125,6 +103,7 @@ public class VersionChecker {
             PackCompanion.LOGGER.error("Error while fetching modlist guide", e);
         }
     }
+
     private static void downloadFile(String urlString, File destination) {
         try {
             URL url = new URL(urlString);
@@ -144,6 +123,7 @@ public class VersionChecker {
             PackCompanion.LOGGER.error("Error downloading modlist guide", e);
         }
     }
+
     private static File getVersionCacheFile() {
         return new File(PackCompanion.cacheDir, "version.json");
     }
@@ -158,6 +138,7 @@ public class VersionChecker {
             return new JsonObject();
         }
     }
+
     private static String getCachedVersion() {
         JsonObject cacheFile = getCacheJson();
         String key = "version";
@@ -184,6 +165,7 @@ public class VersionChecker {
             PackCompanion.LOGGER.error("Failed to update cache key: {}", key);
         }
     }
+
     private static void checkCache(File targetFile, String hashValue, String hashKey, String name, Boolean integrityValue){
         if(getCachedHash(hashKey)!= null ) {
             if (hashValue.equals(getCachedHash(hashKey))) {

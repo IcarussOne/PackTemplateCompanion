@@ -1,7 +1,7 @@
 package com.barebonium.packcompanion.entries;
 
-import com.barebonium.packcompanion.enumstates.Status;
 import com.barebonium.packcompanion.enumstates.Action;
+import com.barebonium.packcompanion.enumstates.Status;
 
 import java.util.List;
 
@@ -13,35 +13,43 @@ public class HTMLEntry {
     public String replacementModVersion;
     public String replacementModLink;
     public Action action;
+    public String actionMessage;
     public boolean isMinVersion;
     public boolean isMaxVersion;
     public List<ModPatchEntry> patchList;
     public String message;
-    public boolean isCleanroom = false;
+    public boolean isCleanroom;
 
-    public HTMLEntry(String modName,
-                     Status status,
-                     String actualVersion,
-                     String replacementModName,
-                     String replacementModLink,
-                     Action action,
-                     boolean isMinVersion,
-                     boolean isMaxVersion,
-                     String replacementModVersion,
-                     List<ModPatchEntry> patchList,
-                     String message,
-                     boolean isCleanroom) {
+    public HTMLEntry(String modName, ModEntry entry) {
         this.modName = modName;
-        this.status = status;
-        this.actualVersion = actualVersion;
-        this.replacementModName = replacementModName;
-        this.replacementModLink = replacementModLink;
-        this.action = action;
-        this.isMinVersion = isMinVersion;
-        this.isMaxVersion = isMaxVersion;
-        this.replacementModVersion = replacementModVersion;
-        this.patchList = patchList;
-        this.message = message;
-        this.isCleanroom = isCleanroom;
+        this.status = entry.status;
+        this.actualVersion = entry.version;
+        this.replacementModName = entry.replacementModName;
+        this.replacementModLink = entry.replacementModLink;
+        this.action = entry.action;
+        this.actionMessage = entry.action.getHtmlActionString(entry, modName);
+        this.isMinVersion = entry.isMinVersion;
+        this.isMaxVersion = entry.isMaxVersion;
+        this.replacementModVersion = entry.replacementModVersion;
+        this.patchList = entry.patchList;
+        this.message = entry.message;
+        this.isCleanroom = entry.isCleanroom;
     }
+
+    public HTMLEntry(String modName, ClassCheckEntry entry) {
+        this.modName = modName;
+        this.status = entry.status;
+        this.actualVersion = null;
+        this.replacementModName = entry.replacementModName;
+        this.replacementModLink = entry.replacementModLink;
+        this.action = entry.action;
+        this.actionMessage = entry.action.getHtmlActionString(entry, modName);
+        this.isMinVersion = false;
+        this.isMaxVersion = false;
+        this.replacementModVersion = entry.replacementModVersion;
+        this.patchList = entry.patchList;
+        this.message = entry.message;
+        this.isCleanroom = entry.isCleanroom;
+    }
+
 }
