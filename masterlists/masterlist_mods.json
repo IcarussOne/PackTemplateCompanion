@@ -755,6 +755,8 @@
       {
         "modName": "IC2 Patcher",
         "modId": "ic2patcher",
+        "isClassLoaded": true,
+        "classpath": "mods.su5ed.ic2patcher.asm.PatcherClassTransformer",
         "modLink": "https://www.curseforge.com/minecraft/mc-mods/ic2-patcher",
         "modDescription": "Fixes several issues in IndustrialCraft2."
       }
@@ -803,6 +805,8 @@
       {
         "modName": "IFPatcher",
         "modId": "ifpatcher",
+        "isClassLoaded": true,
+        "classpath": "net.eve0415.ifpatcher.Transformer",
         "modLink": "https://www.curseforge.com/minecraft/mc-mods/ifpatcher",
         "modDescription": "Patch some known bugs from Industrial Foregoing for 1.12.2 as it is officially EOL."
       }

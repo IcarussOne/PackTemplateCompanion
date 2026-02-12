@@ -6,5 +6,6 @@ public class ModPatchEntry {
     public String version;
     public String modLink;
     public String modDescription;
-
+    public boolean isClassLoaded = false;
+    public String classpath = "";
 }
