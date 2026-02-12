@@ -1,11 +1,11 @@
-package com.barebonium.packcompanion.configparse;
+package com.barebonium.packcompanion.processors;
 
 import com.barebonium.packcompanion.PackCompanion;
 import com.barebonium.packcompanion.entries.ConfigEntry;
-import com.barebonium.packcompanion.utils.ConfigSetting;
 import com.barebonium.packcompanion.entries.ModDependency;
+import com.barebonium.packcompanion.utils.ConfigSetting;
 import com.barebonium.packcompanion.utils.MessageRegex;
-import com.barebonium.packcompanion.utils.ModHelper;
+import com.barebonium.packcompanion.utils.helpers.ModHelper;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
@@ -18,19 +18,37 @@ import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Objects;
 
-public class ConfigParser {
+public class ConfigProcessor {
     private static final Gson GSON = new Gson();
     public static StringBuilder ConfigTable= new StringBuilder("<h2>Config Analysis</h2> <details class=\"dropdown\"> <summary>Show Config Analysis</summary> <table>");
     public static int ConfigEntryIndex = 0;
 
 
-    public static void processConfigJsonToOutput(File configGuide, PrintWriter mdWriter) throws FileNotFoundException {
+    public static boolean checkConfigs(PrintWriter writer) {
         PackCompanion.LOGGER.info("Beginning processing config json into Log Output");
-        JsonReader reader = new JsonReader(new FileReader(configGuide));
+        boolean isSuccess = false;
+        try {
+            writer.println("## Config Analysis");
+            writer.printf("| %-25s | %-40s | %-150s |%n", "Mod Name", "Config Name", "Reason");
+            writer.printf("| %-25s | %-40s | %-150s |%n", ":---", ":---", ":---");
 
-        try{
+            File configEntries = OutputProcessor.verifyCachedFile("masterlist_configs.json");
+            JsonReader reader = new JsonReader(new FileReader(configEntries));
             List<ConfigEntry> entries = GSON.fromJson(reader, new TypeToken<List<ConfigEntry>>(){}.getType());
+            reader.close();
 
+            processConfigJsonToOutput(writer, entries);
+            writer.println("");
+            isSuccess = true;
+        } catch (IOException e) {
+            PackCompanion.LOGGER.error("Error while trying to process config json", e);
+        }
+        PackCompanion.LOGGER.info("Finished processing config json");
+        return isSuccess;
+    }
+
+    public static void processConfigJsonToOutput(PrintWriter mdWriter, List<ConfigEntry> entries) throws FileNotFoundException {
+        try{
             if (entries == null) return;
             ConfigTable.append("<tr>");
             ConfigTable.append("<th>").append("Mod Name").append("</th>");
@@ -65,7 +83,7 @@ public class ConfigParser {
                         }
                     }
                     if (dependenciesLoaded) {
-                        PackCompanion.LOGGER.info("Dependencies Loaded for Mod Id: " + entry.modId);
+                        PackCompanion.LOGGER.info("Dependencies Loaded for Mod Id: {}", entry.modId);
                         if (checkConfigMatch(setting)) {
                             if (setting.shouldMatch) {
                                 mdWriter.printf("| %-25s | %-40s | %-150s |%n", modName, setting.name, setting.message);
@@ -116,9 +134,6 @@ public class ConfigParser {
         } catch (Exception e){
             PackCompanion.LOGGER.error("Error while trying to process config json", e);
         }
-
-
-        PackCompanion.LOGGER.info("Finished processing config json");
     }
 
     private static boolean checkConfigMatch(ConfigSetting setting) {
@@ -134,8 +149,10 @@ public class ConfigParser {
             if (setting.type.startsWith("list")) {
                 PackCompanion.LOGGER.info("The field is a List, Processing..");
                 if (setting.value.equals("[]")) {
-                    if (currentValue instanceof List) return ((List<?>) currentValue).isEmpty();
-                    if (currentValue.getClass().isArray()) return java.lang.reflect.Array.getLength(currentValue) == 0;
+                    if (currentValue instanceof List)
+                        return ((List<?>) currentValue).isEmpty();
+                    if (currentValue.getClass().isArray())
+                        return java.lang.reflect.Array.getLength(currentValue) == 0;
                 }else if (setting.value.startsWith("Contains:")) {
                     String jsonPart = setting.value.substring("Contains:".length()).trim();
 
@@ -195,7 +212,6 @@ public class ConfigParser {
             default:        return String.class;
         }
     }
-
 
     private static class ListTypeToken implements ParameterizedType {
         private final Class<?> wrapped;

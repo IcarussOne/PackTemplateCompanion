@@ -3,15 +3,18 @@ package com.barebonium.packcompanion.htmlcompiler;
 
 import com.barebonium.packcompanion.PackCompanion;
 import com.barebonium.packcompanion.config.ConfigHandler;
-import com.barebonium.packcompanion.configparse.ConfigParser;
 import com.barebonium.packcompanion.entries.HTMLEntry;
 import com.barebonium.packcompanion.entries.ModPatchEntry;
 import com.barebonium.packcompanion.enumstates.Action;
-import com.barebonium.packcompanion.utils.*;
+import com.barebonium.packcompanion.processors.ConfigProcessor;
+import com.barebonium.packcompanion.processors.OutputProcessor;
+import com.barebonium.packcompanion.utils.MessageRegex;
+import com.barebonium.packcompanion.utils.helpers.ModHelper;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class HTMLGenerator {
     public static String GlobalHTML;
@@ -67,7 +70,7 @@ public class HTMLGenerator {
         StringBuilder cleanroomTable = new StringBuilder();
         List<HTMLEntry> modPatchList = new ArrayList<>();
         int patchEntryCount = 0;
-        if (ConfigHandler.enableModAnalysis){
+        if (ConfigHandler.enableModAnalysis) {
             tableHtml.append("<h2>Mod Analysis</h2> <details class=\"dropdown\">");
             tableHtml.append("<summary>Show Mod Analysis</summary>");
             tableHtml.append("<table>");
@@ -78,46 +81,13 @@ public class HTMLGenerator {
             tableHtml.append("<th>").append("Reason").append("</th>");
             tableHtml.append("</tr>");
 
-            for(HTMLEntry htmlEntry : htmlEntries){
+            for (HTMLEntry htmlEntry : htmlEntries) {
                 String modName = htmlEntry.modName;
                 String statusStr = htmlEntry.status.toString();
-                String htmlClass;
-                String actionMessage;
+                String htmlClass = htmlEntry.status.toString();
+                String actionMessage = htmlEntry.actionMessage;
 
-
-                switch (htmlEntry.action) {
-                    case REMOVE:
-                        actionMessage = "<p>Remove " + modName+ "</p>";
-                        break;
-                    case INFO:
-                        actionMessage = "<p>No Action Needed</p>";
-                        break;
-                    case REPLACE:
-                        actionMessage = String.format("<p>Replace with <a href=\"%s\">%s</a></p>",
-                                htmlEntry.replacementModLink, htmlEntry.replacementModName);
-                        break;
-                    case UPGRADE:
-                        actionMessage = "<p>Upgrade to version " + htmlEntry.replacementModVersion+"</p>";
-                        break;
-                    case DOWNGRADE:
-                        actionMessage = "<p>Downgrade to version " + htmlEntry.replacementModVersion+"</p>";
-                        break;
-                    default:
-                        actionMessage = "<p>Check mod compatibility</p>";
-                        break;
-                }
-                switch(htmlEntry.status){
-                    case DEPRECATED:
-                        htmlClass = "deprecated";
-                        break;
-                    case PROBLEMATIC:
-                        htmlClass = "problematic";
-                        break;
-                    default:
-                        htmlClass = "";
-                        break;
-                }
-                if(htmlEntry.action != Action.INCLUDE && !htmlEntry.isCleanroom){
+                if (htmlEntry.action != Action.INCLUDE && !htmlEntry.isCleanroom) {
                     tableHtml.append("<tr>");
                     tableHtml.append("<td>").append(modName).append("</td>");
                     tableHtml.append("<td class=")
@@ -133,7 +103,7 @@ public class HTMLGenerator {
                             .append(MessageRegex.translateToHTML(htmlEntry.message))
                             .append("</td>");
                     tableHtml.append("</tr>");
-                } else if(htmlEntry.action == Action.INCLUDE &&  !htmlEntry.isCleanroom){
+                } else if (htmlEntry.action == Action.INCLUDE && !htmlEntry.isCleanroom) {
                     modPatchList.add(htmlEntry);
                 }
             }
@@ -149,12 +119,12 @@ public class HTMLGenerator {
             patchListTable.append("<th>").append("Description").append("</th>");
             patchListTable.append("</tr>");
 
-            for (HTMLEntry htmlEntry : modPatchList){
+            for (HTMLEntry htmlEntry : modPatchList) {
                 String modName = htmlEntry.modName;
 
-                for (ModPatchEntry patchEntry : htmlEntry.patchList){
+                for (ModPatchEntry patchEntry : htmlEntry.patchList) {
                     boolean loaded = ModHelper.isModLoaded(patchEntry.modId);
-                    if (!loaded){
+                    if (!loaded) {
                         patchEntryCount++;
                         String patchModName = String.format("<p><a href=\"%s\">%s</a></p>",
                                 patchEntry.modLink, patchEntry.modName);
@@ -165,8 +135,10 @@ public class HTMLGenerator {
                     }
                 }
             }
+
             patchListTable.append("</table>");
             patchListTable.append("</details>");
+
             cleanroomTable.append("<h2>Cleanroom Incompatible Mods</h2> <details class=\"dropdown\">");
             cleanroomTable.append("<summary>Show Cleanroom Incompatible Mods</summary>");
             cleanroomTable.append("<table>");
@@ -176,46 +148,13 @@ public class HTMLGenerator {
             cleanroomTable.append("<th>").append("Recommended Action").append("</th>");
             cleanroomTable.append("<th>").append("Reason").append("</th>");
             cleanroomTable.append("</tr>");
-            for(HTMLEntry htmlEntry : htmlEntries){
+
+            for (HTMLEntry htmlEntry : htmlEntries) {
                 String modName = htmlEntry.modName;
                 String statusStr = htmlEntry.status.toString();
-                String htmlClass;
-                String actionMessage;
-
-
-                switch (htmlEntry.action) {
-                    case REMOVE:
-                        actionMessage = "<p>Remove " + modName+ "</p>";
-                        break;
-                    case INFO:
-                        actionMessage = "<p>No Action Needed</p>";
-                        break;
-                    case REPLACE:
-                        actionMessage = String.format("<p>Replace with <a href=\"%s\">%s</a></p>",
-                                htmlEntry.replacementModLink, htmlEntry.replacementModName);
-                        break;
-                    case UPGRADE:
-                        actionMessage = "<p>Upgrade to version " + htmlEntry.replacementModVersion+"</p>";
-                        break;
-                    case DOWNGRADE:
-                        actionMessage = "<p>Downgrade to version " + htmlEntry.replacementModVersion+"</p>";
-                        break;
-                    default:
-                        actionMessage = "<p>Check mod compatibility</p>";
-                        break;
-                }
-                switch(htmlEntry.status){
-                    case DEPRECATED:
-                        htmlClass = "deprecated";
-                        break;
-                    case PROBLEMATIC:
-                        htmlClass = "problematic";
-                        break;
-                    default:
-                        htmlClass = "";
-                        break;
-                }
-                if(htmlEntry.action != Action.INCLUDE && htmlEntry.isCleanroom){
+                String actionMessage = htmlEntry.actionMessage;
+                String htmlClass = htmlEntry.status.toString().toLowerCase(Locale.ROOT);
+                if (htmlEntry.action != Action.INCLUDE && htmlEntry.isCleanroom) {
                     cleanroomTable.append("<tr>");
                     cleanroomTable.append("<td>").append(modName).append("</td>");
                     cleanroomTable.append("<td class=")
@@ -252,9 +191,9 @@ public class HTMLGenerator {
         }
         String ConfigTableFinal="";
         if(ConfigHandler.enableConfigAnalysis){
-            ConfigTableFinal = ConfigParser.ConfigTable.toString();
+            ConfigTableFinal = ConfigProcessor.ConfigTable.toString();
         }
-        String PatchListTableFinal=patchListTable.toString();
+        String PatchListTableFinal = patchListTable.toString();
         if (patchEntryCount != 0){
             PatchListTableFinal="";
         }
@@ -266,6 +205,6 @@ public class HTMLGenerator {
         } catch (IOException e) {
             PackCompanion.LOGGER.error("Failed to write HTML report", e);
         }
-        ModlistCheckProcessor.HTMLReportFile = file;
+        OutputProcessor.HTMLReportFile = file;
     }
 }

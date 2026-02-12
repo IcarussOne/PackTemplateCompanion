@@ -30,6 +30,13 @@
     "message": "Outdated. Use #link:[Advanced Rocketry - Reworked](https://www.curseforge.com/minecraft/mc-mods/advanced-rocketry-2)."
   },
   {
+    "modId": "advancedshader",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "Binary patching, incompatible.",
+    "isCleanroom": true
+  },
+  {
     "modId": "advancementscreenshot",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -248,6 +255,19 @@
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "blockcraftery",
+    "version": "1.2.0",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionInclusive": false,
+    "status": "DEPRECATED",
+    "replacementModName": "Blockcraftery: Refurbished",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/blockcraftery-refurbished",
+    "action": "REPLACE",
+    "message": "Outdated and has several bugs. Use #link:[Blockcraftery: Refurbished](https://www.curseforge.com/minecraft/mc-mods/blockcraftery-refurbished).",
+    "isCleanroom": true
+  },
+  {
     "modId": "blockdispenser",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -302,6 +322,19 @@
     "message": "MCreator mod with numerous bugs in 1.12.2. Use an alternative biome mod."
   },
   {
+    "modId": "charset",
+    "version": "0.5.6.6",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionInclusive": false,
+    "status": "DEPRECATED",
+    "replacementModName": "Charset CRE",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/charset-cre",
+    "action": "REPLACE",
+    "message": "Outdated and has several bugs. Use #link:[Charset CRE](https://www.curseforge.com/minecraft/mc-mods/charset-cre).",
+    "isCleanroom": true
+  },
+  {
     "modId": "chickensshed",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -340,6 +373,19 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/xp-orb-clump",
     "action": "REPLACE",
     "message": "Outdated. Use #link:[Fixeroo](https://www.curseforge.com/minecraft/mc-mods/xp-orb-clump)."
+  },
+  {
+    "modId": "codechickenlib",
+    "status": "DEPRECATED",
+    "version": "3.2.3.358",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionInclusive": false,
+    "replacementModName": "CodeChicken Lib CRE",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/codechicken-lib-cre",
+    "action": "REPLACE",
+    "message": "Outdated and has several bugs. Use #link:[CodeChicken Lib CRE](https://www.curseforge.com/minecraft/mc-mods/codechicken-lib-cre).",
+    "isCleanroom": true
   },
   {
     "modId": "configurablecane",
@@ -622,6 +668,19 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/forgelin-continuous",
     "action": "REPLACE",
     "message": "Outdated. Use #link:[Forgelin-Continuous](https://www.curseforge.com/minecraft/mc-mods/forgelin-continuous)."
+  },
+  {
+    "modId": "geckolib3",
+    "version": "3.0.30",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionInclusive": false,
+    "status": "DEPRECATED",
+    "replacementModName": "SauriaLib",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/saurialib",
+    "action": "REPLACE",
+    "message": "Outdated and has several bugs. SauriaLib remains compatible with existing mods that depend on GeckoLib 3. Use #link:[SauriaLib](https://www.curseforge.com/minecraft/mc-mods/saurialib).",
+    "isCleanroom": true
   },
   {
     "modId": "getittogetherdrops",
@@ -1253,6 +1312,26 @@
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "randomportals",
+    "status": "PROBLEMATIC",
+    "version": "1.12.2-1.8.2.4",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionInclusive": false,
+    "replacementModName": "Clean Portals",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/clean-portals-randomportals-cleanroom-edition",
+    "action": "REPLACE",
+    "message": "Does not work with Cleanroom Launcher. Use the Cleanroom Edition replacement.",
+    "isCleanroom": true
+  },
+  {
+    "modId": "rawinput",
+    "status": "DEPRECATED",
+    "action": "REMOVE",
+    "message": "Already included in Cleanroom.",
+    "isCleanroom": true
+  },
+  {
     "modId": "rebind_narrator",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -1291,6 +1370,13 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "serializationisbad",
+    "status": "DEPRECATED",
+    "action": "REMOVE",
+    "message": "Modern Java versions fix the issue this mod solves.",
+    "isCleanroom": true
+  },
+  {
     "modId": "silentboss",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -1319,6 +1405,15 @@
     "status": "PROBLEMATIC",
     "action": "REMOVE",
     "message": "May breaks some mods."
+  },
+  {
+    "modId": "soundfilters",
+    "status": "DEPRECATED",
+    "replacementModName": "Sound Physics Remixin",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/sound-physics-remixin",
+    "action": "REPLACE",
+    "message": "Outdated. Use #link:[籁/Sound Physics Remixin](https://www.curseforge.com/minecraft/mc-mods/sound-physics-remixin). For Forge, use #link:[version 1.1.15 or below](https://www.curseforge.com/minecraft/mc-mods/sound-physics-remixin/files/6723296).",
+    "isCleanroom": true
   },
   {
     "modId": "sourcebottles",

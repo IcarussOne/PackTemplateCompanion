@@ -1,4 +1,4 @@
-package com.barebonium.packcompanion.utils;
+package com.barebonium.packcompanion.utils.helpers;
 
 import com.barebonium.packcompanion.PackCompanion;
 import net.minecraftforge.fml.common.Loader;

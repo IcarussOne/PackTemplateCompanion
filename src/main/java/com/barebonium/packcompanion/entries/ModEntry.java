@@ -3,13 +3,11 @@ package com.barebonium.packcompanion.entries;
 import com.barebonium.packcompanion.enumstates.Action;
 import com.barebonium.packcompanion.enumstates.Status;
 
-
 import javax.annotation.Nullable;
-import java.util.List;
 
-public class ModEntry {
+public class ModEntry extends AbstractModEntry{
     /** The mod id of this mod entry. */
-    public String modId;
+    //public String modId;
 
     /** The mod version string. */
     public @Nullable String version;
@@ -61,18 +59,18 @@ public class ModEntry {
     public Action action = Action.REMOVE;
 
     /** The name of the replacement mod, if applicable. Used to generate hyperlink text. */
-    public @Nullable String replacementModName;
+    //public @Nullable String replacementModName;
 
     /** The hyperlink to the replacement mod, if applicable. This should be the full hyperlink. */
-    public @Nullable String replacementModLink;
+    //public @Nullable String replacementModLink;
 
     /** The replacement mod version. Should always be used with {Action.UPGRADE} or {Action.DOWNGRADE}. */
-    public @Nullable String replacementModVersion;
+    //public @Nullable String replacementModVersion;
 
     /** The message that will display in the output file. Usually the reason the mod is on this list. */
-    public String message = "";
+    //public String message = "";
 
     /** A list of mods used that patch or fix the main mod. ThaumcraftFix is an example of this. */
-    public @Nullable List<ModPatchEntry> patchList;
+    //public @Nullable List<ModPatchEntry> patchList;
 
 }
