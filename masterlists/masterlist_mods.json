@@ -1469,6 +1469,12 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "stupidthings",
+    "status": "PROBLEMATIC",
+    "action": "INFO",
+    "message": "If you plan on adding The Aurorian mod, make sure to disable `Acid` and `Rubber` in config"
+  },
+  {
     "modId": "superhot",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
