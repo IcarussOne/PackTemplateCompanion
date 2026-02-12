@@ -39,10 +39,10 @@ public class HTMLGenerator {
                 " td { text-align: center }"+
                 "  tr:nth-child(even) { background-color: var(--row-even); }" +
                 "  h1 { border-bottom: 1px solid var(--title-border); padding-bottom: .3em; display: flex; justify-content: space-between; align-items: center; }" +
-                "  .problematic { color: #ff7b72; font-weight: bold; } " +
-                "  body.light-mode .problematic { color: #cf222e; }" +
-                "  .deprecated { color: #ffdc72; font-weight: bold; } " +
-                "  body.light-mode .deprecated { color: #ffa700; }" +
+                "  .PROBLEMATIC { color: #ff7b72; font-weight: bold; } " +
+                "  body.light-mode .PROBLEMATIC { color: #cf222e; }" +
+                "  .DEPRECATED { color: #ffdc72; font-weight: bold; } " +
+                "  body.light-mode .DEPRECATED { color: #ffa700; }" +
                 "  .code-snippet{font-family: 'Courier New', Courier, monospace; font-size: 85%; background-color: rgba(240, 246, 252, 0.15); padding: 0.2em 0.4em; border-radius: 3px; color: #64d3ff;}"+
                 "  body.light-mode .code-snippet{ background-color: rgba(11, 36, 62, 0.9); color: #FFFFFF;}"+
                 "  .config-name {color: #72ffeb;}"+
