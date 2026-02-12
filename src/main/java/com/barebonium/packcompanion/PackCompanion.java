@@ -49,11 +49,14 @@ public class PackCompanion {
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event){
+        long start = System.currentTimeMillis();
         if (ConfigHandler.enableVersionChecker) {
             VersionChecker.checkAndDownload();
         }
         LOGGER.info("{} is Checking your modlist!", Tags.MOD_NAME);
         OutputProcessor.runPackCompanionChecks();
+        long end = System.currentTimeMillis();
+        LOGGER.info("{} took {}ms to complete its analysis.", PackCompanion.MOD_NAME, end - start);
     }
 
 }
