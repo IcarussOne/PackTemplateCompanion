@@ -60,6 +60,9 @@ public class ModHelper {
     public static boolean isClassLoaded(String className) {
         try {
             Class.forName(className);
+            if (ConfigHandler.debugMode) {
+                PackCompanion.LOGGER.error("Found loaded class: {}", className);
+            }
             return true;
         } catch(ClassNotFoundException e) {
             PackCompanion.LOGGER.error("Failed to load class {}: {}", className, e.getMessage());

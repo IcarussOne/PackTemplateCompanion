@@ -123,8 +123,7 @@ public class HTMLGenerator {
                 String modName = htmlEntry.modName;
 
                 for (ModPatchEntry patchEntry : htmlEntry.patchList) {
-                    boolean loaded = ModHelper.isModLoaded(patchEntry.modId);
-                    if (!loaded) {
+                    if (patchEntry.isClassLoaded && !ModHelper.isClassLoaded(patchEntry.classpath) || !patchEntry.isClassLoaded && !ModHelper.isModLoaded(patchEntry.modId)) {
                         patchEntryCount++;
                         String patchModName = String.format("<p><a href=\"%s\">%s</a></p>",
                                 patchEntry.modLink, patchEntry.modName);
