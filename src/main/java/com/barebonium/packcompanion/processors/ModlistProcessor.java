@@ -148,41 +148,49 @@ public class ModlistProcessor {
     private static void writeModListTable(PrintWriter writer, Map<String, List<ModEntry>> loadedModEntries) {
         final String analysisTableColumn = "| %-25s | %-15s | %-150s | %-200s |%n";
 
-        writer.println("## Mod Analysis");
-        writer.printf(analysisTableColumn, "Mod Name", "Status", "Recommended Action", "Reason");
-        writer.printf(analysisTableColumn, ":---", ":---", ":---", ":---");
+        boolean shouldProcess = loadedModEntries.values().stream().anyMatch(modEntries -> modEntries.stream().anyMatch(entry -> !entry.isCleanroom));
+        if(shouldProcess) {
+            writer.println("## Mod Analysis");
+            writer.printf(analysisTableColumn, "Mod Name", "Status", "Recommended Action", "Reason");
+            writer.printf(analysisTableColumn, ":---", ":---", ":---", ":---");
 
-        loadedModEntries.forEach((modName, modEntries) -> {
-            for(ModEntry entry : modEntries) {
-                if(entry.isCleanroom) continue;
-                String statusStr = entry.status.toString();
-                String actionMessage = entry.action.getMarkdownActionString(entry, modName);
-                writer.printf(analysisTableColumn, modName, statusStr, actionMessage, MessageRegex.translateToMarkdown(entry.message));
-            }
-        });
-        writer.println("");
+            loadedModEntries.forEach((modName, modEntries) -> {
+                for (ModEntry entry : modEntries) {
+                    if (entry.isCleanroom)
+                        continue;
+                    String statusStr = entry.status.toString();
+                    String actionMessage = entry.action.getMarkdownActionString(entry, modName);
+                    writer.printf(analysisTableColumn, modName, statusStr, actionMessage, MessageRegex.translateToMarkdown(entry.message));
+                }
+            });
+            writer.println("");
+        }
     }
 
     private static void writePatchTable(PrintWriter writer, Map<String, List<ModEntry>> modEntries) {
         final String patchTableColumn = "| %-200s | %-40s | %-80s |%n";
 
-        writer.println("## Mods and Patches to include");
-        writer.printf(patchTableColumn, "Mod Name", "Patch for", "Description");
-        writer.printf(patchTableColumn, ":---", ":---", ":---");
+        boolean shouldProcess = modEntries.values().stream().anyMatch(entries -> entries.stream().anyMatch(entry -> entry.patchList != null && !entry.patchList.isEmpty()));
+        if(shouldProcess) {
+            writer.println("## Mods and Patches to include");
+            writer.printf(patchTableColumn, "Mod Name", "Patch for", "Description");
+            writer.printf(patchTableColumn, ":---", ":---", ":---");
 
-        modEntries.forEach((modName, entries) -> {
-            for(ModEntry entry : entries) {
-                if(entry.patchList == null) continue;
-                for(ModPatchEntry patchEntry : entry.patchList) {
-                    if(!ModHelper.isModLoaded(patchEntry.modId)) {
-                        //TODO: This is still using the old hardcoded link format. May need to switch to the less brittle version.
-                        String patchName = String.format("[%s](https://www.curseforge.com/minecraft/mc-mods/%s)", patchEntry.modName, patchEntry.modLink);
-                        writer.printf(patchTableColumn, patchName, modName, patchEntry.modDescription);
+            modEntries.forEach((modName, entries) -> {
+                for (ModEntry entry : entries) {
+                    if (entry.patchList == null)
+                        continue;
+                    for (ModPatchEntry patchEntry : entry.patchList) {
+                        if (!ModHelper.isModLoaded(patchEntry.modId)) {
+                            //TODO: This is still using the old hardcoded link format. May need to switch to the less brittle version.
+                            String patchName = String.format("[%s](https://www.curseforge.com/minecraft/mc-mods/%s)", patchEntry.modName, patchEntry.modLink);
+                            writer.printf(patchTableColumn, patchName, modName, patchEntry.modDescription);
+                        }
                     }
                 }
-            }
-        });
-        writer.println("");
+            });
+            writer.println("");
+        }
     }
 
     private static void writeCleanroomTable(PrintWriter writer, Map<String, List<ModEntry>> loadedModEntries) {
@@ -191,18 +199,22 @@ public class ModlistProcessor {
 
         final String analysisTableColumn = "| %-25s | %-15s | %-150s | %-200s |%n";
 
-        writer.println("## Cleanroom incompatible mods");
-        writer.printf(analysisTableColumn, "Mod Name", "Status", "Recommended Action", "Reason");
-        writer.printf(analysisTableColumn, ":---", ":---", ":---", ":---");
+        boolean shouldProcess = loadedModEntries.values().stream().anyMatch(modEntries -> modEntries.stream().anyMatch(entry -> entry.isCleanroom));
+        if(shouldProcess) {
+            writer.println("## Cleanroom incompatible mods");
+            writer.printf(analysisTableColumn, "Mod Name", "Status", "Recommended Action", "Reason");
+            writer.printf(analysisTableColumn, ":---", ":---", ":---", ":---");
 
-        loadedModEntries.forEach((modName, modEntries) -> {
-            for(ModEntry entry : modEntries) {
-                if(!entry.isCleanroom) continue;
-                String statusStr = entry.status.toString();
-                String actionMessage = entry.action.getMarkdownActionString(entry, modName);
-                writer.printf(analysisTableColumn, modName, statusStr, actionMessage, MessageRegex.translateToMarkdown(entry.message));
-            }
-        });
-        writer.println("");
+            loadedModEntries.forEach((modName, modEntries) -> {
+                for (ModEntry entry : modEntries) {
+                    if (!entry.isCleanroom)
+                        continue;
+                    String statusStr = entry.status.toString();
+                    String actionMessage = entry.action.getMarkdownActionString(entry, modName);
+                    writer.printf(analysisTableColumn, modName, statusStr, actionMessage, MessageRegex.translateToMarkdown(entry.message));
+                }
+            });
+            writer.println("");
+        }
     }
 }
