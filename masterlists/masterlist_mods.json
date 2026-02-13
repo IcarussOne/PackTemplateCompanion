@@ -325,6 +325,19 @@
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "chisel",
+    "status": "DEPRECATED",
+    "version": "MC1.12.2-1.0.2.45",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "Chisel",
+    "replacementModVersion": "MC1.12.2-1.0.2.45",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/chisel/download/2915375",
+    "action": "UPGRADE",
+    "message": "Outdated and may cause crashes."
+  },
+  {
     "modId": "cie",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -357,6 +370,19 @@
     "message": "Outdated. Use #link:[Fixeroo](https://www.curseforge.com/minecraft/mc-mods/xp-orb-clump)."
   },
   {
+    "modId": "ctm",
+    "status": "DEPRECATED",
+    "version": "MC1.12.2-1.0.2.31",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "ConnectedTexturesMod",
+    "replacementModVersion": "MC1.12.2-1.0.2.31",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/ctm/download/2915363",
+    "action": "UPGRADE",
+    "message": "Outdated and may cause crashes."
+  },
+  {
     "modId": "configurablecane",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -371,6 +397,19 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "contenttweaker",
+    "status": "DEPRECATED",
+    "version": "1.12.2-4.10.0",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "ContentTweaker",
+    "replacementModVersion": "1.12.2-4.10.0",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/contenttweaker/download/3331364",
+    "action": "UPGRADE",
+    "message": "Outdated and may cause crashes."
   },
   {
     "modId": "continousmusic",
@@ -391,6 +430,19 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/crafting-tweaks-unofficial",
     "action": "REPLACE",
     "message": "Outdated. Use #link:[Crafting Tweaks Unofficial](https://www.curseforge.com/minecraft/mc-mods/crafting-tweaks-unofficial)."
+  },
+  {
+    "modId": "crafttweaker",
+    "status": "DEPRECATED",
+    "version": "4.1.20",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "CraftTweaker",
+    "replacementModVersion": "4.1.20",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/crafttweaker/download/7406648",
+    "action": "UPGRADE",
+    "message": "Outdated and may cause crashes."
   },
   {
     "modId": "creeperconfetti",
@@ -650,6 +702,19 @@
     "message": "Will cause incompatibilities with no performance gain. #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks) already has its own Frustum Culling tweak."
   },
   {
+    "modId": "fluxnetworks",
+    "status": "DEPRECATED",
+    "version": "4.1.0",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "Flux Networks",
+    "replacementModVersion": "4.1.0",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/flux-networks/download/3178199",
+    "action": "UPGRADE",
+    "message": "Outdated and may cause crashes."
+  },
+  {
     "modId": "forgelin",
     "status": "DEPRECATED",
     "replacementModName": "Forgelin-Continuous",
@@ -699,6 +764,19 @@
     "status": "PROBLEMATIC",
     "action": "REMOVE",
     "message": "Provides no benefit."
+  },
+  {
+    "modId": "hammercore",
+    "status": "DEPRECATED",
+    "version": "12.2.58",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "HammerLib",
+    "replacementModVersion": "12.2.58",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/hammer-lib/download/6348753",
+    "action": "UPGRADE",
+    "message": "Outdated and may cause crashes."
   },
   {
     "modId": "helpfixer",
@@ -860,6 +938,19 @@
     ]
   },
   {
+    "modId": "jeiutilities",
+    "status": "DEPRECATED",
+    "version": "0.2.13",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "JEI Utilities",
+    "replacementModVersion": "0.2.13",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/jei-utilities/download/6937116",
+    "action": "UPGRADE",
+    "message": "Outdated and may cause crashes."
+  },
+  {
     "modId": "jeresources",
     "action": "INCLUDE",
     "patchList": [
@@ -957,10 +1048,10 @@
     "isMinVersion": false,
     "isMaxVersion": true,
     "status": "DEPRECATED",
-    "replacementModName": "Mekanism Community Edition Unofficial",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/mekanism-ce-unofficial",
+    "replacementModName": "Mekanism Community Edition",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/mekanism-ce",
     "action": "REPLACE",
-    "message": "Outdated. Use #link:[Mekanism Community Edition Unofficial](https://www.curseforge.com/minecraft/mc-mods/mekanism-ce-unofficial)."
+    "message": "Outdated. Use #link:[Mekanism Community Edition](https://www.curseforge.com/minecraft/mc-mods/mekanism-ce)."
   },
   {
     "modId": "mendingfix",
@@ -1014,6 +1105,19 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "modtweaker",
+    "status": "DEPRECATED",
+    "version": "4.0.19",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "ModTweaker",
+    "replacementModVersion": "4.0.19",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/modtweaker/download/3840577",
+    "action": "UPGRADE",
+    "message": "Outdated and may cause crashes."
   },
   {
     "modId": "movingquickly",
@@ -1154,6 +1258,19 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/lolasm",
     "action": "REPLACE",
     "message": "Outdated fork of CensoredASM. Use #link:[CensoredASM](https://www.curseforge.com/minecraft/mc-mods/lolasm)."
+  },
+  {
+    "modId": "neenergistics",
+    "status": "DEPRECATED",
+    "version": "2.0.9",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "Not Enough Energetics",
+    "replacementModVersion": "2.0.9",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/not-enough-energistics/download/6325382",
+    "action": "UPGRADE",
+    "message": "Outdated and may cause crashes."
   },
   {
     "modId": "oldcombat",
@@ -1334,6 +1451,19 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "reccomplex",
+    "status": "DEPRECATED",
+    "version": "1.4.8.6",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "Reccurent Complex",
+    "replacementModVersion": "1.4.8.6",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/recurrent-complex/download/5615733",
+    "action": "UPGRADE",
+    "message": "Outdated and may cause crashes."
+  },
+  {
     "modId": "redirectionor",
     "status": "DEPRECATED",
     "action": "REMOVE",
@@ -1392,6 +1522,19 @@
     "message": "Outdated and may cause crashes."
   },
   {
+    "modId": "sledgehammer",
+    "status": "DEPRECATED",
+    "version": "1.12.2-2.0.26",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "Sledgehammer",
+    "replacementModVersion": "1.12.2-2.0.26",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/sledgehammer/download/5264329",
+    "action": "UPGRADE",
+    "message": "Outdated and may cause crashes."
+  },
+  {
     "modId": "sleepsooner",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -1412,6 +1555,19 @@
     "status": "PROBLEMATIC",
     "action": "REMOVE",
     "message": "May break text rendering in some mods."
+  },
+  {
+    "modId": "solarflux",
+    "status": "DEPRECATED",
+    "version": "12.4.11",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "Solar Flux Reborn",
+    "replacementModVersion": "12.4.11",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/solar-flux-reborn/download/3050838",
+    "action": "UPGRADE",
+    "message": "Outdated and may cause crashes."
   },
   {
     "modId": "soundfilters",
@@ -1682,6 +1838,19 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "universaltweaks",
+    "status": "DEPRECATED",
+    "version": "1.18.0",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "Universal Tweaks",
+    "replacementModVersion": "1.18.0",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks/download/7403701",
+    "action": "UPGRADE",
+    "message": "Outdated and may cause crashes."
+  },
+  {
     "modId": "unloader",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -1716,6 +1885,19 @@
     "status": "PROBLEMATIC",
     "action": "REMOVE",
     "message": "Broken and abandoned performance mod. Use #link:[Nothirium](https://www.curseforge.com/minecraft/mc-mods/nothirium) and #link:[Naughthirium](https://www.curseforge.com/minecraft/mc-mods/naughthirium) or (Cleanroom Only) #link:[Celeritas](https://github.com/kappa-maintainer/Celeritas-auto-build/releases)."
+  },
+  {
+    "modId": "vintagefix",
+    "status": "DEPRECATED",
+    "version": "0.6.2",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "Vintagefix",
+    "replacementModVersion": "0.6.2",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/vintagefix/download/6609247",
+    "action": "UPGRADE",
+    "message": "Outdated and may cause crashes."
   },
   {
     "modId": "voidfog",
