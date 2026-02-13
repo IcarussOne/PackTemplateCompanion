@@ -43,6 +43,19 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "agricraft",
+    "status": "DEPRECATED",
+    "version": "2.15.0",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "Agricraft-Refitbench",
+    "replacementModVersion": "2.15.0",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/agricraft-refitted",
+    "action": "REPLACE",
+    "message": "Outdated and has Severe memory usage and low performance."
+  },
+  {
     "modId": "aiimprovements",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -779,6 +792,15 @@
     "message": "Outdated and may cause crashes."
   },
   {
+    "modId": "hardcoreitemstages",
+    "status": "PROBLEMATIC",
+    "replacementModName": "",
+    "replacementModVersion": "",
+    "replacementModLink": "",
+    "action": "INFO",
+    "message": "Crashes with VintageFix's `mixin.dynamic_resources` setting. disable `hideUnknownItems` config in `hardcoreitemstage.cfg`to avoid further crashes."
+  },
+  {
     "modId": "helpfixer",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -1291,6 +1313,15 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/openblocks-reopened",
     "action": "REPLACE",
     "message": "Outdated. Remove OpenModsLib and Replace OpenBlocks with #link:[OpenBlocks Reopened](https://www.curseforge.com/minecraft/mc-mods/openblocks-reopened)."
+  },
+  {
+    "modId": "orestages",
+    "status": "PROBLEMATIC",
+    "replacementModName": "",
+    "replacementModVersion": "",
+    "replacementModLink": "",
+    "action": "INFO",
+    "message": "Crashes with VintageFix's `mixin.dynamic_resources` setting. disable it in `vintagefix.properties` config to avoid further crashes."
   },
   {
     "modId": "overpowered_mending",
