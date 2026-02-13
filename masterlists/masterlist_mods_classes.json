@@ -220,5 +220,19 @@
     "message": "Problematic. Crashes with other Thaumcraft addons. Use #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker).",
     "patchList": [],
     "isCleanroom": false
+  },
+  {
+    "modId": "thaumictweaker",
+    "status": "PROBLEMATIC",
+    "verification": "CLASSLOADED",
+    "className": "nukeminecart.thaumictweaker.ThaumicTweaker",
+    "versionHash": "",
+    "action": "REPLACE",
+    "replacementModName": "ThaumicTweaker",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumictweaker",
+    "replacementModVersion": "",
+    "message": "Mainly changes a few recipes and has the same id as ThaumicTweaker, a more useful mod. Use #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker).",
+    "patchList": [],
+    "isCleanroom": false
   }
 ]
