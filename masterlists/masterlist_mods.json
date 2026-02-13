@@ -43,18 +43,6 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
-    "modId": "aether",
-    "version": "0.3.0",
-    "isMinVersion": true,
-    "isMaxVersion": true,
-    "isVersionExclusive": false,
-    "status": "PROBLEMATIC",
-    "replacementModName": "Aether II: Phosphor Not Included",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/the-aether-ii-phosphor-not-included",
-    "action": "REPLACE",
-    "message": "Packaged Phosphor breaks lighting engine compatibility. Use #link:[Aether II: Phosphor Not Included](https://www.curseforge.com/minecraft/mc-mods/the-aether-ii-phosphor-not-included)."
-  },
-  {
     "modId": "aiimprovements",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -824,6 +812,10 @@
   },
   {
     "modId": "jeid",
+    "version": "2.2.4",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
     "status": "DEPRECATED",
     "replacementModName": "RoughlyEnoughIDs (REID)",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/reid/files/6761278",
@@ -1135,14 +1127,6 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/lolasm",
     "action": "REPLACE",
     "message": "Outdated fork of CensoredASM. Use #link:[CensoredASM](https://www.curseforge.com/minecraft/mc-mods/lolasm)."
-  },
-  {
-    "modId": "nyx",
-    "status": "PROBLEMATIC",
-    "replacementModName": "Hyxcate",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/hyxcate",
-    "action": "REPLACE",
-    "message": "Performance issues and OptiFine lighting bugs. Use #link:[Hyxcate](https://www.curseforge.com/minecraft/mc-mods/hyxcate)."
   },
   {
     "modId": "oldcombat",

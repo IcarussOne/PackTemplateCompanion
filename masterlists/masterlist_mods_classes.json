@@ -1,5 +1,16 @@
 [
   {
+    "modId": "aether",
+    "status": "PROBLEMATIC",
+    "className": "",
+    "verification": "HASHMATCH",
+    "versionHash": "692a33b02b44583b7c626af78c92d0e8",
+    "replacementModName": "Aether II: Phosphor Not Included",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/the-aether-ii-phosphor-not-included",
+    "action": "REPLACE",
+    "message": "Packaged Phosphor breaks lighting engine compatibility. Use #link:[Aether II: Phosphor Not Included](https://www.curseforge.com/minecraft/mc-mods/the-aether-ii-phosphor-not-included)."
+  },
+  {
     "modId": "borninabarn",
     "status": "DEPRECATED",
     "verification": "CLASSLOADED",
@@ -16,7 +27,7 @@
     "modId": "codechickenlib",
     "status": "DEPRECATED",
     "className": "codechicken.lib.Reference",
-    "verification": "CLASSLOADED",
+    "verification": "HASHMATCH",
     "versionHash": "3b5e44db5ac96fb23a439590b6731a31",
     "replacementModName": "CodeChicken Lib CRE",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/codechicken-lib-cre",
@@ -93,6 +104,17 @@
     "replacementModVersion": "latest beta",
     "message": "Must use the latest beta version or it will crash. Optional Baubles integration available with #link:[Mowzie's Mobs' Baubles](https://www.curseforge.com/minecraft/mc-mods/mowzies-mobs-baubles).",
     "patchList": []
+  },
+  {
+    "modId": "nyx",
+    "status": "PROBLEMATIC",
+    "verification": "CLASSLOADED",
+    "className": "de.ellpeck.nyx.lunarevents.LunarEvent",
+    "versionHash": "",
+    "replacementModName": "Hyxcate",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/hyxcate",
+    "action": "REPLACE",
+    "message": "Performance issues and OptiFine lighting bugs. Use #link:[Hyxcate](https://www.curseforge.com/minecraft/mc-mods/hyxcate)."
   },
   {
     "modId": "optifine",
