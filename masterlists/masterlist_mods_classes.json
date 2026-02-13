@@ -1,5 +1,25 @@
 [
   {
+    "modId": "aether",
+    "status": "PROBLEMATIC",
+    "className": "",
+    "verification": "HASHMATCH",
+    "versionHash": "692a33b02b44583b7c626af78c92d0e8",
+    "replacementModName": "Aether II: Phosphor Not Included",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/the-aether-ii-phosphor-not-included",
+    "action": "REPLACE",
+    "message": "Packaged Phosphor breaks lighting engine compatibility. Use #link:[Aether II: Phosphor Not Included](https://www.curseforge.com/minecraft/mc-mods/the-aether-ii-phosphor-not-included)."
+  },
+  {
+    "modId": "betterfps",
+    "status": "PROBLEMATIC",
+    "verification": "CLASSLOADED",
+    "className": "guichaguri.betterfps.BetterFps",
+    "versionHash": "",
+    "action": "REMOVE",
+    "message": "Outdated and breaks core functionality."
+  },
+  {
     "modId": "borninabarn",
     "status": "DEPRECATED",
     "verification": "CLASSLOADED",
@@ -11,6 +31,19 @@
     "replacementModVersion": "latest beta",
     "message": "Fix already included in Forge / Cleanroom Loader, does nothing when installed.",
     "patchList": []
+  },
+  {
+    "modId": "codechickenlib",
+    "status": "DEPRECATED",
+    "className": "codechicken.lib.Reference",
+    "verification": "HASHMATCH",
+    "versionHash": "3b5e44db5ac96fb23a439590b6731a31",
+    "replacementModName": "CodeChicken Lib CRE",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/codechicken-lib-cre",
+    "action": "REPLACE",
+    "patchList": [],
+    "message": "Outdated and has several bugs. Use #link:[CodeChicken Lib CRE](https://www.curseforge.com/minecraft/mc-mods/codechicken-lib-cre).",
+    "isCleanroom": true
   },
   {
     "modId": "emojicord",
@@ -50,7 +83,7 @@
     "replacementModName": "",
     "replacementModLink": "",
     "replacementModVersion": "",
-    "message": "Not Required with latest MixinBooter",
+    "message": "Not Required with latest version of MixinBooter.",
     "patchList": [],
     "isCleanroom": false
   },
@@ -64,7 +97,7 @@
     "replacementModName": "latest beta",
     "replacementModLink": "latest beta",
     "replacementModVersion": "latest beta",
-    "message": "Not Required with latest MixinBooter",
+    "message": "Not Required with latest version of MixinBooter.",
     "patchList": [],
     "isCleanroom": false
   },
@@ -78,8 +111,19 @@
     "replacementModName": "latest beta",
     "replacementModLink": "latest beta",
     "replacementModVersion": "latest beta",
-    "message": "Must use the latest beta version or it will crash. Optional Baubles integration available.",
+    "message": "Must use the latest beta version or it will crash. Optional Baubles integration available with #link:[Mowzie's Mobs' Baubles](https://www.curseforge.com/minecraft/mc-mods/mowzies-mobs-baubles).",
     "patchList": []
+  },
+  {
+    "modId": "nyx",
+    "status": "PROBLEMATIC",
+    "verification": "CLASSLOADED",
+    "className": "de.ellpeck.nyx.lunarevents.LunarEvent",
+    "versionHash": "",
+    "replacementModName": "Hyxcate",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/hyxcate",
+    "action": "REPLACE",
+    "message": "Performance issues and OptiFine lighting bugs. Use #link:[Hyxcate](https://www.curseforge.com/minecraft/mc-mods/hyxcate)."
   },
   {
     "modId": "optifine",
@@ -94,7 +138,7 @@
         "modName": "OptiNotFine",
         "modId": "optinotfine",
         "modLink": "https://www.curseforge.com/minecraft/mc-mods/optinotfine",
-        "modDescription": "Fixing OptiFine, until something better comes."
+        "modDescription": "Numerous OptiFine fixes and improvements."
       }
     ]
   },
@@ -108,7 +152,7 @@
     "replacementModName": "latest beta",
     "replacementModLink": "latest beta",
     "replacementModVersion": "latest beta",
-    "message": "Redundant in modern java version",
+    "message": "Serialization RCE exploit has been fixed in modern java versions. Do not remove if you are using Forge.",
     "patchList": [],
     "isCleanroom": true
   },
@@ -136,7 +180,7 @@
     "replacementModName": "ThaumicTweaker",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumictweaker",
     "replacementModVersion": "",
-    "message": "Problematic. Use #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumcraft-6-enhanced).",
+    "message": "Problematic. Crashes with other Thaumcraft addons. Use #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker).",
     "patchList": [],
     "isCleanroom": false
   }

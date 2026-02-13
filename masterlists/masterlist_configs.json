@@ -8,7 +8,7 @@
                 "type": "boolean",
                 "value": "true",
                 "shouldMatch":"true",
-                "message":"This Setting should be disabled as Advanced Rocketry's Sky conflicts with Optifine (mainly shaders)",
+                "message":"This Setting should be disabled as Advanced Rocketry's Sky conflicts with Optifine's shaders.",
                 "dependencies":[
                     {
                         "modId": "optifine",
@@ -23,7 +23,7 @@
                 "type": "boolean",
                 "value": "true",
                 "shouldMatch":"true",
-                "message":"This Setting should be disabled as Advanced Rocketry's Sky conflicts with Optifine (mainly shaders)",
+                "message":"This Setting should be disabled as Advanced Rocketry's Sky conflicts with Optifine's shaders.",
                 "dependencies":[
                     {
                         "modId": "optifine",
@@ -38,7 +38,7 @@
                 "type": "boolean",
                 "value": "true",
                 "shouldMatch":"true",
-                "message":"This Setting should be disabled as Advanced Rocketry's Sky conflicts with Hyxcate/Nyx's Sky",
+                "message":"This Setting should be disabled as Advanced Rocketry's Sky conflicts with Hyxcate/Nyx's Sky rendering.",
                 "dependencies":[
                     {
                         "modId": "nyx"
@@ -51,7 +51,7 @@
                 "type": "boolean",
                 "value": "true",
                 "shouldMatch":"true",
-                "message":"This Setting should be disabled as Advanced Rocketry's Sky conflicts with Hyxcate/Nyx's Sky",
+                "message":"This Setting should be disabled as Advanced Rocketry's Sky conflicts with Hyxcate/Nyx's Sky rendering.",
                 "dependencies":[
                     {
                         "modId": "nyx"
@@ -69,7 +69,7 @@
                 "type": "list_int_p",
                 "value": "Contains:[0]",
                 "shouldMatch":"false",
-                "message":"This Setting should contain the dimension 0 (Overworld) as Astral Sorcery's Sky conflicts with Hyxcate",
+                "message":"This Setting should contain the dimension 0 (Overworld) as Astral Sorcery's Sky conflicts with Hyxcate's sky rendering.",
                 "dependencies":[
                     {
                         "modId": "nyx"
@@ -82,7 +82,7 @@
                 "type": "list_int_p",
                 "value": "Contains:[0]",
                 "shouldMatch":"false",
-                "message":"This Setting should contain the dimension 0 (Overworld) as Astral Sorcery's Sky conflicts with Optifine's Sky (Mainly Shaders)",
+                "message":"This Setting should contain the dimension 0 (Overworld) as Astral Sorcery's Sky conflicts with Optifine's shaders.",
                 "dependencies":[
                     {
                         "modId": "optifine",
@@ -90,32 +90,6 @@
                         "className": "optifine.OptiFineForgeTweaker"
                     }
                 ]
-            }
-        ]
-    },
-    {
-        "modId": "potioncore",
-        "version":"1.9_for_1.12.2",
-        "isMinVersion":"false",
-        "isMaxVersion":"true",
-        "settings": [
-            {
-                "name": "ControllableJumpBoost",
-                "field": "com.tmtravlr.potioncore.ConfigLoader#controllableJumpBoost",
-                "type": "boolean",
-                "value": "true",
-                "shouldMatch":"true",
-                "message":"This Setting should be false!",
-                "dependencies":[]
-            },
-            {
-                "name": "FixReach",
-                "field": "com.tmtravlr.potioncore.ConfigLoader#fixReach",
-                "type": "boolean",
-                "value": "true",
-                "shouldMatch":"true",
-                "message":"This Setting should be false!",
-                "dependencies":[]
             }
         ]
     },
@@ -128,7 +102,7 @@
                 "type": "boolean",
                 "value": "true",
                 "shouldMatch":"true",
-                "message":"This setting messes up with Optifine's shaders, you should disable it if you use shaders",
+                "message":"This setting messes up with Optifine's shaders, you should disable it if you use shaders.",
                 "dependencies":[
                     {
                         "modId": "optifine",
@@ -148,7 +122,7 @@
                 "type": "boolean",
                 "value": "true",
                 "shouldMatch":"true",
-                "message":"This setting messes up with Optifine's shaders, you should disable it if you use shaders",
+                "message":"This setting messes up with Optifine's shaders, you should disable it if you use shaders.",
                 "dependencies":[
                     {
                         "modId": "optifine",
@@ -163,7 +137,7 @@
                 "type": "boolean",
                 "value": "true",
                 "shouldMatch":"true",
-                "message":"This setting messes up with Optifine's shaders, you should disable it if you use shaders",
+                "message":"This setting messes up with Optifine's shaders, you should disable it if you use shaders.",
                 "dependencies":[
                     {
                         "modId": "optifine",
@@ -171,6 +145,29 @@
                         "className": "optifine.OptiFineForgeTweaker"
                     }
                 ]
+            }
+        ]
+    },
+    {
+        "modId": "potioncore",
+        "settings": [
+            {
+                "name": "controllableJumpBoost",
+                "field": "com.tmtravlr.potioncore.ConfigLoader#controllableJumpBoost",
+                "type": "boolean",
+                "value": "true",
+                "shouldMatch":"true",
+                "message":"This setting breaks dozens of jump height increasing effects. This setting should be false.",
+                "dependencies":[]
+            },
+            {
+                "name": "fixReach",
+                "field": "com.tmtravlr.potioncore.ConfigLoader#fixReach",
+                "type": "boolean",
+                "value": "true",
+                "shouldMatch":"true",
+                "message":"This setting is incompatible with ReachFix and breaks several other reach increasing effects. This setting should be false.",
+                "dependencies":[]
             }
         ]
     },
@@ -183,7 +180,7 @@
                 "type": "boolean",
                 "value": "true",
                 "shouldMatch":"true",
-                "message":"Update Checker may break in Cleanroom environment, Disable it.",
+                "message":"Update Checker may break in Cleanroom environment. This setting should be false.",
                 "dependencies":[]
             }
         ]

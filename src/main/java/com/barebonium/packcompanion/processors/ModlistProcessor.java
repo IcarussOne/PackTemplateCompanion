@@ -110,7 +110,7 @@ public class ModlistProcessor {
                 boolean isSpecifiedVersion = ModHelper.isSpecifiedVersion(entry.modId, entry.version, entry.isMinVersion, entry.isMaxVersion);
                 // Returns true if the entry is inclusive and the version is the specified version range or true
                 // if the entry is not inclusive, and it is not in the specified version range.
-                return (entry.isVersionInclusive && isSpecifiedVersion) || (!entry.isVersionInclusive && !isSpecifiedVersion);
+                return (!entry.isVersionExclusive && isSpecifiedVersion) || (entry.isVersionExclusive && !isSpecifiedVersion);
             }
         }
         return false;
