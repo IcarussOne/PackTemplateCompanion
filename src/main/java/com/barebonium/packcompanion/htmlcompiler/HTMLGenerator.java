@@ -134,7 +134,7 @@ public class HTMLGenerator {
                         patchListTable.append("<tr>");
                         patchListTable.append("<td>").append(patchModName).append("</td>");
                         patchListTable.append("<td>").append(modName).append("</td>");
-                        patchListTable.append("<td>").append(patchEntry.modDescription).append("</td>");
+                        patchListTable.append("<td>").append(MessageRegex.translateToHTML(patchEntry.modDescription)).append("</td>");
                     }
                 }
             }
