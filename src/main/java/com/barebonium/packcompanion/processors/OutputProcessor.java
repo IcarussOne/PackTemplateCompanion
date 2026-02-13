@@ -10,6 +10,8 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Date;
 
 import static java.nio.file.Files.readAllBytes;
@@ -47,6 +49,8 @@ public class OutputProcessor {
             writer.close();
 
             if(isSuccess) {
+                cleanupOldReports(PackCompanion.outputDir, ".md", ConfigHandler.reportFilesCountLimit);
+                cleanupOldReports(PackCompanion.outputDir, ".html", ConfigHandler.reportFilesCountLimit);
                 if (ConfigHandler.debugMode) {
                     PackCompanion.LOGGER.info("Analysis confirmed, Beginning HTML compilation");
                 }
@@ -86,5 +90,20 @@ public class OutputProcessor {
         File directory = new File(parentDir, childDir);
         if (!directory.exists()) directory.mkdir();
         return directory;
+    }
+    public static void cleanupOldReports(File directory, String format, int maxFilesPresent){
+        if(!directory.exists()){
+            return;
+        }
+        File[] files = directory.listFiles((dir, name) -> name.toLowerCase().endsWith(format));
+        if(files!=null &&  files.length>maxFilesPresent){
+            Arrays.sort(files, Comparator.comparing(File::lastModified));
+            int filesToDelete = files.length-maxFilesPresent;
+            for(int i=0; i<filesToDelete; i++){
+                if(files[i].delete()){
+                    PackCompanion.LOGGER.warn("Report deleted from output folder: {}", files[i].getPath());
+                }
+            }
+        }
     }
 }

@@ -43,6 +43,12 @@ public class ConfigHandler {
     @Config.Comment("Enables debug mode with robust logging.")
     public static boolean debugMode = false;
 
+    @Config.RequiresMcRestart
+    @Config.Name("Report files count limit")
+    @Config.Comment("Limit how many instances of reports you want to be present in your output folder (1-100)")
+    @Config.RangeInt(min = 1, max = 100)
+    public static int reportFilesCountLimit = 5;
+
     @Mod.EventBusSubscriber(modid = PackCompanion.MOD_ID)
     public static class ConfigChangeListener {
         @SubscribeEvent
