@@ -644,7 +644,9 @@
   {
     "modId": "frustumculling",
     "status": "PROBLEMATIC",
-    "action": "REMOVE",
+    "replacementModName": "Universal Tweaks",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
+    "action": "REPLACE",
     "message": "Will cause incompatibilities with no performance gain. #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks) already has its own Frustum Culling tweak."
   },
   {
@@ -888,7 +890,9 @@
   {
     "modId": "laglessmod",
     "status": "PROBLEMATIC",
-    "action": "REMOVE",
+    "replacementModName": "Universal Tweaks",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
+    "action": "REPLACE",
     "message": "Will cause incompatibilities with no performance gain. #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks) already has its own Frustum Culling tweak."
   },
   {
@@ -1092,6 +1096,14 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "nobounce",
+    "status": "DEPRECATED",
+    "replacementModName": "ThaumicTweaker",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumictweaker",
+    "action": "REPLACE",
+    "message": "Merged and improved in #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker)."
+  },
+  {
     "modId": "nodoze",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -1283,7 +1295,7 @@
     "replacementModName": "Universal Tweaks",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
-    "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+    "message": "Known to cause crashes with certain mods. Majority of features are now in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
     "modId": "randomportals",
@@ -1297,6 +1309,14 @@
     "action": "REPLACE",
     "message": "Does not work with Cleanroom Launcher. Use the Cleanroom Edition replacement.",
     "isCleanroom": true
+  },
+  {
+    "modId": "randomtweaks",
+    "status": "PROBLEMATIC",
+    "replacementModName": "Universal Tweaks",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
+    "action": "REPLACE",
+    "message": "Known to cause crashes with certain mods. Majority of features are now in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
     "modId": "rawinput",
@@ -1517,6 +1537,14 @@
     ]
   },
   {
+    "modId": "thaumcraftnoresearch",
+    "status": "DEPRECATED",
+    "replacementModName": "ThaumicTweaker",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumictweaker",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker)."
+  },
+  {
     "modId": "thaumicfixes",
     "status": "PROBLEMATIC",
     "replacementModName": "Thaumcraft Fix",
@@ -1531,6 +1559,14 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumictweaker",
     "action": "REPLACE",
     "message": "Use #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker) for a better implementation of subtitles."
+  },
+  {
+    "modId": "thaumic_mercy",
+    "status": "DEPRECATED",
+    "replacementModName": "ThaumicTweaker",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumictweaker",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker)."
   },
   {
     "modId": "thaumicwonders",
@@ -1626,6 +1662,12 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "unlockablebauble",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated, it poorly and invasively injects Baubles capabilities into every armor item. Highly not recommended for use."
   },
   {
     "modId": "unridekeybind",
