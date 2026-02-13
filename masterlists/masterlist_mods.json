@@ -550,6 +550,14 @@
     "message": "Outdated. Use #link:[Dramatic Trees](https://www.curseforge.com/minecraft/mc-mods/dramatictrees)."
   },
   {
+    "modId": "ea",
+    "status": "DEPRECATED",
+    "replacementModName": "Congrega Mystica",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/congrega-mystica",
+    "action": "REPLACE",
+    "message": "Merged and improved in #link:[Congrega Mystica](https://www.curseforge.com/minecraft/mc-mods/congrega-mystica)."
+  },
+  {
     "modId": "easybreeding",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -572,6 +580,14 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "engineeredgolems",
+    "status": "DEPRECATED",
+    "replacementModName": "Congrega Mystica",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/congrega-mystica",
+    "action": "REPLACE",
+    "message": "Merged and improved in #link:[Congrega Mystica](https://www.curseforge.com/minecraft/mc-mods/congrega-mystica)."
   },
   {
     "modId": "entity_desync_fix",
@@ -991,6 +1007,14 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "knowledgeshare",
+    "status": "DEPRECATED",
+    "replacementModName": "Thaumic Wonders Unofficial",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumic-wonders-unofficial",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Thaumic Wonders Unofficial](https://www.curseforge.com/minecraft/mc-mods/thaumic-wonders-unofficial)."
   },
   {
     "modId": "ksyxis",
@@ -1501,6 +1525,14 @@
     "message": "Provides no real performance benefit."
   },
   {
+    "modId": "rusticthaumaturgy",
+    "status": "DEPRECATED",
+    "replacementModName": "Congrega Mystica",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/congrega-mystica",
+    "action": "REPLACE",
+    "message": "Merged and improved in #link:[Congrega Mystica](https://www.curseforge.com/minecraft/mc-mods/congrega-mystica)."
+  },
+  {
     "modId": "salwayseat",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -1530,6 +1562,14 @@
     "action": "REMOVE",
     "message": "Modern Java versions fix the issue this mod solves.",
     "isCleanroom": true
+  },
+  {
+    "modId": "sharetome",
+    "status": "DEPRECATED",
+    "replacementModName": "Thaumic Wonders Unofficial",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumic-wonders-unofficial",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Thaumic Wonders Unofficial](https://www.curseforge.com/minecraft/mc-mods/thaumic-wonders-unofficial)."
   },
   {
     "modId": "silentboss",
@@ -1727,12 +1767,6 @@
         "modId": "thaumicaugmentation",
         "modLink": "https://www.curseforge.com/minecraft/mc-mods/thaumic-augmentation",
         "modDescription": "Augmenting Thaumcraft 6 with a variety of fresh and familiar content."
-      },
-      {
-        "modName": "Thaumic Wonders Unofficial",
-        "modId": "thaumicwonders",
-        "modLink": "https://www.curseforge.com/minecraft/mc-mods/thaumic-wonders-unofficial",
-        "modDescription": "An unofficial continuation of Thaumic Wonders."
       }
     ]
   },
@@ -1767,6 +1801,12 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumictweaker",
     "action": "REPLACE",
     "message": "Better implementation exists in #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker)."
+  },
+  {
+    "modId": "thaumicspeedup",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "Screws up aspects and has issues with NBT."
   },
   {
     "modId": "thaumicwonders",
