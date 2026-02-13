@@ -11,6 +11,15 @@
     "message": "Packaged Phosphor breaks lighting engine compatibility. Use #link:[Aether II: Phosphor Not Included](https://www.curseforge.com/minecraft/mc-mods/the-aether-ii-phosphor-not-included)."
   },
   {
+    "modId": "betterfps",
+    "status": "PROBLEMATIC",
+    "verification": "CLASSLOADED",
+    "className": "guichaguri.betterfps.BetterFps",
+    "versionHash": "",
+    "action": "REMOVE",
+    "message": "Outdated and breaks core functionality."
+  },
+  {
     "modId": "borninabarn",
     "status": "DEPRECATED",
     "verification": "CLASSLOADED",

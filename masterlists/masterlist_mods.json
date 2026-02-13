@@ -194,12 +194,6 @@
     "message": "Performance heavy and known to cause incompatibility issues with certain mods including VintageFix."
   },
   {
-    "modId": "betterfps",
-    "status": "PROBLEMATIC",
-    "action": "REMOVE",
-    "message": "Outdated and breaks core functionality."
-  },
-  {
     "modId": "betterpingdisplay",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -553,6 +547,14 @@
     "message": "Does almost nothing except move unloadChunk to tick; caches chunks indefinitely which might impact RAM usage."
   },
   {
+    "modId": "fastbench",
+    "status": "DEPRECATED",
+    "replacementModName": "Universal Tweaks",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
     "modId": "fastfurnace",
     "status": "DEPRECATED",
     "replacementModName": "CensoredASM",
@@ -591,6 +593,15 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/future-fireproof",
     "action": "REPLACE",
     "message": "Future Fireproof has a better implementation and API features. #link:[Future Fireproof](https://www.curseforge.com/minecraft/mc-mods/future-fireproof)."
+  },
+  {
+    "modId": "foamfix",
+    "status": "DEPRECATED",
+    "replacementModName": "VintageFix",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/vintagefix",
+    "action": "REPLACE",
+    "message": "Outdated and prone to cause issues in Cleanroom Environment. Better implementation exists in #link:[VintageFix](https://www.curseforge.com/minecraft/mc-mods/vintagefix).",
+    "isCleanroom": true
   },
   {
     "modId": "foodfix",
@@ -642,6 +653,14 @@
     "replacementModName": "Forgelin-Continuous",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/forgelin-continuous",
     "action": "REPLACE",
+    "message": "Outdated. Use #link:[Forgelin-Continuous](https://www.curseforge.com/minecraft/mc-mods/forgelin-continuous)."
+  },
+  {
+    "modId": "forgelin",
+    "status": "DEPRECATED",
+    "replacementModName": "Forgelin-Continuous",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/forgelin-continuous",
+    "action": "INCLUDE",
     "message": "Outdated. Use #link:[Forgelin-Continuous](https://www.curseforge.com/minecraft/mc-mods/forgelin-continuous)."
   },
   {
@@ -1283,6 +1302,14 @@
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "randompatches",
+    "status": "PROBLEMATIC",
+    "replacementModName": "Universal Tweaks",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
+    "action": "REPLACE",
+    "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
     "modId": "randomportals",
     "status": "PROBLEMATIC",
     "version": "1.12.2-1.8.2.4",
@@ -1575,6 +1602,14 @@
   },
   {
     "modId": "thirstybottles",
+    "status": "DEPRECATED",
+    "replacementModName": "Universal Tweaks",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "toastcontrol",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
