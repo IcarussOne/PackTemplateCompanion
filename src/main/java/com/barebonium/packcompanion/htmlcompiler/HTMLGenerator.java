@@ -80,13 +80,15 @@ public class HTMLGenerator {
             tableHtml.append("<th>").append("Recommended Action").append("</th>");
             tableHtml.append("<th>").append("Reason").append("</th>");
             tableHtml.append("</tr>");
-
+            PackCompanion.LOGGER.info("Beginning ModList analysis for HTML");
             for (HTMLEntry htmlEntry : htmlEntries) {
                 String modName = htmlEntry.modName;
                 String statusStr = htmlEntry.status.toString();
                 String htmlClass = htmlEntry.status.toString();
                 String actionMessage = htmlEntry.actionMessage;
-
+                if (ConfigHandler.debugMode) {
+                    PackCompanion.LOGGER.info("Processing mod {} for HTML", modName);
+                }
                 if (htmlEntry.action != Action.INCLUDE && !htmlEntry.isCleanroom) {
                     tableHtml.append("<tr>");
                     tableHtml.append("<td>").append(modName).append("</td>");
@@ -118,10 +120,12 @@ public class HTMLGenerator {
             patchListTable.append("<th>").append("Patch for mod").append("</th>");
             patchListTable.append("<th>").append("Description").append("</th>");
             patchListTable.append("</tr>");
-
+            PackCompanion.LOGGER.info("Beginning ModPatchList analysis for HTML");
             for (HTMLEntry htmlEntry : modPatchList) {
                 String modName = htmlEntry.modName;
-
+                if (ConfigHandler.debugMode) {
+                    PackCompanion.LOGGER.info("Processing mod {} for HTML", modName);
+                }
                 for (ModPatchEntry patchEntry : htmlEntry.patchList) {
                     if (patchEntry.isClassLoaded && !ModHelper.isClassLoaded(patchEntry.classpath) || !patchEntry.isClassLoaded && !ModHelper.isModLoaded(patchEntry.modId)) {
                         patchEntryCount++;
@@ -198,9 +202,10 @@ public class HTMLGenerator {
         }
 
         String finalHtml = htmlHeader + tableHtml + patchListTable + cleanroomTable + ConfigTableFinal + script + "</body></html>";
-
+        PackCompanion.LOGGER.info("finalHtml built, Beginning writing file");
         try (PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(file)))) {
             writer.println(finalHtml);
+            PackCompanion.LOGGER.info("File Outputted");
         } catch (IOException e) {
             PackCompanion.LOGGER.error("Failed to write HTML report", e);
         }

@@ -74,6 +74,29 @@
     "isCleanroom": true
   },
   {
+    "modId": "Cleanroom",
+    "status": "PROBLEMATIC",
+    "verification": "CLASSLOADED",
+    "className": "net.minecraftforge.common.MinecraftForge",
+    "versionHash": "",
+    "action": "INCLUDE",
+    "message": "",
+    "patchList": [
+      {
+        "modName": "Fugue",
+        "modId": "fugue",
+        "modLink": "https://www.curseforge.com/minecraft/mc-mods/fugue",
+        "modDescription": "In order to migrate to Cleanroom loader, make sure to install #link:[Fugue](https://www.curseforge.com/minecraft/mc-mods/fugue)."
+      },
+      {
+        "modName": "Scalar Legacy",
+        "modId": "scalar",
+        "modLink": "https://www.curseforge.com/minecraft/mc-mods/scalar-legacy",
+        "modDescription": "In order to migrate to Cleanroom loader, make sure to install #link:[Scalar Legacy](https://www.curseforge.com/minecraft/mc-mods/scalar-legacy)."
+      }
+    ]
+  },
+  {
     "modId": "mixinbootstrap",
     "status": "DEPRECATED",
     "verification": "CLASSLOADED",

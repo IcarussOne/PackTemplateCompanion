@@ -47,6 +47,9 @@ public class OutputProcessor {
             writer.close();
 
             if(isSuccess) {
+                if (ConfigHandler.debugMode) {
+                    PackCompanion.LOGGER.info("Analysis confirmed, Beginning HTML compilation");
+                }
                 File htmlOutput = new File(PackCompanion.outputDir, fileName.replace(".md", ".html"));
                 HTMLGenerator.saveAsHtml(htmlEntries, htmlOutput, timeStamp);
                 if (ConfigHandler.enableUploadToRentry) {
@@ -63,9 +66,11 @@ public class OutputProcessor {
                         PackCompanion.LOGGER.error("Failed to read MD file for upload", e);
                     }
                 }
+            } else if (ConfigHandler.debugMode) {
+                PackCompanion.LOGGER.info("Analysis Failed, Skipping HTML compilation");
             }
         } catch (Exception e) {
-            PackCompanion.LOGGER.info(e.getMessage());
+            PackCompanion.LOGGER.error("Encountered an exception while compiling HTML",e);
         }
     }
 

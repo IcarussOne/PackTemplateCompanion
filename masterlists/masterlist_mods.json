@@ -656,14 +656,6 @@
     "message": "Outdated. Use #link:[Forgelin-Continuous](https://www.curseforge.com/minecraft/mc-mods/forgelin-continuous)."
   },
   {
-    "modId": "forgelin",
-    "status": "DEPRECATED",
-    "replacementModName": "Forgelin-Continuous",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/forgelin-continuous",
-    "action": "INCLUDE",
-    "message": "Outdated. Use #link:[Forgelin-Continuous](https://www.curseforge.com/minecraft/mc-mods/forgelin-continuous)."
-  },
-  {
     "modId": "geckolib3",
     "version": "3.0.30",
     "isMinVersion": false,
