@@ -644,7 +644,9 @@
   {
     "modId": "frustumculling",
     "status": "PROBLEMATIC",
-    "action": "REMOVE",
+    "replacementModName": "Universal Tweaks",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
+    "action": "REPLACE",
     "message": "Will cause incompatibilities with no performance gain. #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks) already has its own Frustum Culling tweak."
   },
   {
@@ -896,7 +898,9 @@
   {
     "modId": "laglessmod",
     "status": "PROBLEMATIC",
-    "action": "REMOVE",
+    "replacementModName": "Universal Tweaks",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
+    "action": "REPLACE",
     "message": "Will cause incompatibilities with no performance gain. #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks) already has its own Frustum Culling tweak."
   },
   {
