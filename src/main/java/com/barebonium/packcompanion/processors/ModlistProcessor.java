@@ -181,9 +181,8 @@ public class ModlistProcessor {
                     if (entry.patchList == null)
                         continue;
                     for (ModPatchEntry patchEntry : entry.patchList) {
-                        if (!ModHelper.isModLoaded(patchEntry.modId)) {
-                            //TODO: This is still using the old hardcoded link format. May need to switch to the less brittle version.
-                            String patchName = String.format("[%s](https://www.curseforge.com/minecraft/mc-mods/%s)", patchEntry.modName, patchEntry.modLink);
+                        if (patchEntry.isClassLoaded && !ModHelper.isClassLoaded(patchEntry.classpath) || !patchEntry.isClassLoaded && !ModHelper.isModLoaded(patchEntry.modId)) {
+                            String patchName = String.format("[%s](%s)", patchEntry.modName, patchEntry.modLink);
                             writer.printf(patchTableColumn, patchName, modName, patchEntry.modDescription);
                         }
                     }
