@@ -152,7 +152,7 @@ public class HTMLGenerator {
                 String modName = htmlEntry.modName;
                 String statusStr = htmlEntry.status.toString();
                 String actionMessage = htmlEntry.actionMessage;
-                String htmlClass = htmlEntry.status.toString().toLowerCase(Locale.ROOT);
+                String htmlClass = htmlEntry.status.toString();
                 if (htmlEntry.action != Action.INCLUDE && htmlEntry.isCleanroom) {
                     cleanroomTable.append("<tr>");
                     cleanroomTable.append("<td>").append(modName).append("</td>");
