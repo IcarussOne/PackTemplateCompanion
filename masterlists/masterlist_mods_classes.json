@@ -11,6 +11,20 @@
     "message": "Packaged Phosphor breaks lighting engine compatibility. Use #link:[Aether II: Phosphor Not Included](https://www.curseforge.com/minecraft/mc-mods/the-aether-ii-phosphor-not-included)."
   },
   {
+    "modId": "baubles",
+    "status": "DEPRECATED",
+    "verification": "CLASSLOADED",
+    "className": "baubles.api.util.WrongSideException",
+    "versionHash": "",
+    "action": "REPLACE",
+    "replacementModName": "Bubbles",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/bubbles-a-baubles-fork",
+    "replacementModVersion": "",
+    "message": "Outdated Baubles fork with more issues than the original. Use #link:[Bubbles](https://www.curseforge.com/minecraft/mc-mods/bubbles-a-baubles-fork) for a more stable fork.",
+    "patchList": [],
+    "isCleanroom": false
+  },
+  {
     "modId": "betterfps",
     "status": "PROBLEMATIC",
     "verification": "CLASSLOADED",
