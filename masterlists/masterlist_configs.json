@@ -186,6 +186,128 @@
         ]
     },
     {
+        "modId": "thaumictweaker",
+        "settings": [
+            {
+                "name": "Runic Shielding Overhaul",
+                "field": "mod.emt.thaumictweaker.config.ConfigOverhaulsTT#wardingEffect",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch": "true",
+                "message": "The `Runic Shielding Overhaul` tweak is located in `ThaumicTweaker - Overhauls.cfg` → `general`.",
+                "dependencies": [
+                    {
+                        "modId": "thaumcraft6enhanced"
+                    }
+                ]
+            },
+            {
+                "name": "Warding Effect",
+                "field": "mod.emt.thaumictweaker.config.ConfigEnhancementsTT#runicShieldingOverhaul",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch": "true",
+                "message": "The `Warding Effect` tweak is located in `ThaumicTweaker - Enhancements.cfg` → `general`.",
+                "dependencies": [
+                    {
+                        "modId": "thaumcraft6enhanced"
+                    }
+                ]
+            },
+            {
+                "name": "Enable Research Subtitles",
+                "field": "mod.emt.thaumictweaker.config.ConfigEnhancementsTT#enableResearchSubtitles",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch": "true",
+                "message": "The `Enable Research Subtitles` tweak is located in `ThaumicTweaker - Enhancements.cfg` → `general`.",
+                "dependencies": [
+                    {
+                        "modId": "thaumicmeme"
+                    }
+                ]
+            },
+            {
+                "name": "Disable Crafting Requirements",
+                "field": "mod.emt.thaumictweaker.config.ConfigWussModeTT#DISABLE_RESEARCH_REQUIREMENTS#disableCraftsRequirements",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch": "true",
+                "message": "The research requirement tweaks are located in `ThaumicTweaker - Wuss Mode.cfg` → `general` → `disable research requirements`.",
+                "dependencies": [
+                    {
+                        "modId": "thaumic_mercy"
+                    }
+                ]
+            },
+            {
+                "name": "Disable Item Requirements",
+                "field": "mod.emt.thaumictweaker.config.ConfigWussModeTT#DISABLE_RESEARCH_REQUIREMENTS#disableItemRequirements",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch": "true",
+                "message": "The research requirement tweaks are located in `ThaumicTweaker - Wuss Mode.cfg` → `general` → `disable research requirements`.",
+                "dependencies": [
+                    {
+                        "modId": "thaumic_mercy"
+                    }
+                ]
+            },
+            {
+                "name": "Disable Knowledge Requirements",
+                "field": "mod.emt.thaumictweaker.config.ConfigWussModeTT#DISABLE_RESEARCH_REQUIREMENTS#disableKnowledgeRequirements",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch": "true",
+                "message": "The research requirement tweaks are located in `ThaumicTweaker - Wuss Mode.cfg` → `general` → `disable research requirements`.",
+                "dependencies": [
+                    {
+                        "modId": "thaumic_mercy"
+                    }
+                ]
+            },
+            {
+                "name": "Disable Theory Requirements",
+                "field": "mod.emt.thaumictweaker.config.ConfigWussModeTT#DISABLE_RESEARCH_REQUIREMENTS#disableTheoryRequirements",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch": "true",
+                "message": "The research requirement tweaks are located in `ThaumicTweaker - Wuss Mode.cfg` → `general` → `disable research requirements`.",
+                "dependencies": [
+                    {
+                        "modId": "thaumic_mercy"
+                    }
+                ]
+            },
+            {
+                "name": "Disable Knowledge Requirements",
+                "field": "mod.emt.thaumictweaker.config.ConfigWussModeTT#DISABLE_RESEARCH_REQUIREMENTS#disableKnowledgeRequirements",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch": "true",
+                "message": "The research requirement tweaks are located in `ThaumicTweaker - Wuss Mode.cfg` → `general` → `disable research requirements`.",
+                "dependencies": [
+                    {
+                        "modId": "thaumcraftnoresearch"
+                    }
+                ]
+            },
+            {
+                "name": "Disable Theory Requirements",
+                "field": "mod.emt.thaumictweaker.config.ConfigWussModeTT#DISABLE_RESEARCH_REQUIREMENTS#disableTheoryRequirements",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch": "true",
+                "message": "The research requirement tweaks are located in `ThaumicTweaker - Wuss Mode.cfg` → `general` → `disable research requirements`.",
+                "dependencies": [
+                    {
+                        "modId": "thaumcraftnoresearch"
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "modId": "universaltweaks",
         "settings": [
             {

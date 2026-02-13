@@ -1100,6 +1100,14 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "nobounce",
+    "status": "DEPRECATED",
+    "replacementModName": "ThaumicTweaker",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumictweaker",
+    "action": "REPLACE",
+    "message": "Merged and improved in #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker)."
+  },
+  {
     "modId": "nodoze",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -1525,6 +1533,14 @@
     ]
   },
   {
+    "modId": "thaumcraftnoresearch",
+    "status": "DEPRECATED",
+    "replacementModName": "ThaumicTweaker",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumictweaker",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker)."
+  },
+  {
     "modId": "thaumicfixes",
     "status": "PROBLEMATIC",
     "replacementModName": "Thaumcraft Fix",
@@ -1539,6 +1555,14 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumictweaker",
     "action": "REPLACE",
     "message": "Use #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker) for a better implementation of subtitles."
+  },
+  {
+    "modId": "thaumic_mercy",
+    "status": "DEPRECATED",
+    "replacementModName": "ThaumicTweaker",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumictweaker",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker)."
   },
   {
     "modId": "thaumicwonders",
