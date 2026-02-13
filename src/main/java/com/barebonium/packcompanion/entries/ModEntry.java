@@ -1,8 +1,5 @@
 package com.barebonium.packcompanion.entries;
 
-import com.barebonium.packcompanion.enumstates.Action;
-import com.barebonium.packcompanion.enumstates.Status;
-
 import javax.annotation.Nullable;
 
 public class ModEntry extends AbstractModEntry{
@@ -36,22 +33,4 @@ public class ModEntry extends AbstractModEntry{
      *     The logic feels a little backwards, but it's focused on HTML generation and not mod integration.
      */
     public boolean isVersionExclusive;
-
-    /** The status of any mod that is not found in the specified version range.
-     * <br>
-     * Values include:
-     * <li> DEPRECATED - used when a mod is forked or superseded and should be replaced </li>
-     * <li> PROBLEMATIC - used when a mod has major bugs and should be removed or downgraded </li>
-     */
-    public Status status = Status.DEPRECATED;
-
-    /**
-     * The recommended action to fix this issue.
-     * <li>REMOVE - Remove the mod without replacement </li>
-     * <li>DOWNGRADE - Roll back to a previous version of the mod </li>
-     * <li>UPGRADE - Upgrade the mod to a new version </li>
-     * <li>REPLACE - Replace the mod with a different mod </li>
-     * <li>INCLUDE - Include an additional mod (such as patch mods) </li>
-     */
-    public Action action = Action.REMOVE;
 }
