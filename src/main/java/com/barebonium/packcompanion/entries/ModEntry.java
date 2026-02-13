@@ -1,14 +1,8 @@
 package com.barebonium.packcompanion.entries;
 
-import com.barebonium.packcompanion.enumstates.Action;
-import com.barebonium.packcompanion.enumstates.Status;
-
 import javax.annotation.Nullable;
 
 public class ModEntry extends AbstractModEntry{
-    /** The mod id of this mod entry. */
-    //public String modId;
-
     /** The mod version string. */
     public @Nullable String version;
 
@@ -32,45 +26,11 @@ public class ModEntry extends AbstractModEntry{
      *     "version": "2.0.0",
      *     "isMinVersion": true,
      *     "isMaxVersion": false,
-     *     "isVersionInclusive": false
+     *     "isVersionExclusive": true
      * }
      * </pre>
      * <p>
      *     The logic feels a little backwards, but it's focused on HTML generation and not mod integration.
      */
-    public boolean isVersionInclusive = true;
-
-    /** The status of any mod that is not found in the specified version range.
-     * <br>
-     * Values include:
-     * <li> DEPRECATED - used when a mod is forked or superseded and should be replaced </li>
-     * <li> PROBLEMATIC - used when a mod has major bugs and should be removed or downgraded </li>
-     */
-    public Status status = Status.DEPRECATED;
-
-    /**
-     * The recommended action to fix this issue.
-     * <li>REMOVE - Remove the mod without replacement </li>
-     * <li>DOWNGRADE - Roll back to a previous version of the mod </li>
-     * <li>UPGRADE - Upgrade the mod to a new version </li>
-     * <li>REPLACE - Replace the mod with a different mod </li>
-     * <li>INCLUDE - Include an additional mod (such as patch mods) </li>
-     */
-    public Action action = Action.REMOVE;
-
-    /** The name of the replacement mod, if applicable. Used to generate hyperlink text. */
-    //public @Nullable String replacementModName;
-
-    /** The hyperlink to the replacement mod, if applicable. This should be the full hyperlink. */
-    //public @Nullable String replacementModLink;
-
-    /** The replacement mod version. Should always be used with {Action.UPGRADE} or {Action.DOWNGRADE}. */
-    //public @Nullable String replacementModVersion;
-
-    /** The message that will display in the output file. Usually the reason the mod is on this list. */
-    //public String message = "";
-
-    /** A list of mods used that patch or fix the main mod. ThaumcraftFix is an example of this. */
-    //public @Nullable List<ModPatchEntry> patchList;
-
+    public boolean isVersionExclusive;
 }
