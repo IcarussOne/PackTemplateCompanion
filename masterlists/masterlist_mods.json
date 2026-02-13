@@ -1379,6 +1379,19 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "simplyjetpacks",
+    "status": "DEPRECATED",
+    "version": "1.12.2-2.2.20.0",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "Simply Jetpacks 2",
+    "replacementModVersion": "1.12.2-2.2.20.0",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/simply-jetpacks-2/download/3294422",
+    "action": "UPGRADE",
+    "message": "Outdated and may cause crashes."
+  },
+  {
     "modId": "sleepsooner",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -1627,6 +1640,19 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "tombstone",
+    "status": "DEPRECATED",
+    "version": "4.7.5",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "Corail Tombstone",
+    "replacementModVersion": "4.7.5",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/corail-tombstone/download/6261464",
+    "action": "UPGRADE",
+    "message": "Outdated and may cause crashes."
   },
   {
     "modId": "tramplestopper",

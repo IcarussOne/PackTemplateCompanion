@@ -1022,6 +1022,9 @@
                 "dependencies":[
                     {
                         "modId": "ikwid"
+                    },
+                    {
+                        "modId": "toastcontrol"
                     }
                 ]
             },

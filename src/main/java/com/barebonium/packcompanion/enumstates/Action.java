@@ -6,8 +6,14 @@ import java.util.function.BiFunction;
 
 public enum Action {
     REMOVE((entry, modName) -> "Remove " + modName),
-    DOWNGRADE((modEntry, modName) -> "Downgrade to version " + modEntry.replacementModVersion),
-    UPGRADE((modEntry, modName) -> "Upgrade to version " + modEntry.replacementModVersion),
+    DOWNGRADE(
+            (modEntry, modName) -> String.format("Downgrade to version [%s](%s)", modEntry.replacementModName, modEntry.replacementModLink),
+            (modEntry, modName) -> String.format("<p>Downgrade to version <a href=\"%s\">%s</a></p>", modEntry.replacementModLink, modEntry.replacementModName)
+    ),
+    UPGRADE(
+            (modEntry, modName) -> String.format("Upgrade to version [%s](%s)", modEntry.replacementModName, modEntry.replacementModLink),
+            (modEntry, modName) -> String.format("<p>Upgrade to version <a href=\"%s\">%s</a></p>", modEntry.replacementModLink, modEntry.replacementModName)
+    ),
     REPLACE(
             (modEntry, modName) -> String.format("Replace with [%s](%s)", modEntry.replacementModName, modEntry.replacementModLink),
             (modEntry, modName) -> String.format("<p>Replace with <a href=\"%s\">%s</a></p>", modEntry.replacementModLink, modEntry.replacementModName)
