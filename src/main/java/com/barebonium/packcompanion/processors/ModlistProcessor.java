@@ -168,7 +168,7 @@ public class ModlistProcessor {
     }
 
     private static void writePatchTable(PrintWriter writer, Map<String, List<ModEntry>> modEntries) {
-        final String patchTableColumn = "| %-200s | %-40s | %-80s |%n";
+        final String patchTableColumn = "| %-100s | %-40s | %-80s |%n";
 
         boolean shouldProcess = modEntries.values().stream().anyMatch(entries -> entries.stream().anyMatch(entry -> entry.patchList != null && !entry.patchList.isEmpty()));
         if(shouldProcess) {

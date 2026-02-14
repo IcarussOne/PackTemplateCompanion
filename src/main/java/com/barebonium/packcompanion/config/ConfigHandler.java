@@ -26,7 +26,7 @@ public class ConfigHandler {
     @Config.RequiresMcRestart
     @Config.Name("Enable Upload To Rentry")
     @Config.Comment("Upload the PackCompanion markdown output file to \"Rentry.co\" to view formatted markdown text.")
-    public static boolean enableUploadToRentry = true;
+    public static boolean enableUploadToRentry = false;
 
     @Config.RequiresMcRestart
     @Config.Name("Enable Login Message")
