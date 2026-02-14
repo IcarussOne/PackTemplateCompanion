@@ -339,7 +339,7 @@
   },
   {
     "modId": "chisel",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "version": "MC1.12.2-1.0.2.45",
     "isMinVersion": true,
     "isMaxVersion": false,
@@ -384,7 +384,7 @@
   },
   {
     "modId": "ctm",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "version": "MC1.12.2-1.0.2.31",
     "isMinVersion": true,
     "isMaxVersion": false,
@@ -413,7 +413,7 @@
   },
   {
     "modId": "contenttweaker",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "version": "1.12.2-4.10.0",
     "isMinVersion": true,
     "isMaxVersion": false,
@@ -446,7 +446,7 @@
   },
   {
     "modId": "crafttweaker",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "version": "4.1.20",
     "isMinVersion": true,
     "isMaxVersion": false,
@@ -732,7 +732,7 @@
   },
   {
     "modId": "fluxnetworks",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "version": "4.1.0",
     "isMinVersion": true,
     "isMaxVersion": false,
@@ -796,7 +796,7 @@
   },
   {
     "modId": "hammercore",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "version": "12.2.58",
     "isMinVersion": true,
     "isMaxVersion": false,
@@ -977,7 +977,7 @@
   },
   {
     "modId": "jeiutilities",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "version": "0.2.13",
     "isMinVersion": true,
     "isMaxVersion": false,
@@ -1154,7 +1154,7 @@
   },
   {
     "modId": "modtweaker",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "version": "4.0.19",
     "isMinVersion": true,
     "isMaxVersion": false,
@@ -1303,7 +1303,7 @@
   },
   {
     "modId": "neenergistics",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "version": "2.0.9",
     "isMinVersion": true,
     "isMaxVersion": false,
@@ -1431,7 +1431,7 @@
     "isMaxVersion": false,
     "isVersionExclusive": true,
     "replacementModVersion": "12.1.0-beta-8",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "replacementModName": "Railcraft Beta",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/railcraft/files/3853491",
     "action": "UPGRADE",
@@ -1503,7 +1503,7 @@
   },
   {
     "modId": "reccomplex",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "version": "1.4.8.6",
     "isMinVersion": true,
     "isMaxVersion": false,
@@ -1577,7 +1577,7 @@
   },
   {
     "modId": "simplyjetpacks",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "version": "1.12.2-2.2.20.0",
     "isMinVersion": true,
     "isMaxVersion": false,
@@ -1590,7 +1590,7 @@
   },
   {
     "modId": "sledgehammer",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "version": "1.12.2-2.0.26",
     "isMinVersion": true,
     "isMaxVersion": false,
@@ -1625,7 +1625,7 @@
   },
   {
     "modId": "solarflux",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "version": "12.4.11",
     "isMinVersion": true,
     "isMaxVersion": false,
@@ -1866,7 +1866,7 @@
   },
   {
     "modId": "tombstone",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "version": "4.7.5",
     "isMinVersion": true,
     "isMaxVersion": false,
@@ -1906,7 +1906,7 @@
   },
   {
     "modId": "universaltweaks",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "version": "1.18.0",
     "isMinVersion": true,
     "isMaxVersion": false,
@@ -1955,7 +1955,7 @@
   },
   {
     "modId": "vintagefix",
-    "status": "DEPRECATED",
+    "status": "PROBLEMATIC",
     "version": "0.6.2",
     "isMinVersion": true,
     "isMaxVersion": false,

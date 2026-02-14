@@ -7,12 +7,12 @@ import java.util.function.BiFunction;
 public enum Action {
     REMOVE((entry, modName) -> "Remove " + modName),
     DOWNGRADE(
-            (modEntry, modName) -> String.format("Downgrade to version [%s](%s)", modEntry.replacementModName, modEntry.replacementModLink),
-            (modEntry, modName) -> String.format("<p>Downgrade to version <a href=\"%s\">%s</a></p>", modEntry.replacementModLink, modEntry.replacementModName)
+            (modEntry, modName) -> String.format("Downgrade %s to version [%s](%s)", modEntry.replacementModName, modEntry.replacementModVersion, modEntry.replacementModLink),
+            (modEntry, modName) -> String.format("<p>Downgrade %s to version <a href=\"%s\">%s</a></p>", modEntry.replacementModName, modEntry.replacementModLink, modEntry.replacementModVersion)
     ),
     UPGRADE(
-            (modEntry, modName) -> String.format("Upgrade to version [%s](%s)", modEntry.replacementModName, modEntry.replacementModLink),
-            (modEntry, modName) -> String.format("<p>Upgrade to version <a href=\"%s\">%s</a></p>", modEntry.replacementModLink, modEntry.replacementModName)
+            (modEntry, modName) -> String.format("Upgrade %s to version [%s](%s)", modEntry.replacementModName, modEntry.replacementModVersion, modEntry.replacementModLink),
+            (modEntry, modName) -> String.format("<p>Upgrade %s to version <a href=\"%s\">%s</a></p>", modEntry.replacementModName, modEntry.replacementModLink, modEntry.replacementModVersion)
     ),
     REPLACE(
             (modEntry, modName) -> String.format("Replace with [%s](%s)", modEntry.replacementModName, modEntry.replacementModLink),

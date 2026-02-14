@@ -21,16 +21,26 @@ public class OutputProcessor {
     public static File GlobalOutputLog;
     public static String lastRentryUrl = "";
 
-    public static void runPackCompanionChecks() {
-        boolean isSuccess = false;
-        String timeStamp = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date());
-        String timeStampFile = new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss").format(new Date());
-        String fileName = "companionOutput-" + timeStampFile + ".md";
+    public static String timeStamp;
+    public static String timeStampFile;
+    public static String fileName;
+
+    public static boolean mdModAnalysisSuccessful = false;
+    public static boolean mdConfigAnalysisSuccessful = false;
+
+    public static ArrayList<HTMLEntry> htmlEntries = new ArrayList<>();
+
+    public static void runPreInitPackCompanionChecks() {
+        timeStamp = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date());
+        timeStampFile = new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss").format(new Date());
+        fileName = "companionOutput-" + timeStampFile + ".md";
 
         try {
+            cleanupOldReports(PackCompanion.outputDir, ".md", ConfigHandler.reportFilesCountLimit);
+            cleanupOldReports(PackCompanion.outputDir, ".html", ConfigHandler.reportFilesCountLimit);
+
             File outputLog = new File(PackCompanion.outputDir, fileName);
             PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(outputLog)));
-            ArrayList<HTMLEntry> htmlEntries = new ArrayList<>();
 
             writer.println("# Pack Companion Report");
             writer.println("");
@@ -38,19 +48,31 @@ public class OutputProcessor {
             writer.println("");
 
             if(ConfigHandler.enableModAnalysis) {
-                isSuccess |= ModlistProcessor.checkModList(writer, htmlEntries);
-            }
-            if(ConfigHandler.enableConfigAnalysis) {
-                isSuccess |= ConfigProcessor.checkConfigs(writer);
+                mdModAnalysisSuccessful |= ModlistProcessor.checkModList(writer, htmlEntries);
+                writer.flush();
+            }else{
+                mdModAnalysisSuccessful = true;
             }
 
             PackCompanion.LOGGER.info("Loaded mods Successfully Analysed");
-            PackCompanion.LOGGER.info("Please consult the Output log at {}", outputLog.getPath());
             writer.close();
 
-            if(isSuccess) {
-                cleanupOldReports(PackCompanion.outputDir, ".md", ConfigHandler.reportFilesCountLimit);
-                cleanupOldReports(PackCompanion.outputDir, ".html", ConfigHandler.reportFilesCountLimit);
+        } catch (Exception e) {
+            PackCompanion.LOGGER.error("Encountered an exception while compiling HTML",e);
+        }
+    }
+    public static void runPostInitPackCompanionChecks() {
+        try {
+            File outputLog = new File(PackCompanion.outputDir, fileName);
+            PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(outputLog)));
+            if(ConfigHandler.enableConfigAnalysis && mdModAnalysisSuccessful) {
+                mdConfigAnalysisSuccessful |= ConfigProcessor.checkConfigs(writer);
+            }else{
+                mdConfigAnalysisSuccessful = true;
+            }
+            PackCompanion.LOGGER.info("Please consult the Output log at {}", outputLog.getPath());
+            writer.close();
+            if(mdConfigAnalysisSuccessful && mdModAnalysisSuccessful) {
                 if (ConfigHandler.debugMode) {
                     PackCompanion.LOGGER.info("Analysis confirmed, Beginning HTML compilation");
                 }
@@ -73,10 +95,12 @@ public class OutputProcessor {
             } else if (ConfigHandler.debugMode) {
                 PackCompanion.LOGGER.info("Analysis Failed, Skipping HTML compilation");
             }
+
         } catch (Exception e) {
             PackCompanion.LOGGER.error("Encountered an exception while compiling HTML",e);
         }
     }
+
 
     public static File verifyCachedFile(String fileName) throws FileNotFoundException {
         File file = new File(PackCompanion.cacheDir, fileName);

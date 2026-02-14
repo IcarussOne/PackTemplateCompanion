@@ -29,6 +29,10 @@ public class PackCompanion {
     public static File cacheDir;
     public static File outputDir;
     public static File gameDir;
+    public static long preStartTime;
+    public static long preEndTime;
+    public static long postStartTime;
+    public static long postEndTime;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
@@ -45,18 +49,28 @@ public class PackCompanion {
         if(ConfigHandler.enableLoginMessage) {
             MinecraftForge.EVENT_BUS.register(new LoginHandler());
         }
+        preStartTime = System.currentTimeMillis();
+        if (ConfigHandler.enableVersionChecker) {
+            VersionChecker.checkAndDownload();
+        }
+        if (ConfigHandler.debugMode) {
+            LOGGER.info("Running PreInitChecks");
+        }
+
+        LOGGER.info("{} is Checking your modlist!", Tags.MOD_NAME);
+        OutputProcessor.runPreInitPackCompanionChecks();
+        preEndTime = System.currentTimeMillis();
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event){
-        long start = System.currentTimeMillis();
-        if (ConfigHandler.enableVersionChecker) {
-            VersionChecker.checkAndDownload();
+        if (ConfigHandler.debugMode) {
+            LOGGER.info("Running PostInitChecks");
         }
-        LOGGER.info("{} is Checking your modlist!", Tags.MOD_NAME);
-        OutputProcessor.runPackCompanionChecks();
-        long end = System.currentTimeMillis();
-        LOGGER.info("{} took {}ms to complete its analysis.", PackCompanion.MOD_NAME, end - start);
+        postStartTime = System.currentTimeMillis();
+        OutputProcessor.runPostInitPackCompanionChecks();
+        postEndTime = System.currentTimeMillis();
+        LOGGER.info("{} took {}ms to complete its analysis.", PackCompanion.MOD_NAME, (preEndTime - preStartTime)+(postEndTime - postStartTime));
     }
 
 }

@@ -183,7 +183,7 @@ public class ModlistProcessor {
                     for (ModPatchEntry patchEntry : entry.patchList) {
                         if (patchEntry.isClassLoaded && !ModHelper.isClassLoaded(patchEntry.classpath) || !patchEntry.isClassLoaded && !ModHelper.isModLoaded(patchEntry.modId)) {
                             String patchName = String.format("[%s](%s)", patchEntry.modName, patchEntry.modLink);
-                            writer.printf(patchTableColumn, patchName, modName, patchEntry.modDescription);
+                            writer.printf(patchTableColumn, patchName, modName, MessageRegex.translateToMarkdown(patchEntry.modDescription));
                         }
                     }
                 }
