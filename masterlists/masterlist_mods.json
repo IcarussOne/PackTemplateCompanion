@@ -1272,14 +1272,10 @@
   {
     "modId": "normalasm",
     "status": "DEPRECATED",
-    "version": "5.20",
-    "isMinVersion": false,
-    "isMaxVersion": true,
-    "isVersionExclusive": false,
     "replacementModName": "CensoredASM",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/lolasm",
     "action": "REPLACE",
-    "message": "Outdated fork of CensoredASM. Use #link:[CensoredASM](https://www.curseforge.com/minecraft/mc-mods/lolasm)."
+    "message": "Uses deprecated methods that can cause crashes in older modpacks. Use #link:[CensoredASM](https://www.curseforge.com/minecraft/mc-mods/lolasm)."
   },
   {
     "modId": "neenergistics",
