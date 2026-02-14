@@ -8,12 +8,15 @@ import com.barebonium.packcompanion.utils.RentryUploader;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Date;
 
+import static com.barebonium.packcompanion.PackCompanion.gameDir;
+import static com.barebonium.packcompanion.PackCompanion.logsDir;
 import static java.nio.file.Files.readAllBytes;
 
 public class OutputProcessor {
@@ -40,7 +43,9 @@ public class OutputProcessor {
             cleanupOldReports(PackCompanion.outputDir, ".html", ConfigHandler.reportFilesCountLimit);
 
             File outputLog = new File(PackCompanion.outputDir, fileName);
-            PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(outputLog)));
+            PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(outputLog, true)));
+
+            File crashAssistantLog = new File(logsDir, "pack-companion-report.log");
 
             writer.println("# Pack Companion Report");
             writer.println("");
@@ -50,6 +55,18 @@ public class OutputProcessor {
             if(ConfigHandler.enableModAnalysis) {
                 mdModAnalysisSuccessful |= ModlistProcessor.checkModList(writer, htmlEntries);
                 writer.flush();
+                try {
+                    Files.copy(
+                            outputLog.toPath(),
+                            crashAssistantLog.toPath(),
+                            java.nio.file.StandardCopyOption.REPLACE_EXISTING
+                    );
+                    if (ConfigHandler.debugMode) {
+                        PackCompanion.LOGGER.info("PreInit Report mirrored to logs for CrashAssistant support.");
+                    }
+                } catch (IOException e) {
+                    PackCompanion.LOGGER.error("Failed to copy report to logs folder", e);
+                }
             }else{
                 mdModAnalysisSuccessful = true;
             }
@@ -64,12 +81,29 @@ public class OutputProcessor {
     public static void runPostInitPackCompanionChecks() {
         try {
             File outputLog = new File(PackCompanion.outputDir, fileName);
-            PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(outputLog)));
+            PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(outputLog, true)));
+
+            File crashAssistantLog = new File(logsDir, "pack-companion-report.log");
+
             if(ConfigHandler.enableConfigAnalysis && mdModAnalysisSuccessful) {
                 mdConfigAnalysisSuccessful |= ConfigProcessor.checkConfigs(writer);
             }else{
                 mdConfigAnalysisSuccessful = true;
             }
+
+            try {
+                Files.copy(
+                        outputLog.toPath(),
+                        crashAssistantLog.toPath(),
+                        java.nio.file.StandardCopyOption.REPLACE_EXISTING
+                );
+                if (ConfigHandler.debugMode) {
+                    PackCompanion.LOGGER.info("PostInit Report mirrored to logs for CrashAssistant support.");
+                }
+            } catch (IOException e) {
+                PackCompanion.LOGGER.error("Failed to copy report to logs folder", e);
+            }
+
             PackCompanion.LOGGER.info("Please consult the Output log at {}", outputLog.getPath());
             writer.close();
             if(mdConfigAnalysisSuccessful && mdModAnalysisSuccessful) {

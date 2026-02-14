@@ -29,6 +29,7 @@ public class PackCompanion {
     public static File cacheDir;
     public static File outputDir;
     public static File gameDir;
+    public static File logsDir;
     public static long preStartTime;
     public static long preEndTime;
     public static long postStartTime;
@@ -46,6 +47,7 @@ public class PackCompanion {
         configDir = OutputProcessor.initializeDirectory(event.getModConfigurationDirectory(), PackCompanion.MOD_ID);
         cacheDir = OutputProcessor.initializeDirectory(configDir, "cache");
         outputDir = OutputProcessor.initializeDirectory(configDir, "output");
+        logsDir = OutputProcessor.initializeDirectory(gameDir, "crash-reports");
         if(ConfigHandler.enableLoginMessage) {
             MinecraftForge.EVENT_BUS.register(new LoginHandler());
         }
