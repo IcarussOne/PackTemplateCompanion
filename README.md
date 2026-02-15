@@ -3,9 +3,9 @@
 ### Description
 **Pack Companion** is the ultimate sentinel mod for 1.12.2 designed to perform a runtime check for modpack stability. It automatically identifies mods that are outdated, problematic, or superseded by modern alternatives.
 
-Pack Companion features a deep **Config Parser** that analyses problematic Config field values. It identifies settings that are known to cause crashes or severe performance issues.
+Pack Companion features a deep **Config Parser** that analyses problematic Config field values through Reflection. It identifies settings that are known to cause crashes or severe performance issues.
 
-The mod generates both **HTML/Markdown** reports (found in your `config/packcompanion/outputs` folder). These report provides a clean, readable breakdown of every flagged mod and config setting, complete with direct links to recommended fixes.
+The mod generates both **HTML/Markdown** reports (found in your `config/packcompanion/output` folder). These report provides a clean, readable breakdown of every flagged mod and config setting, complete with direct links to recommended fixes.
 
 Upon joining the world, you will be provided a link to view the reports in your browser.
 
@@ -15,7 +15,7 @@ This mod is built against the [Cleanroom Wiki Mod List](https://cleanroommc.com/
 ---
 
 ### Template Usage
-This mod is intended to be used with [BareBones Modpack Template](https://github.com/Invadermonky/BareBonesTemplatePack), which provides a pre-configured environment that includes:
+This mod is intended to be used with [BareBonesTemplatePack](https://github.com/Invadermonky/BareBonesTemplatePack), which provides a pre-configured environment that includes:
 * **Curated Optimizations:** A minimalistic list of major improvement, QoL and bugfix mods.
 * **Standardized Configs:** Pre-configured config files for various mods, including Crash Assistant and Universal Tweaks.
 * **Workflow Guide:** A step-by-step template to update old packs or start new ones with modern 1.12.2 standards.
