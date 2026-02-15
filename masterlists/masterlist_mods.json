@@ -657,7 +657,7 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/embers-extended-life/files/6556819",
     "replacementModVersion": "1.25.3",
     "action": "DOWNGRADE",
-    "message": "1.25.4+ versions of Embers Unofficial Extended Life will crash in multiplayer. Use #link:[Embers Unofficial Extended Life 1.25.3](https://www.curseforge.com/minecraft/mc-mods/embers-extended-life/files/6556819)."
+    "message": "1.25.4+ versions of Embers Unofficial Extended Life will crash on multiplayer. Use #link:[Embers Unofficial Extended Life 1.25.3](https://www.curseforge.com/minecraft/mc-mods/embers-extended-life/files/6556819)."
   },
   {
     "modId": "enablecheats",
@@ -1379,7 +1379,7 @@
     "replacementModName": "Universal Tweaks",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
-    "message": "Overwrites anvil methods and breaks compatibility. Use #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker) instead."
+    "message": "Overwrites anvil methods and breaks compatibility. Use #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks) instead."
   },
   {
     "modId": "nomoreglowingpots",
