@@ -642,6 +642,7 @@
     "status": "DEPRECATED",
     "replacementModName": "Embers Unofficial Extended Life",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/embers-extended-life/files/6556819",
+    "replacementModVersion": "1.25.3",
     "action": "REPLACE",
     "message": "Outdated. Use #link:[Embers Unofficial Extended Life 1.25.3](https://www.curseforge.com/minecraft/mc-mods/embers-extended-life/files/6556819)."
   },
@@ -1464,11 +1465,14 @@
   {
     "modId": "orestages",
     "status": "PROBLEMATIC",
-    "replacementModName": "",
-    "replacementModVersion": "",
-    "replacementModLink": "",
-    "action": "INFO",
-    "message": "Crashes with VintageFix's `mixin.dynamic_resources` setting. disable it in `vintagefix.properties` config to avoid further crashes."
+    "version": "2.1.0",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "Ore Stages ReStaged",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/ore-stages-restaged",
+    "action": "REPLACE",
+    "message": "Has issues with VintageFix's 'mixin.dynamic_resources' setting. Use #link:[Ore Stages ReStaged](https://www.curseforge.com/minecraft/mc-mods/ore-stages-restaged)."
   },
   {
     "modId": "overpowered_mending",
