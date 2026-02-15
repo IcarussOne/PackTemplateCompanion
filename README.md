@@ -5,7 +5,7 @@
 
 Pack Companion features a deep **Config Parser** that analyses problematic Config field values through Reflection. It identifies settings that are known to cause crashes or severe performance issues.
 
-The mod generates both **HTML/Markdown** reports (found in your `config/packcompanion/output` folder). These report provides a clean, readable breakdown of every flagged mod and config setting, complete with direct links to recommended fixes.
+The mod generates both **HTML/Markdown** reports (found in your `config/packcompanion/output` folder). These reports provides a clean, readable breakdown of every flagged mod and config setting, complete with direct links to recommended fixes.
 
 Upon joining the world, you will be provided a link to view the reports in your browser.
 
