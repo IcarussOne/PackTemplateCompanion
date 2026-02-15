@@ -43,6 +43,26 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "aetheriumashenarmor",
+    "status": "DEPRECATED",
+    "replacementModName": "Aetherworks Unofficial Extended Life",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/aetherworks-extended-life",
+    "action": "REPLACE",
+    "message": "Merged and improved in #link:[Aetherworks Unofficial Extended Life](https://www.curseforge.com/minecraft/mc-mods/aetherworks-extended-life)"
+  },
+  {
+    "modId": "aetherworks",
+    "status": "DEPRECATED",
+    "version": "1.0.0.3",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": false,
+    "replacementModName": "Aetherworks Unofficial Extended Life",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/aetherworks-extended-life",
+    "action": "REPLACE",
+    "message": "Outdated. Use #link:[Aetherworks Unofficial Extended Life](https://www.curseforge.com/minecraft/mc-mods/aetherworks-extended-life) and #link:[Embers Unofficial Extended Life 1.25.3](https://www.curseforge.com/minecraft/mc-mods/embers-extended-life/files/6556819)."
+  },
+  {
     "modId": "agricraft",
     "status": "DEPRECATED",
     "version": "2.15.0",
@@ -203,6 +223,10 @@
   {
     "modId": "betterfoliage",
     "status": "PROBLEMATIC",
+    "version": "2.4.2",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": false,
     "action": "REMOVE",
     "message": "Performance heavy and known to cause incompatibility issues with certain mods including VintageFix."
   },
@@ -279,6 +303,14 @@
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "bloodmoon",
+    "status": "PROBLEMATIC",
+    "replacementModName": "Hyxcate",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/hyxcate",
+    "action": "REPLACE",
+    "message": "Performance issues and OptiFine lighting bugs. Use #link:[Hyxcate](https://www.curseforge.com/minecraft/mc-mods/hyxcate)."
+  },
+  {
     "modId": "bottlefix",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -301,6 +333,22 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "bq_standard",
+    "status": "DEPRECATED",
+    "replacementModName": "Better Questing Unofficial",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/better-questing-unofficial",
+    "action": "REPLACE",
+    "message": "Merged and improved in #link:[Better Questing Unofficial](https://www.curseforge.com/minecraft/mc-mods/better-questing-unofficial)."
+  },
+  {
+    "modId": "bqt",
+    "status": "DEPRECATED",
+    "replacementModName": "Better Questing Unofficial",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/better-questing-unofficial",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Better Questing Unofficial](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
     "modId": "breedablekillerrabbit",
@@ -383,17 +431,16 @@
     "message": "Outdated. Use #link:[Fixeroo](https://www.curseforge.com/minecraft/mc-mods/xp-orb-clump)."
   },
   {
-    "modId": "ctm",
-    "status": "PROBLEMATIC",
-    "version": "MC1.12.2-1.0.2.31",
-    "isMinVersion": true,
-    "isMaxVersion": false,
-    "isVersionExclusive": true,
-    "replacementModName": "ConnectedTexturesMod",
-    "replacementModVersion": "MC1.12.2-1.0.2.31",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/ctm/download/2915363",
-    "action": "UPGRADE",
-    "message": "Outdated and may cause crashes."
+    "modId": "conarm",
+    "status": "DEPRECATED",
+    "version": "1.2.5.10",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": false,
+    "replacementModName": "Antique Armory",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/antique-armory",
+    "action": "REPLACE",
+    "message": "Outdated. Use #link:[Antique Armory](https://www.curseforge.com/minecraft/mc-mods/antique-armory) and #link:[Tinkers' Antique](https://www.curseforge.com/minecraft/mc-mods/tinkers-antique)."
   },
   {
     "modId": "configurablecane",
@@ -466,12 +513,33 @@
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "ctm",
+    "status": "PROBLEMATIC",
+    "version": "MC1.12.2-1.0.2.31",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "ConnectedTexturesMod",
+    "replacementModVersion": "MC1.12.2-1.0.2.31",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/ctm/download/2915363",
+    "action": "UPGRADE",
+    "message": "Outdated and may cause crashes."
+  },
+  {
     "modId": "customspawner",
     "status": "PROBLEMATIC",
     "replacementModName": "Universal Tweaks",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Very outdated and WILL screw up mob spawns in many mods. If you are using Mo' Creatures, it is highly recommended to use #link:[Mo' Creatures Extended](https://www.curseforge.com/minecraft/mc-mods/mo-creatures-extended) instead which removes the dependency."
+  },
+  {
+    "modId": "cyclepaintings",
+    "status": "DEPRECATED",
+    "replacementModName": "Painting Selection Gui",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/paintings/files/7156791",
+    "action": "REPLACE",
+    "message": "Recommended to use #link:[Painting Selection Gui](https://www.curseforge.com/minecraft/mc-mods/paintings/files/7156791) instead to much more easily select what painting you want when placing it."
   },
   {
     "modId": "damagetilt",
@@ -564,6 +632,32 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "embers",
+    "version": "1.19",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": false,
+    "status": "DEPRECATED",
+    "replacementModName": "Embers Unofficial Extended Life",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/embers-extended-life/files/6556819",
+    "replacementModVersion": "1.25.3",
+    "action": "REPLACE",
+    "message": "Outdated. Use #link:[Embers Unofficial Extended Life 1.25.3](https://www.curseforge.com/minecraft/mc-mods/embers-extended-life/files/6556819)."
+  },
+  {
+    "modId": "embers",
+    "version": "1.23.4",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": false,
+    "status": "PROBLEMATIC",
+    "replacementModName": "Embers Unofficial Extended Life",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/embers-extended-life/files/6556819",
+    "replacementModVersion": "1.25.3",
+    "action": "DOWNGRADE",
+    "message": "1.25.4+ versions of Embers Unofficial Extended Life will crash on multiplayer. Use #link:[Embers Unofficial Extended Life 1.25.3](https://www.curseforge.com/minecraft/mc-mods/embers-extended-life/files/6556819)."
   },
   {
     "modId": "enablecheats",
@@ -932,6 +1026,12 @@
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "ironbackpacks",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "Has several dupe issues and can void all bag contents on servers."
+  },
+  {
     "modId": "je-characters",
     "status": "DEPRECATED",
     "replacementModName": "Had Enough Characters",
@@ -1166,6 +1266,18 @@
     "message": "Outdated and may cause crashes."
   },
   {
+    "modId": "mousetweaks",
+    "status": "PROBLEMATIC",
+    "version": "2.10.1",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": false,
+    "replacementModName": "Mouse Tweaks Unofficial",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/mouse-tweaks-unofficial",
+    "action": "REPLACE",
+    "message": "Outdated and will cause issues with Cleanroom. Use #link:[Mouse Tweaks Unofficial](https://www.curseforge.com/minecraft/mc-mods/mouse-tweaks-unofficial)."
+  },
+  {
     "modId": "movingquickly",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -1262,6 +1374,14 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "noexpensive",
+    "status": "PROBLEMATIC",
+    "replacementModName": "Universal Tweaks",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
+    "action": "REPLACE",
+    "message": "Overwrites anvil methods and breaks compatibility. Use #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks) instead."
+  },
+  {
     "modId": "nomoreglowingpots",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -1287,6 +1407,14 @@
   },
   {
     "modId": "norecipebook",
+    "status": "DEPRECATED",
+    "replacementModName": "Universal Tweaks",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "noprecipebook",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
@@ -1337,11 +1465,14 @@
   {
     "modId": "orestages",
     "status": "PROBLEMATIC",
-    "replacementModName": "",
-    "replacementModVersion": "",
-    "replacementModLink": "",
-    "action": "INFO",
-    "message": "Crashes with VintageFix's `mixin.dynamic_resources` setting. disable it in `vintagefix.properties` config to avoid further crashes."
+    "version": "2.1.0",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "Ore Stages ReStaged",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/ore-stages-restaged",
+    "action": "REPLACE",
+    "message": "Has issues with VintageFix's 'mixin.dynamic_resources' setting. Use #link:[Ore Stages ReStaged](https://www.curseforge.com/minecraft/mc-mods/ore-stages-restaged)."
   },
   {
     "modId": "overpowered_mending",
@@ -1393,12 +1524,30 @@
     "message": "Empty jar that does nothing."
   },
   {
-    "modId": "phosphor-lighting",
+    "modId": "persistency",
     "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "Currently only used by Thaumic Speedup which is not recommended for use."
+  },
+  {
+    "modId": "phosphorcrashfix",
+    "status": "DEPRECATED",
     "replacementModName": "Alfheim Lighting Engine",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/alfheim-lighting-engine",
     "action": "REPLACE",
-    "message": "Incompatible with Cleanroom and several modern optimization mods. Use #link:[Alfheim Lighting Engine](https://www.curseforge.com/minecraft/mc-mods/alfheim-lighting-engine) or Hesperus for better compatibility and performance."
+    "message": "No longer needed for #link:[Alfheim Lighting Engine](https://www.curseforge.com/minecraft/mc-mods/alfheim-lighting-engine) or #link:[Hesperus](https://www.curseforge.com/minecraft/mc-mods/hesperus)."
+  },
+  {
+    "modId": "phosphor-lighting",
+    "status": "PROBLEMATIC",
+    "version": "0.2.7",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": false,
+    "replacementModName": "Alfheim Lighting Engine",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/alfheim-lighting-engine",
+    "action": "REPLACE",
+    "message": "Incompatible with Cleanroom and several modern optimization mods. Use #link:[Alfheim Lighting Engine](https://www.curseforge.com/minecraft/mc-mods/alfheim-lighting-engine) or #link:[Hesperus](https://www.curseforge.com/minecraft/mc-mods/hesperus) for better compatibility and performance."
   },
   {
     "modId": "pickupnotifier",
@@ -1415,6 +1564,14 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "questbook",
+    "status": "DEPRECATED",
+    "replacementModName": "Better Questing Unofficial",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/better-questing-unofficial",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Better Questing Unofficial](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
     "modId": "quickleafdecay",
@@ -1780,7 +1937,7 @@
     "replacementModName": "Thaumcraft Fix",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumcraftfix",
     "action": "REPLACE",
-    "message": "Overwrites classes and breaks compatibility. Use #link:[Thaumcraft Fix](https://www.curseforge.com/minecraft/mc-mods/thaumcraftfix)."
+    "message": "Overwrites Thaumcraft methods and breaks compatibility. Use #link:[Thaumcraft Fix](https://www.curseforge.com/minecraft/mc-mods/thaumcraftfix)."
   },
   {
     "modId": "thaumicmeme",
@@ -1822,7 +1979,7 @@
     "replacementModName": "ThaumicTweaker",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumictweaker",
     "action": "REPLACE",
-    "message": "Overwrites methods and breaks compatibility. Use #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker) instead."
+    "message": "Overwrites Thaumcraft methods and breaks compatibility. Use #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker) instead."
   },
   {
     "modId": "tidychunk",
