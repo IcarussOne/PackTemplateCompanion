@@ -324,6 +324,19 @@
                 ]
             },
             {
+                "name": "AI Removal",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#utAIRemovalToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"`AI Removal` and `AI Replacement` are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities`.",
+                "dependencies":[
+                    {
+                        "modId": "aiimprovements"
+                    }
+                ]
+            },
+            {
                 "name": "AI Replacement",
                 "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#utAIReplacementToggle",
                 "type": "boolean",
@@ -333,6 +346,19 @@
                 "dependencies":[
                     {
                         "modId": "aiimprovements"
+                    }
+                ]
+            },
+            {
+                "name": "AI Removal",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#utAIRemovalToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"`AI Removal` and `AI Replacement` are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities`.",
+                "dependencies":[
+                    {
+                        "modId": "aireducer"
                     }
                 ]
             },
@@ -1324,6 +1350,32 @@
                 "dependencies":[
                     {
                         "modId": "nodoze"
+                    }
+                ]
+            },
+            {
+                "name": "[2] Infinity Conflict",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ITEMS#INFINITY#utInfinityEnchantmentConflicts",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The infinity enchantment tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `items` → `infinity`.",
+                "dependencies":[
+                    {
+                        "modId": "noexpensive"
+                    }
+                ]
+            },
+            {
+                "name": "Anvil XP Level Cap",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#BLOCKS#ANVIL#utAnvilXPLevelCap",
+                "type": "int",
+                "value": "40",
+                "shouldMatch":"true",
+                "message":"The anvil tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `blocks` → `anvil`.",
+                "dependencies":[
+                    {
+                        "modId": "noexpensive"
                     }
                 ]
             },
