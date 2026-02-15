@@ -15,7 +15,7 @@ This mod is built against the [Cleanroom Wiki Mod List](https://cleanroommc.com/
 ---
 
 ### Template Usage
-This mod is intended to be used with [BareBones Modpack Template](https://github.com/BareBonium/BareBones), which provides a pre-configured environment that includes:
+This mod is intended to be used with [BareBones Modpack Template](https://github.com/Invadermonky/BareBonesTemplatePack), which provides a pre-configured environment that includes:
 * **Curated Optimizations:** A minimalistic list of major improvement, QoL and bugfix mods.
 * **Standardized Configs:** Pre-configured config files for various mods, including Crash Assistant and Universal Tweaks.
 * **Workflow Guide:** A step-by-step template to update old packs or start new ones with modern 1.12.2 standards.
@@ -25,7 +25,7 @@ This mod is intended to be used with [BareBones Modpack Template](https://github
 ### Master Lists
 Pack Companion does not rely on static data. Instead, it utilizes a dynamic **Master List** system to provide the most current mod recommendations without requiring frequent mod updates:
 
-* **GitHub Master Lists:** All data and recommendation logic is hosted on our [Master List Directory](https://github.com/BareBonium/PackCompanion-MasterList), which features:<br/><br/>
+* **GitHub Master Lists:** All data and recommendation logic is hosted on our [Master List Directory](https://github.com/AnasDevO/PackTemplateCompanion/tree/master/masterlists), which features:<br/><br/>
   * **Mod Master List**: containing definitions for problematic, outdated, or deprecated mods.
   * **Class Checking Master List**: A specialized list used to verify the presence of classes across classpath, or to match Hash values of Jar files
   * **Config Master List**: A list for auditing mod config fields.<br/><br/>
