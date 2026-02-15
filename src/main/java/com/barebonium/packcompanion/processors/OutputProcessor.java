@@ -4,6 +4,7 @@ import com.barebonium.packcompanion.PackCompanion;
 import com.barebonium.packcompanion.config.ConfigHandler;
 import com.barebonium.packcompanion.entries.HTMLEntry;
 import com.barebonium.packcompanion.htmlcompiler.HTMLGenerator;
+import com.barebonium.packcompanion.utils.HouseApproval;
 import com.barebonium.packcompanion.utils.RentryUploader;
 
 import java.io.*;
@@ -15,13 +16,11 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Date;
 
-import static com.barebonium.packcompanion.PackCompanion.gameDir;
 import static com.barebonium.packcompanion.PackCompanion.logsDir;
 import static java.nio.file.Files.readAllBytes;
 
 public class OutputProcessor {
     public static File HTMLReportFile;
-    public static File GlobalOutputLog;
     public static String lastRentryUrl = "";
 
     public static String timeStamp;
@@ -49,6 +48,10 @@ public class OutputProcessor {
 
             writer.println("# Pack Companion Report");
             writer.println("");
+            if (HouseApproval.houseApproves){
+                writer.println("###### House Approves this report!");
+                writer.println("");
+            }
             writer.printf("### Generated on: %s%n",timeStamp);
             writer.println("");
 

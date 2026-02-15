@@ -8,16 +8,15 @@ import com.barebonium.packcompanion.entries.ModPatchEntry;
 import com.barebonium.packcompanion.enumstates.Action;
 import com.barebonium.packcompanion.processors.ConfigProcessor;
 import com.barebonium.packcompanion.processors.OutputProcessor;
+import com.barebonium.packcompanion.utils.HouseApproval;
 import com.barebonium.packcompanion.utils.MessageRegex;
 import com.barebonium.packcompanion.utils.helpers.ModHelper;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class HTMLGenerator {
-    public static String GlobalHTML;
     public static void saveAsHtml(ArrayList<HTMLEntry> htmlEntries, File file, String timeStamp) {
         String htmlHeader = "<!DOCTYPE html><html><head><title>Pack Companion Report</title>" +
                 "<meta charset=\"UTF-8\">"+
@@ -46,6 +45,8 @@ public class HTMLGenerator {
                 "  .code-snippet{font-family: 'Courier New', Courier, monospace; font-size: 85%; background-color: rgba(240, 246, 252, 0.15); padding: 0.2em 0.4em; border-radius: 3px; color: #64d3ff;}"+
                 "  body.light-mode .code-snippet{ background-color: rgba(11, 36, 62, 0.9); color: #FFFFFF;}"+
                 "  .config-name {color: #72ffeb;}"+
+                "  h6{ color: #b9b9b952 }"+
+                "  body.light-mode h6{ color: #d7d7d7 }"+
                 "  body.light-mode .config-name{ color: #129d7d;}"+
                 "  a:link {color: #0969da; font-weight: bold;}"+
                 "  body.light-mode a:link {color: #0969da; font-weight: bold;}"+
@@ -61,15 +62,18 @@ public class HTMLGenerator {
                 "  .dropdown table { margin-bottom: 0; border: none; }" +
                 "  .dropdown td, .dropdown th { border-left: none; border-right: none; }" +
                 "</style></head><body>" +
-                "<h1>Pack Companion Report <button class='toggle-btn' onclick='toggleTheme()'>Toggle Theme</button></h1>" +
-                "<h4>Generated On: "+ timeStamp + "</h4>";
+                "<h1>Pack Companion Report <button class='toggle-btn' onclick='toggleTheme()'>Toggle Theme</button></h1>";
 
+        StringBuilder headerEasterEgg = new StringBuilder();
+        if (HouseApproval.houseApproves){
+            headerEasterEgg.append("<h6>House approves this report!</h6>");
+        }
+        headerEasterEgg.append("<h4>Generated On: ").append(timeStamp).append("</h4>");
 
         StringBuilder tableHtml = new StringBuilder();
         StringBuilder patchListTable = new StringBuilder();
         StringBuilder cleanroomTable = new StringBuilder();
         List<HTMLEntry> modPatchList = new ArrayList<>();
-        int patchEntryCount = 0;
         if (ConfigHandler.enableModAnalysis) {
             tableHtml.append("<h2>Mod Analysis</h2> <details class=\"dropdown\">");
             tableHtml.append("<summary>Show Mod Analysis</summary>");
@@ -128,7 +132,6 @@ public class HTMLGenerator {
                 }
                 for (ModPatchEntry patchEntry : htmlEntry.patchList) {
                     if (patchEntry.isClassLoaded && !ModHelper.isClassLoaded(patchEntry.classpath) || !patchEntry.isClassLoaded && !ModHelper.isModLoaded(patchEntry.modId)) {
-                        patchEntryCount++;
                         String patchModName = String.format("<p><a href=\"%s\">%s</a></p>",
                                 patchEntry.modLink, patchEntry.modName);
                         patchListTable.append("<tr>");
@@ -196,12 +199,8 @@ public class HTMLGenerator {
         if(ConfigHandler.enableConfigAnalysis){
             ConfigTableFinal = ConfigProcessor.ConfigTable.toString();
         }
-        String PatchListTableFinal = patchListTable.toString();
-        if (patchEntryCount != 0){
-            PatchListTableFinal="";
-        }
 
-        String finalHtml = htmlHeader + tableHtml + patchListTable + cleanroomTable + ConfigTableFinal + script + "</body></html>";
+        String finalHtml = htmlHeader + headerEasterEgg + tableHtml + patchListTable + cleanroomTable + ConfigTableFinal + script + "</body></html>";
         PackCompanion.LOGGER.info("finalHtml built, Beginning writing file");
         try (PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(file)))) {
             writer.println(finalHtml);

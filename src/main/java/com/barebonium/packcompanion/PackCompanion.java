@@ -16,7 +16,8 @@ import java.io.File;
 @Mod(
         modid = PackCompanion.MOD_ID,
         name = PackCompanion.MOD_NAME,
-        version = PackCompanion.MOD_VERSION
+        version = PackCompanion.MOD_VERSION,
+        dependencies = "required-before:universaltweaks"
 )
 public class PackCompanion {
     public static final String MOD_ID = Tags.MOD_ID;
