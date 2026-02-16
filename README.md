@@ -5,6 +5,8 @@
 
 Pack Companion features a deep **Config Parser** that analyses problematic Config field values through Reflection. It identifies settings that are known to cause crashes or severe performance issues.
 
+Pack Companion is also deeply integrated with **Universal Tweaks**, and is able to identify mods that have been been superseded or merged into **Universal Tweaks**'s feature set and provides the exact configuration settings required to replace them.
+
 The mod generates both **HTML/Markdown** reports (found in your `config/packcompanion/output` folder). These reports provides a clean, readable breakdown of every flagged mod and config setting, complete with direct links to recommended fixes.
 
 Upon joining the world, you will be provided a link to view the reports in your browser.
