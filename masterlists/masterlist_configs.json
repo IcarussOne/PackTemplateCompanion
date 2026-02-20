@@ -186,6 +186,35 @@
         ]
     },
     {
+      "modId": "thaumicperiphery",
+      "settings": [
+        {
+          "name": "Alchemical Brass Requires Copper",
+          "field": "thaumicperiphery.Config#copperBrassRecipe",
+          "type": "boolean",
+          "value": "true",
+          "shouldMatch": "true",
+          "message": "The `Alchemical Brass Requires Copper` tweak from ThaumicTweaker is a much better implementation of this. It is located in `ThaumicTweaker - Tweaks.cfg` → `general` → `miscellaneous tweaks`."
+        },
+        {
+          "name": "Enable Caster Gauntlet",
+          "field": "thaumicperiphery.Config#emberCaster",
+          "type": "boolean",
+          "value": "true",
+          "shouldMatch": "true",
+          "message": "The Clockwork Caster's Gauntlet from Congrega Mystica is a much better implementation of this. The tweaks are located in `congregamystica.cfg` → `general` → `caster gauntlets` → `clockwork caster's gauntlet`."
+        },
+        {
+          "name": "Enable Caster Gauntlet",
+          "field": "thaumicperiphery.Config#manaCaster",
+          "type": "boolean",
+          "value": "true",
+          "shouldMatch": "true",
+          "message": "The Elementium Caster's Gauntlet from Congrega Mystica is a much better implementation of this. The tweaks are located in `congregamystica.cfg` → `general` → `caster gauntlets` → `elementium caster's gauntlet`."
+        }
+      ]
+    },
+    {
         "modId": "thaumictweaker",
         "settings": [
             {
