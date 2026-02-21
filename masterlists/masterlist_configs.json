@@ -194,7 +194,7 @@
           "type": "boolean",
           "value": "true",
           "shouldMatch": "true",
-          "message": "The `Alchemical Brass Requires Copper` tweak from ThaumicTweaker has a better implementation of this feature. Configuration option is located in `ThaumicTweaker - Tweaks.cfg` → `general` → `miscellaneous tweaks`."
+          "message": "The `Alchemical Brass Requires Copper` tweak from #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker) has a better implementation of this feature. Configuration option is located in `ThaumicTweaker - Tweaks.cfg` → `general` → `miscellaneous tweaks`."
         },
         {
           "name": "Enable Caster Gauntlet",
