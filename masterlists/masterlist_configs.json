@@ -149,6 +149,24 @@
         ]
     },
     {
+        "modId": "fixeroo",
+        "settings": [
+            {
+                "name": "distanceList",
+                "field": "surreal.fixeroo.FixerooConfig#TESRDISTANCE#distanceList",
+                "type": "list_int_p",
+                "value": "Contains:[0]",
+                "shouldMatch": "true",
+                "message": "The tile entity distance tweaks are located in `xporbclump.cfg` → `general` → `tesrdistance`.",
+                "dependencies": [
+                    {
+                        "modId": "distantbanners"
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "modId": "potioncore",
         "settings": [
             {
