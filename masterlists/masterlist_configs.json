@@ -345,7 +345,7 @@
                 "type": "boolean",
                 "value": "true",
                 "shouldMatch": "true",
-                "message": "`enableSwimAnimation` will break Aqua Acrobatics. This setting should be false.",
+                "message": "`enableSwimAnimation` breaks nearly all modified player hitbox calculations and most custom player animations. This setting should be false.",
                 "dependencies": [
                     {
                         "modId": "aquaacrobatics"
