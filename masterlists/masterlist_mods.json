@@ -2091,7 +2091,7 @@
     "modId": "tropicraft",
     "status": "PROBLEMATIC",
     "action": "INFO",
-    "message": "Has tons of issues and memory leaks. It also introduces its own swimming system that won't work well with Aqua Acrobatics."
+    "message": "Has tons of issues and memory leaks. Highly not recommended for use overall."
   },
   {
     "modId": "twilightforest",

@@ -337,6 +337,24 @@
         ]
     },
     {
+        "modId": "tropicraft",
+        "settings": [
+            {
+                "name": "enableSwimAnimation",
+                "field": "net.tropicraft.core.common.config.TropicsConfigs#enableSwimAnimation",
+                "type": "boolean",
+                "value": "true",
+                "shouldMatch": "true",
+                "message": "`enableSwimAnimation` will break Aqua Acrobatics. This setting should be false.",
+                "dependencies": [
+                    {
+                        "modId": "aquaacrobatics"
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "modId": "universaltweaks",
         "settings": [
             {
