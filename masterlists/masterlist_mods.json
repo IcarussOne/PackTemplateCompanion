@@ -2091,7 +2091,7 @@
     "modId": "tropicraft",
     "status": "PROBLEMATIC",
     "action": "INFO",
-    "message": "Has tons of issues and memory leaks. Highly not recommended for use overall."
+    "message": "Has numerous issues and memory leaks. Not recommended for use."
   },
   {
     "modId": "twilightforest",
