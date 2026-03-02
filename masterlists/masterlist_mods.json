@@ -797,12 +797,6 @@
     "message": "Future Fireproof has a better implementation and API features. #link:[Future Fireproof](https://www.curseforge.com/minecraft/mc-mods/future-fireproof)."
   },
   {
-    "modId": "fluidlogged_api",
-    "status": "PROBLEMATIC",
-    "action": "INFO",
-    "message": "Can impact performance."
-  },
-  {
     "modId": "foamfix",
     "status": "DEPRECATED",
     "replacementModName": "VintageFix",
@@ -1388,7 +1382,7 @@
     "modId": "nether_api",
     "status": "PROBLEMATIC",
     "action": "INFO",
-    "message": "May cause your world spawn to be underwater at an Ocean biome. It also makes changes to certain mods (generated features and mob spawns)."
+    "message": "Overwrites vanilla spawn rules, sometimes causing players to spawn underwater. Overwrites nether generation using its own methods. Incompatible with all mods except those that are explicitly supported."
   },
   {
     "modId": "netherportalfix",
