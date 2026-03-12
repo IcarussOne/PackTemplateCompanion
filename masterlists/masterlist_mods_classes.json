@@ -175,7 +175,7 @@
     "replacementModName": "latest beta",
     "replacementModLink": "latest beta",
     "replacementModVersion": "latest beta",
-    "message": "Must use the latest beta version or it will crash. Optional Baubles integration available with #link:[Mowzie's Mobs' Baubles](https://www.curseforge.com/minecraft/mc-mods/mowzies-mobs-baubles).",
+    "message": "Must use the latest beta version or it will crash with #link:[Mowzie's Mobs' Baubles](https://www.curseforge.com/minecraft/mc-mods/mowzies-mobs-baubles).",
     "patchList": []
   },
   {
