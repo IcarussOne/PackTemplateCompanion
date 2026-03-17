@@ -648,6 +648,9 @@
                 "dependencies":[
                     {
                         "modId": "cie"
+                    },
+                    {
+                        "modId": "configurabledespawntimer"
                     }
                 ]
             },
@@ -690,19 +693,6 @@
                 "dependencies":[
                     {
                         "modId": "configurablecane"
-                    }
-                ]
-            },
-            {
-                "name": "[01] Item Entities Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ITEMS#ITEM_ENTITIES#utItemEntitiesToggle",
-                "type": "boolean",
-                "value": "false",
-                "shouldMatch":"true",
-                "message":"The item entity tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `items` → `item entities`.",
-                "dependencies":[
-                    {
-                        "modId": "configurabledespawntimer"
                     }
                 ]
             },
@@ -975,6 +965,9 @@
                 "dependencies":[
                     {
                         "modId": "finite-fluid-control"
+                    },
+                    {
+                        "modId": "watercontrolextreme"
                     }
                 ]
             },
@@ -1697,19 +1690,6 @@
                 "dependencies":[
                     {
                         "modId": "voidfog"
-                    }
-                ]
-            },
-            {
-                "name": "[1] Finite Water Toggle",
-                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#BLOCKS#FINITE_WATER#utFiniteWaterToggle",
-                "type": "boolean",
-                "value": "false",
-                "shouldMatch":"true",
-                "message":"The finite water tweaks are located in `Universal Tweaks - Bugfixes.cfg` → `general` → `blocks` → `finite water`.",
-                "dependencies":[
-                    {
-                        "modId": "watercontrolextreme"
                     }
                 ]
             }
