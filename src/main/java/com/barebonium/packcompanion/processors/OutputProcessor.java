@@ -157,9 +157,9 @@ public class OutputProcessor {
             return;
         }
         File[] files = directory.listFiles((dir, name) -> name.toLowerCase().endsWith(format));
-        if(files!=null &&  files.length>maxFilesPresent){
+        if(files!=null &&  files.length+1>maxFilesPresent){
             Arrays.sort(files, Comparator.comparing(File::lastModified));
-            int filesToDelete = files.length-maxFilesPresent;
+            int filesToDelete = files.length+1-maxFilesPresent;
             for(int i=0; i<filesToDelete; i++){
                 if(files[i].delete()){
                     PackCompanion.LOGGER.warn("Report deleted from output folder: {}", files[i].getPath());

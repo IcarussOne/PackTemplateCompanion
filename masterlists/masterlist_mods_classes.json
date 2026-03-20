@@ -11,6 +11,22 @@
     "message": "Packaged Phosphor breaks lighting engine compatibility. Use #link:[Aether II: Phosphor Not Included](https://www.curseforge.com/minecraft/mc-mods/the-aether-ii-phosphor-not-included)."
   },
   {
+    "modId": "agricraft",
+    "status": "DEPRECATED",
+    "className": "",
+    "verification": "HASHMATCH",
+    "versionHash": "c05da8a08533d1f8a162c4553e409c56",
+    "version": "",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "Agricraft-Refitbench",
+    "replacementModVersion": "2.17.1",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/agricraft-refitted",
+    "action": "REPLACE",
+    "message": "Outdated and has Severe memory usage and low performance."
+  },
+  {
     "modId": "baubles",
     "status": "DEPRECATED",
     "verification": "CLASSLOADED",
@@ -106,13 +122,30 @@
     "status": "DEPRECATED",
     "verification": "HASHMATCH",
     "className": "",
-    "versionHash": "2da79fce72265eab0541e565636d389d",
+    "versionHash": "2da79fce72265eab0541e565636d389d ",
     "replacementModName": "Forgelin-Continuous",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/forgelin-continuous",
     "action": "REPLACE",
     "patchList": [],
     "isCleanroom": false,
     "message": "Outdated. Use #link:[Forgelin-Continuous](https://www.curseforge.com/minecraft/mc-mods/forgelin-continuous)."
+  },
+  {
+    "modId": "ic2",
+    "verification": "CLASSLOADED",
+    "className": "ic2.core.ContainerBase",
+    "versionHash": "",
+    "action": "INCLUDE",
+    "patchList": [
+      {
+        "modName": "IC2 Patcher",
+        "modId": "ic2patcher",
+        "isClassLoaded": true,
+        "classpath": "mods.su5ed.ic2patcher.asm.PatcherClassTransformer",
+        "modLink": "https://www.curseforge.com/minecraft/mc-mods/ic2-patcher",
+        "modDescription": "Fixes several issues in IndustrialCraft2."
+      }
+    ]
   },
   {
     "modId": "Cleanroom",
@@ -136,6 +169,18 @@
         "modDescription": "In order to migrate to Cleanroom loader, make sure to install #link:[Scalar Legacy](https://www.curseforge.com/minecraft/mc-mods/scalar-legacy)."
       }
     ]
+  },
+  {
+    "modId": "librarianlib",
+    "status": "DEPRECATED",
+    "verification": "HASHMATCH",
+    "className": "",
+    "versionHash": "f614d7b176957417a936e9f41d2e7fe0",
+    "replacementModName": "LibrarianLib-Continuous",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/librarianlib-continuous",
+    "action": "REPLACE",
+    "message": "Incompatible with Forgelin-Continuous. Use #link:[LibrarianLib-Continuous](https://www.curseforge.com/minecraft/mc-mods/librarianlib-continuous). Revert if Wizardry animations break.",
+    "isCleanroom": false
   },
   {
     "modId": "mixinbootstrap",

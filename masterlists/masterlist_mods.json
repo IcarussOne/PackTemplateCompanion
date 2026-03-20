@@ -63,19 +63,6 @@
     "message": "Outdated. Use #link:[Aetherworks Unofficial Extended Life](https://www.curseforge.com/minecraft/mc-mods/aetherworks-extended-life) and #link:[Embers Unofficial Extended Life 1.25.3](https://www.curseforge.com/minecraft/mc-mods/embers-extended-life/files/6556819)."
   },
   {
-    "modId": "agricraft",
-    "status": "DEPRECATED",
-    "version": "2.15.0",
-    "isMinVersion": true,
-    "isMaxVersion": false,
-    "isVersionExclusive": true,
-    "replacementModName": "Agricraft-Refitbench",
-    "replacementModVersion": "2.15.0",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/agricraft-refitted",
-    "action": "REPLACE",
-    "message": "Outdated and has Severe memory usage and low performance."
-  },
-  {
     "modId": "aiimprovements",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -683,7 +670,7 @@
   },
   {
     "modId": "embers",
-    "version": "1.23.4",
+    "version": "1.25.4",
     "isMinVersion": true,
     "isMaxVersion": false,
     "isVersionExclusive": false,
@@ -873,6 +860,18 @@
     "message": "Outdated and may cause crashes."
   },
   {
+    "modId": "forbiddenmagicre",
+    "status": "DEPRECATED",
+    "version": "",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": false,
+    "replacementModName": "",
+    "replacementModLink": "",
+    "action": "REMOVE",
+    "message": "Has conflicting content with certain addons and is no longer available on CurseForge and Modrinth. Use #link:[New Crimson Revelations](https://www.curseforge.com/minecraft/mc-mods/new-crimson-revelations) for most of the same content and #link:[Congrega Mystica](https://www.curseforge.com/minecraft/mc-mods/congrega-mystica) for most of the mod integration."
+  },
+  {
     "modId": "forgelin",
     "status": "DEPRECATED",
     "version": "1.8.3",
@@ -984,20 +983,6 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/hot-or-not-plus",
     "action": "REPLACE",
     "message": "Outdated. Use #link:[Hot or Not Plus](https://www.curseforge.com/minecraft/mc-mods/hot-or-not-plus)."
-  },
-  {
-    "modId": "ic2",
-    "action": "INCLUDE",
-    "patchList": [
-      {
-        "modName": "IC2 Patcher",
-        "modId": "ic2patcher",
-        "isClassLoaded": true,
-        "classpath": "mods.su5ed.ic2patcher.asm.PatcherClassTransformer",
-        "modLink": "https://www.curseforge.com/minecraft/mc-mods/ic2-patcher",
-        "modDescription": "Fixes several issues in IndustrialCraft2."
-      }
-    ]
   },
   {
     "modId": "ichunutil",
@@ -1216,20 +1201,24 @@
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
-    "modId": "librarianlib",
-    "status": "DEPRECATED",
-    "replacementModName": "LibrarianLib-Continuous",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/librarianlib-continuous",
-    "action": "REPLACE",
-    "message": "Incompatible with Forgelin-Continuous. Use #link:[LibrarianLib-Continuous](https://www.curseforge.com/minecraft/mc-mods/librarianlib-continuous). Revert if Wizardry animations break."
-  },
-  {
     "modId": "loginhpfix",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "lostmagica",
+    "status": "DEPRECATED",
+    "version": "",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": false,
+    "replacementModName": "",
+    "replacementModLink": "",
+    "action": "REMOVE",
+    "message": "Has conflicting content with certain addons and is no longer available on CurseForge and Modrinth. Use #link:[New Crimson Revelations](https://www.curseforge.com/minecraft/mc-mods/new-crimson-revelations) for most of the same content and #link:[Congrega Mystica](https://www.curseforge.com/minecraft/mc-mods/congrega-mystica) for most of the mod integration."
   },
   {
     "modId": "maxhealthfixer",
@@ -1718,6 +1707,8 @@
       {
         "modName": "Railway Depot Worker",
         "modId": "rdw",
+        "isClassLoaded": true,
+        "classpath": "tritusk.modpack.railcraft.patcher.EntryPoint",
         "modLink": "https://www.curseforge.com/minecraft/mc-mods/railway-depot-worker",
         "modDescription": "Fixes issues left in old versions of Railcraft."
       }
