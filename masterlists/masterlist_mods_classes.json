@@ -11,6 +11,22 @@
     "message": "Packaged Phosphor breaks lighting engine compatibility. Use #link:[Aether II: Phosphor Not Included](https://www.curseforge.com/minecraft/mc-mods/the-aether-ii-phosphor-not-included)."
   },
   {
+    "modId": "agricraft",
+    "status": "DEPRECATED",
+    "className": "",
+    "verification": "HASHMATCH",
+    "versionHash": "c05da8a08533d1f8a162c4553e409c56",
+    "version": "",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "Agricraft-Refitbench",
+    "replacementModVersion": "2.17.1",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/agricraft-refitted",
+    "action": "REPLACE",
+    "message": "Outdated and has Severe memory usage and low performance."
+  },
+  {
     "modId": "baubles",
     "status": "DEPRECATED",
     "verification": "CLASSLOADED",
