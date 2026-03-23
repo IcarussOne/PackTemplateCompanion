@@ -2085,7 +2085,7 @@
     "modId": "thaumicwands",
     "status": "PROBLEMATIC",
     "action": "REMOVE",
-    "message": "Poor implementation, crashes with ThaumcraftFix."
+    "message": "Poor implementation, crashes with Thaumcraft Fix."
   },
   {
     "modId": "thaumicwonders",
