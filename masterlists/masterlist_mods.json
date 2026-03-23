@@ -79,6 +79,18 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "alchemistry",
+    "status": "DEPRECATED",
+    "version": "1.12.2-42",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": false,
+    "replacementModName": "Alchemistry - Redox",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/alchemistry-redox",
+    "action": "REPLACE",
+    "message": "Outdated. Use #link:[Alchemistry - Redox](https://www.curseforge.com/minecraft/mc-mods/alchemistry-redox)."
+  },
+  {
     "modId": "appleskin",
     "status": "DEPRECATED",
     "replacementModName": "LemonSkin",
@@ -2056,6 +2068,12 @@
     "status": "PROBLEMATIC",
     "action": "REMOVE",
     "message": "Screws up aspects and has issues with NBT."
+  },
+  {
+    "modId": "thaumicwands",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "Poor implementation, crashes with ThaumcraftFix."
   },
   {
     "modId": "thaumicwonders",
