@@ -3,7 +3,8 @@ package com.barebonium.packcompanion.processors;
 import com.barebonium.packcompanion.PackCompanion;
 import com.barebonium.packcompanion.entries.ConfigEntry;
 import com.barebonium.packcompanion.entries.ModDependency;
-import com.barebonium.packcompanion.utils.ConfigSetting;
+import com.barebonium.packcompanion.entries.ConfigSetting;
+import com.barebonium.packcompanion.enumstates.DependencyMode;
 import com.barebonium.packcompanion.utils.MessageRegex;
 import com.barebonium.packcompanion.utils.helpers.ModHelper;
 import com.google.gson.Gson;
@@ -76,9 +77,11 @@ public class ConfigProcessor {
                             );
                         }
 
-                        if (!dependencyLoaded) {
+                        if (!dependencyLoaded && setting.dependencyMode == DependencyMode.AND) {
                             PackCompanion.LOGGER.info("Dependency {} Not Found for Mod Id {} ",dependency.modId, entry.modId);
                             dependenciesLoaded = false;
+                            break;
+                        }else if (dependencyLoaded && setting.dependencyMode == DependencyMode.OR) {
                             break;
                         }
                     }

@@ -1,7 +1,5 @@
 package com.barebonium.packcompanion.entries;
 
-import com.barebonium.packcompanion.utils.ConfigSetting;
-
 import java.util.List;
 
 public class ConfigEntry {
