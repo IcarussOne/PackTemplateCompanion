@@ -2276,6 +2276,14 @@
     "message": "Outdated. Use #link:[AnotherTips](https://www.curseforge.com/minecraft/mc-mods/anothertips)."
   },
   {
+    "modId": "thiccentities",
+    "status": "DEPRECATED",
+    "replacementModName": "Entifier",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/entifier",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Entifier](entifier)."
+  },
+  {
     "modId": "thirstybottles",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
