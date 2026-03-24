@@ -79,6 +79,18 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "alchemistry",
+    "status": "DEPRECATED",
+    "version": "1.12.2-42",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": false,
+    "replacementModName": "Alchemistry - Redox",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/alchemistry-redox",
+    "action": "REPLACE",
+    "message": "Outdated. Use #link:[Alchemistry - Redox](https://www.curseforge.com/minecraft/mc-mods/alchemistry-redox)."
+  },
+  {
     "modId": "appleskin",
     "status": "DEPRECATED",
     "replacementModName": "LemonSkin",
@@ -299,6 +311,18 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "binniecore",
+    "version": "2.5.1.203",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": false,
+    "status": "DEPRECATED",
+    "replacementModName": "Binnie's Mods Patched",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/binnies-mods-patched",
+    "action": "REPLACE",
+    "message": "Deprecated. Use #link:[Binnie's Mods Patched](https://www.curseforge.com/minecraft/mc-mods/binnies-mods-patched)."
   },
   {
     "modId": "blockcraftery",
@@ -554,6 +578,18 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "crimsonrevelations",
+    "version": "0.8",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "status": "DEPRECATED",
+    "replacementModName": "New Crimson Revelations",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/new-crimson-revelations",
+    "action": "REPLACE",
+    "message": "Deprecated. Use #link:[New Crimson Revelations](https://www.curseforge.com/minecraft/mc-mods/new-crimson-revelations)."
   },
   {
     "modId": "ctm",
@@ -1152,8 +1188,8 @@
   {
     "modId": "jehighlights",
     "status": "DEPRECATED",
-    "action": "REMOVE",
-    "message": "Completely redundant. #link:[Just Enough Items (JEI) / Had Enough Items (HEI)](https://www.curseforge.com/minecraft/mc-mods/had-enough-items) already has the same feature."
+    "action": "INFO",
+    "message": "#link:[More Overlays](https://www.curseforge.com/minecraft/mc-mods/more-overlays) includes a more configurable version of the features of JustEnoughHighlights, but has other features as well."
   },
   {
     "modId": "jeid",
@@ -2170,6 +2206,12 @@
     "message": "Screws up aspects and has issues with NBT."
   },
   {
+    "modId": "thaumicwands",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "Poor implementation, crashes with Thaumcraft Fix."
+  },
+  {
     "modId": "thaumicwonders",
     "version": "2.0.0",
     "isMinVersion": true,
@@ -2204,6 +2246,18 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/tinkers-antique",
     "action": "REPLACE",
     "message": "Duplicate features. Use #link:[Tinkers' Antique](https://www.curseforge.com/minecraft/mc-mods/tinkers-antique)."
+  },
+  {
+    "modId": "tinkersoredictcache",
+    "version": "",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "status": "DEPRECATED",
+    "replacementModName": "Tinkers' Antique",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/tinkers-antique",
+    "action": "REPLACE",
+    "message": "Outdated. Use #link:[Tinkers' Antique](https://www.curseforge.com/minecraft/mc-mods/tinkers-antique) which merges modern features and backports."
   },
   {
     "modId": "tips",
