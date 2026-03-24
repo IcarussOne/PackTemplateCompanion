@@ -359,7 +359,7 @@
     "replacementModName": "Better Questing Unofficial",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/better-questing-unofficial",
     "action": "REPLACE",
-    "message": "Better implementation exists in #link:[Better Questing Unofficial](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+    "message": "Outdated. Use #link:[Better Questing Unofficial](https://www.curseforge.com/minecraft/mc-mods/better-questing-unofficial)."
   },
   {
     "modId": "breedablekillerrabbit",
