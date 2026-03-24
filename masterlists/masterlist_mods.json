@@ -690,6 +690,18 @@
     "message": "Merged and improved in #link:[Congrega Mystica](https://www.curseforge.com/minecraft/mc-mods/congrega-mystica)."
   },
   {
+    "modId": "earthworks",
+    "version": "1.3.4.3",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "status": "DEPRECATED",
+    "replacementModName": "Earthworks Unofficial Extended Life",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/earthworks-extended-life",
+    "action": "REPLACE",
+    "message": "Deprecated. Use #link:[Earthworks Unofficial Extended Life](https://www.curseforge.com/minecraft/mc-mods/earthworks-extended-life)."
+  },
+  {
     "modId": "easybreeding",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
