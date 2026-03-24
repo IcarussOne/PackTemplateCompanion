@@ -1744,6 +1744,18 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "pillar",
+    "version": "1.2-10",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": false,
+    "status": "DEPRECATED",
+    "replacementModName": "Pillar Patched",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/pillar-patched",
+    "action": "REPLACE",
+    "message": "Deprecated. Use #link:[Pillar Patched](https://www.curseforge.com/minecraft/mc-mods/pillar-patched)."
+  },
+  {
     "modId": "portaldupebegone",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
