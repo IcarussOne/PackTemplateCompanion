@@ -399,7 +399,7 @@
     "replacementModName": "Better Questing Unofficial",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/better-questing-unofficial",
     "action": "REPLACE",
-    "message": "Better implementation exists in #link:[Better Questing Unofficial](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+    "message": "Outdated. Use #link:[Better Questing Unofficial](https://www.curseforge.com/minecraft/mc-mods/better-questing-unofficial)."
   },
   {
     "modId": "burnbabyburn",
@@ -422,6 +422,19 @@
     "status": "PROBLEMATIC",
     "action": "REMOVE",
     "message": "MCreator mod with numerous bugs in 1.12.2. Use an alternative biome mod."
+  },
+  {
+    "modId": "cfm",
+    "version": "6.3.0",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": false,
+    "status": "DEPRECATED",
+    "replacementModName": "MrCrayfish's Furniture Mod: Refurbished",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/refurbished-furniture",
+    "action": "REPLACE",
+    "message": "Deprecated. Use #link:[MrCrayfish's Furniture Mod: Refurbished](https://www.curseforge.com/minecraft/mc-mods/refurbished-furniture).",
+    "isCleanroom": true
   },
   {
     "modId": "charset",
@@ -693,6 +706,18 @@
     "message": "#link:[Fixeroo](https://www.curseforge.com/minecraft/mc-mods/xp-orb-clump) already has a better implementation of this that supports all tile entities."
   },
   {
+    "modId": "dmonsters",
+    "version": "1.12.2-2.1",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "status": "DEPRECATED",
+    "replacementModName": "Deadly Monsters Patched",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/deadly-monsters-patched",
+    "action": "REPLACE",
+    "message": "Outdated. Use #link:[Deadly Monsters Patched](https://www.curseforge.com/minecraft/mc-mods/deadly-monsters-patched)."
+  },
+  {
     "modId": "drawerfps",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -714,6 +739,14 @@
     "message": "Outdated and may cause crashes."
   },
   {
+    "modId": "dupefixproject",
+    "status": "PROBLEMATIC",
+    "replacementModName": "Universal Tweaks",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
+    "action": "UPGRADE",
+    "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
     "modId": "dynamictrees",
     "version": "1.12.2-0.13.4",
     "isMinVersion": true,
@@ -732,6 +765,18 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/congrega-mystica",
     "action": "REPLACE",
     "message": "Merged and improved in #link:[Congrega Mystica](https://www.curseforge.com/minecraft/mc-mods/congrega-mystica)."
+  },
+  {
+    "modId": "earthworks",
+    "version": "1.3.4.3",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "status": "DEPRECATED",
+    "replacementModName": "Earthworks Unofficial Extended Life",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/earthworks-extended-life",
+    "action": "REPLACE",
+    "message": "Deprecated. Use #link:[Earthworks Unofficial Extended Life](https://www.curseforge.com/minecraft/mc-mods/earthworks-extended-life)."
   },
   {
     "modId": "easybreeding",
@@ -1464,12 +1509,31 @@
     "message": "Known to cause crashes, not recommended for use."
   },
   {
+    "modId": "mup",
+    "status": "DEPRECATED",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
     "modId": "musicinterval",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "mutantbeasts",
+    "version": "1.12.2-1.0.2",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "status": "DEPRECATED",
+    "replacementModName": "Mutant Creatures Legacy",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/mutant-creatures-legacy",
+    "action": "REPLACE",
+    "message": "Deprecated. Use #link:[Mutant Creatures Legacy](https://www.curseforge.com/minecraft/mc-mods/mutant-creatures-legacy)."
   },
   {
     "modId": "muteuselesslogs",
@@ -1522,6 +1586,18 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "naturesaura",
+    "version": "18.1",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "status": "DEPRECATED",
+    "replacementModName": "Nature's Aura Simplified",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/natures-aura-simplified",
+    "action": "REPLACE",
+    "message": "Outdated and impacts performance. Use #link:[Nature's Aura Simplified](https://www.curseforge.com/minecraft/mc-mods/natures-aura-simplified)."
   },
   {
     "modId": "neonium",
@@ -1772,6 +1848,18 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "pillar",
+    "version": "1.2-10",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": false,
+    "status": "DEPRECATED",
+    "replacementModName": "Pillar Patched",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/pillar-patched",
+    "action": "REPLACE",
+    "message": "Deprecated. Use #link:[Pillar Patched](https://www.curseforge.com/minecraft/mc-mods/pillar-patched)."
+  },
+  {
     "modId": "portaldupebegone",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -1910,6 +1998,18 @@
     "message": "Outdated and may cause crashes."
   },
   {
+    "modId": "rpgloot",
+    "status": "DEPRECATED",
+    "version": "1.0",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "RPGLoot Patched",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/rpgloot-patched",
+    "action": "REPLACE",
+    "message": "Deprecated. Use #link:[RPGLoot Patched](https://www.curseforge.com/minecraft/mc-mods/rpgloot-patched)."
+  },
+  {
     "modId": "redirectionor",
     "status": "DEPRECATED",
     "action": "REMOVE",
@@ -1938,6 +2038,14 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "searedladder",
+    "status": "DEPRECATED",
+    "replacementModName": "Tinker's Antique",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/tinkers-antique",
+    "action": "REPLACE",
+    "message": "Merged in #link:[Tinker's Antique](https://www.curseforge.com/minecraft/mc-mods/tinkers-antique)."
   },
   {
     "modId": "seedcopy",
@@ -2036,6 +2144,18 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/solar-flux-reborn/download/3050838",
     "action": "UPGRADE",
     "message": "Outdated and may cause crashes."
+  },
+  {
+    "modId": "soulshardsrespawn",
+    "version": "1.12.2-1.1.1-13",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "status": "DEPRECATED",
+    "replacementModName": "Soul Shards Respawn Patched",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/soul-shards-respawn-patched",
+    "action": "REPLACE",
+    "message": "Outdated. Use #link:[Soul Shards Respawn Patched](https://www.curseforge.com/minecraft/mc-mods/soul-shards-respawn-patched)."
   },
   {
     "modId": "soundfilters",
@@ -2240,6 +2360,18 @@
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "tinkersarsenal",
+    "version": "0.7.0",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "status": "DEPRECATED",
+    "replacementModName": "Tinkers' Arsenal reloaded",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/tinkers-arsenal-reloaded",
+    "action": "REPLACE",
+    "message": "Deprecated. Use #link:[Tinkers' Arsenal reloaded](https://www.curseforge.com/minecraft/mc-mods/tinkers-arsenal-reloaded)."
+  },
+  {
     "modId": "tinkersjei",
     "status": "DEPRECATED",
     "replacementModName": "Tinkers' Antique",
@@ -2266,6 +2398,14 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/anothertips",
     "action": "REPLACE",
     "message": "Outdated. Use #link:[AnotherTips](https://www.curseforge.com/minecraft/mc-mods/anothertips)."
+  },
+  {
+    "modId": "thiccentities",
+    "status": "DEPRECATED",
+    "replacementModName": "Entifier",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/entifier",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Entifier](entifier)."
   },
   {
     "modId": "thirstybottles",

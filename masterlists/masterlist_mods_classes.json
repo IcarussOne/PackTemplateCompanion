@@ -252,6 +252,17 @@
     ]
   },
   {
+    "modId": "soot",
+    "status": "DEPRECATED",
+    "verification": "HASHMATCH",
+    "className": "",
+    "versionHash": "fcab510571c3d5154862bd72af058481",
+    "replacementModName": "Soot Unofficial Extended Life",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/soot-extended-life",
+    "action": "REPLACE",
+    "message": "Outdated. Use #link:[Soot Unofficial Extended Life](https://www.curseforge.com/minecraft/mc-mods/soot-extended-life)."
+  },
+  {
     "modId": "serialisationisbad",
     "status": "DEPRECATED",
     "verification": "CLASSLOADED",
