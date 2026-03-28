@@ -116,7 +116,6 @@ Entry format used to locate problematic configuration values.
 | `value`          | Required | The expected value that will cause problematic interactions.                                                                  |
 | `shouldMatch`    | Required | If the field value should match the `value` exactly.                                                                          |
 | `message`        | Required | A short message describing issues caused by this config setting.                                                              |
-| `dependencyMode` | Optional | If the dependency list should be treated with `OR` or `AND` logic                                                             |
 | `dependencies`   | Optional | A list of required mod dependencies for this setting to cause issues.                                                         |
 | `dependencyMode` | Optional | If the dependency list should be treated with `OR` or `AND` logic                                                             |
 
