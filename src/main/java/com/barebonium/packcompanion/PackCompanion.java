@@ -6,6 +6,7 @@ import com.barebonium.packcompanion.processors.OutputProcessor;
 import com.barebonium.packcompanion.version.VersionChecker;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.event.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
@@ -74,6 +75,14 @@ public class PackCompanion {
         OutputProcessor.runPostInitPackCompanionChecks();
         postEndTime = System.currentTimeMillis();
         LOGGER.info("{} took {}ms to complete its analysis.", PackCompanion.MOD_NAME, (preEndTime - preStartTime)+(postEndTime - postStartTime));
+    }
+
+    @Mod.EventHandler
+    public void onLoadComplete(FMLLoadCompleteEvent event){
+        File crashAssistantLog = new File(logsDir, "pack-companion-report.log");
+        if (crashAssistantLog.exists()) {
+            crashAssistantLog.delete();
+        }
     }
 
 }
