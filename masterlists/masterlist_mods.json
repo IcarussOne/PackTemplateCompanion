@@ -666,7 +666,7 @@
     "status": "DEPRECATED",
     "replacementModName": "Valkyrien Skies",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/valkyrien-skies",
-    "action": "INFO",
+    "action": "REPLACE",
     "message": "Recommended to instead use #link:[Valkyrien Skies](https://www.curseforge.com/minecraft/mc-mods/valkyrien-skies) for physics-based vehicles. If you prefer DaVinci's Vessels, you can stick with it."
   },
   {
