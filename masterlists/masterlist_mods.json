@@ -1966,7 +1966,7 @@
     "modId": "randommobtextures",
     "status": "PROBLEMATIC",
     "action": "REMOVE",
-    "message": "AI generated mod that can impact overall performance. Use Optifine instead."
+    "message": "AI generated mod that can impact overall performance. Use OptiFine instead."
   },
   {
     "modId": "randompatches",
@@ -2024,6 +2024,12 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/recurrent-complex/download/5615733",
     "action": "UPGRADE",
     "message": "Outdated and may cause crashes."
+  },
+  {
+    "modId": "renaissance_core",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "Not recommended, it is specifically made for a modpack and will change major Thaumcraft features without having the ability to disable them."
   },
   {
     "modId": "rpgloot",
