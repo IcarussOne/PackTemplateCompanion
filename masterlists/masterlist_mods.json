@@ -1557,7 +1557,7 @@
     "status": "DEPRECATED",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
-    "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+    "message": "Outdated and has issues with compatibility. Use #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks) for most of the fixes, and #link:[Alfheim Lighting Engine](https://www.curseforge.com/minecraft/mc-mods/alfheim-lighting-engine) or #link:[Hesperus](https://www.curseforge.com/minecraft/mc-mods/hesperus) for lighting optimizations."
   },
   {
     "modId": "musicinterval",
@@ -2045,7 +2045,7 @@
     "modId": "renaissance_core",
     "status": "PROBLEMATIC",
     "action": "REMOVE",
-    "message": "Not recommended, it is specifically made for a modpack and will change major Thaumcraft features without having the ability to disable them."
+    "message": "Not recommended, it is specifically made for a modpack and will change major Thaumcraft features (such as tainted mobs) without having the ability to disable them."
   },
   {
     "modId": "rpgloot",
@@ -2179,7 +2179,7 @@
   {
     "modId": "smoothfont",
     "status": "PROBLEMATIC",
-    "action": "REMOVE",
+    "action": "INFO",
     "message": "May break text rendering in some mods."
   },
   {
@@ -2276,7 +2276,7 @@
     "modId": "stupidthings",
     "status": "PROBLEMATIC",
     "action": "INFO",
-    "message": "If you plan on adding The Aurorian mod, make sure to disable `Acid` and `Rubber` in config."
+    "message": "If you plan on adding The Aurorian mod, make sure to disable `Acid` and `Rubber` in its config."
   },
   {
     "modId": "superhot",
@@ -2455,7 +2455,7 @@
     "replacementModName": "Tinkers' Antique",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/tinkers-antique",
     "action": "REPLACE",
-    "message": "Outdated. Use #link:[Tinkers' Antique](https://www.curseforge.com/minecraft/mc-mods/tinkers-antique) which merges modern features and backports."
+    "message": "Already included in #link:[Tinkers' Antique](https://www.curseforge.com/minecraft/mc-mods/tinkers-antique)."
   },
   {
     "modId": "tips",
