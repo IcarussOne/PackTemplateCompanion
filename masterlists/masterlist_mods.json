@@ -2415,6 +2415,12 @@
     "message": "Better implementation exists in #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker)."
   },
   {
+    "modId": "thaumicforever",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "Not recommended, some content is unfinished, it contains overlapping content with other addons, and it breaks some functionality with ThaumicTweaker and Thaumic Wonders Unofficial."
+  },
+  {
     "modId": "thaumicspeedup",
     "status": "PROBLEMATIC",
     "action": "REMOVE",
