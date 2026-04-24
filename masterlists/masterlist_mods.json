@@ -1406,6 +1406,18 @@
     "message": "Content integrated in #link:[New Crimson Revelations](https://www.curseforge.com/minecraft/mc-mods/new-crimson-revelations) and #link:[Congrega Mystica](https://www.curseforge.com/minecraft/mc-mods/congrega-mystica)."
   },
   {
+    "modId": "matteroverdrive",
+    "version": "1.0.1",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "status": "DEPRECATED",
+    "replacementModName": "Matter Overdrive Refitted",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/matter-overdrive-refitted",
+    "action": "REPLACE",
+    "message": "Outdated. Use #link:[Matter Overdrive Refitted](https://www.curseforge.com/minecraft/mc-mods/matter-overdrive-refitted)."
+  },
+  {
     "modId": "maxhealthfixer",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -2070,6 +2082,17 @@
     "status": "DEPRECATED",
     "action": "REMOVE",
     "message": "Provides no real performance benefit."
+  },
+  {
+    "modId": "roguelike",
+    "version": "1.8.0",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": true,
+    "status": "PROBLEMATIC",
+    "replacementModVersion": "1.8.0",
+    "action": "DOWNGRADE",
+    "message": "Fnar's Edition is known to be worse in performance and includes unnecessary changes to some of the original content. Use #link:[Roguelike Dungeons 1.8.0](https://www.curseforge.com/minecraft/mc-mods/roguelike-dungeons/files/2492586) instead."
   },
   {
     "modId": "rusticthaumaturgy",
