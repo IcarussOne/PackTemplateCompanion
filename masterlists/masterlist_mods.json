@@ -1208,7 +1208,7 @@
         "isClassLoaded": true,
         "classpath": "net.eve0415.ifpatcher.Transformer",
         "modLink": "https://www.curseforge.com/minecraft/mc-mods/ifpatcher",
-        "modDescription": "Patch some known bugs from Industrial Foregoing for 1.12.2 as it is officially EOL."
+        "modDescription": "Patches some known bugs from Industrial Foregoing for 1.12.2 as it is officially EOL."
       }
     ]
   },
@@ -2278,6 +2278,14 @@
     "message": "Outdated. Use #link:[Flare](https://www.curseforge.com/minecraft/mc-mods/flare) as a modern alternative."
   },
   {
+    "modId": "spartanbewitchment",
+    "status": "DEPRECATED",
+    "replacementModName": "Spartan Weaponry Arcana: Expanded",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/spartan-weaponry-arcana-expanded",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Spartan Weaponry Arcana: Expanded](https://www.curseforge.com/minecraft/mc-mods/spartan-weaponry-arcana-expanded)."
+  },
+  {
     "modId": "steamworldpatcher",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -2670,6 +2678,18 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks).  If you also want to make other fluids finite, you can stick with Water Control Extreme."
+  },
+  {
+    "modId": "weaponmod",
+    "action": "INCLUDE",
+    "patchList": [
+      {
+        "modName": "Balkon's Expansion",
+        "modId": "balkonsexpansion",
+        "modLink": "https://www.curseforge.com/minecraft/mc-mods/balkons-expansion",
+        "modDescription": "Highly recommended for configurable mod integration and quality of life."
+      }
+    ]
   },
   {
     "modId": "witchery",
