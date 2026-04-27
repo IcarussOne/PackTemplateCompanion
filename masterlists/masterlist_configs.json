@@ -610,6 +610,19 @@
                 ]
             },
             {
+                "name": "[1] Unsafe Sleeping Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#UNSAFE_SLEEPING#utAllowUnsafeSleeping",
+                "type": "int",
+                "value": "-1",
+                "shouldMatch":"true",
+                "message":"The `Unsafe Sleeping` tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `unsafe sleeping`.",
+                "dependencies":[
+                    {
+                        "modId": "bettersafebed"
+                    }
+                ]
+            },
+            {
                 "name": "[1] Chat Lines",
                 "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#CHAT#utChatLines",
                 "type": "int",
