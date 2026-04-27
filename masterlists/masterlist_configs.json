@@ -612,8 +612,8 @@
             {
                 "name": "[1] Unsafe Sleeping Toggle",
                 "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#UNSAFE_SLEEPING#utAllowUnsafeSleeping",
-                "type": "int",
-                "value": "-1",
+                "type": "boolean",
+                "value": "false",
                 "shouldMatch":"true",
                 "message":"The `Unsafe Sleeping` tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `unsafe sleeping`.",
                 "dependencies":[
