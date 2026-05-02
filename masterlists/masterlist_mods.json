@@ -442,6 +442,14 @@
     "message": "Outdated. Use #link:[Better Questing Unofficial](https://www.curseforge.com/minecraft/mc-mods/better-questing-unofficial)."
   },
   {
+    "modId": "brigo",
+    "status": "PROBLEMATIC",
+    "replacementModName": "Salutation",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/salutation",
+    "action": "REPLACE",
+    "message": "Currently unmaintained and has a few unaddressed #link:[issues](https://github.com/xhyrom/brigo/issues). Use #link:[Salutation](https://www.curseforge.com/minecraft/mc-mods/salutation) for a better implementation."
+  },
+  {
     "modId": "burnbabyburn",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
