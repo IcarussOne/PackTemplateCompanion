@@ -719,10 +719,10 @@
   },
   {
     "modId": "dmonsters",
-    "version": "1.12.2-2.1",
-    "isMinVersion": true,
-    "isMaxVersion": false,
-    "isVersionExclusive": true,
+    "version": "1.7",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": false,
     "status": "DEPRECATED",
     "replacementModName": "Deadly Monsters Patched",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/deadly-monsters-patched",
@@ -1948,7 +1948,7 @@
         "modName": "Railway Depot Worker",
         "modId": "rdw",
         "isClassLoaded": true,
-        "classpath": "tritusk.modpack.railcraft.patcher.EntryPoint",
+        "classpath": "info.tritusk.modpack.railcraft.patcher.ModContainer",
         "modLink": "https://www.curseforge.com/minecraft/mc-mods/railway-depot-worker",
         "modDescription": "Fixes issues left in old versions of Railcraft."
       }

@@ -64,7 +64,7 @@ public class ModHelper {
                 PackCompanion.LOGGER.error("Found loaded class: {}", className);
             }
             return true;
-        } catch(ClassNotFoundException e) {
+        } catch(ClassNotFoundException | LinkageError e) {
             PackCompanion.LOGGER.error("Failed to load class {}: {}", className, e.getMessage());
             return false;
         }
