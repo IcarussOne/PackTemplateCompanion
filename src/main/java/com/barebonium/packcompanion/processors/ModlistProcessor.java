@@ -1,6 +1,7 @@
 package com.barebonium.packcompanion.processors;
 
 import com.barebonium.packcompanion.PackCompanion;
+import com.barebonium.packcompanion.config.ConfigHandler;
 import com.barebonium.packcompanion.entries.ClassCheckEntry;
 import com.barebonium.packcompanion.entries.HTMLEntry;
 import com.barebonium.packcompanion.entries.ModEntry;
@@ -131,7 +132,9 @@ public class ModlistProcessor {
                 return false;
             }
         } else if(entry.verification == Verification.CLASSLOADED){
-            PackCompanion.LOGGER.warn("Classloaded status for class {}: {}", entry.className,ModHelper.isClassLoaded(entry.className) );
+            if(ConfigHandler.debugMode){
+                PackCompanion.LOGGER.warn("Classloaded status for class {}: {}", entry.className,ModHelper.isClassLoaded(entry.className) );
+            }
             return ModHelper.isClassLoaded(entry.className);
         } else {
             return false;
