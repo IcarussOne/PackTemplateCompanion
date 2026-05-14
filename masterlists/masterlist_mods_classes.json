@@ -251,6 +251,17 @@
     "patchList": []
   },
   {
+    "modId": "naturesaura",
+    "verification": "HASHMATCH",
+    "className": "",
+    "versionHash": "212888fda527e55e19b91a69605ec43c",
+    "status": "DEPRECATED",
+    "replacementModName": "Nature's Aura Simplified",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/natures-aura-simplified",
+    "action": "REPLACE",
+    "message": "Outdated and impacts performance. Use #link:[Nature's Aura Simplified](https://www.curseforge.com/minecraft/mc-mods/natures-aura-simplified)."
+  },
+  {
     "modId": "nyx",
     "status": "PROBLEMATIC",
     "verification": "CLASSLOADED",
