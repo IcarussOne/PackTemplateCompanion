@@ -263,16 +263,16 @@
   },
   {
     "modId": "neenergistics",
+    "verification": "HASHMATCH",
+    "className": "",
     "status": "PROBLEMATIC",
-    "version": "2.0.8",
-    "isMinVersion": true,
-    "isMaxVersion": false,
-    "isVersionExclusive": true,
+    "versionHash": "42cc287d45a5703fcdb7b450d6832f8d",
     "replacementModName": "Not Enough Energetics",
     "replacementModVersion": "2.0.9",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/not-enough-energistics/download/6325382",
     "action": "UPGRADE",
-    "message": "Outdated and may cause crashes."
+    "message": "Outdated and may cause crashes.",
+    "doNotMatch": true
   },
   {
     "modId": "nyx",

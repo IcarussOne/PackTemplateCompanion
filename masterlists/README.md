@@ -54,7 +54,8 @@ The class check or problematic version check entry format. This should only be u
   "replacementModVersion": "2.0.0",
   "message": "Example Mod.",
   "patchList": [],
-  "isCleanroom": false
+  "isCleanroom": false,
+  "doNotMatch": false
 }
 ```
 
@@ -72,6 +73,7 @@ The class check or problematic version check entry format. This should only be u
 | `message`               | Required | A short message describing why this mod is listed.                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `patchList`             | Optional | A list of necessary patches required for this mod to function. See #Patch List Entry for more information.                                                                                                                                                                                                                                                                                                                                                                               |
 | `isCleanroom`           | Optional | If this mod entry is specific to the Cleanroom Mod Loader.                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `doNotMatch`            | Optional | Invert the result of the check.                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 ---
 
