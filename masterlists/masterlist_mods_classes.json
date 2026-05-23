@@ -262,6 +262,19 @@
     "message": "Outdated and impacts performance. Use #link:[Nature's Aura Simplified](https://www.curseforge.com/minecraft/mc-mods/natures-aura-simplified)."
   },
   {
+    "modId": "neenergistics",
+    "status": "PROBLEMATIC",
+    "version": "2.0.8",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": true,
+    "replacementModName": "Not Enough Energetics",
+    "replacementModVersion": "2.0.9",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/not-enough-energistics/download/6325382",
+    "action": "UPGRADE",
+    "message": "Outdated and may cause crashes."
+  },
+  {
     "modId": "nyx",
     "status": "PROBLEMATIC",
     "verification": "CLASSLOADED",

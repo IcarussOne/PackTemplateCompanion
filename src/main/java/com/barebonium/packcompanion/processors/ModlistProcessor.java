@@ -123,7 +123,7 @@ public class ModlistProcessor {
             if(jarFile != null) {
                 try {
                     String jarHash = FileHashCalculator.getFileHash(jarFile, "md5");
-                    return jarHash.equals(entry.versionHash);
+                    return !entry.doNotMatch && jarHash.equals(entry.versionHash);
                 } catch (Exception e) {
                     PackCompanion.LOGGER.error("Error comparing Hash", e);
                     return false;
@@ -132,10 +132,10 @@ public class ModlistProcessor {
                 return false;
             }
         } else if(entry.verification == Verification.CLASSLOADED){
-            if(ConfigHandler.debugMode){
+            if (ConfigHandler.debugMode) {
                 PackCompanion.LOGGER.warn("Classloaded status for class {}: {}", entry.className,ModHelper.isClassLoaded(entry.className) );
             }
-            return ModHelper.isClassLoaded(entry.className);
+            return !entry.doNotMatch && ModHelper.isClassLoaded(entry.className);
         } else {
             return false;
         }

@@ -6,4 +6,5 @@ public class ClassCheckEntry extends AbstractModEntry {
     public Verification verification = Verification.CLASSLOADED;
     public String className;
     public String versionHash;
+    public boolean doNotMatch;
 }
