@@ -771,10 +771,10 @@
   },
   {
     "modId": "dmonsters",
-    "version": "1.12.2-2.1",
-    "isMinVersion": true,
-    "isMaxVersion": false,
-    "isVersionExclusive": true,
+    "version": "1.7",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": false,
     "status": "DEPRECATED",
     "replacementModName": "Deadly Monsters Patched",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/deadly-monsters-patched",
@@ -1704,18 +1704,6 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
-    "modId": "naturesaura",
-    "version": "18.1",
-    "isMinVersion": true,
-    "isMaxVersion": false,
-    "isVersionExclusive": true,
-    "status": "DEPRECATED",
-    "replacementModName": "Nature's Aura Simplified",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/natures-aura-simplified",
-    "action": "REPLACE",
-    "message": "Outdated and impacts performance. Use #link:[Nature's Aura Simplified](https://www.curseforge.com/minecraft/mc-mods/natures-aura-simplified)."
-  },
-  {
     "modId": "neonium",
     "status": "PROBLEMATIC",
     "action": "REMOVE",
@@ -1822,19 +1810,6 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/lolasm",
     "action": "REPLACE",
     "message": "Uses deprecated methods that can cause crashes in older modpacks. Use #link:[CensoredASM](https://www.curseforge.com/minecraft/mc-mods/lolasm)."
-  },
-  {
-    "modId": "neenergistics",
-    "status": "PROBLEMATIC",
-    "version": "2.0.9",
-    "isMinVersion": true,
-    "isMaxVersion": false,
-    "isVersionExclusive": true,
-    "replacementModName": "Not Enough Energetics",
-    "replacementModVersion": "2.0.9",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/not-enough-energistics/download/6325382",
-    "action": "UPGRADE",
-    "message": "Outdated and may cause crashes."
   },
   {
     "modId": "oldcombat",
@@ -2036,7 +2011,7 @@
         "modName": "Railway Depot Worker",
         "modId": "rdw",
         "isClassLoaded": true,
-        "classpath": "tritusk.modpack.railcraft.patcher.EntryPoint",
+        "classpath": "info.tritusk.modpack.railcraft.patcher.ModContainer",
         "modLink": "https://www.curseforge.com/minecraft/mc-mods/railway-depot-worker",
         "modDescription": "Fixes issues left in old versions of Railcraft."
       }

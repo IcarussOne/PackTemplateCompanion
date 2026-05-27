@@ -251,6 +251,30 @@
     "patchList": []
   },
   {
+    "modId": "naturesaura",
+    "verification": "HASHMATCH",
+    "className": "",
+    "versionHash": "212888fda527e55e19b91a69605ec43c",
+    "status": "DEPRECATED",
+    "replacementModName": "Nature's Aura Simplified",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/natures-aura-simplified",
+    "action": "REPLACE",
+    "message": "Outdated and impacts performance. Use #link:[Nature's Aura Simplified](https://www.curseforge.com/minecraft/mc-mods/natures-aura-simplified)."
+  },
+  {
+    "modId": "neenergistics",
+    "verification": "HASHMATCH",
+    "className": "",
+    "status": "PROBLEMATIC",
+    "versionHash": "42cc287d45a5703fcdb7b450d6832f8d",
+    "replacementModName": "Not Enough Energetics",
+    "replacementModVersion": "2.0.9",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/not-enough-energistics/download/6325382",
+    "action": "UPGRADE",
+    "message": "Outdated and may cause crashes.",
+    "doNotMatch": true
+  },
+  {
     "modId": "nyx",
     "status": "PROBLEMATIC",
     "verification": "CLASSLOADED",
