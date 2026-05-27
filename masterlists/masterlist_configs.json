@@ -567,6 +567,9 @@
                     },
                     {
                         "modId": "betterbedrockgen"
+                    },
+                    {
+                        "modId": "bringbedrockback"
                     }
                 ]
             },
@@ -997,6 +1000,19 @@
                 ]
             },
             {
+                "name": "Dirt to Path",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#BLOCKS#utDirtToPath",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Dirt to Path` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `blocks`.",
+                "dependencies":[
+                    {
+                        "modId": "dirt2path"
+                    }
+                ]
+            },
+            {
                 "name": "Render Range",
                 "field": "mod.acgaming.universaltweaks.config.UTConfigMods#STORAGE_DRAWERS#utSDRenderRange",
                 "type": "int",
@@ -1058,6 +1074,19 @@
                 "dependencies":[
                     {
                         "modId": "entity_desync_fix"
+                    }
+                ]
+            },
+            {
+                "name": "[1] Dragon Kill Toggle",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#ENTITIES#DRAGON_KILL#utDragonKillToggle",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Dragon Kill` tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities` → `dragon kill`.",
+                "dependencies":[
+                    {
+                        "modId": "equaldragons"
                     }
                 ]
             },
@@ -1662,6 +1691,19 @@
                 "dependencies":[
                     {
                         "modId": "noexpensive"
+                    }
+                ]
+            },
+            {
+                "name": "Disable FOV",
+                "field": "mod.acgaming.universaltweaks.config.UTConfigTweaks#MISC#utDisableFov",
+                "type": "boolean",
+                "value": "false",
+                "shouldMatch":"true",
+                "message":"The `Disable FOV` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `misc`.",
+                "dependencies":[
+                    {
+                        "modId": "nofov"
                     }
                 ]
             },
