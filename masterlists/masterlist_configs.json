@@ -1951,6 +1951,7 @@
                 "value": "false",
                 "shouldMatch":"true",
                 "message":"The `Auto Jump Replacement` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `entities`.",
+                "dependencyMode": "OR",
                 "dependencies":[
                     {
                         "modId": "stepup"
