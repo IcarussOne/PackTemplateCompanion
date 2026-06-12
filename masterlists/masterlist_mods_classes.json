@@ -20,11 +20,11 @@
     "isMinVersion": true,
     "isMaxVersion": false,
     "isVersionExclusive": true,
-    "replacementModName": "Agricraft-Refitbench",
+    "replacementModName": "Agricraft Refitted",
     "replacementModVersion": "2.17.1",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/agricraft-refitted",
     "action": "REPLACE",
-    "message": "Outdated and has Severe memory usage and low performance."
+    "message": "Outdated and has severe memory usage and low performance. Make sure to also remove InfinityLib, it is already included in the fork."
   },
   {
     "modId": "baubles",
@@ -129,6 +129,18 @@
     "message": "Outdated and has several bugs. Use latest #link:[Goslingcord](https://www.curseforge.com/minecraft/mc-mods/goslingcord). For Forge, use #link:[version 2.0.0](https://www.curseforge.com/minecraft/mc-mods/goslingcord/files/6231916).",
     "patchList": [],
     "isCleanroom": true
+  },
+  {
+    "modId": "enchlevellangpatch",
+    "status": "PROBLEMATIC",
+    "verification": "CLASSLOADED",
+    "className": "xland.mcmod.enchlevellangpatch.api.EnchantmentLevelLangPatchConfig",
+    "versionHash": "",
+    "action": "REPLACE",
+    "replacementModName": "Universal Tweaks",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
+    "replacementModVersion": "",
+    "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
     "modId": "essential",
@@ -303,6 +315,18 @@
     ]
   },
   {
+    "modId": "planarartifice",
+    "status": "DEPRECATED",
+    "verification": "CLASSLOADED",
+    "className": "leppa.planarartifice.main.PlanarArtifice",
+    "versionHash": "",
+    "action": "REPLACE",
+    "replacementModName": "Planar Artifice: Reflected",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/planar-artifice-reflected",
+    "replacementModVersion": "",
+    "message": "Unfinished and buggy. Use #link:[Planar Artifice: Reflected](https://www.curseforge.com/minecraft/mc-mods/planar-artifice-reflected) for the rewrite and continuation."
+  },
+  {
     "modId": "randomthings",
     "verification": "HASHMATCH",
     "className": "",
@@ -376,6 +400,18 @@
     "message": "Problematic. Crashes with other Thaumcraft addons. Use #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker).",
     "patchList": [],
     "isCleanroom": false
+  },
+  {
+    "modId": "thaumictinkerer",
+    "status": "DEPRECATED",
+    "verification": "CLASSLOADED",
+    "className": "com.nekokittygames.thaumictinkerer.ThaumicTinkerer",
+    "versionHash": "",
+    "action": "REPLACE",
+    "replacementModName": "Thaumic Tinkerer: Reborn",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumic-tinkerer-reborn",
+    "replacementModVersion": "",
+    "message": "Unfinished and buggy. Use #link:[Thaumic Tinkerer: Reborn](https://www.curseforge.com/minecraft/mc-mods/thaumic-tinkerer-reborn) for the rewrite and continuation. KAMI's content has been split up into #link:[KAMI: Reborn](https://www.curseforge.com/minecraft/mc-mods/kami-reborn) and no longer requires Thaumic Tinkerer."
   },
   {
     "modId": "thaumictweaker",
