@@ -1966,10 +1966,10 @@
   {
     "modId": "normalasm",
     "status": "DEPRECATED",
-    "replacementModName": "CensoredASM",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/lolasm",
+    "replacementModName": "Chibi",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/chibi",
     "action": "REPLACE",
-    "message": "Uses deprecated methods that can cause crashes in older modpacks. Use #link:[CensoredASM](https://www.curseforge.com/minecraft/mc-mods/lolasm)."
+    "message": "Uses deprecated methods that can cause crashes in older modpacks. Use #link:[Chibi](https://www.curseforge.com/minecraft/mc-mods/chibi)."
   },
   {
     "modId": "oldcombat",
