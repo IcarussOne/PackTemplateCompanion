@@ -1771,6 +1771,12 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "multimob",
+    "status": "PROBLEMATIC",
+    "action": "INFO",
+    "message": "Unmaintained and known to potentially screw up mob spawns while also causing other issues and crashes."
+  },
+  {
     "modId": "multithreadednoise",
     "status": "PROBLEMATIC",
     "action": "REMOVE",
