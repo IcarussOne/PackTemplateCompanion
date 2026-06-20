@@ -355,6 +355,12 @@
     "message": "MCreator and not very performance friendly. Use #link:[Wild Caves 4](https://www.curseforge.com/minecraft/mc-mods/wild-caves-4) instead."
   },
   {
+    "modId": "better_weather",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated/Vibe coded port. Highly not recommended for use."
+  },
+  {
     "modId": "bibliocraft",
     "version": "2.4.7",
     "isMinVersion": true,
@@ -973,6 +979,12 @@
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "easymagic",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated/Vibe coded backport. Highly not recommended for use."
+  },
+  {
     "modId": "efficiententities",
     "status": "PROBLEMATIC",
     "action": "REMOVE",
@@ -1089,6 +1101,12 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "fallingleaves",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated/Vibe coded backport. Highly not recommended for use."
   },
   {
     "modId": "farsight",
@@ -1455,6 +1473,12 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "inventoryprofilesnext",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated/Vibe coded backport. Highly not recommended for use."
   },
   {
     "modId": "inventoryspam",
@@ -2060,6 +2084,12 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "particular",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated/Vibe coded backport. Highly not recommended for use."
   },
   {
     "modId": "patchouli",
@@ -2886,6 +2916,12 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "travelerstitles",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated/Vibe coded backport. Highly not recommended for use."
+  },
+  {
     "modId": "trm",
     "status": "PROBLEMATIC",
     "action": "REMOVE",
@@ -2990,6 +3026,12 @@
     "message": "Outdated and may cause crashes."
   },
   {
+    "modId": "visuality",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated/Vibe coded backport. Highly not recommended for use."
+  },
+  {
     "modId": "voidfog",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -3048,6 +3090,12 @@
         "modDescription": "A Companion mod for Witchery: Resurrected, patching bugs, adding integrations and introducing modpack maker-oriented features."
       }
     ]
+  },
+  {
+    "modId": "witcherywalls",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated/Vibe coded port. Highly not recommended for use."
   },
   {
     "modId": "wizardry",
