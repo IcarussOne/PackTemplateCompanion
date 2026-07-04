@@ -2648,6 +2648,14 @@
     "message": "CRITICAL: Uses a library that has a known RCE exploit. Remove immediately and use #link:[Survival Tools](https://www.curseforge.com/minecraft/mc-mods/survival-tools)."
   },
   {
+    "modId": "tc6aspects4jei",
+    "status": "DEPRECATED",
+    "replacementModName": "Thaumic Information",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumic-information",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Thaumic Information](https://www.curseforge.com/minecraft/mc-mods/thaumic-information)."
+  },
+  {
     "modId": "tconstruct",
     "version": "1.12.2-2.13.0.183",
     "isMinVersion": true,
@@ -2729,6 +2737,12 @@
         "modDescription": "Augmenting Thaumcraft 6 with a variety of fresh and familiar content."
       },
       {
+        "modName": "Thaumic Information",
+        "modId": "thaumicinfo",
+        "modLink": "https://www.curseforge.com/minecraft/mc-mods/thaumic-information",
+        "modDescription": "Thaumic JEI + ThaumicWaila + VisualOres integration + Performance"
+      },
+      {
         "modName": "Thaumic Speedup",
         "modId": "thaumicspeedup",
         "modLink": "https://www.curseforge.com/minecraft/mc-mods/thaumic-speedup",
@@ -2765,12 +2779,20 @@
     "message": "Not recommended, some content is unfinished, it contains overlapping content with other addons, and it breaks some functionality with ThaumicTweaker and Thaumic Wonders Unofficial."
   },
   {
+    "modId": "thaumicjei",
+    "status": "DEPRECATED",
+    "replacementModName": "Thaumic Information",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumic-information",
+    "action": "REPLACE",
+    "message": "Merged and improved in #link:[Thaumic Information](https://www.curseforge.com/minecraft/mc-mods/thaumic-information)."
+  },
+  {
     "modId": "thaumicmeme",
     "status": "DEPRECATED",
     "replacementModName": "ThaumicTweaker",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumictweaker",
     "action": "REPLACE",
-    "message": "Use #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker) for a better implementation of subtitles."
+    "message": "Use #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker) for a better implementation of research subtitles."
   },
   {
     "modId": "thaumic_mercy",
@@ -2799,7 +2821,7 @@
     "replacementModName": "Thaumic Tinkerer: Reborn",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumic-tinkerer-reborn",
     "action": "REPLACE",
-    "message": "No longer neccessary because #link:[Thaumic Tinkerer: Reborn](https://www.curseforge.com/minecraft/mc-mods/thaumic-tinkerer-reborn) adds a completely rewritten Essentia Funnel."
+    "message": "No longer necessary because #link:[Thaumic Tinkerer: Reborn](https://www.curseforge.com/minecraft/mc-mods/thaumic-tinkerer-reborn) adds a completely rewritten Essentia Funnel."
   },
   {
     "modId": "thaumictweaks",
@@ -2808,6 +2830,14 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumictweaker",
     "action": "REPLACE",
     "message": "A good portion of features overlap with both #link:[Thaumcraft Fix](https://www.curseforge.com/minecraft/mc-mods/thaumcraftfix) and #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker)."
+  },
+  {
+    "modId": "thaumicwaila",
+    "status": "DEPRECATED",
+    "replacementModName": "Thaumic Information",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumic-information",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Thaumic Information](https://www.curseforge.com/minecraft/mc-mods/thaumic-information)."
   },
   {
     "modId": "thaumicwands",
