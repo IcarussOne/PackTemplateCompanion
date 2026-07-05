@@ -1410,6 +1410,14 @@
     "message": "Can cause invisible entities in your world, as noted on this #link:[issue report](https://github.com/iChun/iChunUtil/issues/178#issuecomment-2917948068)."
   },
   {
+    "modId": "ido",
+    "status": "DEPRECATED",
+    "replacementModName": "Aqua Acrobatics",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/aqua-acrobatics",
+    "action": "REPLACE",
+    "message": "Outdated and discontinued. Better implementation exists in #link:[Aqua Acrobatics](https://www.curseforge.com/minecraft/mc-mods/aqua-acrobatics)."
+  },
+  {
     "modId": "ihateghostblocks",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
