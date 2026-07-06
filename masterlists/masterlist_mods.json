@@ -2640,6 +2640,30 @@
     "message": "If you plan on adding The Aurorian mod, make sure to disable `Acid` and `Rubber` in its config."
   },
   {
+    "modId": "suikecherry",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated/Vibe coded backport. Highly not recommended for use."
+  },
+  {
+    "modId": "suikefoxfriend",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated/Vibe coded backport. Highly not recommended for use."
+  },
+  {
+    "modId": "suikehappyghast",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated/Vibe coded backport. Highly not recommended for use."
+  },
+  {
+    "modId": "suikerawore",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated/Vibe coded backport. Highly not recommended for use."
+  },
+  {
     "modId": "superhot",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
