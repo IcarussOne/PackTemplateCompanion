@@ -138,7 +138,7 @@
     "replacementModName": "LemonSkin",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/lemonskin",
     "action": "REPLACE",
-    "message": "Outdated. Use #link:[LemonSkin](https://www.curseforge.com/minecraft/mc-mods/lemonskin)."
+    "message": "Recommended to instead use #link:[LemonSkin](https://www.curseforge.com/minecraft/mc-mods/lemonskin). Note that it uses a different mod id and package name, it will not be compatible with older mods that originally integrated with AppleSkin! Stick with AppleSkin if this is an issue."
   },
   {
     "modId": "appliedenergistics2",
@@ -157,7 +157,7 @@
     "replacementModName": "Aqua Acrobatics",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/aqua-acrobatics",
     "action": "REPLACE",
-    "message": "Has a different package name and mod id, which will mess up compatibility with all other mods that are trying to integrate with the original Aqua Acrobatics. Recommended to use #link:[Aqua Acrobatics](https://www.curseforge.com/minecraft/mc-mods/aqua-acrobatics) instead."
+    "message": "Has a different mod id and package name, which will mess up compatibility with all other mods that are trying to integrate with the original Aqua Acrobatics. Recommended to use #link:[Aqua Acrobatics](https://www.curseforge.com/minecraft/mc-mods/aqua-acrobatics) instead."
   },
   {
     "modId": "armorcurve",
@@ -2047,7 +2047,7 @@
     "replacementModName": "Chibi",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/chibi",
     "action": "REPLACE",
-    "message": "Uses deprecated methods that can cause crashes in older modpacks. Use #link:[Chibi](https://www.curseforge.com/minecraft/mc-mods/chibi)."
+    "message": "Uses deprecated methods that can cause crashes in older modpacks. The package name and mod id are also different, which will not work with mods that originally integrated with Chibi (unless additional support has been added for the forks). Use #link:[Chibi](https://www.curseforge.com/minecraft/mc-mods/chibi)."
   },
   {
     "modId": "oldcombat",
