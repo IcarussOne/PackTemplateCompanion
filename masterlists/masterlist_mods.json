@@ -2821,6 +2821,12 @@
     "message": "Better implementation exists in #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker)."
   },
   {
+    "modId": "thaumic_arcana",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "Notably unfinished, and contains lots of bugs and missing recipes."
+  },
+  {
     "modId": "thaumicfixes",
     "status": "PROBLEMATIC",
     "replacementModName": "Thaumcraft Fix",
