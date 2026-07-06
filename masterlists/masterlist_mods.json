@@ -1187,6 +1187,14 @@
     "message": "#link:[Future Fireproof](https://www.curseforge.com/minecraft/mc-mods/future-fireproof) has a better implementation and API features."
   },
   {
+    "modId": "fixedanvilrepaircost",
+    "status": "DEPRECATED",
+    "replacementModName": "Universal Tweaks",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
     "modId": "foamfix",
     "status": "DEPRECATED",
     "replacementModName": "VintageFix",

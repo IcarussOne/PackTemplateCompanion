@@ -1716,9 +1716,13 @@
                 "value": "40",
                 "shouldMatch":"true",
                 "message":"The anvil tweaks are located in `Universal Tweaks - Tweaks.cfg` → `general` → `blocks` → `anvil`.",
+                "dependencyMode": "OR",
                 "dependencies":[
                     {
                         "modId": "noexpensive"
+                    },
+                    {
+                        "modId": "fixedanvilrepaircost"
                     }
                 ]
             },
