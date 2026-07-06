@@ -2047,7 +2047,7 @@
     "replacementModName": "Chibi",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/chibi",
     "action": "REPLACE",
-    "message": "Uses deprecated methods that can cause crashes in older modpacks. The package name and mod id are also different, which will not work with mods that originally integrated with Chibi (unless additional support has been added for the forks). Use #link:[Chibi](https://www.curseforge.com/minecraft/mc-mods/chibi)."
+    "message": "Uses deprecated methods that can cause crashes in older modpacks. The mod id and package name are also different, which will not work with mods that originally integrated with Chibi (unless additional support has been added for the forks). Use #link:[Chibi](https://www.curseforge.com/minecraft/mc-mods/chibi)."
   },
   {
     "modId": "oldcombat",
@@ -2366,6 +2366,14 @@
     "replacementModVersion": "1.8.0",
     "action": "DOWNGRADE",
     "message": "AI continuation, highly not recommended for use. Use #link:[Recurrent Complex 1.4.8.6](https://www.curseforge.com/minecraft/mc-mods/recurrent-complex/files/5615733) instead."
+  },
+  {
+    "modId": "reciperemover",
+    "status": "DEPRECATED",
+    "replacementModName": "Universal Tweaks",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
     "modId": "redirectionor",

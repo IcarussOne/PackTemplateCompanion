@@ -1398,6 +1398,9 @@
                     },
                     {
                         "modId": "noprecipebook"
+                    },
+                    {
+                        "modId": "reciperemover"
                     }
                 ]
             },
