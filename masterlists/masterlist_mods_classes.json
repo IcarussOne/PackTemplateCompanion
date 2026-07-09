@@ -27,6 +27,19 @@
     "message": "Outdated and has severe memory usage and low performance. Make sure to also remove InfinityLib, it is already included in the fork."
   },
   {
+    "modId": "alchemistry",
+    "status": "DEPRECATED",
+    "verification": "CLASSLOADED",
+    "versionHash": "",
+    "className": "al132.alchemistry.Alchemistry",
+    "replacementModName": "Alchemistry - Redox",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/alchemistry-redox",
+    "action": "REPLACE",
+    "message": "Outdated. Use #link:[Alchemistry - Redox](https://www.curseforge.com/minecraft/mc-mods/alchemistry-redox).",
+    "patchList": [],
+    "isCleanroom": false
+  },
+  {
     "modId": "baubles",
     "status": "DEPRECATED",
     "verification": "CLASSLOADED",
