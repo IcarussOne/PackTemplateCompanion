@@ -1055,6 +1055,22 @@
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "enderiozoo",
+    "status": "DEPRECATED",
+    "replacementModName": "Ender Safari",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/ender-safari",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Ender Safari](https://www.curseforge.com/minecraft/mc-mods/ender-safari), which no longer depends on Ender IO and EnderCore."
+  },
+  {
+    "modId": "enderzoo",
+    "status": "DEPRECATED",
+    "replacementModName": "Ender Safari",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/ender-safari",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Ender Safari](https://www.curseforge.com/minecraft/mc-mods/ender-safari), which no longer depends on Ender IO and EnderCore."
+  },
+  {
     "modId": "endportalparallax",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
