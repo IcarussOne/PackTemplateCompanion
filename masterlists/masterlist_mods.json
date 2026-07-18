@@ -2907,6 +2907,14 @@
     "message": "Better implementation exists in #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker)."
   },
   {
+    "modId": "thaumiconeprobe",
+    "status": "DEPRECATED",
+    "replacementModName": "Thaumic Information",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumic-information",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Thaumic Information](https://www.curseforge.com/minecraft/mc-mods/thaumic-information)."
+  },
+  {
     "modId": "thaumicspeedup",
     "status": "PROBLEMATIC",
     "version": "5.0",
