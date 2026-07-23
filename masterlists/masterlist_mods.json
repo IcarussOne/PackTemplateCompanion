@@ -1043,6 +1043,22 @@
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "enderiozoo",
+    "status": "DEPRECATED",
+    "replacementModName": "Ender Safari",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/ender-safari",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Ender Safari](https://www.curseforge.com/minecraft/mc-mods/ender-safari), which no longer depends on Ender IO and EnderCore."
+  },
+  {
+    "modId": "enderzoo",
+    "status": "DEPRECATED",
+    "replacementModName": "Ender Safari",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/ender-safari",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Ender Safari](https://www.curseforge.com/minecraft/mc-mods/ender-safari), which no longer depends on Ender IO and EnderCore."
+  },
+  {
     "modId": "endportalparallax",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -1521,6 +1537,12 @@
     "status": "PROBLEMATIC",
     "action": "REMOVE",
     "message": "Has several dupe issues and can void all bag contents on servers. You can try #link:[Retro Sophisticated Backpacks](https://www.curseforge.com/minecraft/mc-mods/retro-sophisticated-backpacks) as an alternative."
+  },
+  {
+    "modId": "isorropia",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "Not recommended, it is unfinished and has several bugs. Breaking the Curative Vat during certain circumstances can produce a massive amount of flux on the area."
   },
   {
     "modId": "jecharacters",
@@ -2486,6 +2508,12 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "simplerpc",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "Causes significant multiplayer lag for some users."
+  },
+  {
     "modId": "simplyjetpacks",
     "status": "PROBLEMATIC",
     "version": "1.12.2-2.2.20.0",
@@ -2730,6 +2758,14 @@
     ]
   },
   {
+    "modId": "tcinventoryscan",
+    "status": "DEPRECATED",
+    "replacementModName": "ThaumicTweaker",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumictweaker",
+    "action": "REPLACE",
+    "message": "Merged and improved in #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker)."
+  },
+  {
     "modId": "techguns",
     "version": "2.0.2.0",
     "isMinVersion": false,
@@ -2815,6 +2851,12 @@
     "message": "Notably unfinished, and contains lots of bugs and missing recipes."
   },
   {
+    "modId": "thaumicconcilium",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "Not recommended, a good portion of content is buggy or unbalanced, may also have issues on servers."
+  },
+  {
     "modId": "thaumicfixes",
     "status": "PROBLEMATIC",
     "replacementModName": "Thaumcraft Fix",
@@ -2851,6 +2893,14 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumictweaker",
     "action": "REPLACE",
     "message": "Better implementation exists in #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker)."
+  },
+  {
+    "modId": "thaumiconeprobe",
+    "status": "DEPRECATED",
+    "replacementModName": "Thaumic Information",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumic-information",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Thaumic Information](https://www.curseforge.com/minecraft/mc-mods/thaumic-information)."
   },
   {
     "modId": "thaumicspeedup",
