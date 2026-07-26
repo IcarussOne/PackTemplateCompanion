@@ -3245,13 +3245,13 @@
     "modId": "vulkanmod112",
     "status": "PROBLEMATIC",
     "action": "REMOVE",
-    "message": "AI generated and has no performance gain. CRITICAL: WILL BREAK MODS THAT RELY ON OPENGL! Use #link:[Nothirium](https://www.curseforge.com/minecraft/mc-mods/nothirium) and #link:[Naughthirium](https://www.curseforge.com/minecraft/mc-mods/naughthirium), or #link:[Celeritas](https://github.com/kappa-maintainer/Celeritas-auto-build/releases)."
+    "message": "AI generated and has no performance gain. CRITICAL: WILL BREAK MODS THAT RELY ON OPENGL!"
   },
   {
     "modId": "vulkanmod_legacy",
     "status": "PROBLEMATIC",
     "action": "REMOVE",
-    "message": "AI generated and has no performance gain. CRITICAL: WILL BREAK MODS THAT RELY ON OPENGL! Use #link:[Nothirium](https://www.curseforge.com/minecraft/mc-mods/nothirium) and #link:[Naughthirium](https://www.curseforge.com/minecraft/mc-mods/naughthirium), or #link:[Celeritas](https://github.com/kappa-maintainer/Celeritas-auto-build/releases)."
+    "message": "AI generated and has no performance gain. CRITICAL: WILL BREAK MODS THAT RELY ON OPENGL!"
   },
   {
     "modId": "warptheory",
