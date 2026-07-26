@@ -1614,10 +1614,10 @@
   {
     "modId": "jeresources",
     "status": "PROBLEMATIC",
-    "version": "0.9.3",
-    "isMinVersion": true,
-    "isMaxVersion": false,
-    "isVersionExclusive": false,
+    "version": "0.9.2",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": true,
     "replacementModVersion": "0.9.2",
     "action": "DOWNGRADE",
     "message": "Latest alpha version has #link:[issues with the villager tab](https://github.com/way2muchnoise/JustEnoughResources/issues/423). Use #link:[JER 0.9.2.60](https://www.curseforge.com/minecraft/mc-mods/just-enough-resources-jer/files/2728585) instead."
