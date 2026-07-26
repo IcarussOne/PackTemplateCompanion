@@ -571,6 +571,29 @@
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "cfm",
+    "version": "6.3.0",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": false,
+    "status": "DEPRECATED",
+    "replacementModName": "MrCrayfish's Furniture Mod Rebuilt",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/mrcrayfish-furniture-mod-rebuilt/files/6581554",
+    "action": "REPLACE",
+    "message": "Outdated. Use #link:[MrCrayfish's Furniture Mod Rebuilt 6.6.0](https://www.curseforge.com/minecraft/mc-mods/mrcrayfish-furniture-mod-rebuilt/files/6581554)."
+  },
+  {
+    "modId": "cfm",
+    "version": "6.10.0",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": true,
+    "status": "PROBLEMATIC",
+    "replacementModVersion": "6.6.0",
+    "action": "DOWNGRADE",
+    "message": "Later versions of MrCrayfish's Furniture Mod Rebuilt have content bloat, significant changes, and more issues like huge textures being added into the texture atlas. Use #link:[MrCrayfish's Furniture Mod Rebuilt 6.6.0](https://www.curseforge.com/minecraft/mc-mods/mrcrayfish-furniture-mod-rebuilt/files/6581554)."
+  },
+  {
     "modId": "chickensshed",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
