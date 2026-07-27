@@ -1219,7 +1219,7 @@
     "replacementModName": "Food Spoiling",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/foodspoiling",
     "action": "REPLACE",
-    "message": "Impacts performance by ticking every loaded container in the world, food items located in JEI/HEI and the Creative inventory will also rot over time. Use #link:[Food Spoiling](https://www.curseforge.com/minecraft/mc-mods/foodspoiling) for a better implementation."
+    "message": "Has severe issues and causes crashes, impacts performance by ticking every loaded container in the world and spamming null tooltip errors, food items will also rot over time in JEI/HEI and other interfaces like villager trades. Use #link:[Food Spoiling](https://www.curseforge.com/minecraft/mc-mods/foodspoiling) for a better implementation."
   },
   {
     "modId": "forgivingvoid",
