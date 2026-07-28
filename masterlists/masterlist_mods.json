@@ -1635,6 +1635,14 @@
     ]
   },
   {
+    "modId": "jumpoverfences",
+    "status": "DEPRECATED",
+    "replacementModName": "Universal Tweaks",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
     "modId": "keydescfix",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -1953,6 +1961,12 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "nb",
+    "status": "PROBLEMATIC",
+    "action": "INFO",
+    "message": "World generation like blackstone can severely impact performance."
   },
   {
     "modId": "neonium",
@@ -3121,6 +3135,12 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/tropicraft-legacy",
     "action": "REPLACE",
     "message": "Has numerous issues and memory leaks. Use #link:[Tropicraft Legacy](https://www.curseforge.com/minecraft/mc-mods/tropicraft-legacy)."
+  },
+  {
+    "modId": "tt20",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "Causes issues with how blocks are broken."
   },
   {
     "modId": "twilightforest",

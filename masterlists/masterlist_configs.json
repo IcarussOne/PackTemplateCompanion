@@ -1239,9 +1239,13 @@
                 "value": "false",
                 "shouldMatch":"true",
                 "message":"The `Fence/Wall Jump` tweak is located in `Universal Tweaks - Tweaks.cfg` → `general` → `blocks`.",
+                "dependencyMode": "OR",
                 "dependencies":[
                     {
                         "modId": "fencejumper"
+                    },
+                    {
+                        "modId": "jumpoverfences"
                     }
                 ]
             },
