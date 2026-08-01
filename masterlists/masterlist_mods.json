@@ -2109,12 +2109,6 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
-    "modId": "oldresearch",
-    "status": "PROBLEMATIC",
-    "action": "REMOVE",
-    "message": "May cause aspects to disappear on some items and will crash with non-vanilla Thaumcraft research. It is also unmaintained with numerous bugs and lacks compatibility with other Thaumcraft addons."
-  },
-  {
     "modId": "onslaught",
     "status": "PROBLEMATIC",
     "action": "REMOVE",
