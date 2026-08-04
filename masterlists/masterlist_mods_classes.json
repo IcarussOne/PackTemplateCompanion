@@ -439,6 +439,20 @@
     "isCleanroom": false
   },
   {
+    "modId": "thaumcraft",
+    "status": "PROBLEMATIC",
+    "verification": "CLASSLOADED",
+    "className": "thaumcraft.common.Thaumcraft",
+    "versionHash": "",
+    "action": "REPLACE",
+    "replacementModName": "Thaumcraft 6",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/thaumcraft/files/2629023",
+    "replacementModVersion": "",
+    "message": "AI generated port and incompatible with all Thaumcraft 6 addons. Use #link:[Thaumcraft 6](https://www.curseforge.com/minecraft/mc-mods/thaumcraft/files/2629023) instead, as well as #link:[Thaumic Tinkerer: Reborn](https://www.curseforge.com/minecraft/mc-mods/thaumic-tinkerer-reborn) and #link:[KAMI: Reborn](https://www.curseforge.com/minecraft/mc-mods/kami-reborn).",
+    "patchList": [],
+    "isCleanroom": false
+  },
+  {
     "modId": "thaumictinkerer",
     "status": "DEPRECATED",
     "verification": "CLASSLOADED",
