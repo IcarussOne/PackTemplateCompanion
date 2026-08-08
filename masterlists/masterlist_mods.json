@@ -1002,29 +1002,11 @@
   },
   {
     "modId": "embers",
-    "version": "1.19",
-    "isMinVersion": false,
-    "isMaxVersion": true,
-    "isVersionExclusive": false,
     "status": "DEPRECATED",
     "replacementModName": "Embers Unofficial Extended Life",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/embers-extended-life/files/6556819",
-    "replacementModVersion": "1.25.3",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/embers-extended-life",
     "action": "REPLACE",
-    "message": "Outdated. Use #link:[Embers Unofficial Extended Life 1.25.3](https://www.curseforge.com/minecraft/mc-mods/embers-extended-life/files/6556819)."
-  },
-  {
-    "modId": "embers",
-    "version": "1.25.4",
-    "isMinVersion": true,
-    "isMaxVersion": false,
-    "isVersionExclusive": false,
-    "status": "PROBLEMATIC",
-    "replacementModName": "Embers Unofficial Extended Life",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/embers-extended-life/files/6556819",
-    "replacementModVersion": "1.25.3",
-    "action": "DOWNGRADE",
-    "message": "1.25.4+ versions of Embers Unofficial Extended Life will crash on multiplayer when Thaumic Periphery is also installed, see this #link:[issue report](https://github.com/Ender-Development/Embers-Extended-Life/issues/69) for more info. Use #link:[Embers Unofficial Extended Life 1.25.3](https://www.curseforge.com/minecraft/mc-mods/embers-extended-life/files/6556819)."
+    "message": "Outdated. Use #link:[Embers Unofficial Extended Life](https://www.curseforge.com/minecraft/mc-mods/embers-extended-life)."
   },
   {
     "modId": "emt",
