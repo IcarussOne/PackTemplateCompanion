@@ -320,6 +320,18 @@
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "betterportals",
+    "version": "0.4.0",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "status": "DEPRECATED",
+    "replacementModName": "Better Portals Refitted",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/better-portals-refitted",
+    "action": "REPLACE",
+    "message": "Outdated. Use #link:[Better Portals Refitted](https://www.curseforge.com/minecraft/mc-mods/better-portals-refitted).",
+    "isCleanroom": true
+  },
+  {
     "modId": "betterquesting",
     "version": "3.5.329",
     "isMinVersion": false,
@@ -504,6 +516,13 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/salutation",
     "action": "REPLACE",
     "message": "Currently unmaintained and has a few unaddressed #link:[issues](https://github.com/xhyrom/brigo/issues). Use #link:[Salutation](https://www.curseforge.com/minecraft/mc-mods/salutation) for a better implementation."
+  },
+  {
+    "modId": "brigo",
+    "status": "DEPRECATED",
+    "action": "REMOVE",
+    "message": "Brigadier is already included in Cleanroom.",
+    "isCleanroom": true
   },
   {
     "modId": "bringbedrockback",
@@ -1748,6 +1767,14 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "meteors",
+    "status": "PROBLEMATIC",
+    "replacementModName": "Hyxcate",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/hyxcate",
+    "action": "REPLACE",
+    "message": "AI generated port. Use [Hyxcate](https://www.curseforge.com/minecraft/mc-mods/hyxcate) for configurable meteors and more related content."
+  },
+  {
     "modId": "mfpu",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -2470,6 +2497,13 @@
     "message": "Merged and improved in #link:[Congrega Mystica](https://www.curseforge.com/minecraft/mc-mods/congrega-mystica)."
   },
   {
+    "modId": "salutation",
+    "status": "DEPRECATED",
+    "action": "REMOVE",
+    "message": "Brigadier is already included in Cleanroom.",
+    "isCleanroom": true
+  },
+  {
     "modId": "salwayseat",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -2563,6 +2597,14 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "smartparticles",
+    "status": "PROBLEMATIC",
+    "replacementModName": "Particle Culling",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/particle-culling",
+    "action": "REPLACE",
+    "message": "Not recommended. Use #link:[Particle Culling](https://www.curseforge.com/minecraft/mc-mods/particle-culling) for a similar feature."
   },
   {
     "modId": "smartspawn",
