@@ -1114,6 +1114,18 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "extrautils2",
+    "action": "INCLUDE",
+    "patchList": [
+      {
+        "modName": "XU2-Patcher",
+        "modId": "xu2patcher",
+        "modLink": "https://www.curseforge.com/minecraft/mc-mods/xu2-patcher",
+        "modDescription": "Fixes several bugs in Extra Utilities 2 using Binary Patches."
+      }
+    ]
+  },
+  {
     "modId": "eyltrafix",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -1360,6 +1372,12 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/hammer-lib/download/6348753",
     "action": "UPGRADE",
     "message": "Outdated and may cause crashes."
+  },
+  {
+    "modId": "hardcoredarkness",
+    "status": "DEPRECATED",
+    "action": "INFO",
+    "message": "#link:[Dynamic Darkness](https://www.curseforge.com/minecraft/mc-mods/dynamic-darkness) does not alter Night Vision colors and is more configurable. Mod incompatibility can still occur, pick what you feel is best."
   },
   {
     "modId": "hardcoreitemstages",
@@ -1698,6 +1716,12 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "lightaura",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated. Use #link:[OptiFine](https://optifine.net/downloads) or #link:[Dynamic Lights](https://www.curseforge.com/minecraft/mc-mods/dynamic-lights) instead."
   },
   {
     "modId": "loginhpfix",
@@ -2390,6 +2414,12 @@
     "action": "REMOVE",
     "message": "Already included in Cleanroom.",
     "isCleanroom": true
+  },
+  {
+    "modId": "realistictorches",
+    "status": "PROBLEMATIC",
+    "action": "INFO",
+    "message": "Known to cause issues with performance and compatibility."
   },
   {
     "modId": "rebind_narrator",
