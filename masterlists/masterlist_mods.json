@@ -320,6 +320,18 @@
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "betterportals",
+    "version": "0.4.0",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "status": "DEPRECATED",
+    "replacementModName": "Better Portals Refitted",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/better-portals-refitted",
+    "action": "REPLACE",
+    "message": "Outdated. Use #link:[Better Portals Refitted](https://www.curseforge.com/minecraft/mc-mods/better-portals-refitted).",
+    "isCleanroom": true
+  },
+  {
     "modId": "betterquesting",
     "version": "3.5.329",
     "isMinVersion": false,
@@ -506,6 +518,13 @@
     "message": "Currently unmaintained and has a few unaddressed #link:[issues](https://github.com/xhyrom/brigo/issues). Use #link:[Salutation](https://www.curseforge.com/minecraft/mc-mods/salutation) for a better implementation."
   },
   {
+    "modId": "brigo",
+    "status": "DEPRECATED",
+    "action": "REMOVE",
+    "message": "Brigadier is already included in Cleanroom.",
+    "isCleanroom": true
+  },
+  {
     "modId": "bringbedrockback",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -569,6 +588,29 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "cfm",
+    "version": "6.3.0",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": false,
+    "status": "DEPRECATED",
+    "replacementModName": "MrCrayfish's Furniture Mod Rebuilt",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/mrcrayfish-furniture-mod-rebuilt/files/6581554",
+    "action": "REPLACE",
+    "message": "Outdated. Use #link:[MrCrayfish's Furniture Mod Rebuilt 6.6.0](https://www.curseforge.com/minecraft/mc-mods/mrcrayfish-furniture-mod-rebuilt/files/6581554)."
+  },
+  {
+    "modId": "cfm",
+    "version": "6.7.0",
+    "isMinVersion": true,
+    "isMaxVersion": false,
+    "isVersionExclusive": false,
+    "status": "PROBLEMATIC",
+    "replacementModVersion": "6.6.0",
+    "action": "DOWNGRADE",
+    "message": "Later versions of MrCrayfish's Furniture Mod Rebuilt have content bloat, significant changes, and more issues like huge textures being added into the texture atlas. Use #link:[MrCrayfish's Furniture Mod Rebuilt 6.6.0](https://www.curseforge.com/minecraft/mc-mods/mrcrayfish-furniture-mod-rebuilt/files/6581554)."
   },
   {
     "modId": "chickensshed",
@@ -979,29 +1021,11 @@
   },
   {
     "modId": "embers",
-    "version": "1.19",
-    "isMinVersion": false,
-    "isMaxVersion": true,
-    "isVersionExclusive": false,
     "status": "DEPRECATED",
     "replacementModName": "Embers Unofficial Extended Life",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/embers-extended-life/files/6556819",
-    "replacementModVersion": "1.25.3",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/embers-extended-life",
     "action": "REPLACE",
-    "message": "Outdated. Use #link:[Embers Unofficial Extended Life 1.25.3](https://www.curseforge.com/minecraft/mc-mods/embers-extended-life/files/6556819)."
-  },
-  {
-    "modId": "embers",
-    "version": "1.25.4",
-    "isMinVersion": true,
-    "isMaxVersion": false,
-    "isVersionExclusive": false,
-    "status": "PROBLEMATIC",
-    "replacementModName": "Embers Unofficial Extended Life",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/embers-extended-life/files/6556819",
-    "replacementModVersion": "1.25.3",
-    "action": "DOWNGRADE",
-    "message": "1.25.4+ versions of Embers Unofficial Extended Life will crash on multiplayer when Thaumic Periphery is also installed, see this #link:[issue report](https://github.com/Ender-Development/Embers-Extended-Life/issues/69) for more info. Use #link:[Embers Unofficial Extended Life 1.25.3](https://www.curseforge.com/minecraft/mc-mods/embers-extended-life/files/6556819)."
+    "message": "Outdated. Use #link:[Embers Unofficial Extended Life](https://www.curseforge.com/minecraft/mc-mods/embers-extended-life)."
   },
   {
     "modId": "emt",
@@ -1088,6 +1112,18 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "extrautils2",
+    "action": "INCLUDE",
+    "patchList": [
+      {
+        "modName": "XU2-Patcher",
+        "modId": "xu2patcher",
+        "modLink": "https://www.curseforge.com/minecraft/mc-mods/xu2-patcher",
+        "modDescription": "Fixes several bugs in Extra Utilities 2 using Binary Patches."
+      }
+    ]
   },
   {
     "modId": "eyltrafix",
@@ -1196,7 +1232,7 @@
     "replacementModName": "Food Spoiling",
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/foodspoiling",
     "action": "REPLACE",
-    "message": "Impacts performance by ticking every loaded container in the world, food items located in JEI/HEI and the Creative inventory will also rot over time. Use #link:[Food Spoiling](https://www.curseforge.com/minecraft/mc-mods/foodspoiling) for a better implementation."
+    "message": "Has severe issues and causes crashes, impacts performance by ticking every loaded container in the world and spamming null tooltip errors, food items will also rot over time in JEI/HEI and other interfaces like villager trades. Use #link:[Food Spoiling](https://www.curseforge.com/minecraft/mc-mods/foodspoiling) for a better implementation."
   },
   {
     "modId": "forgivingvoid",
@@ -1336,6 +1372,12 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/hammer-lib/download/6348753",
     "action": "UPGRADE",
     "message": "Outdated and may cause crashes."
+  },
+  {
+    "modId": "hardcoredarkness",
+    "status": "DEPRECATED",
+    "action": "INFO",
+    "message": "#link:[Dynamic Darkness](https://www.curseforge.com/minecraft/mc-mods/dynamic-darkness) does not alter Night Vision colors and is more configurable. Mod incompatibility can still occur, pick what you feel is best."
   },
   {
     "modId": "hardcoreitemstages",
@@ -1591,9 +1633,9 @@
   {
     "modId": "jeresources",
     "status": "PROBLEMATIC",
-    "version": "0.9.3",
-    "isMinVersion": true,
-    "isMaxVersion": false,
+    "version": "0.9.2",
+    "isMinVersion": false,
+    "isMaxVersion": true,
     "isVersionExclusive": true,
     "replacementModVersion": "0.9.2",
     "action": "DOWNGRADE",
@@ -1610,6 +1652,14 @@
         "modDescription": "Adds a large number of Just Enough Resources integrations."
       }
     ]
+  },
+  {
+    "modId": "jumpoverfences",
+    "status": "DEPRECATED",
+    "replacementModName": "Universal Tweaks",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
     "modId": "keydescfix",
@@ -1666,6 +1716,12 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Merged and improved in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "lightaura",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated. Use #link:[OptiFine](https://optifine.net/downloads) or #link:[Celeritas/Nothirium Dynamic Lights](https://www.curseforge.com/minecraft/mc-mods/celeritas-dynamic-lights) instead (The latter requires Either Nothirium or Celeritas to run smoothly)."
   },
   {
     "modId": "loginhpfix",
@@ -1733,6 +1789,14 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "meteors",
+    "status": "PROBLEMATIC",
+    "replacementModName": "Hyxcate",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/hyxcate",
+    "action": "REPLACE",
+    "message": "AI generated port. Use [Hyxcate](https://www.curseforge.com/minecraft/mc-mods/hyxcate) for configurable meteors and more related content."
   },
   {
     "modId": "mfpu",
@@ -1932,6 +1996,12 @@
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
   },
   {
+    "modId": "nb",
+    "status": "PROBLEMATIC",
+    "action": "INFO",
+    "message": "World generation like blackstone can severely impact performance."
+  },
+  {
     "modId": "neonium",
     "status": "PROBLEMATIC",
     "action": "REMOVE",
@@ -2070,12 +2140,6 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
-  },
-  {
-    "modId": "oldresearch",
-    "status": "PROBLEMATIC",
-    "action": "REMOVE",
-    "message": "May cause aspects to disappear on some items and will crash with non-vanilla Thaumcraft research. It is also unmaintained with numerous bugs and lacks compatibility with other Thaumcraft addons."
   },
   {
     "modId": "onslaught",
@@ -2352,6 +2416,12 @@
     "isCleanroom": true
   },
   {
+    "modId": "realistictorches",
+    "status": "PROBLEMATIC",
+    "action": "INFO",
+    "message": "Known to cause issues with performance and compatibility."
+  },
+  {
     "modId": "rebind_narrator",
     "status": "DEPRECATED",
     "replacementModName": "Universal Tweaks",
@@ -2362,26 +2432,26 @@
   {
     "modId": "reccomplex",
     "status": "PROBLEMATIC",
-    "version": "1.4.8.6",
+    "version": "1.4.8.7",
     "isMinVersion": true,
     "isMaxVersion": false,
     "isVersionExclusive": true,
-    "replacementModName": "Reccurent Complex",
-    "replacementModVersion": "1.4.8.6",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/recurrent-complex/download/5615733",
+    "replacementModName": "Recurrent Complex",
+    "replacementModVersion": "1.4.8.7",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/recurrent-complex/files/8562927",
     "action": "UPGRADE",
-    "message": "Outdated and may cause crashes."
+    "message": "Outdated, known security issues, and may cause crashes."
   },
   {
     "modId": "reccomplex",
-    "version": "1.4.8.6",
+    "version": "1.4.8.7",
     "isMinVersion": false,
     "isMaxVersion": true,
     "isVersionExclusive": true,
     "status": "PROBLEMATIC",
-    "replacementModVersion": "1.4.8.6",
+    "replacementModVersion": "1.4.8.7",
     "action": "DOWNGRADE",
-    "message": "AI generated continuation, highly not recommended for use. Use #link:[Recurrent Complex 1.4.8.6](https://www.curseforge.com/minecraft/mc-mods/recurrent-complex/files/5615733) instead."
+    "message": "AI generated continuation, highly not recommended for use. Use #link:[Recurrent Complex 1.4.8.7](https://www.curseforge.com/minecraft/mc-mods/recurrent-complex/files/8562927) instead."
   },
   {
     "modId": "reciperemover",
@@ -2455,6 +2525,13 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/congrega-mystica",
     "action": "REPLACE",
     "message": "Merged and improved in #link:[Congrega Mystica](https://www.curseforge.com/minecraft/mc-mods/congrega-mystica)."
+  },
+  {
+    "modId": "salutation",
+    "status": "DEPRECATED",
+    "action": "REMOVE",
+    "message": "Brigadier is already included in Cleanroom.",
+    "isCleanroom": true
   },
   {
     "modId": "salwayseat",
@@ -2550,6 +2627,14 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/universal-tweaks",
     "action": "REPLACE",
     "message": "Better implementation exists in #link:[Universal Tweaks](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)."
+  },
+  {
+    "modId": "smartparticles",
+    "status": "PROBLEMATIC",
+    "replacementModName": "Particle Culling",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/particle-culling",
+    "action": "REPLACE",
+    "message": "Not recommended. Use #link:[Particle Culling](https://www.curseforge.com/minecraft/mc-mods/particle-culling) for a similar feature."
   },
   {
     "modId": "smartspawn",
@@ -3100,6 +3185,12 @@
     "message": "Has numerous issues and memory leaks. Use #link:[Tropicraft Legacy](https://www.curseforge.com/minecraft/mc-mods/tropicraft-legacy)."
   },
   {
+    "modId": "tt20",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "Causes issues with how blocks are broken."
+  },
+  {
     "modId": "twilightforest",
     "version": "3.11.1021",
     "isMinVersion": false,
@@ -3217,6 +3308,12 @@
         "modDescription": "Fixes various bugs in VoxelMap."
       }
     ]
+  },
+  {
+    "modId": "vulkanmod112",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated and has no performance gain. CRITICAL: WILL BREAK MODS THAT RELY ON OPENGL!"
   },
   {
     "modId": "vulkanmod_legacy",

@@ -311,6 +311,18 @@
     "message": "Performance issues and OptiFine lighting bugs. Use #link:[Hyxcate](https://www.curseforge.com/minecraft/mc-mods/hyxcate)."
   },
   {
+    "modId": "oldresearch",
+    "status": "PROBLEMATIC",
+    "verification": "CLASSLOADED",
+    "className": "com.wonginnovations.oldresearch.OldResearch",
+    "versionHash": "",
+    "action": "REPLACE",
+    "replacementModName": "TC4 Research Port: Reborn",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/oldresearchreborn",
+    "replacementModVersion": "",
+    "message": "Has numerous bugs, may cause aspects to disappear on some items, will crash with non-vanilla Thaumcraft research, and lacks compatibility with other Thaumcraft addons. Use #link:[TC4 Research Port: Reborn](https://www.curseforge.com/minecraft/mc-mods/oldresearchreborn) for better compatibility (or remove if issues keep occurring)."
+  },
+  {
     "modId": "optifine",
     "status": "PROBLEMATIC",
     "verification": "CLASSLOADED",
