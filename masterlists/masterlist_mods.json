@@ -1721,7 +1721,7 @@
     "modId": "lightaura",
     "status": "PROBLEMATIC",
     "action": "REMOVE",
-    "message": "AI generated. Use #link:[OptiFine](https://optifine.net/downloads) or #link:[Dynamic Lights](https://www.curseforge.com/minecraft/mc-mods/dynamic-lights) instead."
+    "message": "AI generated. Use #link:[OptiFine](https://optifine.net/downloads) or #link:[Celeritas/Nothirium Dynamic Lights](https://www.curseforge.com/minecraft/mc-mods/celeritas-dynamic-lights) instead (The latter requires Either Nothirium or Celeritas to run smoothly)."
   },
   {
     "modId": "loginhpfix",
