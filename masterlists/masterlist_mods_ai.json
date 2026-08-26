@@ -1,0 +1,167 @@
+[
+  {
+    "modId": "alexsmobs",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated backport. Highly not recommended for use."
+  },
+  {
+    "modId": "better_weather",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated port. Highly not recommended for use."
+  },
+  {
+    "modId": "chaospersists",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated port. Highly not recommended for use."
+  },
+  {
+    "modId": "citadel",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated backport. Highly not recommended for use."
+  },
+  {
+    "modId": "easymagic",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated backport. Highly not recommended for use."
+  },
+  {
+    "modId": "efficiententities",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "An AI generated implementation of #link:[FastEntityRender](https://github.com/Meldexun/FastEntityRender). Causes numerous render issues."
+  },
+  {
+    "modId": "fallingleaves",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated backport. Highly not recommended for use."
+  },
+  {
+    "modId": "inventoryprofilesnext",
+    "status": "PROBLEMATIC",
+    "replacementModName": "Inventory Bogo Sorter",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/inventory-bogosorter",
+    "action": "REPLACE",
+    "message": "AI generated backport. Use [Inventory Bogo Sorter](https://www.curseforge.com/minecraft/mc-mods/inventory-bogosorter) instead."
+  },
+  {
+    "modId": "lightaura",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated. Use #link:[OptiFine](https://optifine.net/downloads) or #link:[Celeritas Dynamic Lights](https://www.curseforge.com/minecraft/mc-mods/celeritas-dynamic-lights) instead (the latter requires either Nothirium or Celeritas to run smoothly)."
+  },
+  {
+    "modId": "meteors",
+    "status": "PROBLEMATIC",
+    "replacementModName": "Hyxcate",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/hyxcate",
+    "action": "REPLACE",
+    "message": "AI generated port. Use [Hyxcate](https://www.curseforge.com/minecraft/mc-mods/hyxcate) for configurable meteors and more related content."
+  },
+  {
+    "modId": "oculus",
+    "status": "PROBLEMATIC",
+    "replacementModName": "OptiFine",
+    "replacementModLink": "https://optifine.net/downloads",
+    "action": "REPLACE",
+    "message": "Broken and abandoned backport, other port attempts are AI generated backports and should not be used. Use #link:[OptiFine](https://optifine.net/downloads) and #link:[OptiNotFine](https://www.curseforge.com/minecraft/mc-mods/optinotfine) instead for shaders."
+  },
+  {
+    "modId": "particular",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated backport. Highly not recommended for use."
+  },
+  {
+    "modId": "randommobtextures",
+    "status": "PROBLEMATIC",
+    "replacementModName": "OptiFine",
+    "replacementModLink": "https://optifine.net/downloads",
+    "action": "REPLACE",
+    "message": "AI generated mod that can impact overall performance. Use #link:[OptiFine](https://optifine.net/downloads) and #link:[OptiNotFine](https://www.curseforge.com/minecraft/mc-mods/optinotfine) instead for randomized entity textures."
+  },
+  {
+    "modId": "reccomplex",
+    "version": "1.4.8.7",
+    "isMinVersion": false,
+    "isMaxVersion": true,
+    "isVersionExclusive": true,
+    "status": "PROBLEMATIC",
+    "replacementModVersion": "1.4.8.7",
+    "action": "DOWNGRADE",
+    "message": "AI generated continuation, highly not recommended for use. Use #link:[Recurrent Complex 1.4.8.7](https://www.curseforge.com/minecraft/mc-mods/recurrent-complex/files/8562927) instead."
+  },
+  {
+    "modId": "suikecherry",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated backport. Highly not recommended for use."
+  },
+  {
+    "modId": "suikefoxfriend",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated backport. Highly not recommended for use."
+  },
+  {
+    "modId": "suikehappyghast",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated backport. Highly not recommended for use."
+  },
+  {
+    "modId": "suikerawore",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated backport. Highly not recommended for use."
+  },
+  {
+    "modId": "travelerstitles",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated backport. Highly not recommended for use."
+  },
+  {
+    "modId": "unlockablebauble",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated, it poorly and invasively injects Baubles capabilities into every armor item. Highly not recommended for use."
+  },
+  {
+    "modId": "utilitymobs",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated port. Highly not recommended for use."
+  },
+  {
+    "modId": "visuality",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated backport. Highly not recommended for use."
+  },
+  {
+    "modId": "vulkanmod112",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated and has no performance gain. CRITICAL: WILL BREAK MODS THAT RELY ON OPENGL!"
+  },
+  {
+    "modId": "vulkanmod_legacy",
+    "status": "PROBLEMATIC",
+    "action": "REMOVE",
+    "message": "AI generated and has no performance gain. CRITICAL: WILL BREAK MODS THAT RELY ON OPENGL!"
+  },
+  {
+    "modId": "witcherywalls",
+    "status": "PROBLEMATIC",
+    "replacementModName": "Witchery: Resurrected",
+    "replacementModLink": "https://witchery.msrandom.net/home/downloads",
+    "action": "REPLACE",
+    "message": "AI generated port. Use [Witchery: Resurrected](https://witchery.msrandom.net/home/downloads) and [Witchery: Companion](https://www.curseforge.com/minecraft/mc-mods/witchery-companion) instead."
+  }
+]

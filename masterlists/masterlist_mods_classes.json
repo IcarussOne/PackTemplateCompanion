@@ -463,17 +463,5 @@
     "message": "Mainly changes a few recipes and has the same id as ThaumicTweaker, a more useful mod. Use #link:[ThaumicTweaker](https://www.curseforge.com/minecraft/mc-mods/thaumictweaker).",
     "patchList": [],
     "isCleanroom": false
-  },
-  {
-    "modId": "villagercontracts",
-    "status": "PROBLEMATIC",
-    "verification": "CLASSLOADED",
-    "className": "com.invadermonky.villagercontracts.network.PacketHandler",
-    "versionHash": "",
-    "action": "REPLACE",
-    "replacementModName": "Villager Contracts",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/villager-contracts",
-    "replacementModVersion": "",
-    "message": "AI generated fork that introduces unnecessary content and has more issues. Use #link:[Villager Contracts](https://www.curseforge.com/minecraft/mc-mods/villager-contracts) instead."
   }
 ]
