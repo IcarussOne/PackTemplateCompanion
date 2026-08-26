@@ -11,8 +11,10 @@ import java.net.URL;
 public class VersionChecker {
     private static final String API_URL = "https://api.github.com/repos/AnasDevO/PackTemplateCompanion/releases/latest";
     private static boolean modListGuideIntegrity = false;
+    private static boolean modListGuideAiIntegrity = false;
     private static boolean configEntriesIntegrity = false;
     private static boolean classCheckEntriesIntegrity = false;
+    private static boolean classCheckEntriesAiIntegrity = false;
 
     public static void checkAndDownload() {
         try {
@@ -47,6 +49,19 @@ public class VersionChecker {
                                 }
                                 break;
                             }
+                            case "masterlist_mods_ai.json":
+                            {
+                                String downloadUrl = assetObject.get("browser_download_url").getAsString();
+                                File targetFile = new File(PackCompanion.cacheDir, "masterlist_mods_ai.json");
+                                if(!modListGuideAiIntegrity){
+                                    downloadFile(downloadUrl, targetFile);
+                                    String ModlistAiHashCache = FileHashCalculator.getFileHash(targetFile, "MD5");
+
+                                    saveToCache("modListGuideAiHash",ModlistAiHashCache);
+                                    modListGuideAiIntegrity = true;
+                                }
+                                break;
+                            }
                             case "masterlist_configs.json":
                             {
                                 String downloadUrl = assetObject.get("browser_download_url").getAsString();
@@ -74,6 +89,20 @@ public class VersionChecker {
                                 }
                                 break;
                             }
+                            case "masterlist_mods_classes_ai.json":
+                            {
+                                String downloadUrl = assetObject.get("browser_download_url").getAsString();
+                                File targetFile = new File(PackCompanion.cacheDir, "masterlist_mods_classes_ai.json");
+                                if(!classCheckEntriesAiIntegrity){
+                                    downloadFile(downloadUrl, targetFile);
+
+                                    String ClassCheckEntriesAiHashCache = FileHashCalculator.getFileHash(targetFile, "MD5");
+
+                                    saveToCache("classCheckEntriesAiHash",ClassCheckEntriesAiHashCache);
+                                    classCheckEntriesAiIntegrity = true;
+                                }
+                                break;
+                            }
                         }
 
                     }
@@ -82,17 +111,25 @@ public class VersionChecker {
                     File targetModListGuide = new File(PackCompanion.cacheDir, "masterlist_mods.json");
                     String modListHashValue = FileHashCalculator.getFileHash(targetModListGuide, "MD5");
 
+                    File targetModListAiGuide = new File(PackCompanion.cacheDir, "masterlist_mods_ai.json");
+                    String modListAiHashValue = FileHashCalculator.getFileHash(targetModListAiGuide, "MD5");
+
                     File targetConfigEntries = new File(PackCompanion.cacheDir, "masterlist_configs.json");
                     String configHashValue = FileHashCalculator.getFileHash(targetConfigEntries, "MD5");
 
                     File targetClassCheckingEntries = new File(PackCompanion.cacheDir, "masterlist_mods_classes.json");
                     String classCheckingEntriesHashValue = FileHashCalculator.getFileHash(targetClassCheckingEntries, "MD5");
 
+                    File targetClassCheckingAiEntries = new File(PackCompanion.cacheDir, "masterlist_mods_classes_ai.json");
+                    String classCheckingEntriesAiHashValue = FileHashCalculator.getFileHash(targetClassCheckingAiEntries, "MD5");
+
                     checkCache(targetModListGuide, modListHashValue, "modListGuideHash", "ModListGuide", modListGuideIntegrity);
+                    checkCache(targetModListAiGuide, modListAiHashValue, "modListGuideAiHash", "ModListGuideAi", modListGuideAiIntegrity);
                     checkCache(targetConfigEntries, configHashValue, "configEntriesHash", "ConfigEntries", configEntriesIntegrity);
                     checkCache(targetClassCheckingEntries, classCheckingEntriesHashValue, "classCheckEntriesHash", "ClassCheckEntries", classCheckEntriesIntegrity);
+                    checkCache(targetClassCheckingAiEntries, classCheckingEntriesAiHashValue, "classCheckEntriesAiHash", "ClassCheckEntriesAi", classCheckEntriesAiIntegrity);
 
-                    if (modListGuideIntegrity && configEntriesIntegrity && classCheckEntriesIntegrity) {
+                    if (modListGuideIntegrity && modListGuideAiIntegrity && configEntriesIntegrity && classCheckEntriesIntegrity && classCheckEntriesAiIntegrity) {
                         PackCompanion.LOGGER.warn("Already up to date.");
                     }
                 }
