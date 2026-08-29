@@ -1122,10 +1122,10 @@
   {
     "modId": "fastfurnace",
     "status": "DEPRECATED",
-    "replacementModName": "CensoredASM",
-    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/lolasm",
+    "replacementModName": "Chibi",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/chibi",
     "action": "REPLACE",
-    "message": "Merged and rewritten in #link:[CensoredASM](https://www.curseforge.com/minecraft/mc-mods/lolasm)."
+    "message": "Merged and rewritten in #link:[Chibi](https://www.curseforge.com/minecraft/mc-mods/chibi)."
   },
   {
     "modId": "fastleafdecay",
@@ -1266,6 +1266,14 @@
     "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/forgelin-continuous",
     "action": "REPLACE",
     "message": "Outdated. Use #link:[Forgelin-Continuous](https://www.curseforge.com/minecraft/mc-mods/forgelin-continuous)."
+  },
+  {
+    "modId": "furnaceoptimizer",
+    "status": "DEPRECATED",
+    "replacementModName": "Chibi",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/chibi",
+    "action": "REPLACE",
+    "message": "Better implementation exists in #link:[Chibi](https://www.curseforge.com/minecraft/mc-mods/chibi)."
   },
   {
     "modId": "gadothaumy",
@@ -3114,8 +3122,10 @@
   {
     "modId": "vanillafix",
     "status": "DEPRECATED",
+    "replacementModName": "Chibi",
+    "replacementModLink": "https://www.curseforge.com/minecraft/mc-mods/chibi",
     "action": "REPLACE",
-    "message": "Merged and improved in #link:[CensoredASM](https://www.curseforge.com/minecraft/mc-mods/lolasm) and #link:[VintageFix](https://www.curseforge.com/minecraft/mc-mods/vintagefix)."
+    "message": "Merged and improved in #link:[Chibi](https://www.curseforge.com/minecraft/mc-mods/chibi) and #link:[VintageFix](https://www.curseforge.com/minecraft/mc-mods/vintagefix)."
   },
   {
     "modId": "villagermantlefix",
